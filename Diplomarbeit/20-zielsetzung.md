@@ -31,7 +31,7 @@ Die Motivation hinter dieser Arbeit liegt darin, ein realitätsnahes Spieleentwi
 
 Durch die Umsetzung dieser Diplomarbeit entsteht ein funktionsfähiger Prototyp eines Bosskampf-Szenarios, der zeigt, wie Spieleentwicklung systematisch geplant und durchgeführt werden kann. Die Arbeit verbessert unsere technische und intellektuelle Kompetenz, schafft ein funktionierendes Projektsetup und liefert dokumentierte Erfahrungen, die auch für zukünftige Projekte oder Studien von Bedeutung sind. Wir haben diese Diplomarbeit so aufgeteilt:
 
-Herr Peißl: Visuelles Umfeld des Spiels (Bossraum, Cutscenes, UI) (Blender, UE5)
+Herr Peißl: Projektmanager & Visuelles Umfeld des Spiels (Bossraum, Cutscenes, UI) (Blender, UE5)
 
 Herr Schmiedpeter: Design, Modell und Animationen des Bosses (Blender)
 
