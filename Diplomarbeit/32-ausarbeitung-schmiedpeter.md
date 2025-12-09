@@ -1,4 +1,4 @@
-# Teilaufgabe Schüler Bravo
+# Teilaufgabe Schüler Schmiedpeter
 \textauthor{Schueler 2}
 
 ## Theorie
