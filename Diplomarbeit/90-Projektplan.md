@@ -1,55 +1,76 @@
 # Projekthandbuch
-\textauthor{Schueler XY}
+\textauthor{Peißl}
 
 ## Entwicklungsplan
 
 ### Projektauftrag
 
-Hier beschreiben Sie die allgemeinen Informationen zu Ihrem Maturaprojekt. Hier beschreiben sie den Projektkontext, nämlich die Ausgangssituation und Problembeschreibung
+Diese Diplomarbeit beschäftigt sich mit der Entwicklung eines eigenständigen First-Person-Bosskampfs in der Unreal Engine 5. Das Ziel ist die Umsetzung eines vollständigen, spielbaren Szenarios, das aus einem selbst modellierten Bosscharakter, einem thematisch passenden Bossraum, den dazugehörigen Animationen sowie der notwendigen Spielmechanik besteht. Zudem gibt es am Anfang und am Ende kurze Cutscenes, um den Spieler in die Geschichte mit hinein zuziehen.
+
+Diese Arbeit ist dadurch geprägt, dass zu Beginn keine technischen oder gestalterischen Grundlagen vorhanden sind. Weder Modelle, Animationen, Leveldesign noch Gameplay-Logik existieren. Die Herausforderung liegt darin, alle erforderlichen Komponenten – von der Modellierung über die Programmierung bis hin zur visuellen Gestaltung – eigenständig aufzubauen und zu einem funktionierenden Gesamtsystem zu verbinden.
+
+Die Komplexität der Spielentwicklung kann man  grob in verschiedene Disziplinen aufteilen: 3D-Design, Animation, Engine-Workflow, Skripting, Soundintegration und Performanceoptimierung. Diese Fähigkeiten müssen in kurzer Zeit koordiniert werden. Gleichzeitig soll ein konsistenter visueller Stil gewahrt bleiben, und das Endprodukt muss technisch stabil und spielbar sein. Dieses Projekt bietet daher eine realitätsnahe Gelegenheit, professionelle Entwicklungsprozesse im Bereich Game Development praktisch umzusetzen.
 
 
 #### Projektziele
 
-Das Projektziel beschreibt den erwünschten Zustand (Sollzustand) nach dem erfolgreichen Abschluss des Projektes. Das Ziel wird wohlbedacht formuliert und durch aktives Handeln aller Projektbeteiligten erreicht. Projektziele sollten gemeinsam mit allen Projektbeteiligten erarbeitet werden.
+- Erstellung eines vollständigen, funktionierenden Bosskampfes in First-Person-Perspektive  
+- Modellierung eines Bosscharakters einschließlich Animationen  
+- Gestaltung und Umsetzung des Bossraums im Low-Poly-Stil  
+- Implementierung der Spielmechaniken (KI-Verhalten, Treffererkennung, Lebenssystem, Attacken, Kamera- und Spielersteuerung)  
+- Entwicklung kurzer Cutscenes (Intro und Outro)  
+- Sicherstellung eines konsistenten Designs und einer flüssigen Spielerfahrung  
+- Dokumentation der technischen Entscheidungen, Workflows und Herausforderungen  
 
 #### Nicht-Ziele bzw. nicht Inhalte
 
-Nicht-Ziele sind aus mehreren Gründen wichtig. Erstens helfen sie beim Erwartungsmanagement. Zweitens schaffen sie Klarheit darüber, was erledigt werden soll. Und drittens erhöhen Nicht-Ziele die Transparenz. Denn wenn man schon früh im Projekt explizit die Bereiche definiert, die das Projekt nicht bearbeiten soll, kann dadurch eine Diskussion über genau diese Randbereiche entstehen. 
+- Entwicklung eines vollständigen Spiels mit Story, mehreren Levels oder Open-World-Elementen  
+- Erstellung einer komplexen Benutzeroberfläche über die nötigsten Spielmechaniken hinaus  
+- Multiplayer-Funktionen oder Netzwerksynchronisation  
+- Kommerzielle Veröffentlichung oder Marketing des Produktes  
 
 #### Projektnutzen
 
-Wie soll ein Außenstehender ein Projekt genehmigen, wenn nicht klar formuliert ist, WARUM das Projekt überhaupt durchgeführt werden soll? Auch hier ist es wichtig, möglichst konkret zu werden. Einen Projektnutzen z.B. mit „neueste Technik“ zu bezeichnen, ist nicht ausreichend.
+Dieses Projekt bietet einen klaren fachlichen und pädagogischen Mehrwert. Die Umsetzung eines vollständigen Bosskampfs in der Unreal Engine 5 mit dreidimensionalen Modellen von Blender ermöglicht die verwendung von moderne Technologien, theoretisch so wie praktisch. Dadurch entsteht ein Kompetenzzuwachs in Bereichen wie 3D-Modellierung, Animation, Programmierung, Engine-Workflow und Projektorganisation – alles Fähigkeiten, die in der heutigen IT- und Medienwelt stark nachgefragt sind.
+
+Gleichzeitig schafft das Projekt ein sichtbares, funktionierendes Endprodukt, das als Demonstrator für zukünftige Klassen und schulische Präsentationen eingesetzt werden kann. Der Nutzen liegt somit nicht nur beim Projektteam, sondern auch bei der Schule, die ein professionell wirkendes Showcase erhält. Zudem fördert das Projekt die Teamfähigkeit, das technische Problemlösen und das strukturierte Arbeiten über einen längeren Zeitraum hinweg. 
 
 #### Projektauftraggeber/in
 
-Hier beschreiben Sie wer der Projektauftraggeber ist. Falls es eine externe Firma ist können Sie hier eine kurze Beschreibung des Unternehmens (sofern Projektrelevant) einfügen.
+Diese Arbeit wurde von uns selbst vorgeschlagen und von der HTL Leoben angenommen.
+Herr Prof. Kondert betreut diese Arbeit.
+
+| **Feld**               | **Information**                           |
+|------------------------|-------------------------------------------|
+| **Name**               | HTL Leoben                                |
+| **Adresse**            | Max Tendler-Straße 3, 8700 Leoben         |
+| **URL**                | https://www.htl-leoben.at                 |
+| **E-Mail**             | office@htl-leoben.at                      |
+| **Ansprechpartner/in** | Christina Stroissnigg                     |
+| **Telefon**            | +43 3842 44 888 0                         |
+| **Typ**                | Fachhochschule                            |
+
 
 #### Projekttermine
 
-Welche Termine sind Fixtermine und was sollte an diesen Terminen stattfinden ? Beispiele hierfür sind z.B: Präsentationen, Projektende, Zwischenabgaben, fest eingeplante Besprechungen / Reviews (die auch Projektrelevant sind) die auf keinen Fall vergessen werden dürfen
+| Datum       | Inhalt                                    |
+|------------:|:------------------------------------------|
+| 20.09.2025  | Projektvorbereitung & Projektstart        |
+| 30.09.2025  | Anforderungsanalyse & Konzept             |
+| 20.10.2025  | Prototyp & Grundstruktur                  |
+| 11.11.2025  | Zwischenpräsentation                      |
+| 30.11.2025  | Implementierung Gegner & Gamelogik        |
+| 20.12.2025  | Kampfsystem & UI                          |
+| 30.12.2025  | Erstversion DA                            |
+| 09.01.2026  | Feinschliff & Finale Tests                |
+| 15.02.2026  | Spiel Abgeschlossen                       |
+| 06.03.2026  | Endabgabe                                 |
 
 
-
-| Termin     | Inhalt                          |
-|-----------:|:--------------------------------|
-| 2020-12-24 | Weihnachten                     |
-| 20XX-12-24 | Projektstart                    |
-| 20XX-10-24 | Projektpräsentation             |
-| 20XX-10-24 | Erreichung Meilenstein I        |
-| 20XX-10-24 | Erste Zwischenpräsentation      |
-| 20XX-10-24 | Erreichung Meilenstein II       |
-| 20XX-10-24 | Erreichung Meilenstein III      |
-| 20XX-10-24 | Zweite Zwischenpräsentation     |
-| 20XX-10-24 | Abgabe Endversion an Betreuer   |
-| 20XX-10-24 | Abgabe Gebundene Version        |
-| 20XX-10-24 | ...                             |
-
-: Projektterminübersicht
+#Hier aufgehört
 
 
 #### Projektkosten
-
-Hier dokumentieren Sie welche Kosten fallen Für Ihr Projekt an und wer kommt für diese Kosten auf ?
 
 | Meilenstein  | Kostenart | Menge  | Preis   | Gesamtkosten | Deckung durch |
 |:-------------|:---------:|:------:|--------:|-------------:|---------------|
