@@ -38,7 +38,9 @@ Gleichzeitig schafft das Projekt ein sichtbares, funktionierendes Endprodukt, da
 #### Projektauftraggeber/in
 
 Diese Arbeit wurde von uns selbst vorgeschlagen und von der HTL Leoben angenommen.
-Herr Prof. Kondert betreut diese Arbeit.
+Herr Prof. Kondert betreut diese Arbeit. 
+
+Folgend sind die Kontaktdaten der HTL Leoben.
 
 | **Feld**               | **Information**                           |
 |------------------------|-------------------------------------------|
@@ -53,7 +55,9 @@ Herr Prof. Kondert betreut diese Arbeit.
 
 #### Projekttermine
 
-| Datum       | Inhalt                                    |
+Hier werden die wichtigsten Meilensteine dokumentiert.
+
+| Datum       | Meilenstein                               |
 |------------:|:------------------------------------------|
 | 20.09.2025  | Projektvorbereitung & Projektstart        |
 | 30.09.2025  | Anforderungsanalyse & Konzept             |
@@ -67,54 +71,52 @@ Herr Prof. Kondert betreut diese Arbeit.
 | 06.03.2026  | Endabgabe                                 |
 
 
-#Hier aufgehört
-
 
 #### Projektkosten
 
-| Meilenstein  | Kostenart | Menge  | Preis   | Gesamtkosten | Deckung durch |
+Hier ist eine Übersicht, wie viel unsere Diplomarbeit vorraussichtlich kosten wird.
+
+| Kostenname  | Kostenart | Menge  | Preis   | Gesamtkosten | Deckung durch |
 |:-------------|:---------:|:------:|--------:|-------------:|---------------|
-| Prototyp     | Personal  |  10.00 |   15.00 | 150.00      | Schüler       |
-| Prototyp     | Hardware  |  1     |  254.00 | 254.00      | Projektpartner|
+| ChatGPT Abo     | Software  |  12 |   23.00 | 276.00      | Schüler       |
+| 3D Assets | Software  |  1     |  30.93 | 30.93      | Schüler|
 | DA-Schreiben | Druck     |  3     |   26.00 |  53.00      | Schüler       |
 
- : Geplante Projektkosten
- 
-Am ende sollten Sie eine Projektkostensumme ermitteln und hier angeben damit man sagen kann
-__Das Projekt kostet in Summe so und so viel Euro__. 
+__Das Projekt kostet in Summe vorraussichtlich 359,93 Euro__. 
 
 
-Am Ende der Diplomarbeit fügen Sie hier noch eine Liste der tatsächlich angefallenen Kosten ein.
 
 #### Projektrisiken
 
-Hier geben Sie an welche Risiken auf Ohr Projekt zutreffen können, und auch wie wahrscheinlich es ist das dieses Risiko eintritt.
-Eine Übersicht über Risiken finden sie hier: https://projekte-leicht-gemacht.de/blog/pm-in-der-praxis/130-projektrisiken-beispiele/
+Hier ist unsere einschätzug von den möglichen Risiken sowie deren Wahrscheinlichkeiten.
 
-Hier ein Beispiel:
+| Risiko                                   | EW  | Auswirkungen                                                                 | Maßnahmen |
+|:----------------------------------------:|:---:|:-----------------------------------------------------------------------------|:----------|
+| Unterschätzung des technischen Aufwands   | 35% | Gameplay, Animationen oder Bosslogik werden später fertig als geplant       | Frühzeitige Prototypen, klare Meilensteine, regelmäßige Reviews |
+| Probleme bei 3D-Modellierung oder Rigging | 25% | Bossmodell kann nicht rechtzeitig animiert oder ins Spiel integriert werden | Vereinfachung des Modells, frühzeitige Tests in UE5, Backup-Modell |
+| Unreal Engine 5 Performance-/Kompatibilitätsprobleme | 20% | Ruckeln, Crashes, hohe Nacharbeit nötig                                      | Optimierung von Anfang an, Low-Poly konsequent einsetzen |
+| Zeitmanagement- oder Ressourcenprobleme im Team | 30% | Verzögerungen, ungleich verteilte Aufgaben, Qualität leidet                  | Wochenplanung, klare Verantwortlichkeiten, Transparenz im Team |
+| Fehler in der Game-Logik / KI            | 20% | Bosskampf wirkt unfertig oder ist nicht spielbar                             | Iteratives Testen, isolierte Logikmodule, Debugging-Sessions |
+| Verlust von Dateien / Versionskonflikte  | 10% | Arbeitsfortschritt geht verloren                                              | Regelmäßige Backups, Nutzung von GitHub, klare Branch-Struktur |
+| Ausfall wichtiger Software / Hardware    | 10% | Arbeiten stoppen, Deadlines verschieben sich                                 | Redundante Geräte, Cloud-Speicher, regelmäßige Updates |
+| Umfang zu groß gewählt                   | 40% | Features werden nicht fertig, Qualität leidet                                 | Feature-Cut früh definieren, Fokus auf Kernmechanik |
 
-| Risiko         | EW  | Auswirkungen     | Maßnahmen     |
-|:--------------:|:---:| :----------------|:--------------|
-| Überziehen der Kosten | 15% | Erhöhte Kosten für Schüler | Budgetierung |
-| Ungenaue Schätzungen | 30% | Ungenaue Schätzungen führen zu Problem bezüglich Terminen und Budget. | Schätzungen mit Fachkollegen absprechen|
-| Verzögerungen beim Aufbau von Hard- und Software | 10% | Prototyp wird nicht rechtzeitig zur Endpräsentation fertig | Früh genug anfangen |
-
-: Projektrisiken
 
 ### Projektorganisation
 
 #### Projektbeteiligte
-Hier wird definiert wer (welche Personen) an diesem Projekt beteiligt im Prinzip beteiligt ist.
 
-| Vorname     | Nachname     | Organisation | Kontaktinfos      |
-|:------------|:-------------|:-------------|:------------------|
-| Joltawan    | Barodscheff  | HTL Leoben   | jb@htl-leoben.at  |
-| Frank       | Borland      | Firma XY     | frank@borla.nd    |
-| ...         | ...          | ...          | ...               |
+Hier werden alle Beteiligten an der Diplomarbeit samt Kontaktdaten gelistet.
 
-: Projektbeteiligte
+| Vorname     | Nachname     | Organisation | Email      |Telefonnummer      |
+|:------------|:-------------|:-------------|:------------------|:------------------|
+| Christina    | Stroissnigg  | HTL Leoben   | office@htl-leoben.at  |03842448880|
+| Uwe    | Kondert  | HTL Leoben   | kuw@O365.htl-leoben.at  |067761128667|
+| Nevio       | Peißl      | HTL Leoben     | 211witb19@o365.htl-leoben.at    |068181749849|
+| Rhys         | Schmiedpeter          | HTL Leoben          | 211witb23@o365.htl-leoben.at               |06641401336|
+| Elias         | Grgic          | HTL Leoben          | 211witb06@o365.htl-leoben.at               |06644643590|
 
-Unter Kontaktinfos können neben der Emailadresse natürlich auch noch andere Informationen wie Telefonnunmmer, Postanschrift, usw. stehen. ... Im Prinzip alles was notwendig ist um die Person zu erreichen wenn es notwendig ist. 
+
 
 #### Projektrollen
 
@@ -122,12 +124,14 @@ Hier werden den Kontakten von oben konkrete Rollen zuewiesen.
 
 | Projektrolle           | Rollenbeschreibung     | Name              |
 |------------------------|------------------------|-------------------|
-| Projektleiter | Verantwortlicher für Einhaltung des Projektrahmens | Joltawan Barodscheff |
-| Auftraggeber | Auftraggeber der internen Diplomarbeit | Frank Borland |
-| Betreuer | Schulischer Betreuer | G. Hutter |
-| Betreuer | Schulischer Betreuer | A. Poetscher |
+| Projektleiter | Verantwortlicher für Einhaltung des Projektrahmens | Nevio Peißl |
+| Projektmitarbeiter | Ist an der DA beteiligt und muss seinen Teil erledigen | Rhys Schmiedpeter |
+| Projektmitarbeiter | Ist an der DA beteiligt und muss seinen Teil erledigen | Elias Grgic |
+| Auftraggeber | Auftraggeber der internen Diplomarbeit | Christina Stroissnigg |
+| Betreuer | Schulischer Betreuer | Uwe Kondert |
 
-: Projektrollen
+
+# Hier weitermachen
 
 Gerne können Sie hier auch noch zusätzlich eine Grafik oder ein Organisationsdiagramm einbauen.
 
