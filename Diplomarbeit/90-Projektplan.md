@@ -125,17 +125,18 @@ Hier werden den Kontakten von oben konkrete Rollen zuewiesen.
 | Projektrolle           | Rollenbeschreibung     | Name              |
 |------------------------|------------------------|-------------------|
 | Projektleiter | Verantwortlicher für Einhaltung des Projektrahmens | Nevio Peißl |
-| Projektmitarbeiter | Ist an der DA beteiligt und muss seinen Teil erledigen | Rhys Schmiedpeter |
-| Projektmitarbeiter | Ist an der DA beteiligt und muss seinen Teil erledigen | Elias Grgic |
+| Mitarbeiter | Ist an der DA beteiligt und muss seinen Teil erledigen | Rhys Schmiedpeter |
+| Mitarbeiter | Ist an der DA beteiligt und muss seinen Teil erledigen | Elias Grgic |
 | Auftraggeber | Auftraggeber der internen Diplomarbeit | Christina Stroissnigg |
 | Betreuer | Schulischer Betreuer | Uwe Kondert |
 
 
-# Hier weitermachen
-
-Gerne können Sie hier auch noch zusätzlich eine Grafik oder ein Organisationsdiagramm einbauen.
+In dieser Grafik werden die verschienen Rollen und deren Bezihungen dargestellt.
 
 ![Projektorganisationsdiagramm](img/projektorganisation.png){width=50%}
+
+
+# HIER WEITERMACHEN
 
 ### Vorgehen bei Änderungen
 
