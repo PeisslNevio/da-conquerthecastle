@@ -55,20 +55,17 @@ Folgend sind die Kontaktdaten der HTL Leoben.
 
 #### Projekttermine
 
-Hier werden die wichtigsten Meilensteine dokumentiert.
+Hier werden die wichtigsten Termine dokumentiert.
 
-| Datum       | Meilenstein                               |
-|------------:|:------------------------------------------|
-| 20.09.2025  | Projektvorbereitung & Projektstart        |
-| 30.09.2025  | Anforderungsanalyse & Konzept             |
-| 20.10.2025  | Prototyp & Grundstruktur                  |
-| 11.11.2025  | Zwischenpräsentation                      |
-| 30.11.2025  | Implementierung Gegner & Gamelogik        |
-| 20.12.2025  | Kampfsystem & UI                          |
-| 30.12.2025  | Erstversion DA                            |
-| 09.01.2026  | Feinschliff & Finale Tests                |
-| 15.02.2026  | Spiel Abgeschlossen                       |
-| 06.03.2026  | Endabgabe                                 |
+| Termin     | Inhalt                          |
+|-----------:|:--------------------------------|
+| 2025-10-09 | Einreichung DA in Portal                     |
+| 2025-11-12 | Ertse DA Zwischenpräsentation                    |
+| 2026-01-09 | Elek. Erstversion Abgabe an Betreuer        |
+| 2026-02-26 | Zweite DA Zwischenpräsentation      |
+| 2026-03-06 | DA Abgabe       |
+| 2026-04-07 | Biblv. DA Abgabe      |
+| 2026-04-13 | DA Präsentation     | 
 
 
 
