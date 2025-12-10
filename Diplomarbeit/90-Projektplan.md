@@ -136,17 +136,10 @@ In dieser Grafik werden die verschienen Rollen und deren Bezihungen dargestellt.
 ![Projektorganisationsdiagramm](img/projektorganisation.png){width=50%}
 
 
-# HIER WEITERMACHEN
-
 ### Vorgehen bei Änderungen
 
-Hier dokumentieren sie betreffend des Meilensteinplans oder der Anwendungsfälle: 
-
-* Wer wird informiert, 
-* wer muss zustimmen, 
-* wo werden die Änderungen wie vermerkt?
-
-Das dient in erster Linie dazu um ein einheitliches Vorgehen definiert zu haben.
+Wenn sich innerhalb unserer Diplomarbeit etwas ändert, oder jemand einen Änderungsvorschlag hat muss dies zuerst mit dem Diplomarbeitsteam besprochen werden und darauf mit dem Betreuer. 
+Betreuer und Teammitglieder werden darüber informiert und müssen auch dieser Änderung zustimmen. Alle Änderungen werden in der Projektdokumentation mit Datum festgehalten und ausführlich dokumentiert.
 
 ## Meilensteine
 
@@ -158,55 +151,78 @@ Generell kann ein Meilenstein ein Ereignis sein, an dem
 * etwas begonnen wird oder
 * über die weitere Vorgehensweise entschieden wird
 
-Meilensteine werden meist am Ende von Projektphasen definiert. Auch innerhalb von Phasen kann es zusätzliche Meilensteine geben.
+Hier werden alle Meilensteine noch einmal mit Beschreibung aufgezählt:
 
-Meilensteine verlaufen nie über eine Zeitdauer. Nie. Sie sind lediglich Entscheidungspunkte
+### 2025-09-20: Projektvorbereitung & Projektstart
 
-Hier ein Beispiel wie die Meilensteine im Fall einer aussehen können
+- Projekthandbuch begonnen und grundlegende Struktur festgelegt  
+- Rollenverteilung innerhalb des Teams definiert  
+- Projektumgebung eingerichtet (UE5, Blender, Git)  
+- Erste Abstimmung über Stil, Umfang und technische Rahmenbedingungen  
 
-### 2020-09-15: Projektmanagement abgeschlossen
+### 2025-09-30: Anforderungsanalyse & Konzept
 
-- Projekthandbuch ist fertig
-- Serverinfrastruktur ist hergestellt
-- Bestellungen sind abgessendet
+- Vollständige Beschreibung des Bossraums, Bosses und Kernspielmechaniken erstellt  
+- Technisches Konzept für Animationen, KI, Leveldesign und Cutscenes ausgearbeitet  
+- Risiken, Abgrenzungen und Projektziele definiert  
+- Erste grobe Skizzen und Designideen dokumentiert  
 
-### 2020-11-01: Genehmigung der DA
+### 2025-10-20: Prototyp & Grundstruktur
 
-- Einreichen des Antrags durch die Schüler/innen
-- DA Dokumentation wurde ausgefüllt und unterschrieben
+- Grundlegendes First-Person-Controller-System implementiert  
+- Leerer Bossraum als Blockout aufgebaut  
+- Pipeline für Import von 3D-Modellen getestet  
+- Basislogik (Input, Bewegung, Kamera) lauffähig  
 
-### 2020-11-26: Literaturrecherche abgeschlossen
+### 2025-11-11: Zwischenpräsentation
 
-- Literatur zum Thema XY gesucht und in bibtex vermerkt
-- Aktellen Stand der Forschung erhoben
-- Verschriftlichung des Literaturteils begonnen 
+- Vorstellung des bisherigen Entwicklungsstands  
+- Blockout-Bossraum, frühe Bossmodell-Version und erste Animationstests gezeigt  
+- Feedback vom Betreuer eingeholt und weitere Schritte angepasst  
 
-### 2020-12-17: Prototyp ist funktionell
+### 2025-11-30: Implementierung Gegner & Gamelogik
 
-- DB mit Tabelle für Benutzer.
-- DB Kommunikation zur Anwendung (inkl. Dokumentation)
-- Es gibt in der Anwendung einen /Admin/ Benutzer. Dieser Benutzer kann weitere Benutzer in den Rollen /Lehrende/ und bzw. oder /Studierende/ anlegen.
-      
-### 2021-01-10: Applikation fertiggestellt
+- Bossmodell vollständig fertiggestellt (inkl. Rigging und Animationen)  
+- Grundlegende KI-Logiken implementiert (Bewegung, Attack-Muster, Phasenlogik)  
+- Treffererkennung und Schadenssystem funktionsfähig  
+- Basis für spätere Kampfmechaniken vorbereitet  
 
-- Lehrende sind dazu in der Lage Tests anzulegen.
-- Studenten können einen ihnen zugewiesenen Test absolvieren.
+### 2025-12-20: Kampfsystem & UI
 
-### 2021-01-10: Review und Überarbeitung fertig
+- Spielerangriffe, Block-/Ausweichmechaniken und Kollisionslogik abgeschlossen  
+- UI für Lebensanzeige, Boss-Intro und Trefferfeedback implementiert  
+- Kameraeffekte und visuelle Rückmeldungen integriert  
+- Kampf in erster spielbarer Form funktionsfähig  
 
-- Der Quellcode ist gemeinsam mit den Projektpartnern reviewt
-- Quellcodedokumentation abgeschlossen (Javadoc)
-- Projekt baut auf eigenem Buildserver (Continous Integration)
+### 2025-12-30: Erstversion der Diplomarbeit
 
-### 2021-02-03: Diploarbeit fertig verschriftlicht 
+- Grobversion der schriftlichen DA erstellt  
+- Alle Kapitel strukturiert und mit Platzhaltern für technische Inhalte gefüllt  
+- Dokumententeile pro Teammitglied zusammengeführt  
 
-- Stilfehler sind behoben
-- DA Dokumentationsblatt ist unterschrieben, eingescannt und im Hauptdokument enthalten 
-- Praxisteil ist ebgeschlossen und verschriftlicht
-- Informationen sind im DA Portal eingegeben
-- Unterschriebene DA Betreuungsprotokolle sind in der DA enthalten
-- DA liegt dem Betreuer in ausgedruckter Form vor
-    
+### 2026-01-09: Feinschliff & Finale Tests
+
+- KI-Verbesserungen, Bugfixes und Feintuning der Kampfmechaniken  
+- Beleuchtung, Umgebungstexturen und Partikeleffekte finalisiert  
+- Cutscenes (Intro/Outro) vollständig integriert  
+- Alle Projektteile getestet und optimiert  
+
+### 2026-02-15: Spiel abgeschlossen
+
+- Finaler Bosskampf ist vollständig spielbar und stabil  
+- Projektstände in Git sauber dokumentiert  
+- Alle Deliverables abgeschlossen (Video, Screenshots, Präsentationsmaterial)  
+
+### 2026-03-06: Endabgabe
+
+- Diplomarbeit vollständig fertig, lektoriert und gebunden  
+- Digitale Version hochgeladen  
+- Evaluations- und Betreuungsprotokolle beigelegt  
+- Projekt offiziell abgeschlossen  
+
+
+
+#HIER WEITERMACHEN
 
 ## Anwendungsfälle
 
