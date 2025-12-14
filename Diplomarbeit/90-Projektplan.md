@@ -218,77 +218,208 @@ Hier werden alle Meilensteine noch einmal mit Beschreibung aufgezählt:
 - Projekt offiziell abgeschlossen  
 
 
-
-#HIER WEITERMACHEN
-
 ## Anwendungsfälle
 
-Hier beschreiben Sie die Anwendungsfälle (=UseCases) Ihrer Anwendung / Diplomarbeit. Dabei sollte die Beschreibung auf hohem Niveau (also ohne implementierungsspezifische Details) erfolgen und typischerweise so benannt sein, wie die Ziele aus Sicht der Akteure heißen: Mitglied anmelden, Geld abheben, Auto zurückgeben.
+In diesem Kapitel werden die Anwendungsfälle der Diplomarbeit beschrieben. Ein Anwendungsfall stellt ein Ziel dar, das ein Akteur mithilfe des Systems erreichen möchte. Die Beschreibung erfolgt auf fachlicher Ebene und unabhängig von der technischen Implementierung. Die Anwendungsfälle sind aus Sicht der Akteure formuliert und orientieren sich an typischen Benutzerzielen innerhalb des Spiels.
+
+Zur besseren Übersicht werden die wichtigsten Akteure und deren Interaktionen mit dem System in einer Anwendungsfallübersicht dargestellt.
+
+
+### Akteure
+
+- **Spieler**  
+  Person, die das Spiel startet und den Bosskampf aktiv spielt.
+
+- **System**  
+  Das Spiel selbst (Unreal Engine 5), welches Spielzustände verwaltet, Logiken ausführt und Cutscenes abspielt.
+
 
 Jeder Anwendungsfall wird im selben Muster beschrieben. In den folgenden Absätzen ist zuerst eine allgemeine Beschreibung eines solchen Anwendungsfalls zu finden und dann ein Beispiel dazu.
 
-Damit man auch versteht wer mit welchem Anwendungsfall agiert bietet es sich an hier eine Übersichtsgrafik zu erstellen:
+Damit es übersichtlicher ist gibt es hier noch eine Übersichtsgrafik:
 
 ![Übersicht Anwendungsfälle](img/anwendungsfalldiagramm.png){width=60%}
 
 \newpage
-### Anwendungsfallname
-Anwendungsfälle haben einen eindeutigen Namen aus dem man auf den Inhalt des Anwendungsfalls schließen kann. Wenn Sie agil arbeiten dann stellt ein Anwendungsfall eine UserStory dar welche im Backlog liegt und im Laufe des Projekts (in einem Sprint) abgearbeitet wird.
+### Spiel starten
 
-#### Kurzbeschreibung
-Hier erfolgt eine kurze Beschreibung, was im Anwendungsfall passiert. Kurz bedeutet, dass es zwei oder drei Zeilen sind, selten mehr.
-      
-#### Trigger
-Der fachliche Grund bzw. die Gründe dafür, dass dieser Anwendungsfall ausgeführt 
+**Kurzbeschreibung**  
+Der Spieler startet das Spiel und wird in die Spielwelt geladen.
 
-#### Vorbedingung
-Alle Bedingungen, die erfüllt sein müssen, damit dieser Anwendungsfall ausgeführt werden kann. Gibt es keine Vorbedingungen, so steht hier "keine".
-      
-#### Nachbedingung
-Der Zustand, der nach einem erfolgreichen Durchlauf des Anwendungsfalls erwartet wird.
+**Trigger**  
+Der Spieler startet das Spiel über die ausführbare Datei.
 
-#### Akteure
-Akteure sind beteiligte Personen oder Systeme außerhalb (!) des beschriebenen Systems. Z. B. Anwender, angemeldeter Anwender, Kunde, System, Abrechnungsprozess.
+**Vorbedingung**  
+Die ausführbare Datei befindet sich auf dem Rechner.
 
-#### Standardablauf
-Hier wird das typische Szenario dargestellt, das leicht zu verstehen oder der am häufigsten vorkommende Fall ist. An seinem Ende steht die Zielerreichung des Primärakteurs. Die Ablaufschritte werden nummeriert und meist in strukturierter Sprache beschrieben. Ablaufpläne können jedoch ebenfalls benutzt werden, wenn es angebracht erscheint. Mittels der UML können diese Ablaufschritte in Aktivitätsdiagrammen oder Anwendungsfall-orientierten Sequenzdiagrammen dargestellt werden.
+**Nachbedingung**  
+Der Spieler befindet sich im Spiel und die Startsequenz beginnt.
 
-#### Fehlersituationen
-Dies sind Szenarien, die sich außerhalb des Standardablaufs auch bei der (versuchten) Zielerreichung des Anwendungsfalls ereignen können. Sie werden meistens als konditionale Verzweigungen der normalen Ablaufschritte dargestellt. An ihrem Ende steht ein Misserfolg, die Zielerreichung des Primärakteurs oder eine Rückkehr zum Standardablauf.
+**Akteure**  
+Spieler
 
-#### Systemzustand im Fehlerfall
-Der Zustand, der nach einem erfolglosen Durchlauf des Anwendungsfalls erwartet wird.
+**Standardablauf**  
+1. Der Spieler startet das Spiel.  
+2. Das System lädt die benötigten Ressourcen.  
+3. Eine Intro-Cutscene wird abgespielt oder übersprungen.  
+4. Der Spieler wird in den Bossraum versetzt.
+
+**Fehlersituationen**  
+- Spiel kann nicht gestartet werden.
+
+**Systemzustand im Fehlerfall**  
+Das Spiel wird beendet, es findet kein Übergang in die Spielwelt statt.
 
 
-\newpage
-### Benutzer Anlegen
+/newpage
+### Bosskampf starten
 
-#### Kurzbeschreibung
-Der Benutzer "Admin" kann auf Anfrage einen neuen Benutzer als "Lehrende" und bzw. oder "Studierende" anlegen
+**Kurzbeschreibung**  
+Der Spieler beginnt den Bosskampf nach Betreten des Bossraums.
 
-#### Trigger
-Admin legt auf Anfrage eines Benutzers einen neuen Account an
+**Trigger**  
+Der Spieler erreicht den definierten Startpunkt im Bossraum.
 
-#### Vorbedingung
-Benutzer als "Admin" angemeldet
-      
-#### Nachbedingung
-Es existiert ein Eintrag in der DB Benutzer Tabelle für den neu erstellten Benutzer. (Dieser kann sich anschließend in der Anwendung anmelden)
+**Vorbedingung**  
+Das Spiel wurde erfolgreich gestartet.
 
-#### Akteure
-* Admin
+**Nachbedingung**  
+Der Bosskampf ist aktiv und der Boss greift den Spieler an.
 
-#### Fehlersituationen
-Admin bricht die Aktion ab
+**Akteure**  
+Spieler, System
 
-#### Systemzustand im Fehlerfall
-Benutzer wird nicht angelegt und wird verworfen
+**Standardablauf**  
+1. Der Spieler betritt den Bossraum.  
+2. Das System aktiviert den Boss.  
+3. Die Boss-Intro-Sequenz wird ausgelöst.  
+4. Der Bosskampf beginnt.
 
-#### Standardablauf:
+**Fehlersituationen**  
+- Boss kann nicht initialisiert werden.
 
-1. Admin drückt Button, um einen neuen Benutzer anzulegen
-2. Es öffnet sich ein Formular, indem die nötigen Benutzer-Informationen eingegeben werden (Name, Adresse, Telephonnummer, E-Mail, Geburtsdatum, Passwort-Hash, Rolle). Der neue Benutzer muss mindestens einer der Rollen "Lehrende" und "Studierende" angehören
+**Systemzustand im Fehlerfall**  
+Der Kampf startet nicht, der Spieler bleibt im Bossraum ohne aktive Gegner.
 
-#### Alternativabläufe:
 
-* Admin drückt den Button, um die Aktion abzubrechen 
+/newpage
+### Gegner angreifen
+
+**Kurzbeschreibung**  
+Der Spieler greift den Boss mit einer Waffe an.
+
+**Trigger**  
+Der Spieler löst einen Angriff aus.
+
+**Vorbedingung**  
+Der Bosskampf ist aktiv.
+
+**Nachbedingung**  
+Der Boss erleidet Schaden oder blockiert den Angriff.
+
+**Akteure**  
+Spieler, System
+
+**Standardablauf**  
+1. Der Spieler führt einen Angriff aus.  
+2. Das System prüft die Treffererkennung.  
+3. Schaden wird berechnet und angewendet.  
+
+**Fehlersituationen**  
+- Angriff verfehlt den Boss.
+
+**Systemzustand im Fehlerfall**  
+Der Boss erleidet keinen Schaden, der Kampf läuft weiter.
+
+
+/newpage
+### Spieler wird angegriffen
+
+**Kurzbeschreibung**  
+Der Boss greift den Spieler an.
+
+**Trigger**  
+Der Boss führt eine Angriffshandlung aus.
+
+**Vorbedingung**  
+Der Bosskampf ist aktiv.
+
+**Nachbedingung**  
+Der Spieler verliert Lebenspunkte oder weicht erfolgreich aus.
+
+**Akteure**  
+Spieler, System
+
+**Standardablauf**  
+1. Der Boss startet eine Attacke.  
+2. Das System prüft Treffer oder Ausweichmanöver.  
+3. Schaden wird gegebenenfalls angewendet.
+
+**Fehlersituationen**  
+- Spieler befindet sich außerhalb der Reichweite.
+
+**Systemzustand im Fehlerfall**  
+Der Spieler erleidet keinen Schaden.
+
+
+/newpage
+### Boss besiegen
+
+**Kurzbeschreibung**  
+Der Spieler besiegt den Boss durch Reduzierung dessen Lebenspunkte auf null.
+
+**Trigger**  
+Die Lebenspunkte des Bosses erreichen null.
+
+**Vorbedingung**  
+Der Bosskampf ist aktiv.
+
+**Nachbedingung**  
+Der Bosskampf ist beendet und das Spiel endet.
+
+**Akteure**  
+Spieler, System
+
+**Standardablauf**  
+1. Der Spieler fügt dem Boss den finalen Schaden zu.  
+2. Das System beendet den Kampf.  
+3. Eine Abschluss-Cutscene wird abgespielt.  
+
+**Fehlersituationen**  
+Keine.
+
+**Systemzustand im Fehlerfall**  
+Nicht zutreffend.
+
+
+/newpage
+### Spieler verliert den Kampf
+
+**Kurzbeschreibung**  
+Der Spieler verliert den Bosskampf durch Verlust aller Lebenspunkte.
+
+**Trigger**  
+Die Lebenspunkte des Spielers erreichen null.
+
+**Vorbedingung**  
+Der Bosskampf ist aktiv.
+
+**Nachbedingung**  
+Der Kampf endet und das Spiel wird beendet oder neu gestartet.
+
+**Akteure**  
+Spieler, System
+
+**Standardablauf**  
+1. Der Spieler erleidet tödlichen Schaden.  
+2. Das System beendet den Bosskampf.  
+3. Eine Niederlagen-Sequenz wird angezeigt.
+
+**Fehlersituationen**  
+Keine.
+
+**Systemzustand im Fehlerfall**  
+Nicht zutreffend.
+
+
+
