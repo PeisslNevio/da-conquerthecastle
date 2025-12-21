@@ -2,11 +2,7 @@
 
 ## Auftraggeber
 
-Auftraggeber dieser Diplomarbeit ist die **HTL Leoben**. Die Arbeit entsteht im Rahmen der Reife- und Diplomprüfung und wurde in Abstimmung mit den Betreuern (Kondert Uwe, Hutter Günter) genehmigt. Ziel der Aufgabenstellung ist es, ein praxisnahes Projekt umzusetzen, das die teschnische und organisatorischen Kompetenzen der Schüler wiederspiegelt.
-
-Mit dieser Diplomarbeit verfolgt der Auftraggeber das Ziel, die Fähigkeit der teilhabenden Schüler zur selbstständigen Planung, Umsetzung und Dokumentation eines komplexen, praxisorientierten Projekts zu fördern. Durch die Entwicklung eines spielbaren Bosskampfs mit der Unreal Engine 5 werden moderne Technologien, strukturierte Arbeitsweisen sowie Teamarbeit gefördert und überprüfbar gemacht.
-
-Von der Durchführung dieser Arbeit verspricht sich der Auftraggeber einen klaren Nachweis der erlernten fachlichen Kompetenzen in den Bereichen Softwareentwicklung, 3D-Grafik, Projektmanagement und Dokumentation. Das Endprodukt dient als anschauliches Beispiel für die praxisorientierte Ausbildung an der HTL Leoben und kann für Präsentationen oder Demonstrationszwecke genutzt werden.
+Die vorligende Diplomarbeit wurde mit Zusammenarbeit mit der HTL Leoben durchgeführt. Das Thema der Arbeit wurde von den Autoren eigenständig ausgewählt. Die Arbeit stellt somit eine unabhängige Leistung dar, die in Kooperation mit der HTL Leoben entstanden ist.
 
 
 ## Ausgangssituation
