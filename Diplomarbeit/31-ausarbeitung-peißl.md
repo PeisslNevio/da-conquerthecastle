@@ -1,9 +1,12 @@
 # Teilaufgabe Schüler Peißl
 \textauthor{Nevio Peißl}
 
-Dieses Kapitel wird oft auch als _Literaturrecherche_ bezeichnet. Da gehört alles rein was der __normale__ Leser braucht um den praktischen Ansatz zu verstehen. Das bedeutet Sie brauchen einen roten Faden !
+Dieser Teil der Diplomarbeit beschäftigt sich mit der erstellung des Bossraummodelles und UI sowie der Cutscenes, Hier werden die Designentscheidungen sowie dessen Umsetzung wiedergegeben.
 
-Das sind z.B: allgemeine Definitionen, Beschreibung von fachspezifischen Vorgehensweisen, Frameworks, Theorie zu verwendeten Algorithmen, besondere Umstände, ...
+## Literaturrecherche
+
+In diesem Teil werden die theoretischen Aspekte für die Erstellung eines 3D Modelles, UI sowie Cutscenes im generellen behandelt. 
+
 
 ## Praktische Arbeit
 
