@@ -4,7 +4,7 @@ Die vorliegende Diplomarbeit verfolgt das Ziel, ein spielbares First-Person-Boss
 
 ## Aktueller Stand des Projekts
 
-Zum Beginn der Arbeit existiert weder ein funktionierendes Spiel noch eine technische Basis. Weder Charaktermodelle noch Umgebungselemente, Animationen oder Gameplay-Mechaniken liegen vor. Das Projekt startet somit vollständig von null und erfordert eine eigenständige Planung, Gestaltung und Umsetzung aller Komponenten.
+wenn fertig is
 
 ## Motivation
 
