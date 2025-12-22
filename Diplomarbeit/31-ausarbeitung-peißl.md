@@ -1,14 +1,64 @@
 # Teilaufgabe Schüler Peißl
 \textauthor{Nevio Peißl}
 
-Dieser Teil der Diplomarbeit beschäftigt sich mit der erstellung des Bossraummodelles und UI sowie der Cutscenes, Hier werden die Designentscheidungen sowie dessen Umsetzung wiedergegeben.
+Dieser Teil der Diplomarbeit beschäftigt sich mit der erstellung des Bossraummodelles und UI sowie der Cutscenes. Hier werden die Designentscheidungen sowie dessen Umsetzung wiedergegeben.
 
-## Literaturrecherche
+## Literaturrecherche (30-40%)
 
 In diesem Teil werden die theoretischen Aspekte für die Erstellung eines 3D Modelles, UI sowie Cutscenes im generellen behandelt. 
 
+### Blender
+#### Blender basics (was ist blender)
+#### Modes (Object, edit)
+#### Was ist ein objekt
+#### Wie kann man ein onjekt anschauen
+#### Wie kann man ein objekt bearbeiten (shortcuts)
+#### Wie kann man ein Objekt texturieren
+#### Objekt exportieren
+
+### Unreal Engine
+#### Warum Unreal Engine
+#### Objekt importieren
+#### Objekt bewegen
+#### Texturen zuweißen
+
+### UI
+#### Was macht eine gute UI aus
+#### Wie erstellt man eine UI
+#### Wo ist die Schnittstelle zum Backend
+
+### Cutscenes
+#### Warum brauchen wir Cutscenes
+#### Wie erstellt man Cutscenes
+#### Wie lässt man Cutscenes automatisch abspielen
+
+
+
+
 
 ## Praktische Arbeit
+
+### Blender
+
+#### Bossraum
+##### Erstellung
+##### Designentscheidungen
+##### Moddelieren
+##### Texturieren
+##### Exportieren
+
+#### Items
+##### Welche Items werden benötig und warum
+##### Moddelieren
+##### Texturieren
+##### Exportieren
+
+### Unreal Engine
+#### Modelle Importieren & Einbauen
+#### Texturen hinzufügen
+
+halt alles machen idk
+
 
 > Hier beschreiben Sie ihren praktischen Teil. Es geht darum seine Implementierung / Versuche so darzustellen dass anhand dieser dre Leser erkennen kann was sie wie gemacht haben.
 
@@ -55,12 +105,7 @@ I sincerely wish for you every possible joy life could bring. Everybody needs a 
 If you don't like it - change it. It's your world. Isn't it great to do something you can't fail at? Play with the angles. See how easy it is to create a little tree right in your world. This piece of canvas is your world. This painting comes right out of your heart.
 
 
-# Blender
-## Bossraum
-## Items
-# Unreal Engine
-## UI
-## Cutscenes
+
 
 
 
