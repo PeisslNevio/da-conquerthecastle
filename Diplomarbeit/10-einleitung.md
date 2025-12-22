@@ -1,7 +1,8 @@
 # Einleitung
 
+In dieser Diplomarbeit wird ein Videospiel entwickelt, wo der Spieler die Aufgabe hat direkt den Boss zu besiegen. 
 
-Die Entwicklung moderner Videospiele erfordert eine Kombination aus technischer Kompetenz, gestalterischem Verständnis und effizienter Teamarbeit. Besonders Projekte, die eine vollständige Gameplay-Umgebung, eigene Modelle und filmische Sequenzen umfassen, stellen Schülerteams vor erhebliche Herausforderungen. Genau hier setzt unsere Diplomarbeit an: Ziel ist die Erstellung eines eigenständigen First-Person-Bosskampfes auf Basis der Unreal Engine 5, umgesetzt im Low-Poly-Stil und ergänzt durch kurze Cutscenes.
+Die Entwicklung moderner Videospiele erfordert eine Kombination aus technischer Kompetenz, gestalterischem Verständnis und effizienter Teamarbeit. Besonders Projekte, die eine vollständige Gameplay-Umgebung, eigene Modelle und filmische Sequenzen umfassen, stellen Schülerteams vor erhebliche Herausforderungen. Genau hier setzt diese Diplomarbeit an: Ziel ist die Erstellung eines eigenständigen First-Person-Bosskampfes auf Basis der Unreal Engine 5, umgesetzt im Low-Poly-Stil und ergänzt durch kurze Cutscenes.
 
 Der Kern des Problems liegt in der Vielzahl voneinander abhängiger Aufgabenbereiche: Modellierung der Charaktere und Umgebung, technische Umsetzung in einer professionellen Spiele-Engine, Animation, Beleuchtung, Interaktionslogik sowie Optimierung für eine flüssige Spielerfahrung. Zusätzlich müssen konsistente Designrichtlinien, realistische Workflows und saubere Code-Strukturen eingehalten werden, damit das Projekt trotz begrenzter Zeit und Ressourcen umsetzbar bleibt.
 
