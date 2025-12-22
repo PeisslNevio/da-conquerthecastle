@@ -4,10 +4,6 @@
 
 Das Ziel dieser Diplomarbeit ist die Entwicklung eines First-Person-Videospiels mit der Unreal Engine 5 unter Verwendung von Blender. Dabei soll gezeigt werden, dass auch ein technisch anspruchsvolles Spiel innerhalb kurzer Zeit umsetzbar ist und als praxisnahes Vorbild für nachfolgende Schüler dienen kann.
 
-## Aktueller Stand des Projekts
-
-wenn fertig is
-
 ## Motivation
 
 Die Motivation hinter dieser Arbeit liegt im Interesse an moderner Spieleentwicklung sowie an der praxisnahen Verbindung von Programmierung, 3D-Modellierung und Gamedesign. Ziel ist es, theoretisches Wissen praktisch anzuwenden und zu zeigen, dass komplexe Entwicklungsprozesse auch im schulischen Umfeld realistisch umsetzbar sind.
