@@ -7,10 +7,6 @@ Die vorligende Diplomarbeit wurde mit Zusammenarbeit mit der HTL Leoben durchgef
 
 ## Ausgangssituation
 
-Eine allgemeine Aufgabenstellung 
-
-* Was ist die derzeitige Situation ? 
-* Wie wird derzeit gearbeitet ?
-
+Derzeit wird Programmierung im Unterricht häufig stark theoretisch vermittelt, wodurch der praktische Bezug für viele Schüler nur eingeschränkt nachvollziehbar ist. Kreative und interaktive Anwendungen wie Spieleentwicklung kommen dabei selten zum Einsatz. Diese Arbeit setzt genau hier an, indem sie zeigt, wie moderne Game-Engines und 3D-Tools praxisnah eingesetzt werden können, um komplexe Inhalte anschaulich und verständlich zu vermitteln.
 
 
