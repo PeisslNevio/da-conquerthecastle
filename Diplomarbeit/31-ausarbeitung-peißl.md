@@ -5,13 +5,16 @@ Dieser Teil der Diplomarbeit beschäftigt sich mit der erstellung des Bossraummo
 
 ## Literaturrecherche
 
-In diesem Teil werden die theoretischen Aspekte für die Erstellung eines 3D Modelles, UI sowie Cutscenes im generellen behandelt. 
+In diesem Teil werden die theoretischen Aspekte für die Erstellung eines 3D Modelles, UI sowie Cutscenes, welche für "ConquerTheCastle" benötigt werden, behandelt. 
 
 ### Blender
 
-Blender ist ein gratis, open source 3D Programm, welches alle wichtigen Schritte der 3D Moddelierung durchfühgren kann: modeling, rigging, animation, simulation, rendering und compositing. Blender hat einige build in tools,
+Blender ist ein Open-Source-3D-Programm, das von der Blender Foundation entwickelt wird und kostenlos zugänglich ist. Es deckt alle wesentlichen Schritte der 3D-Modellierung ab. Dazu zählen Modeling, Animation, Simulation, Rendering und standartisiertes Exportieren. Dadurch ist es möglich, den gesamten 3D-Workflows innerhalb von Blender durchzuführen, ohne die Verwendung externer Software.
 
 #### Warum Blender?
+
+
+
 #### Koordinatensystem
 #### Primitive Objekte (vertecies)
 #### Modifiers
