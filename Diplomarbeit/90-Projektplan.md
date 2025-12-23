@@ -77,7 +77,7 @@ Hier ist eine Übersicht, wie viel unsere Diplomarbeit vorraussichtlich kosten w
 |:-------------|:---------:|:------:|--------:|-------------:|---------------|
 | ChatGPT Abo     | Software  |  12 |   23.00 | 276.00      | Schüler       |
 | 3D Assets | Software  |  1     |  30.93 | 30.93      | Schüler|
-| DA-Schreiben | Druck     |  3     |   26.00 |  53.00      | Schüler       |
+| DA-Schreiben | Druck     |  3     |   26.00 |  78.00      | Schüler       |
 
 __Das Projekt kostet in Summe vorraussichtlich 359,93 Euro__. 
 
