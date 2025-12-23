@@ -3,12 +3,14 @@
 
 Dieser Teil der Diplomarbeit beschäftigt sich mit der erstellung des Bossraummodelles und UI sowie der Cutscenes. Hier werden die Designentscheidungen sowie dessen Umsetzung wiedergegeben.
 
-## Literaturrecherche (30-40%)
+## Literaturrecherche
 
 In diesem Teil werden die theoretischen Aspekte für die Erstellung eines 3D Modelles, UI sowie Cutscenes im generellen behandelt. 
 
 ### Blender
-#### Was ist Blender?
+
+Blender ist ein gratis, open source 3D Programm, welches alle wichtigen Schritte der 3D Moddelierung durchfühgren kann: modeling, rigging, animation, simulation, rendering und compositing. Blender hat einige build in tools,
+
 #### Warum Blender?
 #### Koordinatensystem
 #### Primitive Objekte (vertecies)
