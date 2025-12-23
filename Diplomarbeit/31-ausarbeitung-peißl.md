@@ -8,13 +8,15 @@ Dieser Teil der Diplomarbeit beschäftigt sich mit der erstellung des Bossraummo
 In diesem Teil werden die theoretischen Aspekte für die Erstellung eines 3D Modelles, UI sowie Cutscenes im generellen behandelt. 
 
 ### Blender
-#### Blender basics (was ist blender)
+#### Was ist Blender?
+#### Warum Blender?
+#### Koordinatensystem
+#### Primitive Objekte (vertecies)
+#### Modifiers
 #### Modes (Object, edit)
-#### Was ist ein objekt
-#### Wie kann man ein onjekt anschauen
-#### Wie kann man ein objekt bearbeiten (shortcuts)
-#### Wie kann man ein Objekt texturieren
-#### Objekt exportieren
+#### UV-Mapping
+#### Low-Poly-Moddelierung
+#### Exportformate
 
 ### Unreal Engine
 #### Warum Unreal Engine
