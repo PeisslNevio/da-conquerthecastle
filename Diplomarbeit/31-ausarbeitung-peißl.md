@@ -26,17 +26,19 @@ Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem.
 
 Abbildung 1: Blender Koordinatensystem
 
-Der 3D Cursor, welcher in der Mitte von Abb. 1 zusehen ist, ist der Ort, wo neue Objekte hinzugefügt werden. Dieser Cursor kann frei im 3D Raum verschoben werden. 
+Der 3D Cursor, welcher in der Mitte von Abb. 1 zusehen ist, ist der Ort, wo neue Objekte hinzugefügt werden. Dieser Cursor ist standartmäßig am Nullpunkt und kann frei mit `shift + right mouse button` im 3D Raum verschoben werden. Wenn er verschoben wird, ändert sich die Position, an der in Zukunft Objekte eingefügt werden. Der Cursor kann mit `shift + c` wieder zum Nullpunkt gebracht werden.
 
-#### Primitive Objekte (vertecies)
+#### Primitive Objekte
 
-In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `Shift + a` eingefügt werden können. Darunter zählen unter anderem der Würfel, der Zylinder oder der Ball. (Siehe Abb. 2) Diese Objekte, auch Meshes genannt, haben typische Anwendungsfälle. Wenn ein Gebäude erstellt werden soll, ist es sinnvoll einen Würfel zu benutzen, wenn eine Säule benötigt wird, kommt der Zylinder zum einsatz. 
+In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `Shift + a` eingefügt werden können. Darunter zählen unter anderem der Würfel, der Zylinder oder der Ball. (Siehe Abb. 2) Diese Objekte haben typische Anwendungsfälle. Wenn ein Gebäude erstellt werden soll, ist es sinnvoll einen Würfel zu benutzen, wenn eine Säule benötigt wird, kommt der Zylinder zum einsatz. 
 
 Wenn ein Objekt ausgewählt ist, wird es orange Umrandet. Dieses Objekt kann nun bearbeitet werden und der Ursprung des Objektes wird sichtbar. (Siehe Abb. 2, Zylinder)
 
 ![Objekte](img/objekte.png){width=60%}
 
 Abbildung 2: Basis Objekte
+
+Objekte bestehen aus Faces, Edges und Vertecies. Vertecies sind die kleinste Form eines darstellbaren Objektes in Blender. Ein Vertex ist genau ein Punkt. Wenn zwei Punkte verbunden werden, entsteht eine Kante (Edge). Wenn mehere Edges verbunden werden, erhällt man eine Fläche (Face). Verbinden sich mehere Flächen entsteht ein Mesh, ein Objekt.
 
 Diese Onjekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objete können verschoben (`m`), rotiert (`r`) und skaliert (`s`) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (x,y,z) ausgewählt wird, verschiebt sich das Objekt nur auf dieser Achse. Wenn ein Objekt genau einen Meter nach X positiv verschoben werden sollte, lautet der Befehl `g + x + 1`
 
