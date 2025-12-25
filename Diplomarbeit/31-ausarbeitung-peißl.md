@@ -19,18 +19,20 @@ Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leis
 
 #### Koordinatensystem
 
-Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen sind klar zu sehen und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1)
+Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen strecken sich jeweils vom positiven berreich (zb. x positiv) bis hin um negativen Berreich (zb. x neagtiv) und treffen sich am Nullpunkt. Die Achsen sind gut erkennbar und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1)
 
 
 ![Koordinatensystem](img/koordinatensystem.png){width=60%}
 
 Abbildung 1: Blender Koordinatensystem
 
+Der 3D Cursor, welcher in der Mitte von Abb. 1 zusehen ist, ist der Ort, wo neue Objekte hinzugefügt werden. Dieser Cursor kann frei im 3D Raum verschoben werden. 
+
 #### Primitive Objekte (vertecies)
 
-In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `Shift + a` eingefügt werden können. Darunter zählen unter anderem der Würfel, der Zilinder oder der Ball. (Siehe Abb. 2) Diese Objekte, auch Meshes genannt, haben typische Anwendungsfälle. Wenn ein Gebäude erstellt werden soll, ist es sinnvoll einen Würfel zu benutzen, wenn eine Säule benötigt wird, kommt der Zilinder zum einsatz. 
+In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `Shift + a` eingefügt werden können. Darunter zählen unter anderem der Würfel, der Zylinder oder der Ball. (Siehe Abb. 2) Diese Objekte, auch Meshes genannt, haben typische Anwendungsfälle. Wenn ein Gebäude erstellt werden soll, ist es sinnvoll einen Würfel zu benutzen, wenn eine Säule benötigt wird, kommt der Zylinder zum einsatz. 
 
-Jedes Objekt hat einen Ursprung (Origin), wie in Abb. 2 dargestellt.
+Wenn ein Objekt ausgewählt ist, wird es orange Umrandet. Dieses Objekt kann nun bearbeitet werden und der Ursprung des Objektes wird sichtbar. (Siehe Abb. 2, Zylinder)
 
 ![Objekte](img/objekte.png){width=60%}
 
@@ -99,16 +101,6 @@ Die Frage nach der Detailgenauigkeit lässt sich wie folgt beantworten: So, dass
 
 Bilder sind so scharf wie möglich darzustellen. Unnötige Dinge (welche für den Leser keine Information liefern) sind wegzuschneiden. Üblicherweise versucht das Framework Bilder möglichst gut und vollflächig in die Seite einzupassen - was aber speziell bei kleinen Bildern keinen Sinn macht. Daher kann man die Breite des Bildes `{width=xx%}` beeinflussen. Generell macht es keinen Sinn reisen Bilder mit dieser Funktion niederzuskalieren, sondern eher die Bilder schon vorher mittels eines Bildbearbeitungsprogrammes niederzurechnen. Damit wird das endgültige PDF nicht so groß.
 
-### Etwas Fliesstext
-
-We'll put some happy little leaves here and there. Poor old tree. Have fun with it. Isn't that fantastic? You can just push a little tree out of your brush like that.
-
-Making all those little fluffies that live in the clouds. If there's two big trees invariably sooner or later there's gonna be a little tree. There is no right or wrong - as long as it makes you happy and doesn't hurt anyone. Use absolutely no pressure. Just like an angel's wing. This is the time to get out all your flustrations, much better than kicking the dog around the house or taking it out on your spouse. I guess I'm a little weird. I like to talk to trees and animals. That's okay though; I have more fun than most people.
-
-\todo{Noch weitere Infos einholen}
-
-Do an almighty painting with us. Learn when to stop. Absolutely no pressure. You are just a whisper floating across a mountain. As trees get older they lose their chlorophyll. Clouds are free. They just float around the sky all day and have fun.
-
 Now a hierarchical tree from this repo:
 
 \dirtree{%
@@ -124,18 +116,6 @@ Now a hierarchical tree from this repo:
 .2 Makefile.
 .2 REAMDE.md.
 }
-
-A fan brush can be your best friend. Sometimes you learn more from your mistakes than you do from your masterpieces. You can bend rivers. But when I get home, the only thing I have power over is the garbage. Don't kill all your dark areas - you need them to show the light. There's nothing wrong with having a tree as a friend.
-
-God gave you this gift of imagination. Use it. Use your imagination, let it go. Put your feelings into it, your heart, it's your world. There's not a thing in the world wrong with washing your brush. Happy painting, God bless. All those little son of a guns.
-
-I sincerely wish for you every possible joy life could bring. Everybody needs a friend. That's crazy.
-
-If you don't like it - change it. It's your world. Isn't it great to do something you can't fail at? Play with the angles. See how easy it is to create a little tree right in your world. This piece of canvas is your world. This painting comes right out of your heart.
-
-
-
-
 
 
 ### So gehen Zitate
