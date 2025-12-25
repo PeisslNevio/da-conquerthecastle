@@ -19,16 +19,16 @@ Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leis
 
 #### Koordinatensystem
 
-Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. 
-![Koordinatensystem](img/){width=60%}
+Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen sind klar zu sehen und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1)
 
 
-Außerdem gibt es noch weitere Hilfslinien, welche es dem Nutzer erleichtern, sich größen vorzustellen. Die standart Einheit in Blender ist 1m. 
+![Koordinatensystem](img/koordinatensystem.png){width=60%}
+Abbildung 1: Blender Koordinatensystem
 
 #### Primitive Objekte (vertecies)
+#### Modes (Object, edit)
 #### Modifiers
 #### Plugins
-#### Modes (Object, edit)
 #### UV-Mapping
 #### Low-Poly-Moddelierung
 #### Exportformate
