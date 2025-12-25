@@ -15,7 +15,7 @@ Die Mission von Blender ist es, ein leistungsstarkes 3D-Programm für jeden frei
 
 #### Warum Blender?
 
-Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leistungsstark und eine große aktive Comunity hat. Es gibt viele frei zugängliche online Tutorials und Dokumentationen. Die Software bekommt regelmäig Updates und wird ständig erweitert.
+Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leistungsstark und eine große aktive Comunity hat. Es gibt viele frei zugängliche online Tutorials und Dokumentationen. Die Software bekommt regelmäig Updates und wird ständig erweitert. Blender funktioniert auf den meisten Betriebssystemen (Linux, Windows und MAC) und ist durch OpenGL dynamisch aufgebaut.
 
 #### Koordinatensystem
 
@@ -23,9 +23,21 @@ Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem.
 
 
 ![Koordinatensystem](img/koordinatensystem.png){width=60%}
+
 Abbildung 1: Blender Koordinatensystem
 
 #### Primitive Objekte (vertecies)
+
+In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `Shift + a` eingefügt werden können. Darunter zählen unter anderem der Würfel, der Zilinder oder der Ball. (Siehe Abb. 2) Diese Objekte, auch Meshes genannt, haben typische Anwendungsfälle. Wenn ein Gebäude erstellt werden soll, ist es sinnvoll einen Würfel zu benutzen, wenn eine Säule benötigt wird, kommt der Zilinder zum einsatz. 
+
+Jedes Objekt hat einen Ursprung (Origin), wie in Abb. 2 dargestellt.
+
+![Objekte](img/objekte.png){width=60%}
+
+Abbildung 2: Basis Objekte
+
+Diese Onjekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objete können verschoben (`m`), rotiert (`r`) und skaliert (`s`) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (x,y,z) ausgewählt wird, verschiebt sich das Objekt nur auf dieser Achse. Wenn ein Objekt genau einen Meter nach X positiv verschoben werden sollte, lautet der Befehl `g + x + 1`
+
 #### Modes (Object, edit)
 #### Modifiers
 #### Plugins
