@@ -19,7 +19,11 @@ Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leis
 
 #### Koordinatensystem
 
-Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Außerdem gibt es noch weitere Hilfslinien, welche es dem Nutzer erleichtern, sich größen vorzustellen. Die standart Einheit in Blender ist 1m. 
+Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. 
+![Koordinatensystem](img/){width=60%}
+
+
+Außerdem gibt es noch weitere Hilfslinien, welche es dem Nutzer erleichtern, sich größen vorzustellen. Die standart Einheit in Blender ist 1m. 
 
 #### Primitive Objekte (vertecies)
 #### Modifiers
