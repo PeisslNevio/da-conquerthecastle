@@ -19,7 +19,7 @@ Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leis
 
 #### Koordinatensystem
 
-Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen strecken sich jeweils vom positiven berreich (zb. x positiv) bis hin um negativen Berreich (zb. x neagtiv) und treffen sich am Nullpunkt. Die Achsen sind gut erkennbar und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1)
+Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen strecken sich jeweils vom positiven berreich (zb. x positiv) bis hin zum negativen Berreich (zb. x neagtiv) und treffen sich am Nullpunkt. Die Achsen sind gut erkennbar und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1)
 
 
 ![Koordinatensystem](img/koordinatensystem.png){width=60%}
@@ -42,9 +42,43 @@ Objekte bestehen aus Faces, Edges und Vertecies. Vertecies sind die kleinste For
 
 Diese Onjekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objete können verschoben (`m`), rotiert (`r`) und skaliert (`s`) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (x,y,z) ausgewählt wird, verschiebt sich das Objekt nur auf dieser Achse. Wenn ein Objekt genau einen Meter nach X positiv verschoben werden sollte, lautet der Befehl `g + x + 1`
 
-#### Modes (Object, edit)
+#### Modes
+
+#### Object Mode
+
+Object Mode ist der standart bearbeitungs Modus in Blender. Darin kann man Objekte verschieben, skalieren und rotieren. Der Object Mode wird für die Anordnung der Objekte benutzt.
+
+#### Edit Mode
+
+Im Edit Mode bearbeitet man einzelne Objekte. Um in den Edit Mode zu kommen muss man das Objekt auswählen und `tab` drücken. Ein weiteres `tab` und man gelangt wieder im Object Mode. Wichtige Edit Mode Tools sind Extrude `e`, Insert `i`, Loop Cut `ctrl + r`, Bevel `b` und merge vertecies `m`. Mit den Tasten `1`, `2`, `3` kann man zwischen "select Vertecies", "select Edges" und "select Faces" wechseln.
+
 #### Modifiers
+
+##### Mirror
+Der Mirror Modifier spiegelt ein Objekt entlang einer oder meheren Achsen. Er reduziert den Aufwand bei symetrischen Modellen erhablich. Wie man in Abb 3 sieht wird das rechte Objekt bearbeitet und das gespiegelte Objekt auf der linken Seite ändert sich mit. 
+
+![Koordinatensystem](img/mirror.png){width=60%}
+
+Abbildung 3: Mirror Modifier
+
+##### Solidify
+Solidify gibt Objekten eine Dicke. Diese Dicke kann man mit Variablen konfigurieren. Diese Variable kann man rechts im Modifier Tab unter "Thickness" einstellen.
+
+![Koordinatensystem](img/solidify.png){width=60%}
+
+Abbildung 2: Solidify Modifier
+
+
 #### Plugins
+
+##### Extra Mesh Objects
+
+Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Mit diesem Add-On ist es einfacher große und detailreiche Wände zu erstellen. (Siehe Abb. 3)
+
+![Wall Builder](img/wallbuilder.png){width=60%}
+
+
+
 #### UV-Mapping
 #### Low-Poly-Moddelierung
 #### Exportformate
