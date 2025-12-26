@@ -65,11 +65,11 @@ Solidify gibt Objekten eine Dicke. Diese Dicke kann man mit Variablen konfigurie
 
 
 
-#### Plugins
+#### Add-ons
 
 ##### Extra Mesh Objects
 
-Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Mit diesem Add-On ist es einfacher große und detailreiche Wände zu erstellen. (Siehe Abb. 5)
+Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Dieses Add-on ermöglicht es, komplexe Strukturen wie Wände dynamisch generieren zu lassen. (Siehe Abb. 5) [@blender_extra_mesh_objects]
 
 ![Wall Builder](img/wallbuilder.png){width=80%}
 
