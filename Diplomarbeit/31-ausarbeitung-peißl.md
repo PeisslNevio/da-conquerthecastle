@@ -85,7 +85,7 @@ Durch die geringe Anzahl von Polygonen bleibt der Rechenaufwand eher gering und 
 
 #### Exportformate
 
-Blender verfügt über das Exportformat FBX, welches zum Datenaustausch zwischen verschiedenen Programmen benötigt wird.. FBX ist weitverbreitet und wird von Unreal Engine sovie von vielen anderen unterstützt. Dieses Exportformat ist auf schnellen Export und Speichereffizient optimiert und hat viele nützliche Exportfunktionen. [@blender_maual]
+Blender verfügt über das Exportformat FBX, welches zum Datenaustausch zwischen verschiedenen Programmen benötigt wird.. FBX ist weitverbreitet und wird von Unreal Engine sovie von vielen anderen unterstützt. Dieses Exportformat ist auf schnellen Export und Speichereffizient optimiert und hat viele nützliche Exportfunktionen. [@blender_manual]
 
 ### Unreal Engine
 #### Warum Unreal Engine
