@@ -19,63 +19,59 @@ Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leis
 
 #### Koordinatensystem
 
-Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen strecken sich jeweils vom positiven berreich (zb. x positiv) bis hin zum negativen Berreich (zb. x neagtiv) und treffen sich am Nullpunkt. Die Achsen sind gut erkennbar und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1)
+Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen strecken sich jeweils vom positiven berreich (zb. x positiv) bis hin zum negativen Berreich (zb. x neagtiv) und treffen sich am Nullpunkt. Die Achsen sind gut erkennbar und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1) [@blender_manual]
 
 
-![Koordinatensystem](img/koordinatensystem.png){width=60%}
+![Koordinatensystem](img/koordinatensystem.png){width=80%}
 
-Abbildung 1: Blender Koordinatensystem
+Die Kamera des Benutzers kann mit `mouse wheel` rotiert und mit `shift + mouse wheel` bewegt werden. [@blender_manual]
 
-Der 3D Cursor, welcher in der Mitte von Abb. 1 zusehen ist, ist der Ort, wo neue Objekte hinzugefügt werden. Dieser Cursor ist standartmäßig am Nullpunkt und kann frei mit `shift + right mouse button` im 3D Raum verschoben werden. Wenn er verschoben wird, ändert sich die Position, an der in Zukunft Objekte eingefügt werden. Der Cursor kann mit `shift + c` wieder zum Nullpunkt gebracht werden.
+Der 3D Cursor, welcher in der Mitte von Abb. 1 zusehen ist, ist der Ort, wo neue Objekte hinzugefügt werden. Dieser Cursor ist standartmäßig am Nullpunkt und kann frei mit `shift + right mouse button` im 3D Raum verschoben werden. Wenn er verschoben wird, ändert sich die Position, an der in Zukunft Objekte eingefügt werden. Der Cursor kann mit `shift + c` wieder zum Nullpunkt gebracht werden. [@blender_manual]
 
 #### Primitive Objekte
 
-In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `Shift + a` eingefügt werden können. Darunter zählen unter anderem der Würfel, der Zylinder oder der Ball. (Siehe Abb. 2) Diese Objekte haben typische Anwendungsfälle. Wenn ein Gebäude erstellt werden soll, ist es sinnvoll einen Würfel zu benutzen, wenn eine Säule benötigt wird, kommt der Zylinder zum einsatz. 
+In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `Shift + a` eingefügt werden können. Darunter zählen unter anderem der Würfel, der Zylinder oder der Ball. (Siehe Abb. 2) Diese Objekte haben typische Anwendungsfälle. Wenn ein Gebäude erstellt werden soll, ist es sinnvoll einen Würfel zu benutzen, wenn eine Säule benötigt wird, kommt der Zylinder zum einsatz. [@blender_manual]
 
-Wenn ein Objekt ausgewählt ist, wird es orange Umrandet. Dieses Objekt kann nun bearbeitet werden und der Ursprung des Objektes wird sichtbar. (Siehe Abb. 2, Zylinder)
+Wenn ein Objekt ausgewählt ist, wird es orange Umrandet. Dieses Objekt kann nun bearbeitet werden und der Ursprung des Objektes wird sichtbar. (Siehe Abb. 2, Zylinder) [@blender_manual]
 
-![Objekte](img/objekte.png){width=60%}
+![Objekte](img/objekte.png){width=80%}
 
-Abbildung 2: Basis Objekte
 
-Objekte bestehen aus Faces, Edges und Vertecies. Vertecies sind die kleinste Form eines darstellbaren Objektes in Blender. Ein Vertex ist genau ein Punkt. Wenn zwei Punkte verbunden werden, entsteht eine Kante (Edge). Wenn mehere Edges verbunden werden, erhällt man eine Fläche (Face). Verbinden sich mehere Flächen entsteht ein Mesh, ein Objekt.
+Objekte bestehen aus Faces, Edges und Vertecies. Vertecies sind die kleinste Form eines darstellbaren Objektes in Blender. Ein Vertex ist genau ein Punkt. Wenn zwei Punkte verbunden werden, entsteht eine Kante (Edge). Wenn mehere Edges verbunden werden, erhällt man eine Fläche (Face). Verbinden sich mehere Flächen entsteht ein Mesh, ein Objekt. [@blender_manual]
 
-Diese Onjekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objete können verschoben (`m`), rotiert (`r`) und skaliert (`s`) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (x,y,z) ausgewählt wird, verschiebt sich das Objekt nur auf dieser Achse. Wenn ein Objekt genau einen Meter nach X positiv verschoben werden sollte, lautet der Befehl `g + x + 1`
+Diese Onjekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objete können verschoben (`m`), rotiert (`r`) und skaliert (`s`) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (x,y,z) ausgewählt wird, verschiebt sich das Objekt nur auf dieser Achse. Wenn ein Objekt genau einen Meter nach X positiv verschoben werden sollte, lautet der Befehl `g + x + 1`. [@blender_manual]
 
 #### Modes
 
 #### Object Mode
 
-Object Mode ist der standart bearbeitungs Modus in Blender. Darin kann man Objekte verschieben, skalieren und rotieren. Der Object Mode wird für die Anordnung der Objekte benutzt.
+Object Mode ist der Standartmodus in Blender. Darin kann man Objekte verschieben, skalieren und rotieren. Der Object Mode wird zum Anordnen von Objekten benutzt. [@blender_manual]
 
 #### Edit Mode
 
-Im Edit Mode bearbeitet man einzelne Objekte. Um in den Edit Mode zu kommen muss man das Objekt auswählen und `tab` drücken. Ein weiteres `tab` und man gelangt wieder im Object Mode. Wichtige Edit Mode Tools sind Extrude `e`, Insert `i`, Loop Cut `ctrl + r`, Bevel `b` und merge vertecies `m`. Mit den Tasten `1`, `2`, `3` kann man zwischen "select Vertecies", "select Edges" und "select Faces" wechseln.
+Im Edit Mode bearbeitet man einzelne Objekte. Um in den Edit Mode zu kommen muss man das Objekt auswählen und `tab` drücken. Ein weiteres `tab` und man gelangt wieder im Object Mode. Wichtige Edit Mode Tools sind Extrude `e`, Insert `i`, Loop Cut `ctrl + r`, Bevel `b` und merge vertecies `m`. Mit den Tasten `1`, `2`, `3` kann man zwischen "select Vertecies", "select Edges" und "select Faces" wechseln. [@blender_manual]
 
 #### Modifiers
 
 ##### Mirror
-Der Mirror Modifier spiegelt ein Objekt entlang einer oder meheren Achsen. Er reduziert den Aufwand bei symetrischen Modellen erhablich. Wie man in Abb 3 sieht wird das rechte Objekt bearbeitet und das gespiegelte Objekt auf der linken Seite ändert sich mit. 
+Der Mirror Modifier spiegelt ein Objekt entlang einer oder meheren Achsen. Das Objekt wird über seinen Ursprung gespiegelt. Ein Objekt zu spiegeln reduziert den Aufwand bei symetrischen Modellen erhablich und stellt sicher, dass beide seiten exakt gleich sind. In Abb. 5 sieht man zwei Objekte, eines davon ist gespiegelt. [@blender_manual]
 
-![Koordinatensystem](img/mirror.png){width=60%}
-
-Abbildung 3: Mirror Modifier
+![Koordinatensystem](img/mirror.png){width=80%}
 
 ##### Solidify
-Solidify gibt Objekten eine Dicke. Diese Dicke kann man mit Variablen konfigurieren. Diese Variable kann man rechts im Modifier Tab unter "Thickness" einstellen.
+Solidify gibt Objekten eine Dicke. Diese Dicke kann man mit Variablen konfigurieren. Diese Variable kann man rechts im Modifier Tab unter "Thickness" einstellen. Mithilfe von constraints kann man das Ergebnis noch weiter anpassen. [@blender_manual]
 
-![Koordinatensystem](img/solidify.png){width=60%}
+![Koordinatensystem](img/solidify.png){width=80%}
 
-Abbildung 2: Solidify Modifier
 
 
 #### Plugins
 
 ##### Extra Mesh Objects
 
-Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Mit diesem Add-On ist es einfacher große und detailreiche Wände zu erstellen. (Siehe Abb. 3)
+Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Mit diesem Add-On ist es einfacher große und detailreiche Wände zu erstellen. (Siehe Abb. 5)
 
-![Wall Builder](img/wallbuilder.png){width=60%}
+![Wall Builder](img/wallbuilder.png){width=80%}
 
 
 
