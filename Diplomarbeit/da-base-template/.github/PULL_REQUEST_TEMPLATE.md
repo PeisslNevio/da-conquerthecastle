@@ -24,7 +24,7 @@
 
 # Checklist
 
-- [ ] I have read and followed the contributing guidelines.
-- [ ] My changes follow the project’s coding style.
-- [ ] I have tested my changes in the corresponding environments.
-- [ ] I have updated documentations and examples as needed.
+- I have read and followed the contributing guidelines.
+- My changes follow the project’s coding style.
+- I have tested my changes in the corresponding environments.
+- I have updated documentations and examples as needed.

@@ -1,13 +1,16 @@
 ---
+
 da-titel: Erstellen einer Diplomarbeit mit LaTex
 
 da-jahr: 2025/26
 
 da-keywords: HTLLE, CTC, ConquerTheCastle
 
-#lang: english
+#lang: deutsch
 
-bibliography: [literatur.bib]
+bibliography: literatur.bib
+citeproc: true
+reference-section-title: Literaturverzeichnis
 
 da-author:
 - vorname: Nevio 
@@ -68,10 +71,10 @@ da-appendix:
 
 # Diplomarbeitsvereinbarungen müssen zum Schluss sein 
 
-- abschnitt: Diplomatbeitsvereinbarung Englisch
+- abschnitt: Diplomarbeitsvereinbarung Englisch
   pdf-file: HTL-DA-Doku-EN.pdf
 
-- abschnitt: Diplomatbeitsvereinbarung Deutsch
+- abschnitt: Diplomarbeitsvereinbarung Deutsch
   pdf-file: HTL-DA-Doku-DE.pdf
   
 ---
