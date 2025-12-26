@@ -53,6 +53,15 @@
 %
 % verhindert, dass Chapter / Section / Subsection / Subsubsection im Inhaltsverzeichnis so extrem eingerückt werden
 %
+
+\makeatletter
+\providecommand{\bprot@dottedtocline}[3]{%
+  \@dottedtocline{#1}{#2}{#3}%
+}
+\makeatother
+
+
+
 \makeatletter
 \renewcommand*\l@chapter{\bprot@dottedtocline{0}{0em}{2em}}
 \renewcommand*\l@section{\bprot@dottedtocline{1}{0em}{3em}}
