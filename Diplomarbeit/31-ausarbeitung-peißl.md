@@ -1,4 +1,4 @@
-# Teilaufgabe Schüler Peißl
+# Teilaufgabe Peißl
 \textauthor{Nevio Peißl}
 
 Dieser Teil der Diplomarbeit beschäftigt sich mit der erstellung des Bossraummodelles und UI sowie der Cutscenes. Hier werden die Designentscheidungen sowie dessen Umsetzung wiedergegeben.
