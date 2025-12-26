@@ -9,8 +9,6 @@ da-keywords: HTLLE, CTC, ConquerTheCastle
 #lang: deutsch
 
 bibliography: [literatur.bib]
-nocite: |
-  @*
 
 da-author:
 - vorname: Nevio 
