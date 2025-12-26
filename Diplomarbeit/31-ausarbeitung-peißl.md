@@ -81,9 +81,11 @@ UV_Mapping wird zum Texturieren von Objekten benötigt. Es ist der Prozess, wo e
 
 #### Low-Poly-Moddelierung
 
-
+Durch die geringe Anzahl von Polygonen bleibt der Rechenaufwand eher gering und die Framerate ist stabiler. Außerdem verkürzen sich Ladezeiten, besonders auf älteren Geräten. Low-Poly hällt den Style einheitlich und reduziert den modellierungs Aufwand drastisch. [@low_poli]
 
 #### Exportformate
+
+Blender verfügt über das Exportformat FBX, welches zum Datenaustausch zwischen verschiedenen Programmen benötigt wird.. FBX ist weitverbreitet und wird von Unreal Engine sovie von vielen anderen unterstützt. Dieses Exportformat ist auf schnellen Export und Speichereffizient optimiert und hat viele nützliche Exportfunktionen. [@blender_maual]
 
 ### Unreal Engine
 #### Warum Unreal Engine
