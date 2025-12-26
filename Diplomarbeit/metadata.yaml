@@ -8,7 +8,7 @@ da-keywords: HTLLE, CTC, ConquerTheCastle
 
 #lang: deutsch
 
-bibliography: literatur.bib
+bibliography: [literatur.bib]
 nocite: |
   @*
 
