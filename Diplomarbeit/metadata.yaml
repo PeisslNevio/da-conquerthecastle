@@ -19,9 +19,7 @@ da-author:
   thema: Frontend, Design
   ki-tools:
   - name: ChatGPT-5.2
-    zweck: Stilverbesserung sowie Rechtschreibkorrekturen
-  - name: ChatGPT-4o
-    zweck: Informationsbeschaffung
+    zweck: Informationsbeschaffung sowie Rechtschreibkorrekturen
 
 - vorname: Rhys 
   nachname: Schmiedpeter
