@@ -56,13 +56,8 @@ Im Edit Mode bearbeitet man die geometrie einzelner Objekte. Um in den Edit Mode
 ##### Mirror
 Der Mirror Modifier spiegelt ein Objekt entlang einer oder meheren Achsen. Das Objekt wird über seinen Ursprung gespiegelt. Ein Objekt zu spiegeln reduziert den Aufwand bei symetrischen Modellen erhablich und stellt sicher, dass beide seiten exakt gleich sind. In Abb. 5 sieht man zwei Objekte, eines davon ist gespiegelt. [@blender_manual]
 
-![Koordinatensystem](img/mirror.png){width=100%}[@blender]
-
 ##### Solidify
 Solidify gibt Objekten eine Dicke. Diese Dicke kann man mit Variablen konfigurieren. Diese Variable kann man rechts im Modifier Tab unter "Thickness" einstellen. Mithilfe von constraints kann man das Ergebnis noch weiter anpassen. [@blender_manual]
-
-![Koordinatensystem](img/solidify.png){width=100%}[@blender]
-
 
 
 #### Add-ons
