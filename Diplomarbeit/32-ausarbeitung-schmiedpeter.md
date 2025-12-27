@@ -1,5 +1,57 @@
 # Teilaufgabe Schüler Schmiedpeter
-\textauthor{Schueler 2}
+\textauthor{Schmiedpeter}
+
+## 1. Theoretisch
+
+### 1.1 Blender
+#### &nbsp; 1.1.1 Einleitung in Blender
+##### &nbsp; &nbsp; &nbsp;1.1.1.1 Möglichkeiten
+##### &nbsp; &nbsp; &nbsp;1.1.1.2 Basics der Modelierung
+#### &nbsp;1.1.2 Konkurrenz
+##### &nbsp; &nbsp; &nbsp;1.1.2.1 Eigenschaften
+##### &nbsp; &nbsp; &nbsp;1.1.2.2 Vor- und Nachteile
+#### &nbsp;1.1.3 Nützliche Befehle
+
+### 1.2 Erweiterte Funktionen in Blender
+#### &nbsp; 1.2.1 Material
+#### &nbsp; 1.2.2 Module (Modifyers)
+##### &nbsp; &nbsp; &nbsp;1.2.2.1 Boolean
+##### &nbsp; &nbsp; &nbsp;1.2.2.2 Mirror
+##### &nbsp; &nbsp; &nbsp;1.2.2.3 Physiks
+#### &nbsp; 1.2.3 Programmieren 
+##### &nbsp; &nbsp; &nbsp;1.2.3.1 Nutzen
+##### &nbsp; &nbsp; &nbsp;1.2.3.2 Syntax
+
+### 1.3 Animationen
+#### &nbsp; 1.3.1 Basics 
+#### &nbsp; 1.3.2 Wichtig zu beachten
+#### &nbsp;1.3.4 Einfügen in Unreal
+
+## 2. Praktisch
+### 2.1 Design
+### 2.2 Umsetzung mit Blender
+#### &nbsp;2.2.1 Modelierung
+#####  &nbsp;&nbsp;2.2.1.1 Entwickelte Technicken
+##### &nbsp;&nbsp;2.2.1.2 Angehensweiße
+##### &nbsp;&nbsp;2.2.1.3 Probleme und Lösungen
+#### &nbsp;2.2.2 Erweiterte Funktionen
+##### &nbsp;&nbsp;2.2.2.1 Farbenordnung
+##### &nbsp;&nbsp;2.2.2.2 Modul verwendung
+##### &nbsp;&nbsp;2.2.2.3 Erweiterung für Animationen
+#### &nbsp;2.2.3 Animationen
+##### &nbsp;&nbsp;2.2.3.1 Umsetzung von Animationen von Unreal
+##### &nbsp;&nbsp;2.2.3.2 eigene Animation
+###### &nbsp;&nbsp;&nbsp;2.2.3.2.1 T-Pose
+###### &nbsp;&nbsp;&nbsp;2.2.3.2.2 Gehen
+###### &nbsp;&nbsp;&nbsp;2.2.3.2.3 Laufen
+###### &nbsp;&nbsp;&nbsp;2.2.3.2.4 ...
+###### &nbsp;&nbsp;&nbsp;2.2.3.2.5 Schwierigkeiten und Problem
+
+## 3. Litaraturverzeichnis
+für Konkurrenz https://www.youtube.com/watch?v=qvQ8PEhQ-M0
+
+
+-------------------
 
 ## Theorie
 
