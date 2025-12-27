@@ -22,7 +22,7 @@ Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leis
 Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen strecken sich jeweils vom positiven berreich (zb. x positiv) bis hin zum negativen Berreich (zb. x neagtiv) und treffen sich am Nullpunkt. Die Achsen sind gut erkennbar und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1) [@blender_manual]
 
 
-![Koordinatensystem](img/peissl/koordinatensystem.png)[@blender]{width=90%}
+![Koordinatensystem [@blender]](img/peissl/koordinatensystem.png){width=90%}
 
 Die Kamera des Benutzers kann mit `mouse wheel` rotiert und mit `shift + mouse wheel` bewegt werden. [@blender_manual]
 
