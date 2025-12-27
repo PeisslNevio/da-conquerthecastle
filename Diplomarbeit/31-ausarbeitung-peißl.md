@@ -77,7 +77,9 @@ Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Buil
 
 #### UV-Mapping
 
-UV_Mapping wird zum Texturieren von Objekten benötigt. Es ist der Prozess, wo eine 3D Grafik auf eine 2D Fläche projeziert wird indem das Objekt aufgeschnitten und auf eine 2D Textur gelegt wird. Ohne UV-Mapping wäre Texturen versährt und Details gehen verloren. [@gpt_uv_mapping]
+UV_Mapping wird zum Texturieren von Objekten benötigt. Es ist der Prozess, wo eine 3D Grafik auf eine 2D Fläche projeziert wird indem das Objekt aufgeschnitten und auf eine 2D Textur gelegt wird. Ohne UV-Mapping wäre Texturen versährt und Details gehen verloren. [@uv_mapping_guide] [@gpt_uv_mapping]
+
+
 
 #### Low-Poly-Moddelierung
 
