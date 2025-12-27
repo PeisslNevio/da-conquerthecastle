@@ -22,7 +22,7 @@ Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leis
 Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen strecken sich jeweils vom positiven berreich (zb. x positiv) bis hin zum negativen Berreich (zb. x neagtiv) und treffen sich am Nullpunkt. Die Achsen sind gut erkennbar und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1) [@blender_manual]
 
 
-![Koordinatensystem](img/koordinatensystem.png){width=100%}
+![Koordinatensystem](img/koordinatensystem.png){width=100%}[@blender]
 
 Die Kamera des Benutzers kann mit `mouse wheel` rotiert und mit `shift + mouse wheel` bewegt werden. [@blender_manual]
 
@@ -34,7 +34,7 @@ In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `sh
 
 Wenn ein Objekt ausgewählt ist, wird es orange Umrandet. Dieses Objekt kann nun bearbeitet werden und der Ursprung des Objektes wird sichtbar. (Siehe Abb. 2, Zylinder) [@blender_manual]
 
-![Objekte](img/objekte.png){width=100%}
+![Objekte](img/objekte.png){width=100%}[@blender]
 
 
 Objekte bestehen aus Faces, Edges und Vertecies. Vertecies sind die kleinste Form eines darstellbaren Objektes in Blender. Ein Vertex ist genau ein Punkt. Wenn zwei Punkte verbunden werden, entsteht eine Kante (Edge). Wenn mehere Edges verbunden werden, erhällt man eine Fläche (Face). Verbinden sich mehere Flächen entsteht ein Mesh, ein Objekt. [@blender_manual]
@@ -56,12 +56,12 @@ Im Edit Mode bearbeitet man die geometrie einzelner Objekte. Um in den Edit Mode
 ##### Mirror
 Der Mirror Modifier spiegelt ein Objekt entlang einer oder meheren Achsen. Das Objekt wird über seinen Ursprung gespiegelt. Ein Objekt zu spiegeln reduziert den Aufwand bei symetrischen Modellen erhablich und stellt sicher, dass beide seiten exakt gleich sind. In Abb. 5 sieht man zwei Objekte, eines davon ist gespiegelt. [@blender_manual]
 
-![Koordinatensystem](img/mirror.png){width=100%}
+![Koordinatensystem](img/mirror.png){width=100%}[@blender]
 
 ##### Solidify
 Solidify gibt Objekten eine Dicke. Diese Dicke kann man mit Variablen konfigurieren. Diese Variable kann man rechts im Modifier Tab unter "Thickness" einstellen. Mithilfe von constraints kann man das Ergebnis noch weiter anpassen. [@blender_manual]
 
-![Koordinatensystem](img/solidify.png){width=100%}
+![Koordinatensystem](img/solidify.png){width=100%}[@blender]
 
 
 
@@ -71,7 +71,7 @@ Solidify gibt Objekten eine Dicke. Diese Dicke kann man mit Variablen konfigurie
 
 Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Dieses Add-on ermöglicht es, komplexe Strukturen wie Wände dynamisch generieren zu lassen. (Siehe Abb. 5) [@blender_extra_mesh_objects]
 
-![Wall Builder](img/wallbuilder.png){width=100%}
+![Wall Builder](img/wallbuilder.png){width=100%}[@blender]
 
 
 
