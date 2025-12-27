@@ -15,14 +15,14 @@ Die Mission von Blender ist es, ein leistungsstarkes 3D-Programm für jeden frei
 
 #### Warum Blender?
 
-Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leistungsstark und eine große aktive Comunity hat. Es gibt viele frei zugängliche online Tutorials und Dokumentationen. Die Software bekommt regelmäig Updates und wird ständig erweitert. Blender funktioniert auf den meisten Betriebssystemen (Linux, Windows und MAC) und ist durch OpenGL dynamisch aufgebaut. [blender_manual]
+Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leistungsstark und eine große aktive Comunity hat. Es gibt viele frei zugängliche online Tutorials und Dokumentationen. Die Software bekommt regelmäig Updates und wird ständig erweitert. Blender funktioniert auf den meisten Betriebssystemen (Linux, Windows und MAC) und ist durch OpenGL dynamisch aufgebaut. [@blender_manual]
 
 #### Koordinatensystem
 
 Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen strecken sich jeweils vom positiven berreich (zb. x positiv) bis hin zum negativen Berreich (zb. x neagtiv) und treffen sich am Nullpunkt. Die Achsen sind gut erkennbar und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1) [@blender_manual]
 
 
-![Koordinatensystem](img/koordinatensystem.png){width=100%}[@blender]
+![Koordinatensystem](img/koordinatensystem.png){width=90%}[@blender]
 
 Die Kamera des Benutzers kann mit `mouse wheel` rotiert und mit `shift + mouse wheel` bewegt werden. [@blender_manual]
 
@@ -34,7 +34,7 @@ In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `sh
 
 Wenn ein Objekt ausgewählt ist, wird es orange Umrandet. Dieses Objekt kann nun bearbeitet werden und der Ursprung des Objektes wird sichtbar. (Siehe Abb. 2, Zylinder) [@blender_manual]
 
-![Objekte](img/objekte.png){width=100%}[@blender]
+![Objekte](img/objekte.png){width=90%}[@blender]
 
 
 Objekte bestehen aus Faces, Edges und Vertecies. Vertecies sind die kleinste Form eines darstellbaren Objektes in Blender. Ein Vertex ist genau ein Punkt. Wenn zwei Punkte verbunden werden, entsteht eine Kante (Edge). Wenn mehere Edges verbunden werden, erhällt man eine Fläche (Face). Verbinden sich mehere Flächen entsteht ein Mesh, ein Objekt. [@blender_manual]
@@ -66,7 +66,7 @@ Solidify gibt Objekten eine Dicke. Diese Dicke kann man mit Variablen konfigurie
 
 Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Dieses Add-on ermöglicht es, komplexe Strukturen wie Wände dynamisch generieren zu lassen. (Siehe Abb. 5) [@blender_extra_mesh_objects]
 
-![Wall Builder](img/wallbuilder.png){width=100%}[@blender]
+![Wall Builder](img/wallbuilder.png){width=90%}[@blender]
 
 
 
@@ -74,7 +74,7 @@ Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Buil
 
 UV_Mapping wird zum Texturieren von Objekten benötigt. Es ist der Prozess, wo eine 3D Grafik auf eine 2D Fläche projeziert wird indem das Objekt aufgeschnitten und auf eine 2D Textur gelegt wird. Ohne UV-Mapping wäre Texturen versährt und Details gehen verloren. [@uv_mapping_guide] [@gpt_uv_mapping]
 
-![UV Mapping](img/uv-mapping.png){width=100%}[@blender]
+![UV Mapping](img/uv-mapping.png){width=90%}[@blender]
 
 
 
