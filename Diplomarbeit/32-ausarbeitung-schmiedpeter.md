@@ -8,8 +8,14 @@
 ##### &nbsp; &nbsp; &nbsp;1.1.1.1 Möglichkeiten
 ##### &nbsp; &nbsp; &nbsp;1.1.1.2 Basics der Modelierung
 #### &nbsp;1.1.2 Konkurrenz
-##### &nbsp; &nbsp; &nbsp;1.1.2.1 Eigenschaften
-##### &nbsp; &nbsp; &nbsp;1.1.2.2 Vor- und Nachteile
+Neben Blender hätte man sich noch für andere Modellierungsprogramme entscheiden können Beispielsweise *Tinkercad, AutoDesk Fusion oder OpenSCAD*. 
+* Tinkercad kennt man vorallem auch durch das Entverwerfen von einfachen Schaltkreisen online und so in etwa ist es bei deren Programm für das Modellieren.
+Das Programm ist sehr simple und leicht zu verstehen - Perfekt für Anfänger
+Aber nicht geeignet für die Diplomarbeit, weil man extreme Einschränkungen hat. Man kann keine Modelle im Nachhinein abrunden, da Tinkercad nur an vorgefertigte Objekte zum Bewegen hat. Diese Modelle sind fix gefertigt und nicht veränderbar.
+* AutoDesk Fusion ist spezialiesiert auf die Produktion bzw. auf Werkzeug und Maschinen. Das heißt aber nicht das dieses Programm nicht geeignet ist für das Modelieren 
+AutoDesk hat eine einfacher Handhabung *Zitat aus dem Video*. Aus iesem Grund verwenden dieses Tool sehr viele größere Firmen, wie: Yamaha und Toyota *- so deren Homepage*
+Nachteil ist das Programm kostet viel .
+* OpenSCAD ist ein Open-Source  Program für das Modellieren per Code. Aus diesem Grund ist dieses Programm nicht geeignet für ein großes Projekt, wegen der hohen Komplexität. 
 #### &nbsp;1.1.3 Nützliche Befehle
 
 ### 1.2 Erweiterte Funktionen in Blender
