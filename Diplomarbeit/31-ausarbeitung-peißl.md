@@ -22,7 +22,7 @@ Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leis
 Wenn ein neues Blender Projekt erstellt wird sieht man nur das Koordinatenystem. Es besteht aus drei Achsen: x,y und z. Diese Achsen strecken sich jeweils vom positiven berreich (zb. x positiv) bis hin zum negativen Berreich (zb. x neagtiv) und treffen sich am Nullpunkt. Die Achsen sind gut erkennbar und bietem dem Nutzer einen Fixpunkt, an dem er sich orentieren kann. Außerdem gibt es rechts oben ein kleines Diagramm, welches die Orentierung des Nutzers nochmal in Echtzeit anzeigt. (Siehe Abb. 1) [@blender_manual]
 
 
-![Koordinatensystem](img/koordinatensystem.png){width=90%}[@blender]
+![Koordinatensystem](img/peissl/koordinatensystem.png){width=90%}[@blender]
 
 Die Kamera des Benutzers kann mit `mouse wheel` rotiert und mit `shift + mouse wheel` bewegt werden. [@blender_manual]
 
@@ -34,7 +34,7 @@ In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `sh
 
 Wenn ein Objekt ausgewählt ist, wird es orange Umrandet. Dieses Objekt kann nun bearbeitet werden und der Ursprung des Objektes wird sichtbar. (Siehe Abb. 2, Zylinder) [@blender_manual]
 
-![Objekte](img/objekte.png){width=90%}[@blender]
+![Objekte](img/peissl/objekte.png){width=90%}[@blender]
 
 
 Objekte bestehen aus Faces, Edges und Vertecies. Vertecies sind die kleinste Form eines darstellbaren Objektes in Blender. Ein Vertex ist genau ein Punkt. Wenn zwei Punkte verbunden werden, entsteht eine Kante (Edge). Wenn mehere Edges verbunden werden, erhällt man eine Fläche (Face). Verbinden sich mehere Flächen entsteht ein Mesh, ein Objekt. [@blender_manual]
@@ -66,7 +66,7 @@ Solidify gibt Objekten eine Dicke. Diese Dicke kann man mit Variablen konfigurie
 
 Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Dieses Add-on ermöglicht es, komplexe Strukturen wie Wände dynamisch generieren zu lassen. (Siehe Abb. 5) [@blender_extra_mesh_objects]
 
-![Wall Builder](img/wallbuilder.png){width=90%}[@blender]
+![Wall Builder](img/peissl/wallbuilder.png){width=90%}[@blender]
 
 
 
@@ -74,13 +74,15 @@ Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Buil
 
 UV_Mapping wird zum Texturieren von Objekten benötigt. Es ist der Prozess, wo eine 3D Grafik auf eine 2D Fläche projeziert wird indem das Objekt aufgeschnitten und auf eine 2D Textur gelegt wird. Ohne UV-Mapping wäre Texturen versährt und Details gehen verloren. [@uv_mapping_guide] [@gpt_uv_mapping]
 
-![UV Mapping](img/uv-mapping.png){width=90%}[@blender]
+![UV Mapping](img/peissl/uv-mapping.png){width=90%}[@blender]
 
 
 
 #### Low-Poly-Moddelierung
 
 Durch die geringe Anzahl von Polygonen bleibt der Rechenaufwand eher gering und die Framerate ist stabiler. Außerdem verkürzen sich Ladezeiten, besonders auf älteren Geräten. Low-Poly hällt den Style einheitlich und reduziert den modellierungs Aufwand drastisch. Ein Low-Poly Spiel setzt nicht auf hochauflösende Grafik oder komplexe Modelle, sondern auf die Einfachkeit und die Effizienz. [@low_poly] [@why_low_poly]
+
+![Low-Poly Beispiel](img/peissl/low-poly-example.png){width=90%}[@low_poly_example]
 
 #### Exportformate
 
