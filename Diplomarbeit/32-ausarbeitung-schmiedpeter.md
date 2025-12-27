@@ -53,9 +53,6 @@ Nachteil ist das Programm kostet viel .
 ###### &nbsp;&nbsp;&nbsp;2.2.3.2.4 ...
 ###### &nbsp;&nbsp;&nbsp;2.2.3.2.5 Schwierigkeiten und Problem
 
-## 3. Litaraturverzeichnis
-für Konkurrenz https://www.youtube.com/watch?v=qvQ8PEhQ-M0
-
 
 -------------------
 
