@@ -92,9 +92,11 @@ Blender verfügt über das Exportformat FBX, welches zum Datenaustausch zwischen
 
 ### Unreal Engine
 
-Unreal Engine ist eine leistungsstarke, kostenlose 3D Entwicklungssoftware, die vielseiteig eingesetzt werden kann. Unreal verfügt über die gleichen Technologien wie AAA-Gamestudios, nutzbar von jedem. Mit Unreal Engine ist (fast) jeder Schritt in einem einheitlichen Ökosystem, was die Entwicklung von Spielen deutlich vereinfacht. [@what_is_unreal_engine]
+Unreal Engine ist eine leistungsstarke, kostenlose 3D Entwicklungssoftware, die vielseiteig eingesetzt werden kann. Egal ob Spiele programieren, Filme produzieren oder animieren. Unreal verfügt über alles, was benötigt wird, egal für welches Projekt. [@what_is_unreal_engine]
 
 #### Warum Unreal Engine
+
+Unreal verfügt über die gleichen Technologien wie AAA-Gamestudios, nutzbar von jedem. Mit Unreal Engine ist (fast) jeder Schritt in einem einheitlichen Ökosystem, was die Entwicklung von Spielen deutlich vereinfacht. Mit Unreal Engine ist es möglich selbst als kleines Entwicklerteam Spiele zu entwickeln. [@unreal_engine_indie]
 
 #### UI
 ##### Was macht eine gute UI aus
