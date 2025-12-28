@@ -92,14 +92,14 @@ Blender verfügt über das Exportformat FBX, welches zum Datenaustausch zwischen
 
 Unreal Engine ist eine leistungsstarke, kostenlose 3D Entwicklungssoftware, die vielseiteig eingesetzt werden kann. Egal ob Spiele programieren, Filme produzieren oder animieren. Unreal verfügt über die gleichen Technologien wie AAA-Gamestudios, nutzbar von jedem. Mit Unreal Engine ist (fast) jeder Entwicklungsschritt in einem einheitlichen Ökosystem, was den Entwicklungsprozess deutlich vereinfacht und es möglich selbst als kleines Entwicklerteam hochwertige Spiele zu entwickeln. [@what_is_unreal_engine] [@unreal_engine_indie]
 
-#### UI
+#### GUI
 
-Das User Interface, auch Benutzeroberfläche genannt, ist eines der wichtigsten Bestandteile eines Spiels. Unter UI versteht man alles was vor dem eigentlichen Spiel angezeigt wird. Daruner zählt man alle Menüs und alle Lebens sowie andere Statistikanzeigen. Es wird benötigt, um dem User die nötigen Informationen zugeben. Das UI dient als Schnittstelle zwischen User und Spiel. [@ui_guide]
-
-##### Wie erstellt man eine UI
-##### Wo ist die Schnittstelle zum Backend
+Das Graphical User Interface, auch Benutzeroberfläche genannt, ist eines der wichtigsten Bestandteile eines Spiels. Unter GUI versteht man alles was vor dem eigentlichen Spiel angezeigt wird. Daruner zählt man alle Menüs und alle Lebens sowie andere Statistikanzeigen. Es wird benötigt, um dem User die nötigen Informationen zugeben. Das GUI dient als Schnittstelle zwischen User und Spiel. Eine Benutzeroberfläche soll einfach, effizient und intuitiv sein. Es ist wichtig dass jedes Element einen Namen hat, der die Funktion des Elementes intuituiv beschreibt. Mithilfe von Farben kann man den Benutzer auf bestimmte Elemente aufmerksam machen und dessen Erfahrung verbessern. Außerdem sollte jede Funktion inerhalb weniger Klicks zu erreichen sein. Funktionen, welche häufiger verwendet werden sollen leicht erreichbar sein. Das GUI muss eine Balance zwischen Funktionen und Design sein. [@ui_guide] [@what_is_a_good_ui]
 
 #### Cutscenes
+
+Eine Cutscene, auch genannt Zwischensequenz, ist eine kurze Filmsequenz in einem Videospiel, welche die Geschichte weiter erzählt. Der Spieler kann während dieser Cutscene nicht eingreifen, er ist der Zuschauer. 
+
 ##### Warum brauchen wir Cutscenes
 ##### Wie erstellt man Cutscenes
 ##### Wie lässt man Cutscenes automatisch abspielen
