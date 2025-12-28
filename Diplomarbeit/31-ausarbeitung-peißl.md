@@ -99,6 +99,9 @@ Unreal Engine ist eine leistungsstarke, kostenlose 3D Entwicklungssoftware, die 
 Unreal verfügt über die gleichen Technologien wie AAA-Gamestudios, nutzbar von jedem. Mit Unreal Engine ist (fast) jeder Entwicklungsschritt in einem einheitlichen Ökosystem, was den Entwicklungsprozess deutlich vereinfacht und es möglich selbst als kleines Entwicklerteam hochwertige Spiele zu entwickeln. [@unreal_engine_indie]
 
 #### UI
+
+Das User Interface, auch Benutzeroberfläche genannt, ist eines der wichtigsten Bestandteile eines Spiels. Unter UI versteht man alles was vor dem eigentlichen Spiel angezeigt wird. Daruner zählt man alle Menüs und alle Lebens sowie andere Statistikanzeigen. Es wird benötigt, um dem User die nötigen Informationen zugeben. Das UI dient als Schnittstelle zwischen User und Spiel. [@ui_guide]
+
 ##### Was macht eine gute UI aus
 ##### Wie erstellt man eine UI
 ##### Wo ist die Schnittstelle zum Backend
