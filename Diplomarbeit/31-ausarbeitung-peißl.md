@@ -98,11 +98,7 @@ Das Graphical User Interface, auch Benutzeroberfläche genannt, ist eines der wi
 
 #### Cutscenes
 
-Eine Cutscene, auch genannt Zwischensequenz, ist eine kurze Filmsequenz in einem Videospiel, welche die Geschichte weiter erzählt. Der Spieler kann während dieser Cutscene nicht eingreifen, er ist der Zuschauer. 
-
-##### Warum brauchen wir Cutscenes
-##### Wie erstellt man Cutscenes
-##### Wie lässt man Cutscenes automatisch abspielen
+Eine Cutscene, auch genannt Zwischensequenz, ist eine kurze Filmsequenz in einem Videospiel, welche die Geschichte weiter erzählt. Der Spieler kann während dieser Cutscene nicht eingreifen, er ist der Zuschauer. [@cutscene_explanation]
 
 
 
