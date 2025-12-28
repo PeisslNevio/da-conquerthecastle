@@ -96,7 +96,7 @@ Das Graphical User Interface, auch Benutzeroberfläche genannt, ist eines der wi
 
 Eine Cutscene, auch genannt Zwischensequenz, ist eine kurze Filmsequenz in einem Videospiel, welche die Geschichte weiter erzählt. Der Spieler kann während dieser Cutscene nicht eingreifen, er ist der Zuschauer. In UE wird die Cutscene mithilfe des Level Sequenzers erstellt. Zu diesem Sequenzer wird eine Kamera hinzugefügt und in der Timeline wird mithilfe von Keyframes die Kameraposition zu bestimmten Zeitpunkten angegeben. Mit einem Blueprint angegeben, wann die Cutscene aufgerufen wird. [@cutscene_explanation] [@cutscene_tutorial]
 
-
+\newpage
 
 
 ## Praktische Arbeit
