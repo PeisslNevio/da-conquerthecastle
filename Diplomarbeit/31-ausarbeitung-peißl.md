@@ -49,18 +49,14 @@ Object Mode ist der Standartmodus in Blender. Darin kann man Objekte einfügen, 
 
 Im Edit Mode bearbeitet man die geometrie einzelner Objekte. Um in den Edit Mode zu kommen muss man das Objekt auswählen und `tab` drücken. Ein weiteres `tab` und man gelangt wieder im Object Mode. Wichtige Edit Mode Tools sind Extrude `e`, Insert `i`, Loop Cut `ctrl + r`, Bevel `b` und merge vertecies `m`. Mit den Tasten `1`, `2`, `3` kann man zwischen "select Vertecies", "select Edges" und "select Faces" wechseln. [@blender_manual]
 
-#### Modifiers
+#### Mirror
+Der Mirror Modifier spiegelt ein Objekt entlang einer oder meheren Achsen. Das Objekt wird über seinen Ursprung gespiegelt. Ein Objekt zu spiegeln reduziert den Aufwand bei symetrischen Modellen erhablich und stellt sicher, dass beide Seiten exakt gleich sind. [@blender_manual]
 
-##### Mirror
-Der Mirror Modifier spiegelt ein Objekt entlang einer oder meheren Achsen. Das Objekt wird über seinen Ursprung gespiegelt. Ein Objekt zu spiegeln reduziert den Aufwand bei symetrischen Modellen erhablich und stellt sicher, dass beide seiten exakt gleich sind. In Abb. 5 sieht man zwei Objekte, eines davon ist gespiegelt. [@blender_manual]
-
-##### Solidify
-Solidify gibt Objekten eine Dicke. Diese Dicke kann man mit Variablen konfigurieren. Diese Variable kann man rechts im Modifier Tab unter "Thickness" einstellen. Mithilfe von constraints kann man das Ergebnis noch weiter anpassen. [@blender_manual]
+#### Solidify
+Solidify gibt Objekten eine Dicke. Die einfachste Version davon funktioniert ähnlich wie Extrude im Edit Mode. Die Dicke kann man im Modifiers Tab unter "Thickness" einstellen. Man kann das Entresultat mit weitern Einstellungen noch weiter verändern. Die "Even Thickness" Einstellung hällt die Dicke an allen Kanten gleich. "Fill Rim" schließt alle offenen Kanten und verhindert Hohlräume. [@blender_manual]
 
 
-#### Add-ons
-
-##### Extra Mesh Objects
+#### Extra Mesh Objects
 
 Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Dieses Add-on ermöglicht es, komplexe Strukturen wie Wände dynamisch generieren zu lassen. (Siehe Abb. 5) [@blender_extra_mesh_objects]
 
