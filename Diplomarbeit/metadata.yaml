@@ -1,5 +1,3 @@
----
-
 da-titel: Conquer the Castle - A Videogame in Unreal Engine
 
 da-jahr: 2025/26
@@ -42,7 +40,7 @@ da-betreuer:
 - paraffe: hg
   name: Ing. DI(FH) Günther Hutter, Msc.
 
-da-kurzfassung-de: Hier kommt eine deutsche Kurzfassung hin.
+da-kurzfassung-de: Im Rahmen dieser Diplomarbeit wurde ein minimalistisches, mittelalterlich angehauchtes Bosskampf-Spiel für den PC entwickelt. Ziel des Projekts war es, die grundlegenden Abläufe der Spieleentwicklung praxisnah umzusetzen und dabei insbesondere die Zusammenarbeit zwischen 3D-Modellierung und Game-Engine zu vertiefen.
 
 da-kurzfassung-en: Hier kommt eine englische Kurzfassung hin.
 
@@ -72,4 +70,3 @@ da-appendix:
 
 - abschnitt: Diplomarbeitsvereinbarung Deutsch
   pdf-file: HTL-DA-Doku-DE.pdf
-...
