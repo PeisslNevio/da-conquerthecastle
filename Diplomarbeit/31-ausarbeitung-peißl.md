@@ -96,7 +96,7 @@ Unreal Engine ist eine leistungsstarke, kostenlose 3D Entwicklungssoftware, die 
 
 #### Warum Unreal Engine
 
-Unreal verfügt über die gleichen Technologien wie AAA-Gamestudios, nutzbar von jedem. Mit Unreal Engine ist (fast) jeder Schritt in einem einheitlichen Ökosystem, was die Entwicklung von Spielen deutlich vereinfacht. Mit Unreal Engine ist es möglich selbst als kleines Entwicklerteam Spiele zu entwickeln. [@unreal_engine_indie]
+Unreal verfügt über die gleichen Technologien wie AAA-Gamestudios, nutzbar von jedem. Mit Unreal Engine ist (fast) jeder Entwicklungsschritt in einem einheitlichen Ökosystem, was den Entwicklungsprozess deutlich vereinfacht und es möglich selbst als kleines Entwicklerteam hochwertige Spiele zu entwickeln. [@unreal_engine_indie]
 
 #### UI
 ##### Was macht eine gute UI aus
