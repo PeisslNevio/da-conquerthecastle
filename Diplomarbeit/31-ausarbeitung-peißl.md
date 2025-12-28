@@ -39,7 +39,7 @@ Objekte bestehen aus Faces, Edges und Vertecies. Vertecies sind die kleinste For
 
 Diese Onjekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objete können verschoben (`m`), rotiert (`r`) und skaliert (`s`) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (x,y,z) ausgewählt wird, verschiebt sich das Objekt nur auf dieser Achse. Wenn ein Objekt genau einen Meter nach X positiv verschoben werden sollte, lautet der Befehl `g + x + 1`. [@blender_manual]
 
-#### Modes
+#### Bearbeitungsmodi
 
 #### Object Mode
 
@@ -58,7 +58,7 @@ Solidify gibt Objekten eine Dicke. Die einfachste Version davon funktioniert äh
 
 #### Extra Mesh Objects
 
-Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Dieses Add-on ermöglicht es, komplexe Strukturen wie Wände dynamisch generieren zu lassen. (Siehe Abb. 5) [@blender_extra_mesh_objects]
+Extra Mesh Objects ist ein Add-On für Blender und verfügt über den "Wall Builder". Dieser ermöglicht es, komplexe Wände mit Ziegelsteindesign einfach zu erstellen und bearbeiten. Dieses Add-on ermöglicht es, komplexe Strukturen wie Wände dynamisch generieren zu lassen. (Siehe Abb. 3) [@blender_extra_mesh_objects]
 
 ![Wall Builder [@blender]](img/peissl/wallbuilder.png){width=90%}
 
@@ -95,7 +95,6 @@ Das Graphical User Interface, auch Benutzeroberfläche genannt, ist eines der wi
 #### Cutscenes
 
 Eine Cutscene, auch genannt Zwischensequenz, ist eine kurze Filmsequenz in einem Videospiel, welche die Geschichte weiter erzählt. Der Spieler kann während dieser Cutscene nicht eingreifen, er ist der Zuschauer. In UE wird die Cutscene mithilfe des Level Sequenzers erstellt. Zu diesem Sequenzer wird eine Kamera hinzugefügt und in der Timeline wird mithilfe von Keyframes die Kameraposition zu bestimmten Zeitpunkten angegeben. Mit einem Blueprint angegeben, wann die Cutscene aufgerufen wird. [@cutscene_explanation] [@cutscene_tutorial]
-
 
 
 
