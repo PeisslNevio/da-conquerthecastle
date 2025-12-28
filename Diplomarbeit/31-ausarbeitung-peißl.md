@@ -83,7 +83,7 @@ Durch die geringe Anzahl von Polygonen bleibt der Rechenaufwand eher gering und 
 
 ![Low-Poly Beispiel [@low_poly_example]](img/peissl/low-poly-example.png){width=90%}
 
-#### Exportformate
+#### Exportformat
 
 Blender verfügt über das Exportformat FBX, welches zum Datenaustausch zwischen verschiedenen Programmen benötigt wird. FBX ist weitverbreitet und wird von Unreal Engine sovie von vielen anderen unterstützt. Dieses Exportformat ist auf schnellen Export und Speichereffizient optimiert und hat viele nützliche Exportfunktionen. [@blender_manual]
 
@@ -92,19 +92,16 @@ Blender verfügt über das Exportformat FBX, welches zum Datenaustausch zwischen
 
 ### Unreal Engine
 #### Warum Unreal Engine
-#### Objekt importieren
-#### Objekt bewegen
-#### Texturen zuweißen
 
-### UI
-#### Was macht eine gute UI aus
-#### Wie erstellt man eine UI
-#### Wo ist die Schnittstelle zum Backend
+#### UI
+##### Was macht eine gute UI aus
+##### Wie erstellt man eine UI
+##### Wo ist die Schnittstelle zum Backend
 
-### Cutscenes
-#### Warum brauchen wir Cutscenes
-#### Wie erstellt man Cutscenes
-#### Wie lässt man Cutscenes automatisch abspielen
+#### Cutscenes
+##### Warum brauchen wir Cutscenes
+##### Wie erstellt man Cutscenes
+##### Wie lässt man Cutscenes automatisch abspielen
 
 
 
@@ -112,7 +109,7 @@ Blender verfügt über das Exportformat FBX, welches zum Datenaustausch zwischen
 
 ## Praktische Arbeit
 
-### Blender
+### Modellierung
 
 #### Bossraum
 ##### Erstellung
