@@ -11,9 +11,7 @@ In diesem Teil werden die theoretischen Aspekte für die Erstellung eines 3D Mod
 
 Blender ist ein Open-Source-3D-Programm, das von der Blender Foundation entwickelt wird und kostenlos zugänglich ist. Es deckt alle wesentlichen Schritte der 3D-Modellierung ab. Dazu zählen Modeling, Animation, Simulation, Rendering und Exportieren. Dadurch ist es möglich, den gesamten 3D-Workflow innerhalb von Blender durchzuführen, ohne die Verwendung externer Software. [@blender_features]
 
-Die Mission von Blender ist es, ein leistungsstarkes 3D-Programm für jeden frei zugänglich zumachen. Blender wird von der Comunity entwickelt und jeder kann einen Beitrag leisten. [@blender_about]
-
-#### Warum Blender?
+Die Mission von Blender ist es, ein leistungsstarkes 3D-Programm für jeden frei zugänglich zumachen. Blender wird von der Comunity entwickelt und jeder kann einen Beitrag leisten. 
 
 Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leistungsstark und eine große aktive Comunity hat. Es gibt viele frei zugängliche online Tutorials und Dokumentationen. Die Software bekommt regelmäig Updates und wird ständig erweitert. Blender funktioniert auf den meisten Betriebssystemen (Linux, Windows und MAC) und ist durch OpenGL dynamisch aufgebaut. [@blender_manual]
 
@@ -92,17 +90,12 @@ Blender verfügt über das Exportformat FBX, welches zum Datenaustausch zwischen
 
 ### Unreal Engine
 
-Unreal Engine ist eine leistungsstarke, kostenlose 3D Entwicklungssoftware, die vielseiteig eingesetzt werden kann. Egal ob Spiele programieren, Filme produzieren oder animieren. Unreal verfügt über alles, was benötigt wird, egal für welches Projekt. [@what_is_unreal_engine]
-
-#### Warum Unreal Engine
-
-Unreal verfügt über die gleichen Technologien wie AAA-Gamestudios, nutzbar von jedem. Mit Unreal Engine ist (fast) jeder Entwicklungsschritt in einem einheitlichen Ökosystem, was den Entwicklungsprozess deutlich vereinfacht und es möglich selbst als kleines Entwicklerteam hochwertige Spiele zu entwickeln. [@unreal_engine_indie]
+Unreal Engine ist eine leistungsstarke, kostenlose 3D Entwicklungssoftware, die vielseiteig eingesetzt werden kann. Egal ob Spiele programieren, Filme produzieren oder animieren. Unreal verfügt über die gleichen Technologien wie AAA-Gamestudios, nutzbar von jedem. Mit Unreal Engine ist (fast) jeder Entwicklungsschritt in einem einheitlichen Ökosystem, was den Entwicklungsprozess deutlich vereinfacht und es möglich selbst als kleines Entwicklerteam hochwertige Spiele zu entwickeln. [@what_is_unreal_engine] [@unreal_engine_indie]
 
 #### UI
 
 Das User Interface, auch Benutzeroberfläche genannt, ist eines der wichtigsten Bestandteile eines Spiels. Unter UI versteht man alles was vor dem eigentlichen Spiel angezeigt wird. Daruner zählt man alle Menüs und alle Lebens sowie andere Statistikanzeigen. Es wird benötigt, um dem User die nötigen Informationen zugeben. Das UI dient als Schnittstelle zwischen User und Spiel. [@ui_guide]
 
-##### Was macht eine gute UI aus
 ##### Wie erstellt man eine UI
 ##### Wo ist die Schnittstelle zum Backend
 
