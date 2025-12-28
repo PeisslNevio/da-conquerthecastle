@@ -6,7 +6,11 @@
 ### 1.1 Blender
 #### &nbsp; 1.1.1 Einleitung in Blender
 ##### &nbsp; &nbsp; &nbsp;1.1.1.1 Möglichkeiten
+Blender ist ein Programm mit vielen Möglichkeiten. Zum einen kann man mit diesem Programm Modellieren außerdem hat diese eine Zeichenfunktion, sowie einen Python Editor. Schon bestehende Modelle kann man Animationen hinzufügen folgend dazu ist es eine nützliche Weise so Videos zu rendern und schneiden.
 ##### &nbsp; &nbsp; &nbsp;1.1.1.2 Basics der Modelierung
+Aufgebaut ist Blender so: in der Mitte ist ein Koordinatensystem, hier passiert das meiste, links davon sind Werkzeuge. Auf der rechten Seite befinden sich die Objekt Hierache bei den man alle Ordner inkl. Kamera und Licht bzw. auch alle Objekte sieht, sowie im unteren Bereich jegliche Module wie Modifier, Material und Physiks.
+![Koordinatensystem [@blender]](img/schmiedpeter/Defaultscreen_blender.png){width=90%}
+...
 #### &nbsp;1.1.2 Konkurrenz
 Neben Blender hätte man sich noch für andere Modellierungsprogramme entscheiden können Beispielsweise *Tinkercad, AutoDesk Fusion oder OpenSCAD*. 
 * Tinkercad kennt man vorallem auch durch das Entverwerfen von einfachen Schaltkreisen online und so in etwa ist es bei deren Programm für das Modellieren.
