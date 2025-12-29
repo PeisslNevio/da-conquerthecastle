@@ -4,9 +4,13 @@
 # Theoretisch
 
 ## Blender
+
 ### Einleitung in Blender
+
 #### Möglichkeiten
+
 Blender ist ein Programm mit vielen Möglichkeiten. Zum einen kann man mit diesem Programm Modellieren außerdem hat diese eine Zeichenfunktion, sowie einen Python Editor. Schon bestehende Modelle kann man Animationen hinzufügen folgend dazu ist es eine nützliche Weise so Videos zu rendern und schneiden.
+
 #### Basics der Modelierung
 
 Aufgebaut ist Blender so: in der Mitte ist ein Koordinatensystem, hier passiert das meiste, links davon sind Werkzeuge. Auf der rechten Seite befinden sich die Objekt Hierache bei den man alle Ordner inkl. Kamera und Licht bzw. auch alle Objekte sieht, sowie im unteren Bereich jegliche Module wie Modifier, Material und Physiks.
@@ -17,12 +21,17 @@ In der Modellierungsansicht gibt es 3 Modi alle haben eine andere Bedeutung
 
 * Objektmodus ist hauptsächlich für den Umgang mit mehrere Objekten und dem einfügen von Objekten. Vom Programm bereit gestellte Objekte sind der Würfel, Quader, Zylinder, die Kugel und viele mehr. Standard gemäß sind diese auf die Größe 1 Meter gesetzt und am `Set Origin` gesetzt, welches man beides gleich ändern kann. Außerdem wird dieser Modus für Module wie Physiks oder Modifier verwendet.
   Die wichtigsten Werkzeuge sind Objekte bewegen/rotieren/skalieren
+  
 * Der Editmodus ist ein wenig anders, dieser ist nämlich da um einzelne Objekte zu verändern
   >  Der Modus funktioniert auch mit meheren Objekten, es ist nur nicht erwünscht weil ungewollte Fehler auftretten können. Aus diesem Grund sollten Objekt vor den ändern  im Editmode gruppieren.
 
+
 	Auswählen funktioniert anders als im Objektmodus hier wählt man nicht ein Objekt aus sondern es hängt ab welche Ansicht ausgewählt ist. Standard ist die Punktansicht ausgewählt, hierbei können nur Ecken angewählt werden. Nach dem gleichen Prinzip funktioniert die Kanten- und Flächenansicht. *Tipp mit `Shift` kann man mehrere auswählen und mit `Str` wählt Blender alle aus, die auf der Bahn zum erst ausgewählten*.
 Wichtige Werkzeuge sind Loop Cuts und das Messer (mit diesen beiden fügt mann Kanten hinzu), bewegen, Flächen verkleinern und extrahieren bzw. füllen
-* Skulptur Modus 
+
+* Skulptur Modus verwendet Werkzeuge, die Polys in verschiedene Art und Weisen bewegen. Das einzige Problem dabei ist, das die Polys die bewegt wurden nicht nach genauen Massen bewegt werden können. Außerdem ist zu achten, dass das Objekt mehr Polys haben soll, ansonsten wird das Entergebnis nicht den Erwartungen ersprechen.
+
+Als Unterstützung in den jeweiligen Modus existiert dem Tool Anmerkungen. Mit diesem Tool kann man Sachen in der Eigenen Perspektive zeichnen. Im Edit und Objektmodus kann man zusätzlich auch das Tool Messen verwenden. Dieser funktioniert auch wieder in der eigenen Perspektive und ist wie Anmerkungen 2D. 
   
 ### Konkurrenz
 Neben Blender hätte man sich noch für andere Modellierungsprogramme entscheiden können Beispielsweise *Tinkercad, AutoDesk Fusion oder OpenSCAD*. 
