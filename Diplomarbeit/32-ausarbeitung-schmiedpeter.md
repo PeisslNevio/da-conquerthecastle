@@ -86,8 +86,18 @@ Für den Editmodus
 
 
 ## Erweiterte Funktionen in Blender
+
 ### Material
-### Module (Modifyers)
+
+Das Material beschreibt das Aussehen eines Objektes bzw. einzelne Flächen - dazu gehört die Farbe, die Metalleffekt, die Rauheit und einiges mehr was definiert werden kann. Standard gemäß ist das Material ohne besondere Werte und in ein helles Grau. Das hat den Grund da Effekte bzw. Farben sonst beim Modelieren im Weg ist.
+
+![Koordinatensystem [@blender]](img/schmiedpeter/Material_blender.png){width=90%}
+
+Objekte sind nur einfärbbar im Editmodus. Einzelne Flächen kann man nur Farben hinzu fügen, wenn diese ausgewählt musst die Farbe auch ausgewählt werden und dann zugewiesen werden. Um die Farbe sehen zu können muss man die Ansichtsfenster Shading auf Materialbeispiel bzw gerendert ändern.
+
+
+
+### Modifyers
 #### Boolean
 #### Mirror
 ### Physiks
