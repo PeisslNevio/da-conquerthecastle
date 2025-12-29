@@ -10,7 +10,7 @@ Blender ist ein Programm mit vielen Möglichkeiten. Zum einen kann man mit diese
 ##### &nbsp; &nbsp; &nbsp;1.1.1.2 Basics der Modelierung
 
 Aufgebaut ist Blender so: in der Mitte ist ein Koordinatensystem, hier passiert das meiste, links davon sind Werkzeuge. Auf der rechten Seite befinden sich die Objekt Hierache bei den man alle Ordner inkl. Kamera und Licht bzw. auch alle Objekte sieht, sowie im unteren Bereich jegliche Module wie Modifier, Material und Physiks.
-![Koordinatensystem [@blender]](img/schmiedpeter/Defaultscreen_blender.png){width=90%}
+![Koordinatensystem [@blender]](img/schmiedpeter/Defaultscreen-blender.png){width=90%}
 In der Modellierungsansicht gibt es 3 Modi alle haben eine andere Bedeutung
 * Objektmodus ist hauptsächlich für den Umgang mit mehrere Objekten und dem einfügen von Objekten. Vom Programm bereit gestellte Objekte sind der Würfel, Quader, Zylinder, die Kugel und viele mehr. Standard gemäß sind diese auf die Größe 1 Meter gesetzt und am `Set Origin` gesetzt, welches man beides gleich ändern kann. Außerdem wird dieser Modus für Module wie Physiks oder Modifier verwendet.
   Die wichtigsten Werkzeuge sind Objekte bewegen/rotieren/skalieren
