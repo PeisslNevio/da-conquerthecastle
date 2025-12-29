@@ -120,6 +120,11 @@ Eine Cutscene, auch genannt Zwischensequenz, ist eine kurze Filmsequenz in einem
 #### Modelle Importieren & Einbauen
 #### Texturen hinzufügen
 
+#### GUI erstellen
+
+#### Cutscenes erstellen
+
+
 halt alles machen idk
 
 
