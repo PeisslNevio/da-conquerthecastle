@@ -1,28 +1,30 @@
 # Teilaufgabe Schüler Schmiedpeter
 \textauthor{Schmiedpeter}
 
-## 1. Theoretisch
+# Theoretisch
 
-### 1.1 Blender
-#### &nbsp; 1.1.1 Einleitung in Blender
-##### &nbsp; &nbsp; &nbsp;1.1.1.1 Möglichkeiten
+## Blender
+### Einleitung in Blender
+#### Möglichkeiten
 Blender ist ein Programm mit vielen Möglichkeiten. Zum einen kann man mit diesem Programm Modellieren außerdem hat diese eine Zeichenfunktion, sowie einen Python Editor. Schon bestehende Modelle kann man Animationen hinzufügen folgend dazu ist es eine nützliche Weise so Videos zu rendern und schneiden.
-##### &nbsp; &nbsp; &nbsp;1.1.1.2 Basics der Modelierung
+#### Basics der Modelierung
 
 Aufgebaut ist Blender so: in der Mitte ist ein Koordinatensystem, hier passiert das meiste, links davon sind Werkzeuge. Auf der rechten Seite befinden sich die Objekt Hierache bei den man alle Ordner inkl. Kamera und Licht bzw. auch alle Objekte sieht, sowie im unteren Bereich jegliche Module wie Modifier, Material und Physiks.
+
 ![Koordinatensystem [@blender]](img/schmiedpeter/Defaultscreen-blender.png){width=90%}
+
 In der Modellierungsansicht gibt es 3 Modi alle haben eine andere Bedeutung
+
 * Objektmodus ist hauptsächlich für den Umgang mit mehrere Objekten und dem einfügen von Objekten. Vom Programm bereit gestellte Objekte sind der Würfel, Quader, Zylinder, die Kugel und viele mehr. Standard gemäß sind diese auf die Größe 1 Meter gesetzt und am `Set Origin` gesetzt, welches man beides gleich ändern kann. Außerdem wird dieser Modus für Module wie Physiks oder Modifier verwendet.
   Die wichtigsten Werkzeuge sind Objekte bewegen/rotieren/skalieren
 * Der Editmodus ist ein wenig anders, dieser ist nämlich da um einzelne Objekte zu verändern
   >  Der Modus funktioniert auch mit meheren Objekten, es ist nur nicht erwünscht weil ungewollte Fehler auftretten können. Aus diesem Grund sollten Objekt vor den ändern  im Editmode gruppieren.
-  
+
 	Auswählen funktioniert anders als im Objektmodus hier wählt man nicht ein Objekt aus sondern es hängt ab welche Ansicht ausgewählt ist. Standard ist die Punktansicht ausgewählt, hierbei können nur Ecken angewählt werden. Nach dem gleichen Prinzip funktioniert die Kanten- und Flächenansicht. *Tipp mit `Shift` kann man mehrere auswählen und mit `Str` wählt Blender alle aus, die auf der Bahn zum erst ausgewählten*.
 Wichtige Werkzeuge sind Loop Cuts und das Messer (mit diesen beiden fügt mann Kanten hinzu), bewegen, Flächen verkleinern und extrahieren bzw. füllen
-
 * Skulptur Modus 
   
-#### &nbsp;1.1.2 Konkurrenz
+### Konkurrenz
 Neben Blender hätte man sich noch für andere Modellierungsprogramme entscheiden können Beispielsweise *Tinkercad, AutoDesk Fusion oder OpenSCAD*. 
 * Tinkercad kennt man vorallem auch durch das Entverwerfen von einfachen Schaltkreisen online und so in etwa ist es bei deren Programm für das Modellieren.
 Das Programm ist sehr simple und leicht zu verstehen - Perfekt für Anfänger
@@ -34,42 +36,45 @@ Nachteil ist das Programm kostet viel .
 
 
 
-#### &nbsp;1.1.3 Nützliche Befehle
+### Nützliche Befehle
 
-### 1.2 Erweiterte Funktionen in Blender
-#### &nbsp; 1.2.1 Material
-#### &nbsp; 1.2.2 Module (Modifyers)
-##### &nbsp; &nbsp; &nbsp;1.2.2.1 Boolean
-##### &nbsp; &nbsp; &nbsp;1.2.2.2 Mirror
-##### &nbsp; &nbsp; &nbsp;1.2.2.3 Physiks
-#### &nbsp; 1.2.3 Programmieren 
-##### &nbsp; &nbsp; &nbsp;1.2.3.1 Nutzen
-##### &nbsp; &nbsp; &nbsp;1.2.3.2 Syntax
+## Erweiterte Funktionen in Blender
+### Material
+### Module (Modifyers)
+#### Boolean
+#### Mirror
+### Physiks
+### Programmieren 
+#### Nutzen
+#### Syntax
 
-### 1.3 Animationen
-#### &nbsp; 1.3.1 Basics 
-#### &nbsp; 1.3.2 Wichtig zu beachten
-#### &nbsp;1.3.4 Einfügen in Unreal
 
-## 2. Praktisch
-### 2.1 Design
-### 2.2 Umsetzung mit Blender
-#### &nbsp;2.2.1 Modelierung
-#####  &nbsp;&nbsp;2.2.1.1 Entwickelte Technicken
-##### &nbsp;&nbsp;2.2.1.2 Angehensweiße
-##### &nbsp;&nbsp;2.2.1.3 Probleme und Lösungen
-#### &nbsp;2.2.2 Erweiterte Funktionen
-##### &nbsp;&nbsp;2.2.2.1 Farbenordnung
-##### &nbsp;&nbsp;2.2.2.2 Modul verwendung
-##### &nbsp;&nbsp;2.2.2.3 Erweiterung für Animationen
-#### &nbsp;2.2.3 Animationen
-##### &nbsp;&nbsp;2.2.3.1 Umsetzung von Animationen von Unreal
-##### &nbsp;&nbsp;2.2.3.2 eigene Animation
-###### &nbsp;&nbsp;&nbsp;2.2.3.2.1 T-Pose
-###### &nbsp;&nbsp;&nbsp;2.2.3.2.2 Gehen
-###### &nbsp;&nbsp;&nbsp;2.2.3.2.3 Laufen
-###### &nbsp;&nbsp;&nbsp;2.2.3.2.4 ...
-###### &nbsp;&nbsp;&nbsp;2.2.3.2.5 Schwierigkeiten und Problem
+------
+
+## Animationen
+### Basics 
+### Wichtig zu beachten
+### Einfügen in Unreal
+
+# Praktisch
+## Design
+## Umsetzung mit Blender
+### Modelierung
+#### Entwickelte Technicken
+#### Angehensweiße
+#### Probleme und Lösungen
+### Erweiterte Funktionen
+#### Farbenordnung
+#### Modul verwendung
+#### Erweiterung für Animationen
+### Animationen
+#### Umsetzung von Animationen von Unreal
+#### eigene Animation
+##### T-Pose
+##### Gehen
+##### Laufen
+##### ...
+##### Schwierigkeiten und Problem
 
 
 -------------------
