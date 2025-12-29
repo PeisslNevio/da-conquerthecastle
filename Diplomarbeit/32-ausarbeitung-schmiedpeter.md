@@ -1,8 +1,6 @@
 # Teilaufgabe Schüler Schmiedpeter
 \textauthor{Schmiedpeter}
 
-# Theoretisch
-
 ## Blender
 
 ### Einleitung in Blender
@@ -23,7 +21,8 @@ In der Modellierungsansicht gibt es 3 Modi alle haben eine andere Bedeutung
   Die wichtigsten Werkzeuge sind Objekte bewegen/rotieren/skalieren
   
 * Der Editmodus ist ein wenig anders, dieser ist nämlich da um einzelne Objekte zu verändern
-  >  Der Modus funktioniert auch mit meheren Objekten, es ist nur nicht erwünscht weil ungewollte Fehler auftretten können. Aus diesem Grund sollten Objekt vor den ändern  im Editmode gruppieren.
+
+   >  Der Modus funktioniert auch mit meheren Objekten, es ist nur nicht erwünscht weil ungewollte Fehler auftretten können. Aus diesem Grund sollten Objekt vor den ändern  im Editmode gruppieren.
 
 
 	Auswählen funktioniert anders als im Objektmodus hier wählt man nicht ein Objekt aus sondern es hängt ab welche Ansicht ausgewählt ist. Standard ist die Punktansicht ausgewählt, hierbei können nur Ecken angewählt werden. Nach dem gleichen Prinzip funktioniert die Kanten- und Flächenansicht. *Tipp mit `Shift` kann man mehrere auswählen und mit `Str` wählt Blender alle aus, die auf der Bahn zum erst ausgewählten*.
@@ -34,13 +33,17 @@ Wichtige Werkzeuge sind Loop Cuts und das Messer (mit diesen beiden fügt mann K
 Als Unterstützung in den jeweiligen Modus existiert dem Tool Anmerkungen. Mit diesem Tool kann man Sachen in der Eigenen Perspektive zeichnen. Im Edit und Objektmodus kann man zusätzlich auch das Tool Messen verwenden. Dieser funktioniert auch wieder in der eigenen Perspektive und ist wie Anmerkungen 2D. 
   
 ### Konkurrenz
+
 Neben Blender hätte man sich noch für andere Modellierungsprogramme entscheiden können Beispielsweise *Tinkercad, AutoDesk Fusion oder OpenSCAD*. 
+
 * Tinkercad kennt man vorallem auch durch das Entverwerfen von einfachen Schaltkreisen online und so in etwa ist es bei deren Programm für das Modellieren.
 Das Programm ist sehr simple und leicht zu verstehen - Perfekt für Anfänger
 Aber nicht geeignet für die Diplomarbeit, weil man extreme Einschränkungen hat. Man kann keine Modelle im Nachhinein abrunden, da Tinkercad nur an vorgefertigte Objekte zum Bewegen hat. Diese Modelle sind fix gefertigt und nicht veränderbar.
+
 * AutoDesk Fusion ist spezialiesiert auf die Produktion bzw. auf Werkzeug und Maschinen. Das heißt aber nicht das dieses Programm nicht geeignet ist für das Modelieren 
 AutoDesk hat eine einfacher Handhabung *Zitat aus dem Video*. Aus iesem Grund verwenden dieses Tool sehr viele größere Firmen, wie: Yamaha und Toyota *- so deren Homepage*
 Nachteil ist das Programm kostet viel .
+
 * OpenSCAD ist ein Open-Source  Program für das Modellieren per Code. Aus diesem Grund ist dieses Programm nicht geeignet für ein großes Projekt, wegen der hohen Komplexität.
 
 
@@ -58,7 +61,7 @@ bei den nächsten Befehle gilt:
 *  bei zusätzlichen Achsen Tippen `X`/`Y`/`Z` wird diese prioriesiert, mit 2x Tippen unprioriesieren
 *  bei `Shift` werden in Blocken bewegt
 
-||||
+| Befehl | Nutzen | Weitere erklärung |
 |:------:|:------:|:-----------------:|
 |    `G`   |    verschieben im Koordinatesystem   |    	/	  |
 |    `R`   |    drehen   |    	Um den Ursprung (Oranger Punkt)	  |
@@ -66,7 +69,7 @@ bei den nächsten Befehle gilt:
 
  Für den Objektmodus
 
-||||
+| Befehl | Nutzen | Weitere erklärung |
 |:------:|:------:|:-----------------:|
 |    `Str + J`   |    Objekte gruppieren   |    Funktioniert bei 2 oder mehr Objekte. Das der Befehl durchgesetzt werden kann, muss ein primär Objekt ausgewählt werden, für z.B	den Ursprung des Objektes |
 |    `Rechts Klick` + Ursprung ändern  |    versetzt den Ursprung   |    	Entweder nach Masse, Volumen oder nach dem Set Origin	  |
@@ -74,7 +77,7 @@ bei den nächsten Befehle gilt:
 
 Für den Editmodus
 
-||||
+| Befehl | Nutzen | Weitere erklärung |
 |:------:|:------:|:-----------------:|
 |    `M`   |    Punkte zusammenfügen   |   Funktioniert bei 2 oder mehr Punkten bzw. auch bei Kanten und Flächen setzen diese aber in Punkte um. Entweder auf dem ersten/ letzten ausgewählten Punkte, in der Mitte oder beim Set Origin. |
 |    `Str + R`   |    Loop Cuts   |   Erstellt Kanten die sich um ein ganzes Objekt schlingt. Dazu kann man einstellen wie viele Schleifen erstellt werden |
@@ -113,25 +116,25 @@ Objekte sind nur einfärbbar im Editmodus. Einzelne Flächen kann man nur Farben
 ### Wichtig zu beachten
 ### Einfügen in Unreal
 
-# Praktisch
-## Design
-## Umsetzung mit Blender
-### Modelierung
-#### Entwickelte Technicken
-#### Angehensweiße
-#### Probleme und Lösungen
-### Erweiterte Funktionen
-#### Farbenordnung
-#### Modul verwendung
-#### Erweiterung für Animationen
-### Animationen
-#### Umsetzung von Animationen von Unreal
-#### eigene Animation
-##### T-Pose
-##### Gehen
-##### Laufen
-##### ...
-##### Schwierigkeiten und Problem
+## Praktisch
+### Design
+### Umsetzung mit Blender
+#### Modelierung
+##### Entwickelte Technicken
+##### Angehensweiße
+##### Probleme und Lösungen
+#### Erweiterte Funktionen
+##### Farbenordnung
+##### Modul verwendung
+##### Erweiterung für Animationen
+#### Animationen
+##### Umsetzung von Animationen von Unreal
+##### eigene Animation
+###### T-Pose
+###### Gehen
+###### Laufen
+###### ...
+###### Schwierigkeiten und Problem
 
 
 -------------------
