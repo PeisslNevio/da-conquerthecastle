@@ -47,6 +47,44 @@ Nachteil ist das Programm kostet viel .
 
 ### Nützliche Befehle
 
+| Befehl | Nutzen | Weitere erklärung |
+|:------:|:------:|:-----------------:|
+|   `Shift + A`   |  Objekt hinzufügen    |    / 			  |
+|  `X`   |  Löschen   |   Wenn man etwas löschen will kommt eine Bestätigung abfrage			  |
+|    `TAB`   |    Wechselt den Modus   |     Von Objekt- auf Editmodus und zurück  		  |
+|    `LEERZEICHEN`   |    Zeitleiste abspielen/ stoppen   |  /  |
+
+bei den nächsten Befehle gilt:
+*  bei zusätzlichen Achsen Tippen `X`/`Y`/`Z` wird diese prioriesiert, mit 2x Tippen unprioriesieren
+*  bei `Shift` werden in Blocken bewegt
+
+||||
+|:------:|:------:|:-----------------:|
+|    `G`   |    verschieben im Koordinatesystem   |    	/	  |
+|    `R`   |    drehen   |    	Um den Ursprung (Oranger Punkt)	  |
+|    `S`   |    skalieren   |    	Um den Ursprung 	  |
+
+ Für den Objektmodus
+
+||||
+|:------:|:------:|:-----------------:|
+|    `Str + J`   |    Objekte gruppieren   |    Funktioniert bei 2 oder mehr Objekte. Das der Befehl durchgesetzt werden kann, muss ein primär Objekt ausgewählt werden, für z.B	den Ursprung des Objektes |
+|    `Rechts Klick` + Ursprung ändern  |    versetzt den Ursprung   |    	Entweder nach Masse, Volumen oder nach dem Set Origin	  |
+|    `Rechts Klick` +  Weich schattieren   |    Ecken abrunden   |   ohne Polys hinzufügen |
+
+Für den Editmodus
+
+||||
+|:------:|:------:|:-----------------:|
+|    `M`   |    Punkte zusammenfügen   |   Funktioniert bei 2 oder mehr Punkten bzw. auch bei Kanten und Flächen setzen diese aber in Punkte um. Entweder auf dem ersten/ letzten ausgewählten Punkte, in der Mitte oder beim Set Origin. |
+|    `Str + R`   |    Loop Cuts   |   Erstellt Kanten die sich um ein ganzes Objekt schlingt. Dazu kann man einstellen wie viele Schleifen erstellt werden |
+|    `K`   |    Messer   |   fügt Schnitte zu einen Objekt hinzu. Wird `Shift` gedrückt wird der Schnitt zentral gerichtet|
+|    `E`   |    Extrahieren   |   erweitert Flächen bzw. Kanten |
+|    `I`   |    Einsetzten von Flächen   |   erzeugt ein kleinere Fläche in einer größeren |
+|    `F`   |    Füllen von Flächen und Kanten   |   Bei 2 Punkte wird eine Kante erstellt ansonsten ein Fläche. Bei 5+ Punkte füllen werden oft komische Flächen erzeugt, vor allem für das Rendern und Exportieren ist das wichtig. |
+|    `Str + T`   |    Fläche zu Dreieck konventieren |   Trifft zu alle ausgewällten Flächen und ist sinnvoll für das Exportieren bzw. Rendern |
+
+
 ## Erweiterte Funktionen in Blender
 ### Material
 ### Module (Modifyers)
