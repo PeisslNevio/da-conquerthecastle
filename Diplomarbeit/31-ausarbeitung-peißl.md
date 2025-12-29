@@ -31,7 +31,7 @@ Der 3D Cursor, welcher in der Mitte von Abb. 1 zusehen ist, ist der Ort, wo neue
 
 In Blender gibt es einige Basisobjekte, welche mithilfe der Tastenkombintion `shift + a` eingefügt werden können. Darunter zählen unter anderem der Würfel, der Zylinder oder der Ball. (Siehe Abb. 2) Diese Objekte haben typische Anwendungsfälle. Wenn ein Gebäude erstellt werden soll, ist es sinnvoll einen Würfel zu benutzen, wenn eine Säule benötigt wird, kommt der Zylinder zum einsatz. [@blender_manual]
 
-Wenn ein Objekt ausgewählt ist, wird es orange Umrandet. Dieses Objekt kann nun bearbeitet werden und der Ursprung des Objektes wird sichtbar. (Siehe Abb. 2, Zylinder) [@blender_manual]
+Wenn ein Objekt ausgewählt ist, wird es orange Umrandet. Dieses Objekt kann nun bearbeitet werden und der Ursprung des Objektes wird sichtbar. Außerdem wird das ausgewählte Objekt im Outliner rechts markiert. (Siehe Abb. 2, Zylinder) [@blender_manual]
 
 ![Objekte [@blender]](img/peissl/objekte.png){width=90%}
 
