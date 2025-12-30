@@ -142,7 +142,9 @@ Bei längeren Entwicklungen in einem Projekt lehrnt man immer neue Funktionen ke
 * Gegenteil von der Funktion Insert: Wird ausgeführt in dem man eine Fläche extrahiert ohne eine Höhe hinzu zufügen und diese Fläche mit `S` vergrößern. Hier wird vorallem beachtet das keine Flächen überschnitten werden, was bei insert und dann `S` schon der Fall ist.
 * Objekte auf einer Kreisbahn verschieben: Verwendet die Technik das man den Ursprung beliebig setzten kann. Nützlich ist das allerdings dann bei Objekten die man auf einen kugelförmigen Objekt bewegen möchte. Da setzt man den Ursprung auf den gleichen wie bei der Kugel und mit `R` bewegt man das Objekt immer im gleichen Abstand bzw. in der gleichen Neigung zur Kugel. Siehe Abbildung
 
+![Objekte auf einer KUgel [@blender]](img/schmiedpeter/kugel_bewegen.png){width=50%}
 
+* Zuerst per Anmerkung vorgezeichnet und dann in der 2d Ansicht bearbeitet, das 2 mal. Diese Funktionalität ist ähnlich zum UV Mapping nur viel simpler.
 
 ##### Angehensweiße
 ##### Probleme und Lösungen
