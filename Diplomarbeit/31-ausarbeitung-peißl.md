@@ -107,31 +107,98 @@ In UE wird die Cutscene mithilfe des Level Sequenzers erstellt. Zu diesem Sequen
 
 ## Praktische Arbeit
 
+bla bla
+
 ### Bossraum
+
+bla bla
+
 #### Konzept
+
+bla bla
+
 #### Modellierung
+
+bla bla
+
 #### Texturierung & Materialien
+
+bla bla
+
 #### Optimierung
+
+bla bla
+
 #### Erstellung
+
+bla bla
+
 #### Export & Integration in Unreal Engine
 
+bla bla
+
+
 ### Items
+
+bla bla
+
 #### Item-Konzept
+
+bla bla
+
 #### Funktionen im Spiel
+
+bla bla
+
 #### Modellierung
+
+bla bla
+
 #### Texturierung
+
+bla bla
+
 #### Export & Verwendumg im Spiel
 
+bla bla
+
+
 ### GUI
+
+bla bla
+
 #### UI-Konzept
+
+bla bla
+
 #### Umsetzung in UMG
+
+bla bla
+
 #### Einbindung ins Spiel
 
+bla bla
+
+
 ### Cutscenes erstellen
+
+bla bla
+
 #### Ziel & Einsatz der Cutscenes
+
+bla bla
+
 #### Erstellung mit Level Sequencer
+
+bla bla
+
 #### Kameraführung & Timing
+
+bla bla
+
 #### Trigger & Ablauf im Spiel
+
+bla bla
 
 
 
