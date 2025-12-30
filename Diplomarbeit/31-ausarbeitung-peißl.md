@@ -21,7 +21,7 @@ Blender ist für diese Arbeit eine optimale Lösung, da es frei verfügbar, leis
 Beim Erstellen eines neuen Blender-Projekts ist zunächst nur das Koordinatensystem sichtbar. Dieses besteht aus drei Achsen: X, Y und Z. Die Achsen erstrecken sich jeweils vom positiven bis zum negativen Bereich und treffen sich im Nullpunkt. Sie dienen als Orientierungshilfe und bieten dem Benutzer einen festen Bezugspunkt innerhalb der Szene. Zusätzlich befindet sich rechts oben ein kleines Achsendiagramm, das die Orientierung des Nutzers in Echtzeit anzeigt (siehe Abb. 1). [@blender_manual]
 
 
-![Koordinatensystem [@blender]](img/peissl/koordinatensystem.png){width=90%}
+![Koordinatensystem [@blender]](img/peissl/theorie/koordinatensystem.png){width=90%}
 
 Die Kamera kann mit dem Mausrad rotiert und mit Shift + Mausrad verschoben werden. [@blender_manual]
 
@@ -33,7 +33,7 @@ Blender bietet mehrere primitive Basisobjekte, die mithilfe der Tastenkombinatio
 
 Wird ein Objekt ausgewählt, ist es orange umrandet. Der Ursprung des Objekts wird sichtbar, und das Objekt wird im Outliner auf der rechten Seite markiert (siehe Abb. 2, Zylinder). [@blender_manual]
 
-![Objekte [@blender]](img/peissl/objekte.png){width=90%}
+![Objekte [@blender]](img/peissl/theorie/objekte.png){width=90%}
 
 
 Objekte bestehen aus Vertices, Edges und Faces. Ein Vertex stellt einen einzelnen Punkt dar. Werden zwei Vertices verbunden, entsteht eine Edge. Mehrere verbundene Edges ergeben eine Face. Verbinden sich mehrere Faces, entsteht ein Mesh, welches das eigentliche Objekt darstellt. [@blender_manual]
@@ -61,7 +61,7 @@ Der Solidify Modifier verleiht Objekten eine Dicke. Die einfachste Anwendung äh
 
 Extra Mesh Objects ist ein Add-on für Blender, das die dynamische Erstellung komplexer Strukturen wie Wände ermöglicht. Um es zu nutzen, muss das Add-on installiert sein. Neue Wall Objekte werden mit `Shift + A` und dem Wall Builder erstellt (siehe Abb. 3). [@blender_extra_mesh_objects]
 
-![Wall Builder [@blender]](img/peissl/wallbuilder.png){width=90%}
+![Wall Builder [@blender]](img/peissl/theorie/wallbuilder.png){width=90%}
 
 Es können nun die Eigenschaften dieser Wand bearbeitet werden. Darunter zählen Anfang und Ende der Wand, die Höhe und Breite sowie die Größe der einzelnen Ziegelsteine. Es gibt noch weitere Einstellungen für Fenster, Zinnen und Treppen. [@blender_extra_mesh_objects]
 
@@ -72,14 +72,14 @@ Es können nun die Eigenschaften dieser Wand bearbeitet werden. Darunter zählen
 
 UV-Mapping wird zum Texturieren von Objekten benötigt. Es ist der Prozess, bei dem eine 3D-Grafik auf eine 2D-Fläche projiziert wird. Das Objekt wird aufgeschnitten und auf eine 2D Textur gelegt. Jede Fläche (Face) bekommt Koordinaten auf einer 2D-Textur. Wenn diese Textur bearbeitet wird, verändert sich auch das Aussehen des Objektes. Ohne UV-Mapping wären Texturen verzerrt, und Details gehen verloren. [@uv_mapping_guide] [@gpt_uv_mapping]
 
-![UV Mapping [@uv_mapping_guide]](img/peissl/uv-mapping.png){width=90%}
+![UV Mapping [@uv_mapping_guide]](img/peissl/theorie/uv-mapping.png){width=90%}
 
 
 #### Low-Poly-Modellierung
 
 Durch die geringe Anzahl von Polygonen bleibt der Rechenaufwand eher gering und die Framerate ist stabiler. Außerdem verkürzen sich Ladezeiten, besonders auf älteren Geräten. Low-Poly hält den Style einheitlich und reduziert den Modellierungsaufwand drastisch. Ein Low-Poly Spiel setzt nicht auf hochauflösende Grafik oder komplexe Modelle, sondern auf die Einfachheit und Effizienz. [@low_poly] [@why_low_poly]
 
-![Low-Poly Beispiel [@low_poly_example]](img/peissl/low-poly-example.png){width=90%}
+![Low-Poly Beispiel [@low_poly_example]](img/peissl/theorie/low-poly-example.png){width=90%}
 
 #### Exportformat
 
@@ -109,98 +109,104 @@ In UE wird die Cutscene mithilfe des Level Sequenzers erstellt. Zu diesem Sequen
 
 ## Praktische Arbeit
 
-bla bla
+In diesem Kapitel wird die praktische Umsetzung des Bossraums, der Items, der GUI und der Cutscenes beschrieben.
 
 ### Bossraum
 
-bla bla
-
+Der Bossraum ist der zentrale Schauplatz des Spiels. Dieser Raum erinnert an einen Thronsaal und bietet ausreichend Platz für den Kampf. Wenn der Spieler den Bossraum betritt, soll er das Gefühl haben, vor einem entscheidenden Kampf zu stehen.
 #### Konzept
 
-bla bla
+Das Konzept des Bossraums orientiert sich an mittelalterlichen Thronsälen. Der Raum ist länglich aufgebaut und führt den Spieler vom Eingangsbereich direkt bis zum Thron des Bosses. Elemente wie Säulen, hohe Decken, Fenster und Banner wurden verwendet, um die Macht des Bosses widerzuspiegeln.
+Der Spieler kann sich während des Kampfes leicht orientieren, da der Bossraum übersichtlich aufgebaut ist und jedes Objekt, das sich darin befindet, einen klaren Nutzen hat.
+
+Nachfolgend ist die Skizze des Bossraums dargestellt. In der Skizze sind die Eingangstür (links), der rote Teppich (orange), die Säulen (grün) und der Thron (rot) eingezeichnet. Außerdem ist die Position der Fenster violett gekennzeichnet. Der Bossraum hat eine Länge von 70 Metern, eine Breite von 30 Metern und eine Höhe von 20 Metern.
+
+![Bossraum Konzept](img/peissl/praxis/konzept-bossraum.jpg){width=90%}
 
 #### Modellierung
 
-bla bla
+Die Modellierung des Bossraumes erfolgte vollständig in Blender. 
+
+//todo
 
 #### Texturierung & Materialien
 
-bla bla
+//todo
 
 #### Optimierung
 
-bla bla
+//todo
 
 #### Erstellung
 
-bla bla
+//todo
 
 #### Export & Integration in Unreal Engine
 
-bla bla
+//todo
 
 
 ### Items
 
-bla bla
+//todo
 
 #### Item-Konzept
 
-bla bla
+//todo
 
 #### Funktionen im Spiel
 
-bla bla
+//todo
 
 #### Modellierung
 
-bla bla
+//todo
 
 #### Texturierung
 
-bla bla
+//todo
 
 #### Export & Verwendumg im Spiel
 
-bla bla
+//todo
 
 
 ### GUI
 
-bla bla
+//todo
 
 #### UI-Konzept
 
-bla bla
+//todo
 
 #### Umsetzung in UMG
 
-bla bla
+//todo
 
 #### Einbindung ins Spiel
 
-bla bla
+//todo
 
 
 ### Cutscenes erstellen
 
-bla bla
+//todo
 
 #### Ziel & Einsatz der Cutscenes
 
-bla bla
+//todo
 
 #### Erstellung mit Level Sequencer
 
-bla bla
+//todo
 
 #### Kameraführung & Timing
 
-bla bla
+//todo
 
 #### Trigger & Ablauf im Spiel
 
-bla bla
+//todo
 
 
 
