@@ -104,6 +104,8 @@ Eine Cutscene, auch genannt Zwischensequenz, ist eine kurze Filmsequenz in einem
 
 In UE wird die Cutscene mithilfe des Level Sequenzers erstellt. Zu diesem Sequenzer wird eine Kamera hinzugefügt und in der Timeline wird mithilfe von Keyframes die Kameraposition zu bestimmten Zeitpunkten angegeben. Mithilfe eines Blueprints wird festgelegt, wann die Cutscene aufgerufen wird.  [@cutscene_tutorial]
 
+/newpage
+
 
 ## Praktische Arbeit
 
