@@ -95,7 +95,7 @@ Für den Editmodus
 
 Das Material beschreibt das Aussehen eines Objektes bzw. einzelne Flächen - dazu gehört die Farbe, die Metalleffekt, die Rauheit und einiges mehr was definiert werden kann. Standard gemäß ist das Material ohne besondere Werte und in ein helles Grau. Das hat den Grund da Effekte bzw. Farben sonst beim Modelieren im Weg ist.
 
-![Koordinatensystem [@blender]](img/schmiedpeter/Material_blender.png){width=90%}
+![Matterial erklärung [@blender]](img/schmiedpeter/Material_blender.png){width=90%}
 
 Objekte sind nur einfärbbar im Editmodus. Einzelne Flächen kann man nur Farben hinzu fügen, wenn diese ausgewählt musst die Farbe auch ausgewählt werden und dann zugewiesen werden. Um die Farbe sehen zu können muss man die Ansichtsfenster Shading auf Materialbeispiel bzw gerendert ändern.
 
@@ -132,7 +132,44 @@ Beispiel an einem Modifyer ist das Gewebe Modifyer. Dieser funktioniert wie eine
 ### Einfügen in Unreal
 
 ## Praktisch
+
 ### Design
+
+Die grundsätzliche Inspiration stammt von den Rittern des Mittelalters. Vor allem in der Rüstungskonstruktion sieht man, wie die Rüstung aufgebaut ist. Es wird vor allem auf eine Kombination aus Kettenrüstung sowie Helm und Brustpanzer mit Arm-/ Beinschienen gesetzt.
+
+Die Kettenrüstung ist jedoch nicht gut geeignet für den Modellierungsstil **Low-Poly**.
+
+#### Low-Poly-Stil
+
+Low-Poly ist ein simpel gehaltener Stil mit relativ wenigen Polygonen (Punkten).  
+Der große Vorteil dieses Stils liegt vor allem in der Performance.
+
+Grundsätzlich gilt:
+> Je weniger Punkte ein Modell besitzt, desto weniger muss der PC beim Rendern berechnen.
+
+Um zu überprüfen, wie viele Punkte ein Modell besitzt, muss dieses exportiert und anschließend als **FBX-Datei** betrachtet werden. Unter **3dviewer.net** erhält man dafür eine gute Übersicht.
+
+#### Helmgestaltung
+
+Eine weitere unübliche Gestaltung ist der Helm. Untypisch sind dabei vor allem die Hörner sowie generell die auffällige Farbgestaltung. Hörner an Helmen gab es im Mittelalter nur sehr selten. Wahrscheinlich wurden sie damals kaum verwendet, da sie im Kampf eher hinderlich waren.
+
+#### Farbwahl
+
+Die Farben wurden bewusst gewählt, da diese Funktionen erfüllen sollen.  
+Sie unterstützen das Aussehen des Bosses als Oberhaupt des Gegners und tragen zusätzlich eine symbolische Bedeutung.
+
+Die Farbe **Lila** wird beispielsweise häufig mit Macht, Reichtum und Autorität assoziiert. Historisch gesehen war Lila zudem eine Farbe, die sehr schwer herzustellen war und daher auch im Mittelalter als Zeichen von Wohlstand galt.
+
+#### Zeitliche Einordnung der Rüstung
+
+Die Rüstung selbst erinnert eher an das **Hoch- bzw. Spätmittelalter** beziehungsweise an die **Renaissance**, da in diesen Epochen Rüstungen immer kunstvoller gefertigt wurden.
+
+- **Hoch- und Spätmittelalter (ca. 1380–1500)**  
+  Diese Epoche bietet sehr guten Rundumschutz am gesamten Körper und eignet sich daher gut für ein Low-Poly-Design.
+
+- **Renaissance**  
+  In dieser Zeit wurden Rüstungen sehr detailreich gestaltet, was für Low-Poly-Modelle weniger geeignet ist. Typisch dafür sind stark verzierte Rüstungen oder Elemente wie Kappenhelme und aufwendige Verzierungen.
+
 ### Umsetzung mit Blender
 #### Modelierung
 ##### Entwickelte Technicken
