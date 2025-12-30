@@ -59,7 +59,7 @@ Der Solidify Modifier verleiht Objekten eine Dicke. Die einfachste Anwendung äh
 
 #### Extra Mesh Objects
 
-Extra Mesh Objects ist ein Add-on für Blender, das die dynamische Erstellung komplexer Strukturen wie Wände ermöglicht. Um es zu nutzen, muss das Add-on installiert sein. Neue Objekte werden über `Shift + A` → Mesh → Extras → Wall Builder erstellt (siehe Abb. 3). [@blender_extra_mesh_objects]
+Extra Mesh Objects ist ein Add-on für Blender, das die dynamische Erstellung komplexer Strukturen wie Wände ermöglicht. Um es zu nutzen, muss das Add-on installiert sein. Neue Wall Objekte werden mit `Shift + A` und dem Wall Builder erstellt (siehe Abb. 3). [@blender_extra_mesh_objects]
 
 ![Wall Builder [@blender]](img/peissl/wallbuilder.png){width=90%}
 
