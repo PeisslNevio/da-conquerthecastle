@@ -147,6 +147,19 @@ Bei längeren Entwicklungen in einem Projekt lehrnt man immer neue Funktionen ke
 * Zuerst per Anmerkung vorgezeichnet und dann in der 2d Ansicht bearbeitet, das 2 mal. Diese Funktionalität ist ähnlich zum UV Mapping nur viel simpler.
 
 ##### Angehensweiße
+
+Das Design ist schon mal grob festgelegt und es muss eine Strategie heraus gefunden werden wie dieser umgesetzt wird. Sollte man oben anfangen bei den Gleidmassen oder bei besonderen Markmale der Figur. Wegen der besonderen Form weil es üblich ist, wird oben beim Kopf angefangen und geht weiter hinunter und die Gliedmassen sind am Schluss zu Fertigen. Eingeteil wird im Endeffekt so: Helm und Kopf dann zum Körper, der Hals (die Verbindung) wird erst als drittes gemacht, dann Beine und Arme und am Schluss Füße und Hände.
+
+
+* Helm
+* Körper
+* Hals
+* Beine
+* Arme
+* Schuhe
+* Hände
+
+
 ##### Probleme und Lösungen
 #### Erweiterte Funktionen
 ##### Farbenordnung
