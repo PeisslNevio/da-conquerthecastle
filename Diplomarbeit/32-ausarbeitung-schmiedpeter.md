@@ -187,14 +187,27 @@ Bei längeren Entwicklungen in einem Projekt lehrnt man immer neue Funktionen ke
 
 Das Design ist schon mal grob festgelegt und es muss eine Strategie heraus gefunden werden wie dieser umgesetzt wird. Sollte man oben anfangen bei den Gleidmassen oder bei besonderen Markmale der Figur. Wegen der besonderen Form weil es üblich ist, wird oben beim Kopf angefangen und geht weiter hinunter und die Gliedmassen sind am Schluss zu Fertigen. Eingeteil wird im Endeffekt so: Helm und Kopf dann zum Körper, der Hals (die Verbindung) wird erst als drittes gemacht, dann Beine und Arme und am Schluss Füße und Hände.
 
+Die Modellierung des Bosses erfolgte nach dem Prinzip, von oben nach unten zu arbeiten, wobei die Gliedmaßen bewusst erst am Ende ausgearbeitet wurden. Diese Vorgehensweise erleichterte es, zunächst die grundlegenden Proportionen und die visuelle Wirkung der Figur festzulegen, bevor Details ergänzt wurden. Der Fokus lag dabei auf einer klaren Silhouette und einer gut erkennbaren Formensprache, die bereits aus der Distanz die Rolle des Bossgegners vermittelt.
 
-* Helm
-* Körper
-* Hals
-* Beine
-* Arme
-* Schuhe
-* Hände
+###### Helm
+
+Die Kopfform des Helms wurde bewusst höher als rund gestaltet und orientiert sich eher an einer quaderartigen Grundform. Dadurch wirkt der Kopf massiver und dominanter, was die bedrohliche Erscheinung des Bosses zusätzlich verstärkt. Die Gesichtsform weist einen klaren, basalen Schnitt auf, der gezielt hervorgehoben wurde. Das Visier wurde leuchtend gestaltet, um einen mysteriösen und leicht übernatürlichen Eindruck zu erzeugen.
+
+Ein weiteres markantes Merkmal des Helms sind die Hörner. Diese verlaufen mit ihrer Masse nach hinten, wurden jedoch relativ flach gehalten, um die Gesamtform nicht zu überladen. Während der Modellierung zeigte sich, dass die Spitzen der Hörner zunächst an einer falschen Position lagen. Aus diesem Grund wurden sie im weiteren Verlauf neu ausgerichtet, sodass sie sich harmonisch in die Gesamtform des Helms einfügen und die Silhouette nicht negativ beeinflussen.
+
+###### Körper
+
+Beim Körper wurde eine spezielle Modellierungstechnik eingesetzt, bei der quer verlaufende Akzente genutzt wurden, um die körperlichen Strukturen gezielt hervorzuheben. Der Fokus lag dabei insbesondere auf der Brust- und Bauchmuskulatur sowie auf den Schultern, da diese Bereiche maßgeblich zur kraftvollen und einschüchternden Wirkung des Bosses beitragen. Zusätzlich wurden auch sekundäre Elemente wie der Gürtel in das Modell integriert, um den Gesamteindruck stimmig abzurunden.
+
+Im nächsten Schritt wurde ein Cloth-Fallen angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen. Nach Abschluss dieses Arbeitsschrittes wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
+
+Während der Umsetzung traten zwei größere Probleme auf. Zum einen war die Rüstung an den Seiten deutlich dünner als im restlichen Bereich, während sie am Rücken teilweise kaum Tiefe aufwies. Dieses Problem wurde behoben, indem die betroffenen Bereiche mit einer Skalierung angepasst und anschließend sauber zusammengeführt wurden, sodass alle Endpunkte korrekt miteinander verbunden sind. Zum anderen waren einzelne Eckpunkte durch überlagernde Flächen schwer zugänglich. Da eine saubere Bearbeitung dadurch nicht möglich war, wurden die letzten Arbeitsschritte rückgängig gemacht und anschließend erneut korrekt umgesetzt. Ohne Probleme kam das Objekt dann trotzdem nicht, dennnoch war dieser eindeutlich besser.
+
+###### Hals
+###### Beine
+###### Arme
+###### Schuhe
+###### Hände
 
 
 ##### Probleme und Lösungen
