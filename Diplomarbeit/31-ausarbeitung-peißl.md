@@ -114,7 +114,7 @@ In UE wird die Cutscene mithilfe des Level Sequenzers erstellt. Zu diesem Sequen
 #### Bossraum
 ##### Erstellung
 ##### Designentscheidungen
-##### Moddelieren
+##### Modellieren
 ##### Texturieren
 ##### Exportieren
 
