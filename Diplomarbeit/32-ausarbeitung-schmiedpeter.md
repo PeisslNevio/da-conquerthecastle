@@ -58,6 +58,7 @@ Nachteil ist das Programm kostet viel .
 |    `LEERZEICHEN`   |    Zeitleiste abspielen/ stoppen   |  /  |
 
 bei den nächsten Befehle gilt:
+e
 *  bei zusätzlichen Achsen Tippen `X`/`Y`/`Z` wird diese prioriesiert, mit 2x Tippen unprioriesieren
 *  bei `Shift` werden in Blocken bewegt
 
@@ -101,12 +102,19 @@ Objekte sind nur einfärbbar im Editmodus. Einzelne Flächen kann man nur Farben
 
 
 ### Modifyers
+
 sind Erweiterungen die eigene Funktionen haben, davon existieren viele. Für ein Projekt werden oft nur eine handvoll verwendet. Manche sind davon Erleichterung, das heißt auch möglich ohne Modifiers aber nur komplexer, manche davon sind komplett eigene Funktionen.  Modifyers sind auf der rechten Seite unter dem Schraubenschlüssel. Sie sind in Kategorieen auf geteilt wichtig sind hierbei Erzeugen und Physik. Zu Beachten ist es wird zuerst nur eine Übersicht erstellt. Bearbeiten kann man diese Übersicht erst wenn man diese angewendet hat. Einer der wichtigsten Modifyer sind Boolean, Mirror und collition
+
 #### Boolean
+
 Dieser schneidet ein Objekt von einem anderen herraus. Hierbei hängt es ab was ausgewählt wird **Schneiden, Vereinigung und Differenz**. Es ist notwendig einen Primären Körper zu haben und einen Sekundären.
+
 #### Mirror
+
 spiegelt das Objekt in die jeweilige Richtung die man Ausgwählt hat. Gespiegelt wird das Objekt nicht in der Mitte sondern um den Ursprung. Dieser wird als Mitte angesehen.
+
 #### Physik
+
 Physik ist nicht wie die anderen ein einziger Modifyer sondern gleiche eine Kategorie. Hier reagieren die Modifiers auf die Regeln der echten Welt. Möglich sind Simulationen, wie mit Flüssigkeiten oder mit Stoffen. Besonders für diese Kategorie ist auch das diese auch eine eigene Übersicht hat. Wichtig für die meisten Modifyers in dieser Kategorie einen zweites Objekt mit dem Modifyer Kollision. Dieser ist dafür da, dass Objekte mit seiner Hitbox reagieren können. Ansonsten wird dieser ignoriert, als wäre der nicht dagewesen. 
 Beispiel an einem Modifyer ist das Gewebe Modifyer. Dieser funktioniert wie eine Decke. Führt man die Simlation  mit `LEERZEICHEN`  aus dann fällt der Körper hinunter. Ist ein Objekt im weg mit Kollision, dann hällt dieser hin beim fallen auf. Das Objekt kann allerdings nur zerfallen bei Eckpunkten, weil jede Fläche ist starr. In den Einstellungen ist zum Setzen wie gut das Objekt zerfällt bzw. auch wie schwer sie ist. Beim Anwenden diesem Modifyer wird der Körper in dieser Lager fixiert.
 
@@ -128,6 +136,14 @@ Beispiel an einem Modifyer ist das Gewebe Modifyer. Dieser funktioniert wie eine
 ### Umsetzung mit Blender
 #### Modelierung
 ##### Entwickelte Technicken
+
+Bei längeren Entwicklungen in einem Projekt lehrnt man immer neue Funktionen kennen. Hin und wieder erfindet man auch seine eigene Technicken. In Blender sind es z.B.
+
+* Gegenteil von der Funktion Insert: Wird ausgeführt in dem man eine Fläche extrahiert ohne eine Höhe hinzu zufügen und diese Fläche mit `S` vergrößern. Hier wird vorallem beachtet das keine Flächen überschnitten werden, was bei insert und dann `S` schon der Fall ist.
+* Objekte auf einer Kreisbahn verschieben: Verwendet die Technik das man den Ursprung beliebig setzten kann. Nützlich ist das allerdings dann bei Objekten die man auf einen kugelförmigen Objekt bewegen möchte. Da setzt man den Ursprung auf den gleichen wie bei der Kugel und mit `R` bewegt man das Objekt immer im gleichen Abstand bzw. in der gleichen Neigung zur Kugel. Siehe Abbildung
+
+
+
 ##### Angehensweiße
 ##### Probleme und Lösungen
 #### Erweiterte Funktionen
