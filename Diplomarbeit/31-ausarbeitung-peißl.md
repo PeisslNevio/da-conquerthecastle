@@ -1,7 +1,7 @@
 # Teilaufgabe Peißl
 \textauthor{Nevio Peißl}
 
-Dieser Teil der Diplomarbeit beschäftigt sich mit der erstellung des Bossraummodelles und UI sowie der Cutscenes. Hier werden die Designentscheidungen sowie dessen Umsetzung wiedergegeben.
+Dieser Teil der Diplomarbeit beschäftigt sich mit der Erstellung des Bossraum-Modells und UI sowie der Cutscenes. Hier werden die Designentscheidungen sowie dessen Umsetzung wiedergegeben.
 
 ## Literaturrecherche
 
@@ -10,9 +10,9 @@ In diesem Teil werden die theoretischen Aspekte für die Erstellung eines 3D Mod
 
 ### Blender
 
-Blender ist ein Open-Source-3D-Programm, das von der Blender Foundation entwickelt wird und kostenlos zugänglich ist. Es deckt alle wesentlichen Schritte der 3D-Modellierung ab. Dazu zählen Modeling, Animation, Simulation, Rendering und Exportieren. Dadurch ist es möglich, den gesamten 3D-Workflow innerhalb von Blender durchzuführen, ohne die Verwendung externer Software. [@blender_features]
+Blender ist ein Open-Source-3D-Programm, das von der Blender Foundation entwickelt wird und kostenlos zugänglich ist. Es deckt alle wesentlichen Schritte der 3D-Modellierung ab. Dazu zählen Modeling, Animation, Simulation, Rendering und Export. Dadurch ist es möglich, den gesamten 3D-Workflow innerhalb von Blender durchzuführen, ohne zusätzliche externe Software. [@blender_features]
 
-Die Mission von Blender ist es, ein leistungsstarkes 3D-Programm für jeden frei zugänglich zumachen. Blender wird von der Comunity entwickelt und jeder kann einen Beitrag leisten. 
+Die Mission von Blender ist es, ein leistungsstarkes 3D-Programm für jeden frei zugänglich zu machen. Blender wird von der Comunity entwickelt und jeder kann einen Beitrag leisten. 
 
 Blender ist die optimale Lösung für diese Arbeit, da es frei zugänglich, leistungsstark und eine große aktive Comunity hat. Es gibt viele frei zugängliche online Tutorials und Dokumentationen. Die Software bekommt regelmäig Updates und wird ständig erweitert. Blender funktioniert auf den meisten Betriebssystemen (Linux, Windows und MAC) und ist durch OpenGL dynamisch aufgebaut. [@blender_manual]
 
