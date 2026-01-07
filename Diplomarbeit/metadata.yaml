@@ -13,7 +13,7 @@ da-author:
 - vorname: Nevio 
   nachname: Peißl
   klasse: 5BHWIN
-  thema: Frontend und Design
+  thema: Frontend und Gamedesign
   ki-tools:
   - name: ChatGPT5.2
     zweck: Informationsbeschaffung, Rechtschreibkorrektur
@@ -21,7 +21,7 @@ da-author:
 - vorname: Rhys 
   nachname: Schmiedpeter
   klasse: 5BHWIN
-  thema: Design Player und Boss
+  thema: Design, Modell und Animation des Bosses
   ki-tools:
   - name: ChatGPT5.2
     zweck: Inspirations & Informationsbeschaffung, Rechtschreibkorrektur
@@ -29,7 +29,7 @@ da-author:
 - vorname: Elias 
   nachname: Grgic
   klasse: 5BHWIN
-  thema: Backend, Gameplay Logik
+  thema: Backend
   ki-tools:
   - name: ChatGPT5.2
     zweck: Informationsbeschaffung, Rechtschreibkorrektur
