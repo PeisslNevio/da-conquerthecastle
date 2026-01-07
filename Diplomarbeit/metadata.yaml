@@ -10,15 +10,13 @@ da-keywords: HTLLE, CTC, ConquerTheCastle
 bibliography: [literatur.bib]
 
 da-author:
-- vorname: Joltawan 
-  nachname: Barodscheff
-  klasse: 5AHWIN
-  thema: Bauen des LaTex Templates
+- vorname: Nevio 
+  nachname: Peißl
+  klasse: 5BHWIN
+  thema: Frontend, Design
   ki-tools:
-  - name: ChatGPT3.5
-    zweck: Informationsbeschaffung
-  - name: Midjourney
-    zweck: Künstlerische Illustration
+  - name: ChatGPT5.2
+    zweck: Informationsbeschaffung, Rechtschreibkorrektur
 
 - vorname: Craig 
   nachname: Tester
