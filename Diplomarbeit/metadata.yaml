@@ -13,33 +13,27 @@ da-author:
 - vorname: Nevio 
   nachname: Peißl
   klasse: 5BHWIN
-  thema: Frontend, Design
+  thema: Frontend und Design
   ki-tools:
   - name: ChatGPT5.2
     zweck: Informationsbeschaffung, Rechtschreibkorrektur
 
-- vorname: Craig 
-  nachname: Tester
-  klasse: 5AHWIN
-  thema: Entwicklung eines Prototypen
+- vorname: Rhys 
+  nachname: Schmiedpeter
+  klasse: 5BHWIN
+  thema: Design Player und Boss
   ki-tools:
-  - name: Github Copilot
-    zweck: Boilerplate codegenerierung, Codedokumentation
+  - name: ChatGPT5.2
+    zweck: Inspirations & Informationsbeschaffung, Rechtschreibkorrektur
 
-- vorname: Karl 
-  nachname: Ranseier
-  klasse: 5AHWIN
-  thema: API-Mockups und Testen der Applikation
-
-- vorname: Frank 
-  nachname: Borland
-  klasse: 5AHWIN
-  thema: GUI Generierung
+- vorname: Elias 
+  nachname: Grgic
+  klasse: 5BHWIN
+  thema: Backend, Gameplay Logik
   ki-tools:
-  - name: Galileo AI
-    zweck: Setendesign sowie UI/UX Design der App
-  - name: Grammarly Go
-    zweck: Stilverbesserung sowie Rechtschreibkorrekturen
+  - name: ChatGPT5.2
+    zweck: Informationsbeschaffung, Rechtschreibkorrektur
+
 
 da-betreuer:
 - paraffe: hg
