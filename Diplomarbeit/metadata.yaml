@@ -16,7 +16,7 @@ da-author:
   klasse: 5BHWIN
   thema: Frontend, Design
   ki-tools:
-  - name: ChatGPT-5.2
+  - name: ChatGPT5.2
     zweck: Informationsbeschaffung, Rechtschreibkorrektur
 
 - vorname: Rhys 
@@ -24,7 +24,7 @@ da-author:
   klasse: 5BHWIN
   thema: Design Player & Boss
   ki-tools:
-  - name: ChatGPT-5.2
+  - name: ChatGPT5.2
     zweck: Inspirations & Informationsbeschaffung, Rechtschreibkorrektur
 
 - vorname: Elias 
@@ -32,7 +32,7 @@ da-author:
   klasse: 5BHWIN
   thema: Backend, Gameplay Logik
   ki-tools:
-  - name: ChatGPT-5.2
+  - name: ChatGPT5.2
     zweck: Informationsbeschaffung, Rechtschreibkorrektur
 
 da-betreuer:
