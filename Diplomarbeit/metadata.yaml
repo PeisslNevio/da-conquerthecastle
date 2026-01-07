@@ -1,50 +1,50 @@
 ---
-da-titel: GeoQuest - Die Schnitzeljagd App
 
-da-jahr: 2025/26 
+da-titel: Conquer the Castle - A Videogame in Unreal Engine
 
-da-keywords: HTLLE, Schnitzeljagd, App,
+da-jahr: 2025/26
+
+da-keywords: HTLLE, CTC, ConquerTheCastle
 
 #lang: english
 
 bibliography: [literatur.bib]
 
 da-author:
-- vorname: Benjamin 
-  nachname: Muratovic
+- vorname: Nevio 
+  nachname: Peißl
   klasse: 5BHWIN
-  thema: Projekt Management
+  thema: Frontend, Design
   ki-tools:
-  - name: ChatGPT5.1
-    zweck: Informationsbeschaffung
+  - name: ChatGPT-5.2
+    zweck: Informationsbeschaffung, Rechtschreibkorrektur
 
-- vorname: Christian 
-  nachname: Kovacs
+- vorname: Rhys 
+  nachname: Schmiedpeter
   klasse: 5BHWIN
-  thema: Entwicklung - Backend
+  thema: Design Player & Boss
   ki-tools:
-  - name: ChatGPT5.1
-    zweck: Boilerplate codegenerierung, Informationsbeschaffung
-  - name: Minstral Small 3.2
-    zweck: Boilerplate codegenerierung
-  - name: Gemini Model 3
-    zweck: Boilerplate Firebase codegenerierung 
+  - name: ChatGPT-5.2
+    zweck: Inspirations & Informationsbeschaffung, Rechtschreibkorrektur
 
-- vorname: Tobias 
-  nachname: Zeismann
-  klasse: 5AHWIN
-  thema: Entwicklung - Frontend
+- vorname: Elias 
+  nachname: Grgic
+  klasse: 5BHWIN
+  thema: Backend, Gameplay Logik
   ki-tools:
-  - name: ChatGPT5.1
-    zweck: Informationsbeschaffung
-    
+  - name: ChatGPT-5.2
+    zweck: Informationsbeschaffung, Rechtschreibkorrektur
+
 da-betreuer:
-- paraffe: wb
-  name: DI Andreas Weichbold
+- paraffe: kuw
+  name: DI Uwe Kondert, Msc.
 
-da-kurzfassung-de: Hier kommt eine deutsche Kurzfassung hin.
+- paraffe: hg
+  name: Ing. DI(FH) Günther Hutter, Msc.
 
-da-kurzfassung-en: Hier kommt eine englische Kurzfassung hin.
+da-kurzfassung-de: Im Rahmen dieser Diplomarbeit wurde ein minimalistisches, mittelalterlich angehauchtes Bosskampf-Spiel für den PC entwickelt. Die 3D-Modellierung erfolgte mit Blender, während die spieltechnische Umsetzung in der Unreal Engine realisiert wurde. Die Arbeit zeigt exemplarisch, wie ein kleiner Game-Prototyp von der Konzeptphase über die Modellierung bis hin zur lauffähigen Anwendung entwickelt werden kann.
+
+da-kurzfassung-en: As part of this diploma project, a minimalist medieval-themed boss fight game for PC was developed. The 3D modeling was created using Blender, while the gameplay and technical implementation were realized with Unreal Engine. This work demonstrates how a small game prototype can be developed from the initial concept through modeling to a fully functional application.
 
 
 da-kiquellen:
@@ -67,10 +67,11 @@ da-appendix:
 
 # Diplomarbeitsvereinbarungen müssen zum Schluss sein 
 
-- abschnitt: Diplomatbeitsvereinbarung Englisch
+- abschnitt: Diplomarbeitsvereinbarung Englisch
   pdf-file: HTL-DA-Doku-EN.pdf
 
-- abschnitt: Diplomatbeitsvereinbarung Deutsch
+- abschnitt: Diplomarbeitsvereinbarung Deutsch
   pdf-file: HTL-DA-Doku-DE.pdf
-  
----
+
+
+  ---
