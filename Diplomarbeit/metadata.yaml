@@ -36,17 +36,19 @@ da-author:
 
 
 da-betreuer:
+- paraffe: kuw
+  name: DI Uwe Kondert, Msc.
+
 - paraffe: hg
   name: Ing. DI(FH) Günther Hutter, Msc.
 
-- paraffe: me
-  name: DI Dr. mont Thomas Messner
+da-kurzfassung-de: Im Rahmen dieser Diplomarbeit wurde ein minimalistisches, mittelalterlich angehauchtes Bosskampf-Spiel für den PC entwickelt. Die 3D-Modellierung erfolgte mit Blender, während die spieltechnische Umsetzung in der Unreal Engine realisiert wurde. Die Arbeit zeigt exemplarisch, wie ein kleiner Game-Prototyp von der Konzeptphase über die Modellierung bis hin zur lauffähigen Anwendung entwickelt werden kann.
 
-da-kurzfassung-de: Hier kommt eine deutsche Kurzfassung hin.
-
-da-kurzfassung-en: Hier kommt eine englische Kurzfassung hin.
+da-kurzfassung-en: As part of this diploma project, a minimalist medieval-themed boss fight game for PC was developed. The 3D modeling was created using Blender, while the gameplay and technical implementation were realized with Unreal Engine. This work demonstrates how a small game prototype can be developed from the initial concept through modeling to a fully functional application.
 
 
+
+# KI Quellen müssen noch ersetzt werden
 da-kiquellen:
 - ki: ChatGPT4
   short-prompt: Erklärung Pandoc
