@@ -1,50 +1,58 @@
 ---
-
 da-titel: Conquer the Castle - A Videogame in Unreal Engine
 
 da-jahr: 2025/26
 
 da-keywords: HTLLE, CTC, ConquerTheCastle
 
-#lang: english
+#lang: deutsch
 
 bibliography: [literatur.bib]
 
 da-author:
-- vorname: Nevio 
-  nachname: Peißl
-  klasse: 5BHWIN
-  thema: Frontend, Design
+- vorname: Joltawan 
+  nachname: Barodscheff
+  klasse: 5AHWIN
+  thema: Bauen des LaTex Templates
   ki-tools:
-  - name: ChatGPT5.2
-    zweck: Informationsbeschaffung, Rechtschreibkorrektur
+  - name: ChatGPT3.5
+    zweck: Informationsbeschaffung
+  - name: Midjourney
+    zweck: Künstlerische Illustration
 
-- vorname: Rhys 
-  nachname: Schmiedpeter
-  klasse: 5BHWIN
-  thema: Design Player & Boss
+- vorname: Craig 
+  nachname: Tester
+  klasse: 5AHWIN
+  thema: Entwicklung eines Prototypen
   ki-tools:
-  - name: ChatGPT5.2
-    zweck: Inspirations & Informationsbeschaffung, Rechtschreibkorrektur
+  - name: Github Copilot
+    zweck: Boilerplate codegenerierung, Codedokumentation
 
-- vorname: Elias 
-  nachname: Grgic
-  klasse: 5BHWIN
-  thema: Backend, Gameplay Logik
+- vorname: Karl 
+  nachname: Ranseier
+  klasse: 5AHWIN
+  thema: API-Mockups und Testen der Applikation
+
+- vorname: Frank 
+  nachname: Borland
+  klasse: 5AHWIN
+  thema: GUI Generierung
   ki-tools:
-  - name: ChatGPT5.2
-    zweck: Informationsbeschaffung, Rechtschreibkorrektur
+  - name: Galileo AI
+    zweck: Setendesign sowie UI/UX Design der App
+  - name: Grammarly Go
+    zweck: Stilverbesserung sowie Rechtschreibkorrekturen
 
 da-betreuer:
-- paraffe: kuw
-  name: DI Uwe Kondert, Msc.
-
 - paraffe: hg
   name: Ing. DI(FH) Günther Hutter, Msc.
 
-da-kurzfassung-de: Im Rahmen dieser Diplomarbeit wurde ein minimalistisches, mittelalterlich angehauchtes Bosskampf-Spiel für den PC entwickelt. Die 3D-Modellierung erfolgte mit Blender, während die spieltechnische Umsetzung in der Unreal Engine realisiert wurde. Die Arbeit zeigt exemplarisch, wie ein kleiner Game-Prototyp von der Konzeptphase über die Modellierung bis hin zur lauffähigen Anwendung entwickelt werden kann.
+- paraffe: me
+  name: DI Dr. mont Thomas Messner
 
-da-kurzfassung-en: As part of this diploma project, a minimalist medieval-themed boss fight game for PC was developed. The 3D modeling was created using Blender, while the gameplay and technical implementation were realized with Unreal Engine. This work demonstrates how a small game prototype can be developed from the initial concept through modeling to a fully functional application.
+da-kurzfassung-de: Hier kommt eine deutsche Kurzfassung hin.
+
+da-kurzfassung-en: Hier kommt eine englische Kurzfassung hin.
 
 
 da-kiquellen:
@@ -67,10 +75,10 @@ da-appendix:
 
 # Diplomarbeitsvereinbarungen müssen zum Schluss sein 
 
-- abschnitt: Diplomarbeitsvereinbarung Englisch
+- abschnitt: Diplomatbeitsvereinbarung Englisch
   pdf-file: HTL-DA-Doku-EN.pdf
 
-- abschnitt: Diplomarbeitsvereinbarung Deutsch
+- abschnitt: Diplomatbeitsvereinbarung Deutsch
   pdf-file: HTL-DA-Doku-DE.pdf
-
+  
 ---
