@@ -1,10 +1,12 @@
+---
+
 da-titel: Conquer the Castle - A Videogame in Unreal Engine
 
 da-jahr: 2025/26
 
 da-keywords: HTLLE, CTC, ConquerTheCastle
 
-#lang: deutsch
+#lang: english
 
 bibliography: [literatur.bib]
 
@@ -70,3 +72,6 @@ da-appendix:
 
 - abschnitt: Diplomarbeitsvereinbarung Deutsch
   pdf-file: HTL-DA-Doku-DE.pdf
+
+
+  ---
