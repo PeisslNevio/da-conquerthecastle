@@ -2300,3 +2300,81 @@ FPackageName: Skipped package /Game/LevelPrototyping/Interactable/Target/Assets/
 [2026.01.07-07.57.39:537][702]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ThirdPerson/MI_ThirdPersonColWay_Auto1
 [2026.01.07-07.57.39:537][702]LogSavePackage: Moving '../../../../../../Users/fritz/OneDrive/Dokumente/Schule/Diplomarbeit/da-conquerthecastle/UE5/Conquer_The_Castle/Saved/MI_ThirdPersonColWay_Auto16B0B1DE8494B7F632DE7DEB575B03CC3.tmp' to '../../../../../../Users/fritz/OneDrive/Dokumente/Schule/Diplomarbeit/da-conquerthecastle/UE5/Conquer_The_Castle/Saved/Autosaves/Game/ThirdPerson/MI_ThirdPersonColWay_Auto1.uasset'
 [2026.01.07-07.57.39:539][702]LogFileHelpers: Auto-saving content packages took 0.362
+[2026.01.07-07.58.58:371][490]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2026.01.07-07.58.59:463][490]LogSlate: Window 'Inhalt speichern' being destroyed
+[2026.01.07-07.58.59:519][490]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.01.07-07.58.59:883][490]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
+[2026.01.07-07.58.59:964][490]LogUObjectHash: Compacting FUObjectHashTables data took   1.64ms
+[2026.01.07-07.59.00:046][490]LogUObjectHash: Compacting FUObjectHashTables data took   0.51ms
+[2026.01.07-07.59.00:085][490]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter] ([2] browsable assets)...
+[2026.01.07-07.59.00:086][490]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter]
+[2026.01.07-07.59.00:106][490]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2026.01.07-07.59.00:107][490]LogSavePackage: Moving '../../../../../../Users/fritz/OneDrive/Dokumente/Schule/Diplomarbeit/da-conquerthecastle/UE5/Conquer_The_Castle/Saved/BP_ThirdPersonCharacter9A0F381E4493005E495BADB32383F020.tmp' to '../../../../../../Users/fritz/OneDrive/Dokumente/Schule/Diplomarbeit/da-conquerthecastle/UE5/Conquer_The_Castle/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2026.01.07-07.59.00:111][490]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonPlayerController] ([2] browsable assets)...
+[2026.01.07-07.59.00:111][490]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonPlayerController]
+[2026.01.07-07.59.00:123][490]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonPlayerController
+[2026.01.07-07.59.00:124][490]LogSavePackage: Moving '../../../../../../Users/fritz/OneDrive/Dokumente/Schule/Diplomarbeit/da-conquerthecastle/UE5/Conquer_The_Castle/Saved/BP_ThirdPersonPlayerControllerC492512A49A9948DC61BF1B5C5BCF5B3.tmp' to '../../../../../../Users/fritz/OneDrive/Dokumente/Schule/Diplomarbeit/da-conquerthecastle/UE5/Conquer_The_Castle/Content/ThirdPerson/Blueprints/BP_ThirdPersonPlayerController.uasset'
+[2026.01.07-07.59.00:126][490]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ThirdPerson/MI_ThirdPersonColWay] ([1] browsable assets)...
+[2026.01.07-07.59.00:127][490]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPerson/MI_ThirdPersonColWay]
+[2026.01.07-07.59.00:129][490]LogSavePackage: Moving output files for package: /Game/ThirdPerson/MI_ThirdPersonColWay
+[2026.01.07-07.59.00:131][490]LogSavePackage: Moving '../../../../../../Users/fritz/OneDrive/Dokumente/Schule/Diplomarbeit/da-conquerthecastle/UE5/Conquer_The_Castle/Saved/MI_ThirdPersonColWay05A3CEE54EDDC2A6E225AABB85A9CCDE.tmp' to '../../../../../../Users/fritz/OneDrive/Dokumente/Schule/Diplomarbeit/da-conquerthecastle/UE5/Conquer_The_Castle/Content/ThirdPerson/MI_ThirdPersonColWay.uasset'
+[2026.01.07-07.59.00:159][490]LogFileHelpers: InternalPromptForCheckoutAndSave took 639.328 ms
+[2026.01.07-07.59.00:284][490]LogContentValidation: Display: Starting to validate 3 assets
+[2026.01.07-07.59.00:284][490]LogContentValidation: Enabled validators:
+[2026.01.07-07.59.00:285][490]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.01.07-07.59.00:285][490]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.01.07-07.59.00:285][490]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.01.07-07.59.00:285][490]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.01.07-07.59.00:285][490]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.01.07-07.59.00:285][490]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.01.07-07.59.00:288][490]AssetCheck: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter Asset wird validiert
+[2026.01.07-07.59.00:288][490]AssetCheck: /Game/ThirdPerson/Blueprints/BP_ThirdPersonPlayerController Asset wird validiert
+[2026.01.07-07.59.00:288][490]AssetCheck: /Game/ThirdPerson/MI_ThirdPersonColWay Asset wird validiert
+[2026.01.07-07.59.00:322][490]LogSourceControl: Display: Uncontrolled Changelist persistency file saved ../../../../../../Users/fritz/OneDrive/Dokumente/Schule/Diplomarbeit/da-conquerthecastle/UE5/Conquer_The_Castle/Saved/SourceControl/UncontrolledChangelists.json
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: ================================================
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: Total job queries 4 500, among them cache hits 583 (12.96%), DDC hits 1 489 (33.09%), Duplicates 739 (16.42%)
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: Tracking 3 178 distinct input hashes that result in 1 565 distinct outputs (49.24%)
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: RAM used: 15,88 MiB of 819,20 MiB budget. Usage: 1.94%
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: Shaders Compiled: 1 689
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: Jobs assigned 1 689, completed 1 689 (100%)
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: Average time worker was idle: 19.00 s
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: Time job spent in pending queue: average 205.30 s, longest 567.91 s
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: Job execution time: average 6.30 s, max 247.45 s
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: Job life time (pending + execution): average 211.60 s, max 569.04
+[2026.01.07-07.59.45:889][ 10]LogShaderCompilers: Display: Shader code size: total 19,977 MiB, numShaders 1 735, average 11,79 KiB, min 1,199 KiB, max 51,403 KiB
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 995.69 s
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  1.33%
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Jobs were issued in 1 441 batches (only local compilation was used), average 1.17 jobs/batch
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Average processing rate: 1.70 jobs/sec
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Total thread time: 5 497,393 s
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Total thread preprocess time: 281,792 s
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Percentage time preprocessing: 5.13%
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Effective parallelization: 5.52 (times faster than compiling all shaders on one thread). Compare with number of workers: 8 - 0.690149
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display:                                                 FLumenCardCS (compiled    3 times, average 24.82 sec, max 54.15 sec, min 7.53 sec)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled    5 times, average 21.05 sec, max 61.57 sec, min 7.58 sec)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display:                         TBasePassCSFNoLightMapPolicySkylight (compiled    2 times, average 7.94 sec, max 8.95 sec, min 6.93 sec)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy (compiled   33 times, average 6.83 sec, max 43.86 sec, min 2.90 sec)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display:                                        FMicropolyRasterizeCS (compiled  440 times, average 6.65 sec, max 18.04 sec, min 0.01 sec)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display:                                        FMicropolyRasterizeCS - 53.23% of total time (compiled  440 times, average 6.65 sec, max 18.04 sec, min 0.01 sec)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display:                                               FHWRasterizeMS - 4.38% of total time (compiled  120 times, average 2.01 sec, max 3.17 sec, min 0.96 sec)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 4.10% of total time (compiled   33 times, average 6.83 sec, max 43.86 sec, min 2.90 sec)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display:                                               FHWRasterizeVS - 2.71% of total time (compiled   84 times, average 1.77 sec, max 2.44 sec, min 1.17 sec)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 2.37% of total time (compiled   54 times, average 2.42 sec, max 28.15 sec, min 1.07 sec)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: === Material stats ===
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Materials Translated:    154
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Material Total Translate Time: 0.25 s
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Material Translation Only: 0.10 s (40%)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (0%)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: Material Cache Hits: 0 (0%)
+[2026.01.07-07.59.45:890][ 10]LogShaderCompilers: Display: ================================================
+[2026.01.07-08.01.27:581][316]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4510.680176
+[2026.01.07-08.01.28:581][319]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.01.07-08.01.28:581][319]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4511.349609, Update Interval: 331.533569
+[2026.01.07-08.07.55:947][484]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4899.038086
+[2026.01.07-08.07.57:281][488]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.01.07-08.07.57:281][489]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4900.038086, Update Interval: 353.613098
