@@ -181,6 +181,93 @@ In Unreal Engine sind die kleinsten Änderungen an Blueprints sind sofort im Spi
 
 In Unity ist häufiges Stoppen und Starten des Play-Modues um Änderungen zu laden und es ist ein Verzögerter Feedback-Zyklus
 
+### Warum Unreal Engine gegenüber anderen Engines im Bereich Game Development wählen?
+
+#### Allgemeine Einordnung
+
+Unreal Engine selber ist keine reine Spiel-Engine mehr sonder eine Echtzeit-3D-Plattform. Der Fokus liegt auf Visualisierung für ein Erlebnis für die Augen, Simulation und auch interaktice Echtzeitsysteme. Der einsatz liegt in der Industrie, Medien und Forschunf im Vergleich dazu wird Unity zwar auch verwendet aber mehr für Handyspielle oder Trainingsbereiche, während Unreal klar auf High-End-Visualisierung ihr Ziel sätzt.
+
+#### Game Development
+
+***Unreal Engine***
+
+Hier liegt der Fokus mehr auf High-End-Pc- und Konsolenspiele, dadurch gezeiigt wegen der realistischen Grafik und der großen Spielwelt. Die modernen Features(Nanite, Lumen und Blueprints) sind ideal für Atmosphärische Spiel, AAA-Nahe Projekte(Spiele von den größten und bekanntesten Herstellern) und kleine Teams mit Qualitätsanspruch.
+
+***Vergleich zu Unity***
+
+Unity ist stärker im Mobilen Bereich, weil es weniger Hardware gebunden ist und man sich weniger Sorgen machen muss.
+
+#### Architekturvisualisierung
+
+Unreal Engine wird auch gerne für Echtzeit-Architekturvisualisierungen und interaktive Gebäudebegehungen und es ist deutlich realistischer als klassische Renderbilder.
+**Vorteile:**
+
+ * Realistische Lichtsimulation
+ * Interaktion statt statische Bilder
+ * Physikalisch korrektes Materialverhalten
+ * Echtzeit-Änderungen von:
+   - Tageszeit
+   - Licht
+   - Materialien
+
+Wird genutzt von:
+
+ * Architekturbürös
+ * Bauunternehmen
+ * Immobilienentwicklern
+
+#### Film & Animation (Virtual Production)
+
+***Unreal Engine***
+
+Unreal Engine hat eine Zentrale Rolle in Virtual Production und setzt LED-Walls und Echtzeit-Hintergründen ein.
+**Vorteile:**
+
+ * Beleuchtung passt sich der virtuellen Umgebung an
+ * Weniger Postproduktion nötig
+ * Kosteneffizienter
+ * Schnellere Entscheidungsprozesse
+ * Regisseure sehen das Endergebnis direkt am Set
+
+***Vergleich zu klassischen Pipelines***
+
+Traditionell wird der Greenscreen verwendet und nachträglich wird es zusammengestellt
+
+#### Simulationen
+
+Man findet ein paar Verwendungszwäcke für Simulationen in Unreal Engine. Typisch dafür wären physikbasierte Simualtionen, Trainingsumgebungen oder auch Sicherheits- und Gefahrszenarien. Typsiche Bereiche wo es eingesetzt wird, wären Industrie, Forschung, Ausbildung und sogar Militärische Simulationen
+
+**Vorteile**
+
+ * Echtzeit-Feedback
+ * Realistische Umgebungen
+ * Kombinierbar mit KI-Systemen
+
+#### VR / AR
+
+Unreal Engine besitzt eine starke Unterstützung fpr Virtual Reality und Augmented Reality. Diese hohe Bildqualität ist sehr wichtig für die Immersion und Realismus den der Nutzer Erfahren muss. Gut geeignet für Trainingssimulationen, medizinische Anwendungen und Produktpräsentationen. Unreal besitzt auch bessere Grafik und mehr Realismus und dadurch sind auch höhere Hardwareanforderungen. Unity ist jedoch häufig die erste Wahl für einfache VR-Projekte.
+
+#### Automobilindustrie
+
+Unreal Engine macht sich auch in der Automobilindustrie zu nutzen, häufige Einsätze sind bei Fahrzeugvisualisierungen, Desgin-Reviews und Virtuellen Showrooms. In der Praxis sind in Unreal schnellere Entwicklungszyklen, bessere Entscheidungsgrundlagen und auch Reduzierung physischer Prototypen.
+
+**Vorteile**
+
+ * Realistische Materialien(Lack, Glas, Metall)
+ * Echtzeit-Anpassungen von:
+   - Farben
+   - Innenausstattung
+   - Beleuchtung
+
+#### Digitale Zwillinge
+
+Unreal Engine wird auch verwendet um digitale Zwillinge realer Systeme, Prozesse bzw. physicher Objekte herzustellen. Der Einsatz findet sich meist in Smart Cities, Industrieanlagen oder auch fpr Verkehrsmodelle wieder. Kombinationen bestehen aus:
+
+ * Echtzeitdaten
+ * 3D-Visualisierung
+ * Simulation
+
+Der Mehrwert dafür ist die analyse komplexer Systeme, vorhersage von Verhalten oder der optimierung realer Prozesse.
 
 
 ---
