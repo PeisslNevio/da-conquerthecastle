@@ -23,7 +23,7 @@ Physikalisch basiertes Rendering (PBR) ist in Unreal Engine standardmäßig akti
 
 * Licht
 * Rauheit
-- Metallizität
+* Metallizität
 
 Dies ermöglicht die Darstellung glaubwürdiger Oberflächen ohne tiefgehende Shader-Kenntnisse. Bereits mit den Standardwerkzeugen der Engine lassen sich realistische Ergebnisse erzielen, die „out of the box“ eine hohe Qualität besitzen.
 
@@ -31,9 +31,9 @@ Dies ermöglicht die Darstellung glaubwürdiger Oberflächen ohne tiefgehende Sh
 
 Unity kann ebenfalls photorealistische Ergebnisse liefern, dies ist jedoch hauptsächlich mit der High Definition Render Pipeline (HDRP) möglich. Diese erfordert:
 
-- einen höheren Konfigurationsaufwand  
-- detaillierte Shader-Anpassungen  
-- zusätzliche manuelle Feinarbeit  
+* einen höheren Konfigurationsaufwand  
+* detaillierte Shader-Anpassungen  
+* zusätzliche manuelle Feinarbeit  
 
 Im Vergleich dazu liefert Unreal Engine vergleichbare oder bessere Ergebnisse deutlich schneller und konsistenter.
 
@@ -45,9 +45,9 @@ Nanite ermöglicht die Verwendung extrem hochauflösender Modelle mit Millionen 
 
 Nanite eignet sich besonders für:
 
-- Scan-Daten  
-- Architekturvisualisierungen  
-- detailreiche Spielwelten  
+* Scan-Daten  
+* Architekturvisualisierungen  
+* detailreiche Spielwelten  
 
 ***Vergleich zu Unity***
 
@@ -59,9 +59,9 @@ Unity verwendet ein klassisches LOD-System, bei dem Detailstufen manuell erstell
 
 Unreal Engine berechnet mit Lumen die globale Beleuchtung und Reflexionen vollständig in Echtzeit. Das Licht reagiert dynamisch auf:
 
-- bewegte Objekte  
-- Zerstörung  
-- Tageszeitwechsel  
+* bewegte Objekte  
+* Zerstörung  
+* Tageszeitwechsel  
 
 Ein klassisches Light-Baking ist nicht erforderlich. Dadurch wirken Szenen lebendiger, natürlicher und konsistenter, während gleichzeitig der Iterationsaufwand im Leveldesign deutlich reduziert wird.
 
@@ -71,9 +71,9 @@ Unity setzt hauptsächlich auf vorab berechnetes Light-Baking. Bei jeder Änderu
 
 Lumen spart dadurch:
 
-- Zeit  
-- Speicherplatz  
-- Iterationsaufwand  
+* Zeit  
+* Speicherplatz  
+* Iterationsaufwand  
 
 #### Post-Processing & Bildqualität
 
@@ -81,10 +81,10 @@ Lumen spart dadurch:
 
 Unreal Engine bietet eine integrierte Post-Processing-Pipeline mit hochwertigen Effekten wie:
 
-- Bloom (Überstrahlen heller Lichtquellen)  
-- Motion Blur (Bewegungsunschärfe)  
-- Depth of Field (Tiefenunschärfe wie bei realen Kameras)  
-- Film Grain (Simulation analoger Filmkörnung)  
+* Bloom (Überstrahlen heller Lichtquellen)  
+* Motion Blur (Bewegungsunschärfe)  
+* Depth of Field (Tiefenunschärfe wie bei realen Kameras)  
+* Film Grain (Simulation analoger Filmkörnung)  
 
 Post-Processing beschreibt die digitale Nachbearbeitung des gerenderten Bildes zur Verbesserung von Atmosphäre und Bildwirkung. Die Effekte sind über sogenannte Post-Process-Volumes steuerbar und sorgen für einen konsistenten, filmischen Look.
 
@@ -102,13 +102,13 @@ Unreal Engine bietet eine sehr realitätsnahe Editor-Vorschau. Das im Editor sic
 
 In Unity sind häufiger Test-Builds notwendig. Das endgültige Ergebnis hängt stärker von:
 
-- Zielplattform  
-- verwendeter Render-Pipeline  
-- Build-Einstellungen  
+* Zielplattform  
+* verwendeter Render-Pipeline  
+* Build-Einstellungen  
 
 ab, wodurch der Feedback-Zyklus langsamer ist.
 
----
+\newpage
 
 ### Warum Unreal Engine im Bereich Programmierung & Blueprints wählen?
 
@@ -122,10 +122,10 @@ Blueprints sind ein zentraler Bestandteil der Unreal Engine und nahtlos in alle 
 
 **Vorteile:**
 
-- kein zwingendes Vorwissen in C++ erforderlich  
-- Einstieg auch ohne Programmierkenntnisse möglich  
-- Fehler leichter nachvollziehbar als bei Textcode  
-- Logik visuell gut lesbar  
+* kein zwingendes Vorwissen in C++ erforderlich  
+* Einstieg auch ohne Programmierkenntnisse möglich  
+* Fehler leichter nachvollziehbar als bei Textcode  
+* Logik visuell gut lesbar  
 
 ***Vergleich zu Unity***
 
@@ -137,17 +137,17 @@ Unity verwendet primär C#-Skripte. Visuelles Skripting ist optional und weniger
 
 Nodes repräsentieren:
 
-- Funktionen  
-- Events  
-- Bedingungen  
-- Schleifen  
+* Funktionen  
+* Events  
+* Bedingungen  
+* Schleifen  
 
 Dabei wird klar zwischen Ablaufsteuerung (Execution Flow) und Datenfluss (Variablen) unterschieden. Auch komplexe Logiken lassen sich ohne lange Code-Dateien umsetzen. Besonders geeignet ist dieses System für:
 
-- Gameplay-Logik  
-- Benutzeroberflächen  
-- Interaktionen  
-- Trigger-Systeme  
+* Gameplay-Logik  
+* Benutzeroberflächen  
+* Interaktionen  
+* Trigger-Systeme  
 
 ***Vergleich zu Unity***
 
@@ -209,19 +209,19 @@ Unreal Engine wird häufig für Echtzeit-Architekturvisualisierungen und interak
 
 **Vorteile:**
 
-- realistische Lichtsimulation  
-- Interaktion statt statischer Bilder  
-- physikalisch korrektes Materialverhalten  
-- Echtzeit-Änderungen von:
-  - Tageszeit  
-  - Beleuchtung  
-  - Materialien  
+* realistische Lichtsimulation  
+* Interaktion statt statischer Bilder  
+* physikalisch korrektes Materialverhalten  
+* Echtzeit-Änderungen von:
+  * Tageszeit  
+  * Beleuchtung  
+  * Materialien  
 
 Genutzt wird Unreal Engine unter anderem von:
 
-- Architekturbüros  
-- Bauunternehmen  
-- Immobilienentwicklern  
+* Architekturbüros  
+* Bauunternehmen  
+* Immobilienentwicklern  
 
 #### Film & Animation (Virtual Production)
 
@@ -231,11 +231,11 @@ Unreal Engine spielt eine zentrale Rolle im Bereich der Virtual Production. Dabe
 
 **Vorteile:**
 
-- Beleuchtung passt sich der virtuellen Umgebung an  
-- geringerer Postproduktionsaufwand  
-- kosteneffizientere Produktionsprozesse  
-- schnellere Entscheidungsfindung  
-- Regisseure sehen das finale Bild bereits direkt am Set  
+* Beleuchtung passt sich der virtuellen Umgebung an  
+* geringerer Postproduktionsaufwand  
+* kosteneffizientere Produktionsprozesse  
+* schnellere Entscheidungsfindung  
+* Regisseure sehen das finale Bild bereits direkt am Set  
 
 ***Vergleich zu klassischen Pipelines***
 
@@ -247,9 +247,9 @@ Unreal Engine wird auch für verschiedene Arten von Simulationen eingesetzt. Daz
 
 **Vorteile:**
 
-- Echtzeit-Feedback  
-- realistische Umgebungen  
-- kombinierbar mit KI-Systemen  
+* Echtzeit-Feedback  
+* realistische Umgebungen  
+* kombinierbar mit KI-Systemen  
 
 #### VR / AR
 
@@ -261,21 +261,23 @@ Unreal Engine wird auch in der Automobilindustrie eingesetzt, beispielsweise fü
 
 **Vorteile:**
 
-- realistische Materialien (Lack, Glas, Metall)  
-- Echtzeit-Anpassungen von:
-  - Farben  
-  - Innenausstattung  
-  - Beleuchtung  
+* realistische Materialien (Lack, Glas, Metall)  
+* Echtzeit-Anpassungen von:
+  * Farben  
+  * Innenausstattung  
+  * Beleuchtung  
 
 #### Digitale Zwillinge
 
 Unreal Engine wird zur Erstellung digitaler Zwillinge realer Systeme, Prozesse oder physischer Objekte verwendet. Einsatzgebiete sind unter anderem Smart Cities, Industrieanlagen und Verkehrsmodelle. Diese digitalen Zwillinge kombinieren:
 
-- Echtzeitdaten  
-- 3D-Visualisierung  
-- Simulation  
+* Echtzeitdaten  
+* 3D-Visualisierung  
+* Simulation  
 
 Der Mehrwert liegt in der Analyse komplexer Systeme, der Vorhersage von Verhalten sowie der Optimierung realer Prozesse.
 
----
+\newpage
+
+
 ## Praktische Arbeit
