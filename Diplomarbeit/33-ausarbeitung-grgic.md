@@ -21,8 +21,8 @@ Unity ist stärker auf Performance, mobile Plattformen und eine möglichst breit
 
 Physikalisch basiertes Rendering (PBR) ist in Unreal Engine standardmäßig aktiviert. Materialien reagieren dadurch realistisch auf Eigenschaften wie:
 
-- Licht
-- Rauheit
+* Licht
+* Rauheit
 - Metallizität
 
 Dies ermöglicht die Darstellung glaubwürdiger Oberflächen ohne tiefgehende Shader-Kenntnisse. Bereits mit den Standardwerkzeugen der Engine lassen sich realistische Ergebnisse erzielen, die „out of the box“ eine hohe Qualität besitzen.
