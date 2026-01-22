@@ -125,25 +125,80 @@ Nachfolgend ist die Skizze des Bossraums dargestellt. In der Skizze sind die Ein
 
 #### Modellierung
 
-Die Modellierung des Bossraumes erfolgte vollständig in Blender. 
+Die Modellierung des Bossraumes wurde vollständig im 3D-Modellierungsprogramm Blender durchgeführt. Das Modellierungsverfahren erfolgte in mehreren iterativen Schritten: Zunächst wurden die Grundstrukturen des Bodens und der Wandflächen grob modelliert, um die räumliche Grundform zu etablieren. Die Wandkonstruktion wurde unter Verwendung des Blender-Add-ons „Wall Builder" erstellt, um eine effiziente und realistische Modellierung zu ermöglichen. 
 
-//todo
+Anschließend wurden die tragenden Säulen sowie der Thronsessel als zentrale Designelemente integriert. Der Thronsessel wurde bewusst auf einer erhöhten Plattform positioniert, die durch eine Treppe erreichbar ist. Diese Designentscheidung verfolgt das Ziel, der Boss-Figur eine visuelle Hierarchie und eine übergeordnete Positionierung gegenüber dem Spieler zu verleihen. Die Fensterpositionierung wurde strategisch so gewählt, dass stets mindestens eine Säule zwischen benachbarten Fenstern positioniert ist, um Sichtblockaden zu erzeugen.
 
-#### Texturierung & Materialien
+Für die Eingangstür wurde eine Öffnung aus der Wandfläche geschnitten, um eine authentische Türöffnung zu schaffen und dem Spieler eine intuitive räumliche Wahrnehmung zu ermöglichen. Für die Raumdecke wurde ein Gewölbesystem gewählt, da es die Blickrichtung des Spielers gezielt auf die zentrale Boss-Position lenkt und damit die Spielmechanik unterstützt. Das Gewölbesystem wird durch mehrere kleinere, stützende Gewölbe strukturiert, die die Deckenarchitektur mit den tragenden Säulen und dem Boden verbinden und damit eine statisch wirkungsvolle Raumkomposition erzeugen.
 
-//todo
+#### Texturierung
+
+Die Texturierung des Bossraumes wurde mit strategischer Farbgebung und Materialwahl umgesetzt, um sowohl die atmosphärische Raumwirkung als auch die psychologische Lenkung des Spielers zu unterstützen. Für die Wandoberflächen wurde ein neutrales Grau gewählt, das Steinoberflächen realistisch darstellt. Durch die Verwendung von verschiedenen Grautönen und Schattierungen wurde eine räumliche Tiefenwirkung erzeugt und bestimmte Bereiche visuell hervorgehoben, um die Raumarchitektur verständlich zu machen.
+
+Die Eingangstür wurde in Brauntönen texturiert, um eine realistische Holzoptik zu simulieren und damit eine authentische Raumwahrnehmung zu fördern. Der Fußbodenteppich wurde bewusst in intensivem Rot texturiert, da diese Farbwahl eine mehrfache psychologische Funktion erfüllt: Zum einen lenkt die warme, auffällige Rotfärbung die Blickrichtung und Bewegungsrichtung des Spielers unmittelbar zur Boss-Position hin. Zum anderen vermittelt die rote Färbung durch ihre kulturelle Assoziation mit Gefahr, Macht und Autorität ein Gefühl von Respekt gegenüber dem Boss-Charakter und unterstreicht damit die narrative Hierarchie des Raums.
+
 
 #### Optimierung
 
-//todo
+Die Optimierung des Bossraum-Modells war ein kritischer Aspekt der Entwicklung, um eine stabile Performance und hohe Framerate auf verschiedenen Hardware-Konfigurationen zu gewährleisten. Das gesamte Modellierungsverfahren wurde unter dem Leitprinzip der Low-Poly-Modellierung durchgeführt, um die Polygonanazahl so gering wie möglich zu halten.
 
-#### Erstellung
+**Strategien zur Polygonenreduktion:**
+Die Grundstrukturen des Raumes (Boden, Wände, Decke) wurden mit minimaler Geometrie konstruiert. Statt komplexer, organischer Formen wurden hauptsächlich einfache geometrische Primitive und planare Flächen verwendet. Dies reduzierte die Verarbeitungslast erheblich, ohne die visuelle Qualität wesentlich zu beeinträchtigen, da der Low-Poly-Stil ein einheitliches Design-Statement des Spiels darstellt.
 
-//todo
+**Behandlung von Spalten und Lücken:**
+Bei der Minimierung der Polygonanzahl entstanden unvermeidlich kleine Spalten und Lücken in der Wandgeometrie sowie an den Verbindungsstellen zwischen verschiedenen Modellobjekten. Diese Spalten wurden systematisch durch das strategische Platzieren zusätzlicher statischer Dekorationsobjekte wie Wandverzierungen, kleine Säulenabschnitte und architektonische Details aufgefüllt. Dies diente nicht nur als technische Lösung, sondern trug auch zur visuellen Authentizität des Raums bei.
+
+**Wiederverwendung:**
+Sich wiederholende Elemente wie Säulen und Wandsegmente wurden als wiederverwendbare Modelle erstellt und mehrfach platziert, statt individuelle Geometrie für jedes Element zu modellieren. Dies reduzierte sowohl die Modellierungszeit als auch die Speicheranforderungen und GPU-Last.
+
+Das resultierende Modell erreichte eine Polygonanazahl von etwa 80.000 Dreiecken für den gesamten Bossraum, was eine optimale Balance zwischen visueller Qualität und Performance-Anforderungen darstellt.
 
 #### Export & Integration in Unreal Engine
 
-//todo
+Der Export des Bossraum-Modells von Blender nach Unreal Engine 5 erforderte eine sorgfältige Vorbereitung und mehrere aufeinanderfolgende Schritte, um sicherzustellen, dass die Integrität des Modells, die Texturen und die Kollisionsdaten erhalten bleiben.
+
+**Vorbereitung in Blender - Szenen-Organisation:**
+Zunächst wurde sichergestellt, dass alle Komponenten des Bossraums korrekt in Blender organisiert waren. Das Modell bestand aus mehreren separaten Objekten (Wände, Säulen, Thronsessel, Tür, Treppen, dekorative Elemente), die zunächst alle aus einzelnen Objekten bestanden. Diese verteilte Struktur ermöglichte Flexibilität bei der Modellierung, musste aber für den Export konsolidiert werden.
+
+**Zusammenfügen mittels Join-Operation:**
+Um die Performance während des Exports zu optimieren und die Hierarchie zu vereinfachen, wurden alle Objekte des Bossraums mithilfe der Join-Funktion kombiniert. Dies wurde durchgeführt, indem im Object Mode alle zu vereinigenden Objekte ausgewählt wurden (mittels Shift+Click), das zu behaltende Basisobjekt als letztes ausgewählt wurde, und anschließend die Tastenkombination Ctrl+J zum Zusammenfügen verwendet wurde. Diese Operation reduzierte die Objektanzahl erheblich und vereinfachte die Export-Hierarchie.
+
+**Anwendung von Modifiern:**
+Vor dem Export wurden alle angewendeten Modifier (insbesondere Mirror und Solidify) "angewendet" oder "baked", um sicherzustellen, dass diese Transformationen in der FBX-Datei persistent gespeichert werden. Dies geschah durch Auswahl des Modifiers und Klick auf "Apply" im Modifier-Panel.
+
+**FBX-Export-Prozess:**
+Der Export wurde mithilfe des Menüpfads `File > Export > FBX (.fbx)` durchgeführt. Dabei öffnete sich der Export-Dialog mit einer umfangreichen Liste von Konfigurationsoptionen. Die folgenden Einstellungen wurden konfiguriert:
+
+- **Scale**: 1.0 (um die Maßstäbe korrekt zu erhalten)
+- **Forward Axis**: -Y Forward (Standard für Unreal Engine)
+- **Up Axis**: Z Up (Standard für Unreal Engine)
+- **Apply Scaling**: FBX All (um Skalierungsinformationen zu bewahren)
+- **Smoothing**: Aktiviert (um glatte Übergänge zwischen Flächen zu gewährleisten)
+- **Apply Modifiers**: Aktiviert (um alle Modifier in der Geometrie zu berücksichtigen)
+- **Bake Animation**: Deaktiviert (da das Modell nicht animiert ist)
+- **NLA Strips**: Deaktiviert
+
+**UV-Map und Textur-Erhaltung:**
+Es wurde sichergestellt, dass die UV-Maps korrekt in die FBX-Datei exportiert wurden, damit die Texturen in Unreal Engine korrekt auf das Modell angewendet werden konnten. Die Textur-Verweise wurden zwar nicht direkt in der FBX-Datei enthalten, aber die UV-Koordinaten bildeten die Grundlage für die spätere Material-Anwendung in Unreal.
+
+**Import in Unreal Engine 5:**
+Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Project-Verzeichnis (`Content/Models/`) kopiert. Unreal Engine erkannte die Datei automatisch und importierte sie. Bei der Bestätigung des Imports wurden folgende Parameter konfiguriert:
+
+- **Skeletal Mesh**: Deaktiviert (nicht erforderlich für statische Modelle)
+- **Create Physics Asset**: Deaktiviert
+- **Create Default Material**: Aktiviert (um automatisch Material-Platzhalter zu erstellen)
+- **LOD Settings**: Automatisch (um Level-of-Detail zu generieren)
+- **Material Import Method**: Create New Materials
+- **Import Textures**: Aktiviert (falls Textur-Dateien vorhanden waren)
+
+**Material-Konfiguration:**
+Nach dem Import wurden die automatisch erstellten Materialien überprüft und konfiguriert. Für jede Texturierungszone des Bossraums (Wandstein, Holztür, roter Teppich, etc.) wurden individuelle Materialien erstellt, die die entsprechenden Texturdateien referenzierten. Metallic- und Roughness-Werte wurden für jedes Material gesetzt, um eine realistische Oberflächenwahrnehmung zu ermöglichen.
+
+**Kollisions-Geometrie:**
+Die Kollisionsdaten wurden basierend auf der importierten Geometrie automatisch generiert. Zusätzlich wurden Custom Collision Shapes erstellt, um sicherzustellen, dass der Spieler an realistischen Positionen mit dem Umfeld interagiert und nicht durch Wände, Säulen oder den Thron gehen kann.
+
+**Validierung und Tests:**
+Nach dem Import wurde das Modell im Level platziert und in verschiedenen Ansichten überprüft (Lit, Unlit, Wireframe). Performance-Tests wurden durchgeführt, um sicherzustellen, dass die Framerate stabil bleibt. Die Lichtsimulation wurde neu berechnet (Baked Lighting), um Beleuchtungseffekte zu optimieren.
 
 
 ### Items
