@@ -17,18 +17,18 @@ Aufgebaut ist Blender so: in der Mitte ist ein Koordinatensystem, hier passiert 
 
 In der Modellierungsansicht gibt es 3 Modi alle haben eine andere Bedeutung
 
-* Objektmodus ist hauptsächlich für den Umgang mit mehrere Objekten und dem einfügen von Objekten. Vom Programm bereit gestellte Objekte sind der Würfel, Quader, Zylinder, die Kugel und viele mehr. Standard gemäß sind diese auf die Größe 1 Meter gesetzt und am `Set Origin` gesetzt, welches man beides gleich ändern kann. Außerdem wird dieser Modus für Module wie Physiks oder Modifier verwendet.
+- Objektmodus ist hauptsächlich für den Umgang mit mehrere Objekten und dem einfügen von Objekten. Vom Programm bereit gestellte Objekte sind der Würfel, Quader, Zylinder, die Kugel und viele mehr. Standard gemäß sind diese auf die Größe 1 Meter gesetzt und am `Set Origin` gesetzt, welches man beides gleich ändern kann. Außerdem wird dieser Modus für Module wie Physiks oder Modifier verwendet.
   Die wichtigsten Werkzeuge sind Objekte bewegen/rotieren/skalieren
   
-* Der Editmodus ist ein wenig anders, dieser ist nämlich da um einzelne Objekte zu verändern
+- Der Editmodus ist ein wenig anders, dieser ist nämlich da um einzelne Objekte zu verändern
 
-   >  Der Modus funktioniert auch mit meheren Objekten, es ist nur nicht erwünscht weil ungewollte Fehler auftretten können. Aus diesem Grund sollten Objekt vor den ändern  im Editmode gruppieren.
+  > Der Modus funktioniert auch mit meheren Objekten, es ist nur nicht erwünscht weil ungewollte Fehler auftretten können. Aus diesem Grund sollten Objekt vor den ändern  im Editmode gruppieren.
 
 
-	Auswählen funktioniert anders als im Objektmodus hier wählt man nicht ein Objekt aus sondern es hängt ab welche Ansicht ausgewählt ist. Standard ist die Punktansicht ausgewählt, hierbei können nur Ecken angewählt werden. Nach dem gleichen Prinzip funktioniert die Kanten- und Flächenansicht. *Tipp mit `Shift` kann man mehrere auswählen und mit `Str` wählt Blender alle aus, die auf der Bahn zum erst ausgewählten*.
-Wichtige Werkzeuge sind Loop Cuts und das Messer (mit diesen beiden fügt mann Kanten hinzu), bewegen, Flächen verkleinern und extrahieren bzw. füllen
+  Auswählen funktioniert anders als im Objektmodus hier wählt man nicht ein Objekt aus sondern es hängt ab welche Ansicht ausgewählt ist. Standard ist die Punktansicht ausgewählt, hierbei können nur Ecken angewählt werden. Nach dem gleichen Prinzip funktioniert die Kanten- und Flächenansicht. *Tipp mit `Shift` kann man mehrere auswählen und mit `Str` wählt Blender alle aus, die auf der Bahn zum erst ausgewählten*.
+  Wichtige Werkzeuge sind Loop Cuts und das Messer (mit diesen beiden fügt mann Kanten hinzu), bewegen, Flächen verkleinern und extrahieren bzw. füllen
 
-* Skulptur Modus verwendet Werkzeuge, die Polys in verschiedene Art und Weisen bewegen. Das einzige Problem dabei ist, das die Polys die bewegt wurden nicht nach genauen Massen bewegt werden können. Außerdem ist zu achten, dass das Objekt mehr Polys haben soll, ansonsten wird das Entergebnis nicht den Erwartungen ersprechen.
+- Skulptur Modus verwendet Werkzeuge, die Polys in verschiedene Art und Weisen bewegen. Das einzige Problem dabei ist, das die Polys die bewegt wurden nicht nach genauen Massen bewegt werden können. Außerdem ist zu achten, dass das Objekt mehr Polys haben soll, ansonsten wird das Entergebnis nicht den Erwartungen ersprechen.
 
 Als Unterstützung in den jeweiligen Modus existiert dem Tool Anmerkungen. Mit diesem Tool kann man Sachen in der Eigenen Perspektive zeichnen. Im Edit und Objektmodus kann man zusätzlich auch das Tool Messen verwenden. Dieser funktioniert auch wieder in der eigenen Perspektive und ist wie Anmerkungen 2D. 
   
@@ -36,57 +36,49 @@ Als Unterstützung in den jeweiligen Modus existiert dem Tool Anmerkungen. Mit d
 
 Neben Blender hätte man sich noch für andere Modellierungsprogramme entscheiden können Beispielsweise *Tinkercad, AutoDesk Fusion oder OpenSCAD*. 
 
-* Tinkercad kennt man vorallem auch durch das Entverwerfen von einfachen Schaltkreisen online und so in etwa ist es bei deren Programm für das Modellieren.
-Das Programm ist sehr simple und leicht zu verstehen - Perfekt für Anfänger
-Aber nicht geeignet für die Diplomarbeit, weil man extreme Einschränkungen hat. Man kann keine Modelle im Nachhinein abrunden, da Tinkercad nur an vorgefertigte Objekte zum Bewegen hat. Diese Modelle sind fix gefertigt und nicht veränderbar.
+- Tinkercad kennt man vorallem auch durch das Entverwerfen von einfachen Schaltkreisen online und so in etwa ist es bei deren Programm für das Modellieren.
+  Das Programm ist sehr simple und leicht zu verstehen - Perfekt für Anfänger
+  Aber nicht geeignet für die Diplomarbeit, weil man extreme Einschränkungen hat. Man kann keine Modelle im Nachhinein abrunden, da Tinkercad nur an vorgefertigte Objekte zum Bewegen hat. Diese Modelle sind fix gefertigt und nicht veränderbar.
 
-* AutoDesk Fusion ist spezialiesiert auf die Produktion bzw. auf Werkzeug und Maschinen. Das heißt aber nicht das dieses Programm nicht geeignet ist für das Modelieren 
-AutoDesk hat eine einfacher Handhabung *Zitat aus dem Video*. Aus iesem Grund verwenden dieses Tool sehr viele größere Firmen, wie: Yamaha und Toyota *- so deren Homepage*
-Nachteil ist das Programm kostet viel .
+- AutoDesk Fusion ist spezialiesiert auf die Produktion bzw. auf Werkzeug und Maschinen. Das heißt aber nicht das dieses Programm nicht geeignet ist für das Modelieren 
+  AutoDesk hat eine einfacher Handhabung *Zitat aus dem Video*. Aus iesem Grund verwenden dieses Tool sehr viele größere Firmen, wie: Yamaha und Toyota *- so deren Homepage*
+  Nachteil ist das Programm kostet viel .
 
-* OpenSCAD ist ein Open-Source  Program für das Modellieren per Code. Aus diesem Grund ist dieses Programm nicht geeignet für ein großes Projekt, wegen der hohen Komplexität.
+- OpenSCAD ist ein Open-Source  Program für das Modellieren per Code. Aus diesem Grund ist dieses Programm nicht geeignet für ein großes Projekt, wegen der hohen Komplexität.
 
 
 
 ### Nützliche Befehle
 
-| Befehl | Nutzen | Weitere erklärung |
-|:------:|:------:|:-----------------:|
-|   `Shift + A`   |  Objekt hinzufügen    |    / 			  |
-|  `X`   |  Löschen   |   Wenn man etwas löschen will kommt eine Bestätigung abfrage			  |
-|    `TAB`   |    Wechselt den Modus   |     Von Objekt- auf Editmodus und zurück  		  |
-|    `LEERZEICHEN`   |    Zeitleiste abspielen/ stoppen   |  /  |
+- **`Shift + A`**: Objekt hinzufügen. Weitere erklärung: /.
+- **`X`**: Löschen. Weitere erklärung: Wenn man etwas löschen will kommt eine Bestätigung abfrage.
+- **`TAB`**: Wechselt den Modus. Weitere erklärung: Von Objekt- auf Editmodus und zurück.
+- **`LEERZEICHEN`**: Zeitleiste abspielen/ stoppen. Weitere erklärung: /.
 
 bei den nächsten Befehle gilt:
-e
-*  bei zusätzlichen Achsen Tippen `X`/`Y`/`Z` wird diese prioriesiert, mit 2x Tippen unprioriesieren
-*  bei `Shift` werden in Blocken bewegt
 
-| Befehl | Nutzen | Weitere erklärung |
-|:------:|:------:|:-----------------:|
-|    `G`   |    verschieben im Koordinatesystem   |    	/	  |
-|    `R`   |    drehen   |    	Um den Ursprung (Oranger Punkt)	  |
-|    `S`   |    skalieren   |    	Um den Ursprung 	  |
+- bei zusätzlichen Achsen Tippen `X`/`Y`/`Z` wird diese prioriesiert, mit 2x Tippen unprioriesieren
+- bei `Shift` werden in Blocken bewegt
 
- Für den Objektmodus
+- **`G`**: verschieben im Koordinatesystem. Weitere erklärung: /.
+- **`R`**: drehen. Weitere erklärung: Um den Ursprung (Oranger Punkt).
+- **`S`**: skalieren. Weitere erklärung: Um den Ursprung.
 
-| Befehl | Nutzen | Weitere erklärung |
-|:------:|:------:|:-----------------:|
-|    `Str + J`   |    Objekte gruppieren   |    Funktioniert bei 2 oder mehr Objekte. Das der Befehl durchgesetzt werden kann, muss ein primär Objekt ausgewählt werden, für z.B	den Ursprung des Objektes |
-|    `Rechts Klick` + Ursprung ändern  |    versetzt den Ursprung   |    	Entweder nach Masse, Volumen oder nach dem Set Origin	  |
-|    `Rechts Klick` +  Weich schattieren   |    Ecken abrunden   |   ohne Polys hinzufügen |
+Für den Objektmodus
+
+- **`Str + J`**: Objekte gruppieren. Weitere erklärung: Funktioniert bei 2 oder mehr Objekte. Das der Befehl durchgesetzt werden kann, muss ein primär Objekt ausgewählt werden, für z.B den Ursprung des Objektes.
+- **`Rechts Klick` + Ursprung ändern**: versetzt den Ursprung. Weitere erklärung: Entweder nach Masse, Volumen oder nach dem Set Origin.
+- **`Rechts Klick` + Weich schattieren**: Ecken abrunden. Weitere erklärung: ohne Polys hinzufügen.
 
 Für den Editmodus
 
-| Befehl | Nutzen | Weitere erklärung |
-|:------:|:------:|:-----------------:|
-|    `M`   |    Punkte zusammenfügen   |   Funktioniert bei 2 oder mehr Punkten bzw. auch bei Kanten und Flächen setzen diese aber in Punkte um. Entweder auf dem ersten/ letzten ausgewählten Punkte, in der Mitte oder beim Set Origin. |
-|    `Str + R`   |    Loop Cuts   |   Erstellt Kanten die sich um ein ganzes Objekt schlingt. Dazu kann man einstellen wie viele Schleifen erstellt werden |
-|    `K`   |    Messer   |   fügt Schnitte zu einen Objekt hinzu. Wird `Shift` gedrückt wird der Schnitt zentral gerichtet|
-|    `E`   |    Extrahieren   |   erweitert Flächen bzw. Kanten |
-|    `I`   |    Einsetzten von Flächen   |   erzeugt ein kleinere Fläche in einer größeren |
-|    `F`   |    Füllen von Flächen und Kanten   |   Bei 2 Punkte wird eine Kante erstellt ansonsten ein Fläche. Bei 5+ Punkte füllen werden oft komische Flächen erzeugt, vor allem für das Rendern und Exportieren ist das wichtig. |
-|    `Str + T`   |    Fläche zu Dreieck konventieren |   Trifft zu alle ausgewällten Flächen und ist sinnvoll für das Exportieren bzw. Rendern |
+- **`M`**: Punkte zusammenfügen. Weitere erklärung: Funktioniert bei 2 oder mehr Punkten bzw. auch bei Kanten und Flächen setzen diese aber in Punkte um. Entweder auf dem ersten/ letzten ausgewählten Punkte, in der Mitte oder beim Set Origin.
+- **`Str + R`**: Loop Cuts. Weitere erklärung: Erstellt Kanten die sich um ein ganzes Objekt schlingt. Dazu kann man einstellen wie viele Schleifen erstellt werden.
+- **`K`**: Messer. Weitere erklärung: fügt Schnitte zu einen Objekt hinzu. Wird `Shift` gedrückt wird der Schnitt zentral gerichtet.
+- **`E`**: Extrahieren. Weitere erklärung: erweitert Flächen bzw. Kanten.
+- **`I`**: Einsetzten von Flächen. Weitere erklärung: erzeugt ein kleinere Fläche in einer größeren.
+- **`F`**: Füllen von Flächen und Kanten. Weitere erklärung: Bei 2 Punkte wird eine Kante erstellt ansonsten ein Fläche. Bei 5+ Punkte füllen werden oft komische Flächen erzeugt, vor allem für das Rendern und Exportieren ist das wichtig.
+- **`Str + T`**: Fläche zu Dreieck konventieren. Weitere erklärung: Trifft zu alle ausgewällten Flächen und ist sinnvoll für das Exportieren bzw. Rendern.
 
 
 ## Erweiterte Funktionen in Blender
@@ -119,7 +111,7 @@ Physik ist nicht wie die anderen ein einziger Modifyer sondern gleiche eine Kate
 Beispiel an einem Modifyer ist das Gewebe Modifyer. Dieser funktioniert wie eine Decke. Führt man die Simlation  mit `LEERZEICHEN`  aus dann fällt der Körper hinunter. Ist ein Objekt im weg mit Kollision, dann hällt dieser hin beim fallen auf. Das Objekt kann allerdings nur zerfallen bei Eckpunkten, weil jede Fläche ist starr. In den Einstellungen ist zum Setzen wie gut das Objekt zerfällt bzw. auch wie schwer sie ist. Beim Anwenden diesem Modifyer wird der Körper in dieser Lager fixiert.
 
 
-### Programmieren 
+### Programmieren
 #### Nutzen
 #### Syntax
 
@@ -127,7 +119,7 @@ Beispiel an einem Modifyer ist das Gewebe Modifyer. Dieser funktioniert wie eine
 ------
 
 ## Animationen
-### Basics 
+### Basics
 ### Wichtig zu beachten
 ### Einfügen in Unreal
 
@@ -176,12 +168,12 @@ Die Rüstung selbst erinnert eher an das **Hoch- bzw. Spätmittelalter** beziehu
 
 Bei längeren Entwicklungen in einem Projekt lehrnt man immer neue Funktionen kennen. Hin und wieder erfindet man auch seine eigene Technicken. In Blender sind es z.B.
 
-* Gegenteil von der Funktion Insert: Wird ausgeführt in dem man eine Fläche extrahiert ohne eine Höhe hinzu zufügen und diese Fläche mit `S` vergrößern. Hier wird vorallem beachtet das keine Flächen überschnitten werden, was bei insert und dann `S` schon der Fall ist.
-* Objekte auf einer Kreisbahn verschieben: Verwendet die Technik das man den Ursprung beliebig setzten kann. Nützlich ist das allerdings dann bei Objekten die man auf einen kugelförmigen Objekt bewegen möchte. Da setzt man den Ursprung auf den gleichen wie bei der Kugel und mit `R` bewegt man das Objekt immer im gleichen Abstand bzw. in der gleichen Neigung zur Kugel. Siehe Abbildung
+- Gegenteil von der Funktion Insert: Wird ausgeführt in dem man eine Fläche extrahiert ohne eine Höhe hinzu zufügen und diese Fläche mit `S` vergrößern. Hier wird vorallem beachtet das keine Flächen überschnitten werden, was bei insert und dann `S` schon der Fall ist.
+- Objekte auf einer Kreisbahn verschieben: Verwendet die Technik das man den Ursprung beliebig setzten kann. Nützlich ist das allerdings dann bei Objekten die man auf einen kugelförmigen Objekt bewegen möchte. Da setzt man den Ursprung auf den gleichen wie bei der Kugel und mit `R` bewegt man das Objekt immer im gleichen Abstand bzw. in der gleichen Neigung zur Kugel. Siehe Abbildung
 
 ![Objekte auf einer KUgel [@blender]](img/schmiedpeter/kugel_bewegen.png){width=50%}
 
-* Zuerst per Anmerkung vorgezeichnet und dann in der 2d Ansicht bearbeitet, das 2 mal. Diese Funktionalität ist ähnlich zum UV Mapping nur viel simpler.
+- Zuerst per Anmerkung vorgezeichnet und dann in der 2d Ansicht bearbeitet, das 2 mal. Diese Funktionalität ist ähnlich zum UV Mapping nur viel simpler.
 
 ##### Angehensweiße
 
