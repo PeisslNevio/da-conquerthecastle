@@ -201,6 +201,9 @@ Die Kollisionsdaten wurden basierend auf der importierten Geometrie automatisch 
 Nach dem Import wurde das Modell im Level platziert und in verschiedenen Ansichten überprüft (Lit, Unlit, Wireframe). Performance-Tests wurden durchgeführt, um sicherzustellen, dass die Framerate stabil bleibt. Die Lichtsimulation wurde neu berechnet (Baked Lighting), um Beleuchtungseffekte zu optimieren.
 
 
+\newpage
+
+
 ### Items
 
 //todo
@@ -226,42 +229,176 @@ Nach dem Import wurde das Modell im Level platziert und in verschiedenen Ansicht
 //todo
 
 
+
+\newpage
+
 ### GUI
 
-//todo
+Die GUI (Graphical User Interface) bildet die visuelle Schnittstelle zwischen Spieler und Spiel. Sie umfasst alle Bildschirmelemente, die außerhalb der eigentlichen Spielwelt dargestellt werden. Während die GUI alle visuellen Elemente der Benutzeroberfläche bezeichnet, beschreibt das HUD speziell jene Informationsfläche, die während des Spielgeschehens relevante Daten wie Spieler-Lebenspunkte, Ausdauer und Boss-Lebenspunkte anzeigt.
 
-#### UI-Konzept
+#### Zielsetzung der Benutzeroberfläche
 
-//todo
+Die primäre Zielsetzung der GUI besteht darin, dem Spieler ausschließlich essentielle Informationen bereitzustellen, ohne ihn dabei durch visuelle Überfrachtung abzulenken. Jedes UI-Element wurde so gestaltet, dass seine Funktion ohne zusätzliche Erklärung verständlich ist. Dies trägt dazu bei, dass sich der Spieler auf das Kampfgeschehen konzentrieren kann, während ihm gleichzeitig alle notwendigen Informationen zur Verfügung stehen.
+
+#### Rolle der GUI im Spielablauf
+
+Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu Beginn leitet das Hauptmenü den Spieler durch die ersten Schritte und ermöglicht den Einstieg ins Spiel. Sobald der Kampf beginnt, übernimmt das HUD die zentrale Rolle: Es zeigt dem Spieler kontinuierlich seine aktuelle Lebenspunkteanzahl sowie seine verfügbare Ausdauer an. Zusätzlich wird die Lebensleiste des Bosses prominent dargestellt, sodass der Spieler den Kampfverlauf nachvollziehen und seine Strategien dynamisch anpassen kann. Nach einem Spieler-Tod erscheint der Death-Screen, der dem Spieler Optionen zur Fortsetzung bietet. Das Statistikmenü ermöglicht es, wichtige Spielinformationen und Errungenschaften einzusehen.
+
+#### Abgrenzung zwischen Spielwelt und Benutzeroberfläche
+
+Die GUI existiert außerhalb der eigentlichen Spielwelt und wird als zweidimensionale Überlagerung im Vordergrund des Bildschirms dargestellt. Diese Trennung zwischen Spielwelt und Benutzeroberfläche wird technisch durch das UMG-Framework realisiert, welches die GUI-Elemente unabhängig von der 3D-Szene rendert. Dadurch bleibt die GUI stets sichtbar und lesbar, unabhängig von Kamerabewegungen oder Spielgeschehen. Diese klare Abgrenzung ermöglicht es dem Spieler, zwischen spielrelevanten Informationen (GUI) und der eigentlichen Spielwelt zu unterscheiden. In der folgenden Abbildung sieht man das HUD im Editor.
+
+
+![Spieler-HUD mit Lebenspunkten und Ausdauer](img/peissl/praxis/ui-player.png){width=90%}
+
+
 
 #### Umsetzung in UMG
 
-//todo
+Unreal Motion Graphics (UMG) ist das integrierte UI-Framework der Unreal Engine und bildet die technische Grundlage für die Erstellung sämtlicher GUI-Elemente in ConquerTheCastle. UMG bietet einen visuellen Editor, der es ermöglicht, Benutzeroberflächen durch Drag-and-Drop von UI-Komponenten zu erstellen, ohne aufwendige manuelle Code-Implementierung.
 
-#### Einbindung ins Spiel
 
-//todo
+**UI-Komponenten und Layout:**
+Die einzelnen Widgets bestehen aus verschiedenen Standard-UI-Komponenten:
 
+- **Canvas Panel**: Dient als übergeordneter Container, der absolute und relative Positionierung ermöglicht.
+- **Buttons**: Interaktive Schaltflächen mit Hover- und Click-Events, die über Blueprints mit Spiellogik verknüpft sind.
+- **Progress Bars**: Visuelle Balken zur Darstellung von Lebenspunkten und Ausdauer, deren Füllstand dynamisch aktualisiert wird.
+- **Text Blocks**: Textfelder für Beschriftungen und Informationsdarstellung.
+- **Images**: Grafische Elemente zur visuellen Gestaltung und Dekoration.
+
+
+**Widget-Erstellung:**
+Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein wiederverwendbares UI-Element, das sowohl visuelle Komponenten als auch zugehörige Logik enthält. Folgende Widgets wurden implementiert:
+
+- **Mainmenu-Widget**: Enthält Buttons für "Play", "Statistics" und "Quit". Das Layout wurde links ausgerichtet und mit konsistenten Abständen zwischen den Buttons versehen, um dem Spieler sicht auf die Burg zu gewähren.
+
+![Hauptmenü](img/peissl/praxis/mainmenu-ui.png){width=90%}
+
+
+- **Statistics-Menu-Widget**: Zeigt Spielstatistiken wie gespielete Spiele, Bestzeit und weitere Errungenschaften an.
+
+![Statistikmenü](img/peissl/praxis/statisticsmenu-ui.png){width=90%}
+
+
+- **HUD-Widget**: Beinhaltet Progress-Bars für Spieler-Lebenspunkte (rot) und Ausdauer (hellblau) sowie die Boss-Lebensleiste.
+
+![Spielerperspektive im Bossraum mit aktiver GUI](img/peissl/praxis/bossroom-player-perspective.png){width=90%}
+
+
+- **Death-Screen-Widget**: Wird bei Spieler-Tod eingeblendet und bietet Optionen zum Neustart oder zur Rückkehr ins Hauptmenü.
+
+![Death-Screen nach Spieler-Tod](img/peissl/praxis/deathscreen-ui.png){width=90%}
+
+
+
+\newpage
 
 ### Cutscenes erstellen
 
-//todo
+Cutscenes dienen in ConquerTheCastle dazu, den Spieler in die Spielwelt einzuführen und wichtige narrative Momente zu inszenieren. Sie schaffen eine atmosphärische Verbindung zwischen den verschiedenen Spielabschnitten und vermitteln dem Spieler das Gefühl einer zusammenhängenden Geschichte. Die Cutscenes wurden mit dem Level Sequencer der Unreal Engine erstellt und über ein Blueprint-System in das Spielgeschehen integriert.
 
 #### Ziel & Einsatz der Cutscenes
 
-//todo
+Die Cutscenes in ConquerTheCastle verfolgen mehrere spezifische Zielsetzungen:
+
+**Intro-Cutscene:**
+Die Intro-Cutscene führt den Spieler in die Spielwelt ein und zeigt einen Überblick über die Umgebung, bevor das eigentliche Gameplay beginnt. Sie erzeugt eine atmosphärische Stimmung und gibt dem Spieler Zeit, sich auf den bevorstehenden Kampf vorzubereiten. Die Cutscene endet mit dem Anzeigen des Hauptmenüs, das dem Spieler Kontrolle über die weitere Spielprogression gibt.
+
+**Bossraum-Cutscene:**
+Die zweite Cutscene wird beim Betreten des Bossraums abgespielt und dient als cinematischer Übergang. Sie zeigt den Bossraum aus verschiedenen Perspektiven und lenkt die Aufmerksamkeit des Spielers auf wichtige Elemente wie den Thron und die räumliche Ausdehnung des Kampfareals. Diese Cutscene vermittelt dem Spieler visuell die Größe und Bedeutung des bevorstehenden Bosskampfes.
+
+Durch den Einsatz von Cutscenes wird das Spielerlebnis aufgewertet und erhält eine professionellere, cinematische Qualität. Die Cutscenes fungieren als narrative Klammer, die die einzelnen Spielabschnitte verbindet.
 
 #### Erstellung mit Level Sequencer
 
-//todo
+Der Level Sequencer ist das zentrale Werkzeug in Unreal Engine für die Erstellung von Cutscenes und cinematischen Sequenzen. Er bietet eine Timeline-basierte Oberfläche, die es ermöglicht, Kamerabewegungen, Aktoren-Transformationen und andere Events zeitlich präzise zu choreographieren.
+
+**Sequencer-Setup:**
+Für jede Cutscene wurde eine neue Level Sequence erstellt. Dies geschah über das Menü "Cinematics > Add Level Sequence". Die Sequenzen wurden im Content-Verzeichnis unter einem eigenen Cutscenes-Ordner organisiert, um eine klare Projektstruktur zu gewährleisten.
+
+**Kamera-Integration:**
+Zu jeder Sequenz wurde eine Cine Camera Actor hinzugefügt, die als virtuelle Filmkamera fungiert. Die Cine Camera bietet erweiterte Einstellungsmöglichkeiten wie Focal Length (Brennweite), Aperture (Blende) und Focus Settings, die eine filmische Bildgestaltung ermöglichen. Die Kamera wurde im Sequencer als Track hinzugefügt, sodass ihre Position, Rotation und Eigenschaften über die Timeline animiert werden konnten.
+
+**Keyframe-Animation:**
+Die Kamerabewegungen wurden durch das Setzen von Keyframes zu bestimmten Zeitpunkten definiert. An kritischen Positionen in der Timeline wurde die Kamera manuell im Viewport positioniert und ein Keyframe gesetzt ("K" gedrückt). Der Sequencer interpoliert automatisch zwischen diesen Keyframes und erzeugt flüssige Kamerabewegungen. Für die Intro-Cutscene wurden mehrere Keyframes gesetzt, um eine schwenkende und fahrtende Bewegung über die Intro-Welt zu erzeugen.
+
+![Intro-Welt mit Kameraposition](img/peissl/praxis/intro-world.png){width=90%}
+
+**Timing und Dauer:**
+Die Länge der Cutscenes wurde so gewählt, dass sie informativ sind, ohne den Spielfluss zu unterbrechen. Die Intro-Cutscene wurde auf eine Dauer von etwa 8-10 Sekunden festgelegt, während die Bossraum-Einführungs-Cutscene kürzer gehalten wurde (5-7 Sekunden), da der Spieler bereits im Spielgeschehen ist und schneller ins Gameplay zurückkehren möchte.
 
 #### Kameraführung & Timing
 
-//todo
+Die Kameraführung in den Cutscenes wurde sorgfältig geplant, um dem Spieler relevante Informationen zu vermitteln und gleichzeitig eine ästhetisch ansprechende Präsentation zu gewährleisten.
+
+**Intro-Cutscene Kameraführung:**
+Die Intro-Cutscene beginnt mit einer erhöhten Kameraperspektive, die einen Überblick über die Intro-Welt bietet. Die Kamera bewegt sich langsam und gleichmäßig, um dem Spieler Zeit zu geben, die Umgebung zu erfassen. Die Bewegung folgt einer sanften Kurve, die durch die Interpolation zwischen Keyframes erzeugt wird. Die Kamera senkt sich allmählich ab und richtet sich auf eine zentrale Struktur aus, was einen natürlichen Übergang zum spielbaren Gameplay schafft.
+
+**Bossraum-Cutscene Kameraführung:**
+Beim Betreten des Bossraums wird eine Fade-In-Sequenz ausgelöst. Die Kamera startet aus einer Position nahe dem Eingang und schwenkt langsam in Richtung des Throns. Diese Bewegung führt den Blick des Spielers entlang des roten Teppichs und hebt die zentrale Achse des Raums hervor. Die Kamera verweilt kurz auf dem Thron, um die Bedeutung dieser Position zu unterstreichen, bevor sie sanft zur Spielerperspektive übergeht.
+
+![Bossraum Fade-In Cutscene](img/peissl/praxis/bossroom-fadein-cutscene.png){width=90%}
+
+**Timing-Überlegungen:**
+Das Timing der Kamerabewegungen wurde so abgestimmt, dass sie weder zu schnell noch zu langsam wirken. Zu schnelle Bewegungen können desorientierend wirken, während zu langsame Bewegungen den Spieler ungeduldig machen. Durch mehrfaches Testen und Anpassen der Keyframe-Positionen und -Zeitpunkte wurde ein ausgewogenes Tempo gefunden.
+
+**Easing und Interpolation:**
+Für natürlichere Bewegungen wurden Easing-Funktionen auf die Keyframes angewendet. Statt linearer Interpolation wurde "Ease In" und "Ease Out" verwendet, wodurch die Kamera sanft beschleunigt und abbremst. Dies erzeugt einen cinematischeren Eindruck und vermeidet abrupte Bewegungsänderungen.
 
 #### Trigger & Ablauf im Spiel
 
-//todo
+Die Integration der Cutscenes in den Spielablauf erfolgt über ein ausgeklügeltes Blueprint-System, das sicherstellt, dass die Cutscenes zum richtigen Zeitpunkt abgespielt werden und nahtlos in das Gameplay übergehen. Das folgende Diagramm zeigt den kompletten Ablauf der Cutscene- und Menü-Logik:
+
+![Kompletter Spielablauf von Cutscene bis Bosskampf](img/peissl/praxis/vollstaendiger-spielablauf.png){width=100%}
+
+**Spielstart und Intro-Sequenz:**
+Beim Start des Spiels wird automatisch die Intro-Cutscene gestartet. Dies geschieht im Level-Blueprint des Intro-Levels durch Aufruf der "Play"-Funktion der Level Sequence. Der Ablauf folgt dabei dieser Logik:
+
+1. **Event BeginPlay:** Das Event wird ausgelöst, wenn das Level vollständig geladen ist
+2. **Create/Get Level Sequence:** Die Intro-Cutscene Sequence wird referenziert oder erstellt
+3. **Play:** Die Sequenz wird gestartet und die Cutscene läuft ab
+4. **Stop Motion Camera:** Ein Node stoppt ggf. die Kamerabewegung nach der Cutscene
+
+![Level-Blueprint für Intro-Welt](img/peissl/praxis/code-intro-world.png){width=90%}
+![Blueprint-Code zum Start der Cutscene](img/peissl/praxis/code-start-cutscene.png){width=90%}
+
+**Hauptmenü-Erstellung und Anzeige:**
+Nach Ablauf der Intro-Cutscene wird das Hauptmenü-Widget erstellt und eingeblendet. Dies wird durch einen "On Finished"-Event des Sequence Players erreicht, der ausgelöst wird, sobald die Cutscene vollständig abgespielt wurde. Der Blueprint führt folgende Schritte durch:
+
+1. **Create Widget:** Das Mainmenu-Widget wird als Instanz erstellt
+2. **Add to Viewport:** Das Widget wird zum visuellen Anzeigebereich hinzugefügt
+3. **Set Input Mode:** Der Input-Mode wird auf "UI Only" gesetzt
+4. **Show Mouse Cursor:** Der Maus-Cursor wird sichtbar gemacht
+
+![Blueprint-Code zur Erstellung des Hauptmenüs](img/peissl/praxis/code-create-mainmenu.png){width=90%}
+
+**Play-Button-Event und Levelüdbergang:**
+Wenn der Spieler den "Play"-Button im Hauptmenü betätigt, wird ein Custom Event ausgelöst, das folgende Aktionen koordiniert:
+
+1. **Remove from Parent:** Das Hauptmenü-Widget wird aus dem Viewport entfernt
+2. **Set Input Mode:** Der Input-Mode wird auf "Game Only" zurückgesetzt
+3. **Hide Mouse Cursor:** Der Maus-Cursor wird ausgeblendet
+4. **Load Level (Optional):** Ein Übergangs-Level oder Cutscene kann optional geladen werden
+
+![Logik des Play-Buttons](img/peissl/praxis/logic-play-button.png){width=90%}
+
+**Fortsetzungs-Cutscene (Optional):**
+Nach Klick auf den Play-Button kann optional eine kurze Übergangs-Cutscene abgespielt werden, die vom Intro zum Bossraum überleitet. Diese Cutscene kann zusätzliche narrative Elemente enthalten:
+
+![Blueprint zur Fortsetzung der Cutscene](img/peissl/praxis/continiue-cutscene.png){width=90%}
+
+**Bossraum-Eingangs-Cutscene:**
+Beim Laden des Bossraum-Levels wird automatisch die Bossraum-Einführungs-Cutscene gestartet. Dies geschieht im Level-Blueprint des Bossraum-Levels über das Event BeginPlay. Die Cutscene zeigt dem Spieler den Raum aus verschiedenen Perspektiven und endet mit einem sanften Übergang zur Spielerperspektive, woraufhin die volle Spielerkontrolle wiederhergestellt wird.
+
+**Spieler-Kontrolle während Cutscenes:**
+Während eine Cutscene abgespielt wird, wird dem Spieler die Kontrolle entzogen. Dies geschieht durch Setzen des Input-Modes auf "UI Only" oder "Cinematic". Die Spielfigur wird temporär deaktiviert oder an Ort und Stelle eingefroren, um sicherzustellen, dass der Spieler die Cutscene nicht durch Bewegung unterbrechen kann. Nach Abschluss der Cutscene wird die volle Spielerkontrolle durch Aufruf von entsprechenden Blueprint-Funktionen wiederhergestellt.
+
+**Überspringbarkeit:**
+In der aktuellen Implementation sind die Cutscenes nicht überspringbar, da sie kurz gehalten sind und wichtige narrative Informationen vermitteln. Für längere Cutscenes in zukünftigen Erweiterungen könnte eine Skip-Funktion implementiert werden, die durch Drücken einer bestimmten Taste (z.B. ESC oder Space) aktiviert wird und die Cutscene sofort beendet.
+
+**Event-Verkettung:**
+Die verschiedenen Events sind sorgfältig miteinander verknüpft, um einen nahtlosen Übergang zwischen Cutscenes, Menüs und Gameplay zu gewährleisten. Dies verhindert, dass Fehler oder ungewünschte Zustände auftreten, wie zum Beispiel das gleichzeitige Anzeigen von Menü und HUD oder die versehentliche Aktivierung von Spielereingaben während einer Cutscene.
 
 
 
