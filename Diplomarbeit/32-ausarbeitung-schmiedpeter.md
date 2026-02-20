@@ -119,9 +119,46 @@ Beispiel an einem Modifyer ist das Gewebe Modifyer. Dieser funktioniert wie eine
 ------
 
 ## Animationen
-### Basics
-### Wichtig zu beachten
-### Einfügen in Unreal
+### Zweck und Nutzen von Animationen
+Animationen sind notwendig, um statische Modelle in glaubwürdige, lesbare und emotionale Figuren zu verwandeln. In Spielen und Visualisierungen übernehmen sie mehrere Aufgaben: Sie machen Handlungen verständlich (z. B. Gehen, Angreifen), stärken die Identität einer Figur durch charakteristische Bewegungen und unterstützen die Spielmechanik durch klare Rückmeldungen (z. B. Treffer, Ausweichen). Ohne Animationen bleibt ein Modell reiner Blickfang, aber es kann keine Handlung vermitteln und wirkt technisch wie dramaturgisch unvollständig.
+
+### Grundlagen des Rigging mit Armature
+Die Armature ist das Skelett einer Figur. Sie besteht aus Knochen (Bones), die hierarchisch verbunden sind und die spätere Bewegung definieren. Jeder Knochen besitzt einen Kopf und ein Ende; aus der Ausrichtung ergibt sich die lokale Achse, die für Rotationen entscheidend ist. Damit eine Armature sauber funktioniert, müssen Skalen der Meshes angewendet sein und die Bone-Orientierungen konsistent angelegt werden.
+
+**Parent-Knochen (Elternknochen)** bestimmen die Hierarchie. Bewegungen eines Elternknochens wirken auf alle darunterliegenden Kinderknochen. Dadurch lassen sich Ketten wie Wirbelsäule, Arm oder Bein logisch aufbauen. Ein Unterarm ist z. B. Kind des Oberarms, sodass eine Rotation des Oberarms die gesamte Kette mitführt.
+
+**Keep Offset** entstehen, wenn ein Knochen einem Elternknochen zugewiesen wird, seine aktuelle Position jedoch beibehaelt. Das bedeutet: Die Hierarchie wirkt, aber der Kindknochen verschiebt sich beim Parenten nicht an den Kopf des Elternknochens. Diese Variante ist sinnvoll, wenn der Abstand zwischen Knochen bewusst erhalten bleiben soll, z. B. bei Zubehoer, Sekundaerbewegungen oder technischen Rigs. Erstellt wird dies im Pose- oder Edit-Mode durch Auswahl von Kind und Elternknochen und anschliessend `Str + P` mit der Option Keep Offset. So bleibt der Abstand erhalten, die Vererbung der Bewegung ist aber aktiv.
+
+**Inverse Kinematik (IK)** wird eingesetzt, wenn man das Ende einer Knochenkette direkt steuern moechte, z. B. Haende, Fueße oder ein Knie beim Aufsetzen auf den Boden. Im Gegensatz zur Vorwaertskinematik (FK), bei der jeder Knochen einzeln rotiert wird, berechnet IK die Winkel der gesamten Kette automatisch, damit das Endglied ein Ziel erreicht. Technisch wird dazu ein Ziel-Objekt (IK-Target) definiert und ein IK-Constraint auf den Endknochen gesetzt; eine Kettenlaenge bestimmt, wie viele Knochen beeinflusst werden. So lassen sich stabile Kontaktpunkte erzeugen, etwa wenn eine Hand eine Waffe haelt oder ein Fuss sauber am Boden bleibt.
+
+### Anwendung an Figuren: Vorgehensweise
+Für die Anwendung an einer Figur wird ein Mesh benoetigt, eine Armature und eine klare Bindung zwischen beiden. Ziel ist es, dass die Knochenbewegung das Mesh nachvollziehbar verformt, ohne sichtbare Artefakte zu erzeugen. Eine Abbildung kann hier optional den Aufbau von Mesh, Armature und Gewichtung verdeutlichen.
+
+Benotigte Schritte:
+1. Mesh vorbereiten (Skalierung anwenden, Ursprung setzen).
+2. Armature platzieren und Knochen entlang der geplanten Bewegung anordnen.
+3. Parenting zwischen Mesh und Armature herstellen.
+4. Gewichte (Weights) pruefen und bei Bedarf korrigieren.
+
+Gerade bei organischen oder flexiblen Objekten ist die Verteilung der Gewichte entscheidend, da zu harte Uebergaenge die Bewegung unnatuerlich wirken lassen.
+
+### Gewichtung und Bindung des Meshes
+Das Verbinden von Mesh und Armature erfolgt in Blender ueber das Parenting. Dabei gibt es mehrere Modi, die das Grundgeruest der Gewichtung erzeugen:
+
+Gewichtungstools (Weight Paint) steuern, wie stark ein Knochen einzelne Punkte des Meshes beeinflusst. Jeder Vertex erhaelt Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und 1. Ein Wert von 1 bedeutet volle Beeinflussung durch den Knochen, ein Wert von 0 keine. In der Praxis werden die Gewichte ueber Pinselwerkzeuge gemalt, geglaettet oder normalisiert, damit Uebergaenge weich bleiben und sich die Summe der Einfluesse pro Punkt sinnvoll verteilt. So entstehen organische Deformationen, ohne dass das Mesh unerwuenscht einbricht oder sich verzieht.
+
+Wichtige Werkzeuge sind Add (Gewichte erhoehen), Subtract (Gewichte reduzieren), Blur oder Smooth (Uebergaenge glaetten) sowie Normalize/Normalize All (Gewichte pro Vertex ausgleichen). Damit lassen sich harte Kanten vermeiden und Gelenkbereiche wie Ellbogen oder Knie sauber verformen.
+
+**Automatic Weights**: Blender berechnet die Gewichte automatisch anhand der Naehe zu den Knochen. Dieser Modus ist effizient und liefert oft brauchbare Ergebnisse, ist jedoch bei komplexen Formen fehleranfaellig. Typische Probleme sind ungewollte Verzerrungen, wenn Knochen zu nah an anderen Bereichen liegen. Deshalb ist eine anschliessende manuelle Korrektur in den Weight-Painting-Modi fast immer notwendig. In der Praxis gilt: Automatic Weights sind der Startpunkt, nicht der Abschluss.
+
+**With Empty Groups**: Erzeugt nur die notwendigen Vertex-Gruppen ohne Gewichte. Dieser Modus ist sinnvoll, wenn die Gewichtung bewusst manuell angelegt werden soll, etwa bei technischen oder sehr klar strukturierten Modellen.
+
+**With Envelope Weights**: Nutzt die Bone-Envelopes (Einflussbereiche) anstelle von Distanzberechnung. Der Vorteil liegt in der direkten Kontrolle ueber Einflussradien, allerdings ist die Methode weniger praezise bei feineren Strukturen und erfordert eine saubere Envelope-Konfiguration.
+
+**Bone-Parenting (Bone)**: Das Mesh wird einem einzelnen Knochen untergeordnet. Diese Methode eignet sich fuer starre Objekte (z. B. Waffen, Schilder) und laesst keine organische Deformation zu.
+
+### Einfuegen in Unreal
+Fuer den Export ist ein konsistentes Rig wichtig: gleiche Ausrichtung, klare Root-Struktur und einheitliche Benennung. In Unreal werden Armature und Animationen als FBX importiert. Entscheidend ist, dass die Animationen im selben Skeleton bleiben, damit sie austauschbar und wiederverwendbar sind. So kann z. B. eine Geh-Animation an mehreren Figuren genutzt werden, solange das Skelett kompatibel bleibt.
 
 ## Praktisch
 
