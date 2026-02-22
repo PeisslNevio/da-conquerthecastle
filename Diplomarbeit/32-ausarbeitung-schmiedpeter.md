@@ -111,12 +111,6 @@ Physik ist nicht wie die anderen ein einziger Modifyer sondern gleiche eine Kate
 Beispiel an einem Modifyer ist das Gewebe Modifyer. Dieser funktioniert wie eine Decke. Führt man die Simlation  mit `LEERZEICHEN`  aus dann fällt der Körper hinunter. Ist ein Objekt im weg mit Kollision, dann hällt dieser hin beim fallen auf. Das Objekt kann allerdings nur zerfallen bei Eckpunkten, weil jede Fläche ist starr. In den Einstellungen ist zum Setzen wie gut das Objekt zerfällt bzw. auch wie schwer sie ist. Beim Anwenden diesem Modifyer wird der Körper in dieser Lager fixiert.
 
 
-### Programmieren
-#### Nutzen
-#### Syntax
-
-
-------
 
 ## Animationen
 ### Zweck und Nutzen von Animationen
@@ -160,14 +154,62 @@ Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabe
 
 **Bone-Parenting (Bone)**: Das Mesh wird einem einzelnen Knochen untergeordnet. Diese Methode eignet sich für starre Objekte (z. B. Waffen, Schilder) und lässt keine organische Deformation zu.
 
-![Gewichtungs-Vergleich bei auswahl der Knochen](img/schmiedpeter/Gewichtungen.png){width=80%}
+![Gewichtungs-Vergleich bei auswahl der Knoche](img/schmiedpeter/Gewichtungen.png){width=80%}
 
-Nach dem Parenting werden die Gewichte mit den Gewichtungstools (Weight Paint) verfeinert. Sie steuern, wie stark ein Knochen einzelne Punkte des Meshes beeinflusst. Jeder Vertex erhält Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und 1. Ein Wert von 1 bedeutet volle Beeinflussung durch den Knochen, ein Wert von 0 keine. In der Praxis werden die Gewichte über Pinselwerkzeuge gemalt, geglättet oder normalisiert, damit Übergänge weich bleiben und sich die Summe der Einflüsse pro Punkt sinnvoll verteilt. So entstehen organische Deformationen, ohne dass das Mesh unerwünscht einbricht oder sich verzieht.
+Nach dem Parenting werden die Gewichte mit den Gewichtungstools (Weight Paint) verfeinert. Sie steuern, wie stark ein Knochen einzelne Punkte des Meshes beeinflusst. Jeder Vertex erhält 
+Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und 1. Ein Wert von 1 bedeutet volle Beeinflussung durch den Knochen, ein Wert von 0 keine. In der Praxis werden die Gewichte über Pinselwerkzeuge gemalt, geglättet oder normalisiert, damit Übergänge weich bleiben und sich die Summe der Einflüsse pro Punkt sinnvoll verteilt. So entstehen organische Deformationen, ohne dass das Mesh unerwünscht einbricht oder sich verzieht.
 
 Wichtige Werkzeuge sind Add (Gewichte erhöhen), Subtract (Gewichte reduzieren), Blur oder Smooth (Übergänge glätten) sowie Normalize/Normalize All (Gewichte pro Vertex ausgleichen). Damit lassen sich harte Kanten vermeiden und Gelenkbereiche wie Ellbogen oder Knie sauber verformen.
 
 ### Einfügen in Unreal
 Für den Export ist ein konsistentes Rig wichtig: gleiche Ausrichtung, klare Root-Struktur und einheitliche Benennung. In Unreal werden Armature und Animationen als FBX importiert. Entscheidend ist, dass die Animationen im selben Skeleton bleiben, damit sie austauschbar und wiederverwendbar sind. So kann z. B. eine Geh-Animation an mehreren Figuren genutzt werden, solange das Skelett kompatibel bleibt.
+
+## Game Sound
+
+Game Sound ist weit mehr als akustische Dekoration. Im Computerspiel übernimmt er eine doppelte Funktion: Einerseits erhöht er die Immersion, indem er die künstliche Spielwelt mit glaubwürdigen Klangräumen füllt, andererseits liefert er dem Spieler unmittelbares Feedback auf Handlungen, Ereignisse und Zustandswechsel. Fehlen Hintergrundgeräusche, wirkt eine Szene schnell künstlich und leer; sind sie stimmig gestaltet, werden sie oft kaum bewusst wahrgenommen, stabilisieren aber das Erleben der Spielwelt nachhaltig.
+
+Im Unterschied zu linearen Medien entsteht Sound im Spielkontext unter interaktiven Bedingungen. Atmo, Musik, Sprache und Geräusche werden nicht in einer fixen Reihenfolge abgespielt, sondern können sich abhängig von Spieleraktionen zeitlich unvorhersehbar überlagern. Genau daraus ergeben sich zentrale gestalterische Herausforderungen: Sprachverständlichkeit muss erhalten bleiben, klangliche Konflikte zwischen Ebenen sollen vermieden werden, und trotzdem muss ein konsistenter Gesamteindruck entstehen. Eine strukturierte Klanghierarchie und ein bewusstes Lautstärke- und Mischungsverhältnis sind daher Grundvoraussetzungen für professionellen Gamesound.
+
+### Musikpsycholigische Grundlagen
+#### Wahrnehmung von Tönen
+Die Wahrnehmung von Tönen wird in der musikpsychologischen Lehre von Ernst Kurth als Erleben von „Strebewirkungen“ beschrieben: Töne und Intervalle wirken nicht statisch, sondern erzeugen den Eindruck von gerichteter Bewegung, Spannung und möglicher Auflösung. Die Strebetendenz-Theorie (Willimek) erweitert diesen Ansatz, indem sie diese Wirkung als psychologische Identifikation des Hörers mit Willensregungen deutet. Vereinfacht bedeutet das: Der Hörer erlebt nicht nur eine Klangbewegung, sondern einen inneren Impuls gegen oder für eine Veränderung.
+
+> „Wir erleben einen Ton nicht als Frequenz, sondern als undefinierbares Ding, das wir jedoch nicht als sinnvoll in unsere materielle Welt eingegliedert erfahren können.“ (Musik und Emotionen, S. 3)
+
+Diese Sichtweise verdeutlicht, dass Töne nicht nur als messbare physikalische Signale verarbeitet werden, sondern als psychisch bedeutungsvolle Klangereignisse.
+
+Für Leitton- und Vorhaltswirkungen wird dieses Prinzip konkret über Spannung erklärt. Dissonante Reibungen (z. B. Sekundreibungen im Obertonbereich) werden teilweise unbewusst wahrgenommen und erzeugen ein Spannungsfeld, das eine Auflösung erwartet. Daraus entsteht der typische Eindruck von Erwartung und Zielgerichtetheit in musikalischen Verläufen. Für den Gamesound ist dieser Mechanismus zentral, weil er genutzt werden kann, um Aufmerksamkeit zu lenken, Unsicherheit zu steigern und Auflösungsmomente dramaturgisch wirksam zu setzen.
+
+#### Basisemotionen
+Im Kontext von Musik und Emotionen werden Basisemotionen nicht isoliert betrachtet, sondern als Ergebnis mehrerer Parameter, vor allem Harmonik, Tempo und Lautstärke. In den dargestellten Testansätzen wurden Musikbeispiele bewusst auf wenige Parameter reduziert, um den emotionalen Kern sichtbar zu machen. Dabei zeigt sich: Das Zusammenspiel aus harmonischer Struktur und zeitlicher/klanglicher Gestaltung bestimmt maßgeblich die wahrgenommene Emotion.
+
+Eine besondere Rolle spielt das Tempo. Schnellere Verläufe erhöhen typischerweise Aktivierung und werden häufiger mit Erregung, Anspannung oder Durchsetzungskraft verbunden, während langsamere Verläufe eher Ruhe, Trauer oder Gelöstheit stützen. Zusätzlich zeigen physiologische Befunde, dass aktivierende Musik mit erhöhter Herzfrequenz und Muskelspannung korreliert, beruhigende Musik hingegen mit sinkender Herzfrequenz. Damit wird die emotionale Wirkung nicht nur subjektiv beschrieben, sondern auch körperlich nachvollziehbar.
+
+Typische emotionale Zuordnungen aus den dargestellten Harmoniezusammenhängen sind:
+- **Dur-Tonika**: nüchternes Einverstanden-Sein mit dem Gegenwärtigen.
+- **Moll-Tonika**: Trauer (bei leiser/langsamer Ausprägung) oder Zorn (bei lauter/schneller Ausprägung).
+- **Äolisches Moll**: Mut, Abenteuer, Spannung, Gefahr.
+- **Subdominante in Dur**: Freude, Überschwänglichkeit, Feierlichkeit.
+- **Verminderter Septakkord / kleine Sexte**: Schrecken, Verzweiflung, Bedrohung, Angst.
+- **Übermäßiger Dreiklang**: Staunen, Überraschung, Verwandlung.
+
+Diese Zuordnungen sind für Gamesound praktisch nutzbar, weil sie eine gezielte Kopplung von Spielsituation und musikalischem Ausdruck erlauben (z. B. Gefahrensignal, Triumphmoment, Trauerphase).
+
+#### Mechanismen der Musikemotion
+Ein etablierter Erklärungsrahmen für musikalisch ausgelöste Emotionen ist das BRECVEM-Modell nach Juslin & Västfjäll. Es beschreibt sieben unterschiedliche Auslösemechanismen, die parallel oder kombiniert wirken können:
+
+- **B – Brain Stem Reflex**: Plötzliche, laute, dissonante oder sehr schnelle Signale lösen unmittelbare Alarm- bzw. Aktivierungsreaktionen aus.
+- **R – Rhythmic Entrainment**: Externe Rhythmen synchronisieren innere Rhythmen (z. B. Herzrate), wodurch Aktivierung und Erregung mitgesteuert werden.
+- **E – Evaluative Conditioning**: Musik wird emotional wirksam, weil sie wiederholt mit positiven oder negativen Ereignissen gekoppelt wurde.
+- **C – Emotional Contagion**: Hörer übernehmen den wahrgenommenen emotionalen Ausdruck der Musik durch innere Nachbildung.
+- **V – Visual Imagery**: Musik erzeugt innere Bilder, die wiederum Emotionen auslösen oder verstärken.
+- **E – Episodic Memory**: Musik aktiviert autobiografische Erinnerungen und damit verbundene Gefühle.
+- **M – Musical Expectancy**: Erwartungen an den Fortgang der Musik werden erfüllt, verzögert oder verletzt; daraus entstehen Spannung, Überraschung und Auflösung.
+
+Gerade für interaktive Medien ist dieses Modell hilfreich, weil es zeigt, dass Musikemotionen nicht nur über Harmonik entstehen, sondern auch über Konditionierung, Rhythmuskopplung, Erwartungssteuerung und Erinnerungseffekte.
+
+
+----
 
 ## Praktisch
 
