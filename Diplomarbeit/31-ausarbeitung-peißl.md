@@ -149,9 +149,9 @@ Die Grundstrukturen des Raumes (Boden, Wände, Decke) wurden mit minimaler Geome
 Bei der Minimierung der Polygonanzahl entstanden unvermeidlich kleine Spalten und Lücken in der Wandgeometrie sowie an den Verbindungsstellen zwischen verschiedenen Modellobjekten. Diese Spalten wurden systematisch durch das strategische Platzieren zusätzlicher statischer Dekorationsobjekte wie Wandverzierungen, kleine Säulenabschnitte und architektonische Details aufgefüllt. Dies diente nicht nur als technische Lösung, sondern trug auch zur visuellen Authentizität des Raums bei.
 
 **Wiederverwendung:**
-Sich wiederholende Elemente wie Säulen und Wandsegmente wurden als wiederverwendbare Modelle erstellt und mehrfach platziert, statt individuelle Geometrie für jedes Element zu modellieren. Dies reduzierte sowohl die Modellierungszeit als auch die Speicheranforderungen und GPU-Last.
+Sich wiederholende Elemente wie Säulen und Wandsegmente wurden als wiederverwendbare Modelle erstellt und mehrfach platziert, statt individuelle Geometrie für jedes Element zu modellieren. Dies reduzierte sowohl die Modellierungszeit drastisch.
 
-Das resultierende Modell erreichte eine Polygonanazahl von etwa 80.000 Dreiecken für den gesamten Bossraum, was eine optimale Balance zwischen visueller Qualität und Performance-Anforderungen darstellt.
+Das resultierende Modell etwa 80.000 Polygone, was eine optimale Balance zwischen visueller Qualität und Performance-Anforderungen darstellt.
 
 #### Export & Integration in Unreal Engine
 
@@ -206,27 +206,60 @@ Nach dem Import wurde das Modell im Level platziert und in verschiedenen Ansicht
 
 ### Items
 
-//todo
+Die Items in ConquerTheCastle übernehmen eine zentrale funktionale und visuelle Rolle im Bosskampf. Da der Kampf als Nahkampf-Szenario konzipiert ist, wurden für Spieler und Boss jeweils Schwerter als primäre Waffen umgesetzt. Die Gestaltung dieser Waffen folgt dem mittelalterlichen Gesamtstil des Spiels und unterstützt die direkte Verständlichkeit der Spielmechanik. Der Spieler erkennt ohne zusätzliche Erklärungen sofort, dass beide Figuren auf den Kampf mit Klingenwaffen ausgelegt sind.
 
-#### Item-Konzept
+#### Zielsetzung der Item-Gestaltung
 
-//todo
+Bei der Ausarbeitung der Waffen standen drei Ziele im Vordergrund:
 
-#### Funktionen im Spiel
+1. **Gameplay-Klarheit:** Waffen sollten auf den ersten Blick als kampfrelevante Objekte erkennbar sein.
+2. **Stilistische Konsistenz:** Formensprache und Materialwirkung sollten zum Low-Poly-Mittelalterstil des Spiels passen.
+3. **Proportionale Glaubwürdigkeit:** Die Größe der Waffen musste mit der Körpergröße der jeweiligen Figur harmonieren.
 
-//todo
+Dadurch entsteht eine konsistente visuelle Hierarchie: Das Spielerschwert wirkt agil und kontrollierbar, während das Boss-Schwert Bedrohung und Reichweite vermittelt.
 
-#### Modellierung
+#### Modellierungs-Workflow
 
-//todo
+Die Modellierung erfolgte in Blender auf Basis einfacher Grundkörper (Cube, Plane, Cylinder), die schrittweise in Form gebracht wurden. Dabei wurde auf eine saubere Trennung von Klinge, Parierstange, Griff und Knauf geachtet, um spätere Materialzuweisungen in Unreal Engine zu vereinfachen. Für symmetrische Bauteile wurde der Mirror-Modifier verwendet, wodurch die Modellierungszeit reduziert und eine exakte Achsensymmetrie sichergestellt wurde.
 
-#### Texturierung
+Die finale Geometrie wurde bewusst low-poly gehalten, um die Performance in Kampfsituationen stabil zu halten. Vor dem Export wurden sämtliche Transformationen angewendet (Apply Rotation/Scale), damit Maßstab und Ausrichtung beim Import in Unreal Engine konsistent bleiben.
 
-//todo
 
-#### Export & Verwendumg im Spiel
+#### Player Schwert
 
-//todo
+Das Schwert des Spielers wurde als Einhandschwert mit einer Gesamtlänge von etwa 1,0 m ausgelegt. Diese Dimension orientiert sich an der Körpergröße des Spielercharakters (ca. 1,80 m) und unterstützt ein ausgewogenes Verhältnis zwischen Reichweite, Lesbarkeit und Beweglichkeit.
+
+**Form und Proportionen:**
+Die Klinge wurde relativ schlank modelliert, um Schnelligkeit und Präzision zu vermitteln. Die Parierstange ist kompakt gehalten und dient primär als visuelles Trennelement zwischen Klinge und Griff. Der Griff wurde so dimensioniert, dass er in der Third-Person-Ansicht klar erkennbar bleibt, ohne den Charakter visuell zu überladen.
+
+**Texturierung und Materialwirkung:**
+Für die Klinge wurden helle Metalltöne mit moderater Roughness gewählt, sodass Lichtreflexe erkennbar sind, jedoch nicht zu stark vom Kampfraum ablenken. Der Griff verwendet dunklere, lederartige Farbtöne, um eine klare Materialtrennung herzustellen. Durch diese Farbwahl bleibt das Schwert auch in dynamischen Kampfsituationen gut lesbar.
+
+**Funktion im Spielkontext:**
+Das Player-Schwert signalisiert einen kontrollierten, direkten Kampfstil. Es wirkt weder überdimensioniert noch ornamental, wodurch der Fokus auf Gameplay und Reaktionsgeschwindigkeit erhalten bleibt.
+
+![Player-Schwert mit Proportionen](img/peissl/praxis/player_sword.png){width=90%}
+
+#### Boss Schwert
+
+Das Boss-Schwert wurde als großformatige Zweihandwaffe mit einer Länge von etwa 2,0 m umgesetzt. Die Dimension ist auf die Körpergröße des Bosses (ca. 3,20 m inklusive Hörner) abgestimmt und unterstreicht dessen dominante Rolle innerhalb des Kampfes.
+
+**Form und Proportionen:**
+Im Vergleich zum Spieler-Schwert ist die Klinge breiter und massiver ausgeführt. Die größere Silhouette erhöht die visuelle Präsenz des Bosses bereits auf Distanz. Die Parierstange und der Griff wurden ebenfalls verstärkt modelliert, um die Größe der Waffe glaubwürdig zu stützen.
+
+**Texturierung und Materialwirkung:**
+Für das Boss-Schwert wurden dunklere Metallwerte und stärkere Kontraste eingesetzt. Dadurch wirkt die Waffe schwerer und bedrohlicher. Einzelne Kantenbereiche wurden heller gehalten, um die Kontur auch bei geringer Beleuchtung klar zu definieren.
+
+**Funktion im Spielkontext:**
+Das Boss-Schwert kommuniziert Reichweite, Schlagkraft und Gefahr. Es dient damit nicht nur als Angriffsobjekt, sondern auch als wichtiges Mittel der Gegnerinszenierung: Bereits durch die Waffengröße entsteht psychologischer Druck auf den Spieler.
+
+![Boss-Schwert mit Proportionen](img/peissl/praxis/boss_sword.png){width=90%}
+
+#### Export & Integration in Unreal Engine
+
+Nach Abschluss der Modellierung wurden beide Schwerter im FBX-Format aus Blender exportiert und in Unreal Engine als statische Meshes importiert. Während des Imports wurde darauf geachtet, dass Maßstab und Achsenausrichtung den Projektstandards entsprechen. Für beide Waffen wurden separate Materialien angelegt, um metallische und nicht-metallische Bereiche unabhängig steuern zu können.
+
+Die finale Einbindung erfolgte über die jeweiligen Charakter-Blueprints. Dabei wurden die Schwert-Meshes an den Hand-Sockets der Skelette gebunden, sodass die Waffen Bewegungen und Animationen korrekt folgen. Abschließend wurden Sichttests im Bossraum durchgeführt, um sicherzustellen, dass Größe, Lesbarkeit und Stilwirkung in der finalen Spielsituation konsistent sind.
 
 
 
