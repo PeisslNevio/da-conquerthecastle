@@ -161,8 +161,34 @@ Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und
 
 Wichtige Werkzeuge sind Add (Gewichte erhöhen), Subtract (Gewichte reduzieren), Blur oder Smooth (Übergänge glätten) sowie Normalize/Normalize All (Gewichte pro Vertex ausgleichen). Damit lassen sich harte Kanten vermeiden und Gelenkbereiche wie Ellbogen oder Knie sauber verformen.
 
+### Animation erstellen in Blender
+Nach dem Rigging beginnt die eigentliche Animation im **Pose Mode** der Armature. Dabei werden nicht die Mesh-Punkte direkt bewegt, sondern die Knochen. Blender speichert diese Bewegungen als Keyframes und interpoliert die Zwischenbilder automatisch.
+
+Typische Vorgehensweise:
+1. Armature auswählen und in den Pose Mode wechseln.
+2. Zeitleiste auf den Startframe setzen (z. B. Frame 1).
+3. Gewünschte Knochen in eine Startpose bringen.
+4. Mit `I` Keyframes setzen (meist **Location**, **Rotation** oder **LocRot**).
+5. Zur nächsten Zeitposition wechseln (z. B. Frame 12/24), neue Pose erstellen und erneut Keyframes setzen.
+6. Dies für alle wichtigen Posen wiederholen (z. B. Kontaktpose, Passing Pose, Endpose).
+
+Für saubere Ergebnisse werden die Kurven im **Graph Editor** oder die Keyframe-Reihenfolge im **Dope Sheet** nachbearbeitet. So lassen sich Bewegungen weicher, schneller oder härter gestalten.
+
+Bei mehreren Animationen (z. B. Idle, Walk, Attack) sollte jede Bewegung als eigene **Action** im Action Editor gespeichert und klar benannt werden. Dadurch bleiben die Clips getrennt und können später in Unreal gezielt importiert werden.
+
+Für Loops (z. B. Gehen) muss der letzte Frame zur Startpose passen, damit der Übergang ohne sichtbaren Sprung wieder von vorne beginnt.
+
 ### Einfügen in Unreal
 Für den Export ist ein konsistentes Rig wichtig: gleiche Ausrichtung, klare Root-Struktur und einheitliche Benennung. In Unreal werden Armature und Animationen als FBX importiert. Entscheidend ist, dass die Animationen im selben Skeleton bleiben, damit sie austauschbar und wiederverwendbar sind. So kann z. B. eine Geh-Animation an mehreren Figuren genutzt werden, solange das Skelett kompatibel bleibt.
+
+Kurzablauf für den Import:
+1. In Blender als `FBX` exportieren (Mesh + Armature + gewünschte Animationen).
+2. In Unreal im Content Browser `Import` wählen und die FBX-Datei laden.
+3. Beim ersten Import ein neues Skeleton erzeugen, bei weiteren Animationen **dasselbe** Skeleton auswählen.
+4. `Import Animations` aktivieren, damit die Actions als Animation Sequences übernommen werden.
+5. Importierte Clips im Animation Preview testen (Loop, Geschwindigkeit, Root-Bewegung).
+
+Wenn ein Clip nicht korrekt aussieht, liegt es meist an Bone-Namen, Skalierung oder an nicht angewendeten Transformationen in Blender.
 
 ## Game Sound
 
