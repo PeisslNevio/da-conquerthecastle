@@ -280,6 +280,10 @@ Der Vorteil liegt in der hohen Kontrolle über Intensität und Dramaturgie:
 
 Dieses Verfahren passt besonders gut zu den Anforderungen interaktiver Klanggestaltung, weil es musikalische Kontinuität mit klarer Spielrückmeldung kombiniert und Überlagerungen mit Sprache/Atmo besser steuerbar macht.
 
+#### Produktionswerkzeuge im Kontext interaktiver Musik
+Die zuvor beschriebenen Konzepte (States, Layer, Looping, Übergänge) werden in der Praxis meist in einer **Digital Audio Workstation (DAW)** vorbereitet. Eine DAW dient dabei als Produktionsumgebung, in der musikalische Bausteine komponiert, arrangiert, gemischt und für den späteren Einsatz in der Engine exportiert werden.
+
+Eine zentrale Rolle spielt dabei **MIDI**. MIDI enthält keine Audiodaten, sondern Steuerinformationen (z. B. Tonhöhe, Länge, Velocity, Timing). Dadurch können musikalische Ideen schnell variiert, instrumentiert und an unterschiedliche Intensitätsstufen angepasst werden. Gerade für adaptive und dynamische Spielmusik ist diese Flexibilität wichtig, weil Material häufig in mehreren Versionen (z. B. ruhig, mittel, intensiv) benötigt wird.
 
 ----
 
