@@ -7,108 +7,106 @@
 
 #### Möglichkeiten
 
-Blender ist ein Programm mit vielen Möglichkeiten. Zum einen kann man mit diesem Programm Modellieren außerdem hat diese eine Zeichenfunktion, sowie einen Python Editor. Schon bestehende Modelle kann man Animationen hinzufügen folgend dazu ist es eine nützliche Weise so Videos zu rendern und schneiden.
+Blender ist ein Programm mit vielen Einsatzmöglichkeiten. Es eignet sich für die Modellierung, bietet eine Zeichenfunktion sowie einen Python-Editor. Zusätzlich können bestehenden Modellen Animationen hinzugefügt werden. Darüber hinaus lassen sich in Blender auch Videos rendern und schneiden.
 
-#### Basics der Modelierung
+#### Basics der Modellierung
 
-Aufgebaut ist Blender so: in der Mitte ist ein Koordinatensystem, hier passiert das meiste, links davon sind Werkzeuge. Auf der rechten Seite befinden sich die Objekt Hierache bei den man alle Ordner inkl. Kamera und Licht bzw. auch alle Objekte sieht, sowie im unteren Bereich jegliche Module wie Modifier, Material und Physiks.
+Blender ist wie folgt aufgebaut: In der Mitte befindet sich das Koordinatensystem, in dem der Großteil der Arbeit stattfindet. Links liegen die wichtigsten Werkzeuge. Rechts befindet sich die Objekthierarchie mit Kamera, Licht und allen Objekten. Im unteren bzw. rechten Modulbereich sind Funktionen wie Modifier, Material und Physik zu finden.
 
 ![Koordinatensystem [@blender]](img/schmiedpeter/Defaultscreen-blender.png){width=90%}
 
-In der Modellierungsansicht gibt es 3 Modi alle haben eine andere Bedeutung
+In der Modellierungsansicht gibt es drei Modi mit jeweils eigener Funktion:
 
-- Objektmodus ist hauptsächlich für den Umgang mit mehrere Objekten und dem einfügen von Objekten. Vom Programm bereit gestellte Objekte sind der Würfel, Quader, Zylinder, die Kugel und viele mehr. Standard gemäß sind diese auf die Größe 1 Meter gesetzt und am `Set Origin` gesetzt, welches man beides gleich ändern kann. Außerdem wird dieser Modus für Module wie Physiks oder Modifier verwendet.
-  Die wichtigsten Werkzeuge sind Objekte bewegen/rotieren/skalieren
+- **Objektmodus:** Dieser Modus wird hauptsächlich für den Umgang mit mehreren Objekten und zum Einfügen neuer Objekte verwendet. Blender stellt standardmäßig Objekte wie Würfel, Quader, Zylinder oder Kugeln bereit. Diese sind zunächst auf Standardgröße gesetzt und können in Größe sowie Ursprung (`Set Origin`) angepasst werden. Außerdem werden in diesem Modus Funktionen wie Physik oder Modifier genutzt. Wichtige Werkzeuge sind Bewegen, Rotieren und Skalieren.
   
-- Der Editmodus ist ein wenig anders, dieser ist nämlich da um einzelne Objekte zu verändern
+- **Editmodus:** Dieser Modus dient zur Bearbeitung einzelner Objekte.
 
-  > Der Modus funktioniert auch mit meheren Objekten, es ist nur nicht erwünscht weil ungewollte Fehler auftretten können. Aus diesem Grund sollten Objekt vor den ändern  im Editmode gruppieren.
+  > Der Modus funktioniert auch mit mehreren Objekten. Das ist jedoch nicht empfohlen, weil dabei leicht ungewollte Fehler entstehen können.
 
 
-  Auswählen funktioniert anders als im Objektmodus hier wählt man nicht ein Objekt aus sondern es hängt ab welche Ansicht ausgewählt ist. Standard ist die Punktansicht ausgewählt, hierbei können nur Ecken angewählt werden. Nach dem gleichen Prinzip funktioniert die Kanten- und Flächenansicht. *Tipp mit `Shift` kann man mehrere auswählen und mit `Str` wählt Blender alle aus, die auf der Bahn zum erst ausgewählten*.
-  Wichtige Werkzeuge sind Loop Cuts und das Messer (mit diesen beiden fügt mann Kanten hinzu), bewegen, Flächen verkleinern und extrahieren bzw. füllen
+  Die Auswahl funktioniert hier anders als im Objektmodus: Es werden keine ganzen Objekte, sondern Punkte, Kanten oder Flächen ausgewählt. Standardmäßig ist die Punktansicht aktiv. Nach demselben Prinzip funktionieren die Kanten- und Flächenansicht. *Tipp: Mit `Shift` können mehrere Elemente ausgewählt werden.*
+  Wichtige Werkzeuge sind Loop Cuts und das Messer (zum Hinzufügen von Kanten), Bewegen, Einsetzen/Verkleinern von Flächen, Extrahieren sowie Füllen.
 
-- Skulptur Modus verwendet Werkzeuge, die Polys in verschiedene Art und Weisen bewegen. Das einzige Problem dabei ist, das die Polys die bewegt wurden nicht nach genauen Massen bewegt werden können. Außerdem ist zu achten, dass das Objekt mehr Polys haben soll, ansonsten wird das Entergebnis nicht den Erwartungen ersprechen.
+- **Skulpturmodus:** Dieser Modus nutzt Werkzeuge, die Polygone auf unterschiedliche Weise verformen. Dabei ist zu beachten, dass die Verformung nicht exakt maßbasiert erfolgt. Zusätzlich sollte das Objekt genügend Polygone besitzen, da das Ergebnis sonst oft nicht den Erwartungen entspricht.
 
-Als Unterstützung in den jeweiligen Modus existiert dem Tool Anmerkungen. Mit diesem Tool kann man Sachen in der Eigenen Perspektive zeichnen. Im Edit und Objektmodus kann man zusätzlich auch das Tool Messen verwenden. Dieser funktioniert auch wieder in der eigenen Perspektive und ist wie Anmerkungen 2D. 
+Als Unterstützung in den jeweiligen Modi gibt es das Tool **Anmerkungen**. Damit können in der aktuellen Perspektive Markierungen eingezeichnet werden. Im Edit- und Objektmodus kann zusätzlich das Tool **Messen** verwendet werden. Dieses funktioniert ebenfalls perspektivbezogen und arbeitet wie Anmerkungen in 2D.
   
 ### Konkurrenz
 
-Neben Blender hätte man sich noch für andere Modellierungsprogramme entscheiden können Beispielsweise *Tinkercad, AutoDesk Fusion oder OpenSCAD*. 
+Neben Blender hätten auch andere Modellierungsprogramme verwendet werden können, beispielsweise *Tinkercad, Autodesk Fusion oder OpenSCAD*. 
 
-- Tinkercad kennt man vorallem auch durch das Entverwerfen von einfachen Schaltkreisen online und so in etwa ist es bei deren Programm für das Modellieren.
-  Das Programm ist sehr simple und leicht zu verstehen - Perfekt für Anfänger
-  Aber nicht geeignet für die Diplomarbeit, weil man extreme Einschränkungen hat. Man kann keine Modelle im Nachhinein abrunden, da Tinkercad nur an vorgefertigte Objekte zum Bewegen hat. Diese Modelle sind fix gefertigt und nicht veränderbar.
+- **Tinkercad:** Das Programm ist vor allem durch das einfache Entwerfen von Schaltungen bekannt und ähnlich niedrigschwellig ist auch die Modellierung. Es ist leicht verständlich und damit gut für Einsteiger geeignet. Für die Diplomarbeit war es jedoch zu eingeschränkt, da viele Formen nur mit vorgefertigten, kaum veränderbaren Grundobjekten erstellt werden können.
 
-- AutoDesk Fusion ist spezialiesiert auf die Produktion bzw. auf Werkzeug und Maschinen. Das heißt aber nicht das dieses Programm nicht geeignet ist für das Modelieren 
-  AutoDesk hat eine einfacher Handhabung *Zitat aus dem Video*. Aus iesem Grund verwenden dieses Tool sehr viele größere Firmen, wie: Yamaha und Toyota *- so deren Homepage*
-  Nachteil ist das Programm kostet viel .
+- **Autodesk Fusion:** Dieses Programm ist stark auf Produktion, Werkzeuge und technische Konstruktion ausgerichtet, kann aber auch für Modellierung eingesetzt werden. Die Handhabung gilt als gut und es wird von großen Unternehmen eingesetzt. Nachteilig sind die Lizenzkosten.
 
-- OpenSCAD ist ein Open-Source  Program für das Modellieren per Code. Aus diesem Grund ist dieses Programm nicht geeignet für ein großes Projekt, wegen der hohen Komplexität.
+- **OpenSCAD:** OpenSCAD ist ein Open-Source-Programm für codebasierte Modellierung. Für dieses Projekt war es aufgrund der höheren Komplexität nicht die passende Wahl.
 
 
 
 ### Nützliche Befehle
 
-- **`Shift + A`**: Objekt hinzufügen. Weitere erklärung: /.
-- **`X`**: Löschen. Weitere erklärung: Wenn man etwas löschen will kommt eine Bestätigung abfrage.
-- **`TAB`**: Wechselt den Modus. Weitere erklärung: Von Objekt- auf Editmodus und zurück.
-- **`LEERZEICHEN`**: Zeitleiste abspielen/ stoppen. Weitere erklärung: /.
+- **`Shift + A`**: Objekt hinzufügen.
+- **`X`**: Löschen (mit Bestätigungsabfrage).
+- **`TAB`**: Modus wechseln (Objektmodus/Editmodus).
+- **`LEERZEICHEN`**: Zeitleiste abspielen/stoppen.
 
-bei den nächsten Befehle gilt:
+Für die folgenden Befehle gilt:
 
-- bei zusätzlichen Achsen Tippen `X`/`Y`/`Z` wird diese prioriesiert, mit 2x Tippen unprioriesieren
-- bei `Shift` werden in Blocken bewegt
+- Mit zusätzlichem Drücken von `X`/`Y`/`Z` wird auf die jeweilige Achse eingeschränkt.
+- Mit `Shift` erfolgen feinere Bewegungen.
 
-- **`G`**: verschieben im Koordinatesystem. Weitere erklärung: /.
-- **`R`**: drehen. Weitere erklärung: Um den Ursprung (Oranger Punkt).
-- **`S`**: skalieren. Weitere erklärung: Um den Ursprung.
+- **`G`**: Verschieben im Koordinatensystem.
+- **`R`**: Drehen um den Ursprung (oranger Punkt).
+- **`S`**: Skalieren um den Ursprung.
 
-Für den Objektmodus
+Für den Objektmodus:
 
-- **`Str + J`**: Objekte gruppieren. Weitere erklärung: Funktioniert bei 2 oder mehr Objekte. Das der Befehl durchgesetzt werden kann, muss ein primär Objekt ausgewählt werden, für z.B den Ursprung des Objektes.
-- **`Rechts Klick` + Ursprung ändern**: versetzt den Ursprung. Weitere erklärung: Entweder nach Masse, Volumen oder nach dem Set Origin.
-- **`Rechts Klick` + Weich schattieren**: Ecken abrunden. Weitere erklärung: ohne Polys hinzufügen.
+- **`Str + J`**: Objekte zusammenführen. Funktioniert mit zwei oder mehr Objekten; dabei bleibt ein aktives Primärobjekt erhalten (z. B. für den Ursprung).
+- **`Rechtsklick` + Ursprung ändern**: Ursprung versetzen (z. B. nach Masse oder Volumen).
+- **`Rechtsklick` + Weich schattieren**: Kanten optisch glätten, ohne Polygone hinzuzufügen.
 
-Für den Editmodus
+Für den Editmodus:
 
-- **`M`**: Punkte zusammenfügen. Weitere erklärung: Funktioniert bei 2 oder mehr Punkten bzw. auch bei Kanten und Flächen setzen diese aber in Punkte um. Entweder auf dem ersten/ letzten ausgewählten Punkte, in der Mitte oder beim Set Origin.
-- **`Str + R`**: Loop Cuts. Weitere erklärung: Erstellt Kanten die sich um ein ganzes Objekt schlingt. Dazu kann man einstellen wie viele Schleifen erstellt werden.
-- **`K`**: Messer. Weitere erklärung: fügt Schnitte zu einen Objekt hinzu. Wird `Shift` gedrückt wird der Schnitt zentral gerichtet.
-- **`E`**: Extrahieren. Weitere erklärung: erweitert Flächen bzw. Kanten.
-- **`I`**: Einsetzten von Flächen. Weitere erklärung: erzeugt ein kleinere Fläche in einer größeren.
-- **`F`**: Füllen von Flächen und Kanten. Weitere erklärung: Bei 2 Punkte wird eine Kante erstellt ansonsten ein Fläche. Bei 5+ Punkte füllen werden oft komische Flächen erzeugt, vor allem für das Rendern und Exportieren ist das wichtig.
-- **`Str + T`**: Fläche zu Dreieck konventieren. Weitere erklärung: Trifft zu alle ausgewällten Flächen und ist sinnvoll für das Exportieren bzw. Rendern.
+- **`M`**: Punkte zusammenfügen. Funktioniert mit zwei oder mehr Punkten (bzw. Kanten/Flächen werden in Punkte umgewandelt); möglich auf erstem/letztem Punkt, in der Mitte oder beim Ursprung.
+- **`Str + R`**: Loop Cuts. Erstellt umlaufende Kanten; die Anzahl der Schnitte kann eingestellt werden.
+- **`K`**: Messer. Fügt Schnitte in ein Objekt ein.
+- **`E`**: Extrahieren. Erweitert Flächen bzw. Kanten.
+- **`I`**: Einsetzen von Flächen. Erzeugt eine kleinere Fläche in einer größeren.
+- **`F`**: Füllen von Flächen/Kanten. Bei zwei Punkten entsteht eine Kante, sonst eine Fläche; bei sehr vielen Punkten können ungünstige Flächen entstehen.
+- **`Str + T`**: Flächen in Dreiecke konvertieren. Sinnvoll für Export und Rendering.
 
 
 ## Erweiterte Funktionen in Blender
 
 ### Material
 
-Das Material beschreibt das Aussehen eines Objektes bzw. einzelne Flächen - dazu gehört die Farbe, die Metalleffekt, die Rauheit und einiges mehr was definiert werden kann. Standard gemäß ist das Material ohne besondere Werte und in ein helles Grau. Das hat den Grund da Effekte bzw. Farben sonst beim Modelieren im Weg ist.
+Material beschreibt das Aussehen eines Objekts bzw. einzelner Flächen. Dazu gehören unter anderem Farbe, Metalleffekt, Rauheit und weitere definierbare Eigenschaften. Standardmäßig ist ein Material neutral und hellgrau, damit Effekte und Farben die Modellierung nicht stören.
 
-![Matterial erklärung [@blender]](img/schmiedpeter/Material_blender.png){width=90%}
+![Material-Erklärung [@blender]](img/schmiedpeter/Material_blender.png){width=90%}
 
-Objekte sind nur einfärbbar im Editmodus. Einzelne Flächen kann man nur Farben hinzu fügen, wenn diese ausgewählt musst die Farbe auch ausgewählt werden und dann zugewiesen werden. Um die Farbe sehen zu können muss man die Ansichtsfenster Shading auf Materialbeispiel bzw gerendert ändern.
+Objekte lassen sich im Editmodus einfärben. Einzelnen Flächen können Farben zugewiesen werden, indem zuerst die Flächen und danach das gewünschte Material ausgewählt werden. Damit die Farben sichtbar sind, muss das Shading auf Material-Vorschau oder Rendered gestellt werden.
 
 
 
-### Modifyers
+### Modifier
 
-sind Erweiterungen die eigene Funktionen haben, davon existieren viele. Für ein Projekt werden oft nur eine handvoll verwendet. Manche sind davon Erleichterung, das heißt auch möglich ohne Modifiers aber nur komplexer, manche davon sind komplett eigene Funktionen.  Modifyers sind auf der rechten Seite unter dem Schraubenschlüssel. Sie sind in Kategorieen auf geteilt wichtig sind hierbei Erzeugen und Physik. Zu Beachten ist es wird zuerst nur eine Übersicht erstellt. Bearbeiten kann man diese Übersicht erst wenn man diese angewendet hat. Einer der wichtigsten Modifyer sind Boolean, Mirror und collition
+Modifier sind Erweiterungen mit eigenen Funktionen. Es gibt viele davon, in einem Projekt wird jedoch meist nur ein Teil tatsächlich genutzt. Manche Modifier erleichtern bestehende Arbeitsschritte, andere bieten zusätzliche Funktionen. Zu finden sind sie rechts unter dem Schraubenschlüssel-Symbol.
+
+Modifier sind in Kategorien gegliedert; besonders relevant sind **Erzeugen** und **Physik**. Wichtig ist, dass Blender zunächst nur eine Vorschau zeigt. Erst nach dem Anwenden wird die Änderung dauerhaft in die Geometrie übernommen. Häufig verwendete Modifier sind Boolean, Mirror und Collision.
 
 #### Boolean
 
-Dieser schneidet ein Objekt von einem anderen herraus. Hierbei hängt es ab was ausgewählt wird **Schneiden, Vereinigung und Differenz**. Es ist notwendig einen Primären Körper zu haben und einen Sekundären.
+Mit dem Boolean-Modifier kann ein Objekt mit einem zweiten Objekt verrechnet werden. Je nach Modus sind **Schnittmenge, Vereinigung oder Differenz** möglich. Dafür werden ein primäres und ein sekundäres Objekt benötigt.
 
 #### Mirror
 
-spiegelt das Objekt in die jeweilige Richtung die man Ausgwählt hat. Gespiegelt wird das Objekt nicht in der Mitte sondern um den Ursprung. Dieser wird als Mitte angesehen.
+Der Mirror-Modifier spiegelt ein Objekt entlang der gewählten Achse. Gespiegelt wird nicht um die geometrische Mitte, sondern um den Ursprung des Objekts.
 
 #### Physik
 
-Physik ist nicht wie die anderen ein einziger Modifyer sondern gleiche eine Kategorie. Hier reagieren die Modifiers auf die Regeln der echten Welt. Möglich sind Simulationen, wie mit Flüssigkeiten oder mit Stoffen. Besonders für diese Kategorie ist auch das diese auch eine eigene Übersicht hat. Wichtig für die meisten Modifyers in dieser Kategorie einen zweites Objekt mit dem Modifyer Kollision. Dieser ist dafür da, dass Objekte mit seiner Hitbox reagieren können. Ansonsten wird dieser ignoriert, als wäre der nicht dagewesen. 
-Beispiel an einem Modifyer ist das Gewebe Modifyer. Dieser funktioniert wie eine Decke. Führt man die Simlation  mit `LEERZEICHEN`  aus dann fällt der Körper hinunter. Ist ein Objekt im weg mit Kollision, dann hällt dieser hin beim fallen auf. Das Objekt kann allerdings nur zerfallen bei Eckpunkten, weil jede Fläche ist starr. In den Einstellungen ist zum Setzen wie gut das Objekt zerfällt bzw. auch wie schwer sie ist. Beim Anwenden diesem Modifyer wird der Körper in dieser Lager fixiert.
+Physik ist kein einzelner Modifier, sondern eine eigene Kategorie. Hier reagieren Objekte nach physikalischen Regeln der realen Welt. Möglich sind beispielsweise Simulationen mit Flüssigkeiten oder Stoffen. Viele Physik-Modifier benötigen ein zweites Objekt mit dem Modifier **Collision**, damit Kollisionen überhaupt erkannt werden.
+
+Ein typisches Beispiel ist der Cloth-Modifier. Er verhält sich wie ein Stofftuch: Startet man die Simulation mit `LEERZEICHEN`, fällt das Objekt nach unten. Befindet sich ein Collision-Objekt im Weg, bleibt der Stoff daran hängen. Da Flächen aus Polygonen bestehen, hängt die Qualität stark von der Geometrie und den Einstellungen (z. B. Gewicht, Steifigkeit) ab. Nach dem Anwenden wird die simulierte Form als fester Zustand übernommen.
 
 
 
@@ -137,14 +135,14 @@ Benötigte Schritte:
 1. Mesh vorbereiten (Skalierung anwenden, Ursprung setzen).
 2. Armature platzieren und Knochen entlang der geplanten Bewegung anordnen.
 3. Parenting zwischen Mesh und Armature herstellen.
-4. Gewichte (Weights) pruefen und bei Bedarf korrigieren.
+4. Gewichte (Weights) prüfen und bei Bedarf korrigieren.
 
-Gerade bei organischen oder flexiblen Objekten ist die Verteilung der Gewichte entscheidend, da zu harte Uebergaenge die Bewegung unnatuerlich wirken lassen.
+Gerade bei organischen oder flexiblen Objekten ist die Verteilung der Gewichte entscheidend, da zu harte Übergänge die Bewegung unnatürlich wirken lassen.
 
 ![Armature im Mesh (On-Figure Ansicht)](img/schmiedpeter/OnFigure.png){width=80%}
 
 ### Gewichtung und Bindung des Meshes
-Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabei gibt es mehrere Modi, die das Grundgerüst der Gewichtung erzeugen und den Startpunkt fuer die spaetere Feinabstimmung liefern:
+Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabei gibt es mehrere Modi, die das Grundgerüst der Gewichtung erzeugen und den Startpunkt für die spätere Feinabstimmung liefern:
 
 **Automatic Weights**: Blender berechnet die Gewichte automatisch anhand der Nähe zu den Knochen. Dieser Modus ist effizient und liefert oft brauchbare Ergebnisse, ist jedoch bei komplexen Formen fehleranfällig. Typische Probleme sind ungewollte Verzerrungen, wenn Knochen zu nah an anderen Bereichen liegen. Deshalb ist eine anschließende manuelle Korrektur in den Weight-Painting-Modi fast immer notwendig. In der Praxis gilt: Automatic Weights sind der Startpunkt, nicht der Abschluss.
 
@@ -154,7 +152,7 @@ Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabe
 
 **Bone-Parenting (Bone)**: Das Mesh wird einem einzelnen Knochen untergeordnet. Diese Methode eignet sich für starre Objekte (z. B. Waffen, Schilder) und lässt keine organische Deformation zu.
 
-![Gewichtungs-Vergleich bei auswahl der Knoche](img/schmiedpeter/Gewichtungen.png){width=80%}
+![Gewichtungs-Vergleich bei Auswahl der Knochen](img/schmiedpeter/Gewichtungen.png){width=80%}
 
 Nach dem Parenting werden die Gewichte mit den Gewichtungstools (Weight Paint) verfeinert. Sie steuern, wie stark ein Knochen einzelne Punkte des Meshes beeinflusst. Jeder Vertex erhält 
 Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und 1. Ein Wert von 1 bedeutet volle Beeinflussung durch den Knochen, ein Wert von 0 keine. In der Praxis werden die Gewichte über Pinselwerkzeuge gemalt, geglättet oder normalisiert, damit Übergänge weich bleiben und sich die Summe der Einflüsse pro Punkt sinnvoll verteilt. So entstehen organische Deformationen, ohne dass das Mesh unerwünscht einbricht oder sich verzieht.
@@ -196,7 +194,7 @@ Game Sound ist weit mehr als akustische Dekoration. Im Computerspiel übernimmt 
 
 Im Unterschied zu linearen Medien entsteht Sound im Spielkontext unter interaktiven Bedingungen. Atmo, Musik, Sprache und Geräusche werden nicht in einer fixen Reihenfolge abgespielt, sondern können sich abhängig von Spieleraktionen zeitlich unvorhersehbar überlagern. Genau daraus ergeben sich zentrale gestalterische Herausforderungen: Sprachverständlichkeit muss erhalten bleiben, klangliche Konflikte zwischen Ebenen sollen vermieden werden, und trotzdem muss ein konsistenter Gesamteindruck entstehen. Eine strukturierte Klanghierarchie und ein bewusstes Lautstärke- und Mischungsverhältnis sind daher Grundvoraussetzungen für professionellen Gamesound.
 
-### Musikpsycholigische Grundlagen
+### Musikpsychologische Grundlagen
 #### Wahrnehmung von Tönen
 Die Wahrnehmung von Tönen wird in der musikpsychologischen Lehre von Ernst Kurth als Erleben von „Strebewirkungen“ beschrieben: Töne und Intervalle wirken nicht statisch, sondern erzeugen den Eindruck von gerichteter Bewegung, Spannung und möglicher Auflösung. Die Strebetendenz-Theorie (Willimek) erweitert diesen Ansatz, indem sie diese Wirkung als psychologische Identifikation des Hörers mit Willensregungen deutet. Vereinfacht bedeutet das: Der Hörer erlebt nicht nur eine Klangbewegung, sondern einen inneren Impuls gegen oder für eine Veränderung.
 
@@ -291,19 +289,19 @@ Eine zentrale Rolle spielt dabei **MIDI**. MIDI enthält keine Audiodaten, sonde
 
 ### Design
 
-Die grundsätzliche Inspiration stammt von den Rittern des Mittelalters. Vor allem in der Rüstungskonstruktion sieht man, wie die Rüstung aufgebaut ist. Es wird vor allem auf eine Kombination aus Kettenrüstung sowie Helm und Brustpanzer mit Arm-/ Beinschienen gesetzt.
+Die grundlegende Inspiration stammt von den Rittern des Mittelalters. Vor allem in der Rüstungskonstruktion zeigt sich dieser Bezug deutlich. Verwendet wurde eine Kombination aus Kettenrüstung sowie Helm und Brustpanzer mit Arm- und Beinschienen.
 
 Die Kettenrüstung ist jedoch nicht gut geeignet für den Modellierungsstil **Low-Poly**.
 
 #### Low-Poly-Stil
 
-Low-Poly ist ein simpel gehaltener Stil mit relativ wenigen Polygonen (Punkten).  
+Low-Poly ist ein einfach gehaltener Stil mit relativ wenigen Polygonen (Punkten).  
 Der große Vorteil dieses Stils liegt vor allem in der Performance.
 
 Grundsätzlich gilt:
 > Je weniger Punkte ein Modell besitzt, desto weniger muss der PC beim Rendern berechnen.
 
-Um zu überprüfen, wie viele Punkte ein Modell besitzt, muss dieses exportiert und anschließend als **FBX-Datei** betrachtet werden. Unter **3dviewer.net** erhält man dafür eine gute Übersicht.
+Um zu überprüfen, wie viele Punkte ein Modell besitzt, kann es exportiert und anschließend als **FBX-Datei** betrachtet werden. Unter **3dviewer.net** erhält man dafür eine gute Übersicht.
 
 #### Helmgestaltung
 
@@ -311,7 +309,7 @@ Eine weitere unübliche Gestaltung ist der Helm. Untypisch sind dabei vor allem 
 
 #### Farbwahl
 
-Die Farben wurden bewusst gewählt, da diese Funktionen erfüllen sollen.  
+Die Farben wurden bewusst gewählt, da sie eine klare Funktion erfüllen.  
 Sie unterstützen das Aussehen des Bosses als Oberhaupt des Gegners und tragen zusätzlich eine symbolische Bedeutung.
 
 Die Farbe **Lila** wird beispielsweise häufig mit Macht, Reichtum und Autorität assoziiert. Historisch gesehen war Lila zudem eine Farbe, die sehr schwer herzustellen war und daher auch im Mittelalter als Zeichen von Wohlstand galt.
@@ -327,21 +325,21 @@ Die Rüstung selbst erinnert eher an das **Hoch- bzw. Spätmittelalter** beziehu
   In dieser Zeit wurden Rüstungen sehr detailreich gestaltet, was für Low-Poly-Modelle weniger geeignet ist. Typisch dafür sind stark verzierte Rüstungen oder Elemente wie Kappenhelme und aufwendige Verzierungen.
 
 ### Umsetzung mit Blender
-#### Modelierung
-##### Entwickelte Technicken
+#### Modellierung
+##### Entwickelte Techniken
 
-Bei längeren Entwicklungen in einem Projekt lehrnt man immer neue Funktionen kennen. Hin und wieder erfindet man auch seine eigene Technicken. In Blender sind es z.B.
+Im Verlauf eines längeren Projekts werden immer wieder neue Funktionen entdeckt. Teilweise entstehen dabei auch eigene Arbeitsweisen. In Blender wurden unter anderem folgende Techniken genutzt:
 
-- Gegenteil von der Funktion Insert: Wird ausgeführt in dem man eine Fläche extrahiert ohne eine Höhe hinzu zufügen und diese Fläche mit `S` vergrößern. Hier wird vorallem beachtet das keine Flächen überschnitten werden, was bei insert und dann `S` schon der Fall ist.
-- Objekte auf einer Kreisbahn verschieben: Verwendet die Technik das man den Ursprung beliebig setzten kann. Nützlich ist das allerdings dann bei Objekten die man auf einen kugelförmigen Objekt bewegen möchte. Da setzt man den Ursprung auf den gleichen wie bei der Kugel und mit `R` bewegt man das Objekt immer im gleichen Abstand bzw. in der gleichen Neigung zur Kugel. Siehe Abbildung
+- **Alternative zu Insert:** Eine Fläche wird ohne zusätzliche Höhe extrahiert und anschließend mit `S` skaliert. Dabei ist darauf zu achten, dass sich keine Flächen überschneiden.
+- **Objekte auf Kreisbahn verschieben:** Diese Technik nutzt einen frei gesetzten Ursprung. Für Objekte auf einer kugelförmigen Oberfläche wird derselbe Ursprung wie bei der Kugel gesetzt. Mit `R` kann das Objekt dann im gleichen Abstand bzw. mit gleicher Neigung entlang der Kugel bewegt werden (siehe Abbildung).
 
-![Objekte auf einer KUgel [@blender]](img/schmiedpeter/kugel_bewegen.png){width=50%}
+![Objekte auf einer Kugel [@blender]](img/schmiedpeter/kugel_bewegen.png){width=50%}
 
-- Zuerst per Anmerkung vorgezeichnet und dann in der 2d Ansicht bearbeitet, das 2 mal. Diese Funktionalität ist ähnlich zum UV Mapping nur viel simpler.
+- **Skizzenbasierter Aufbau:** Formen wurden zunächst mit Anmerkungen vorgezeichnet und danach in der 2D-Ansicht ausgearbeitet. Diese Methode ist einfacher als klassisches UV-Mapping.
 
-##### Angehensweiße
+##### Vorgehensweise
 
-Das Design ist schon mal grob festgelegt und es muss eine Strategie heraus gefunden werden wie dieser umgesetzt wird. Sollte man oben anfangen bei den Gleidmassen oder bei besonderen Markmale der Figur. Wegen der besonderen Form weil es üblich ist, wird oben beim Kopf angefangen und geht weiter hinunter und die Gliedmassen sind am Schluss zu Fertigen. Eingeteil wird im Endeffekt so: Helm und Kopf dann zum Körper, der Hals (die Verbindung) wird erst als drittes gemacht, dann Beine und Arme und am Schluss Füße und Hände.
+Das Design war bereits grob festgelegt, daher musste eine sinnvolle Umsetzungsstrategie definiert werden. Gestartet wurde beim Kopf, anschließend wurde nach unten weitergearbeitet. Die Gliedmaßen wurden bewusst später ausgearbeitet. Die Reihenfolge war: Helm und Kopf, danach Körper, anschließend Hals als Verbindung und danach Beine und Arme; zum Schluss folgten Füße und Hände.
 
 Die Modellierung des Bosses erfolgte nach dem Prinzip, von oben nach unten zu arbeiten, wobei die Gliedmaßen bewusst erst am Ende ausgearbeitet wurden. Diese Vorgehensweise erleichterte es, zunächst die grundlegenden Proportionen und die visuelle Wirkung der Figur festzulegen, bevor Details ergänzt wurden. Der Fokus lag dabei auf einer klaren Silhouette und einer gut erkennbaren Formensprache, die bereits aus der Distanz die Rolle des Bossgegners vermittelt.
 
@@ -355,9 +353,9 @@ Ein weiteres markantes Merkmal des Helms sind die Hörner. Diese verlaufen mit i
 
 Beim Körper wurde eine spezielle Modellierungstechnik eingesetzt, bei der quer verlaufende Akzente genutzt wurden, um die körperlichen Strukturen gezielt hervorzuheben. Der Fokus lag dabei insbesondere auf der Brust- und Bauchmuskulatur sowie auf den Schultern, da diese Bereiche maßgeblich zur kraftvollen und einschüchternden Wirkung des Bosses beitragen. Zusätzlich wurden auch sekundäre Elemente wie der Gürtel in das Modell integriert, um den Gesamteindruck stimmig abzurunden.
 
-Im nächsten Schritt wurde ein Cloth-Fallen angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen. Nach Abschluss dieses Arbeitsschrittes wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
+Im nächsten Schritt wurde eine Cloth-Simulation angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen. Nach Abschluss dieses Arbeitsschrittes wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
 
-Während der Umsetzung traten zwei größere Probleme auf. Zum einen war die Rüstung an den Seiten deutlich dünner als im restlichen Bereich, während sie am Rücken teilweise kaum Tiefe aufwies. Dieses Problem wurde behoben, indem die betroffenen Bereiche mit einer Skalierung angepasst und anschließend sauber zusammengeführt wurden, sodass alle Endpunkte korrekt miteinander verbunden sind. Zum anderen waren einzelne Eckpunkte durch überlagernde Flächen schwer zugänglich. Da eine saubere Bearbeitung dadurch nicht möglich war, wurden die letzten Arbeitsschritte rückgängig gemacht und anschließend erneut korrekt umgesetzt. Ohne Probleme kam das Objekt dann trotzdem nicht, dennnoch war dieser eindeutlich besser.
+Während der Umsetzung traten zwei größere Probleme auf. Zum einen war die Rüstung an den Seiten deutlich dünner als im restlichen Bereich, während sie am Rücken teilweise kaum Tiefe aufwies. Dieses Problem wurde behoben, indem die betroffenen Bereiche skaliert und anschließend sauber zusammengeführt wurden, sodass alle Endpunkte korrekt verbunden sind. Zum anderen waren einzelne Eckpunkte durch überlagernde Flächen schwer zugänglich. Da eine saubere Bearbeitung dadurch nicht möglich war, wurden die letzten Arbeitsschritte rückgängig gemacht und danach korrekt neu umgesetzt. Vollständig fehlerfrei war das Ergebnis zwar nicht sofort, insgesamt war die überarbeitete Version jedoch deutlich besser.
 
 ###### Hals
 ###### Beine
@@ -365,17 +363,7 @@ Während der Umsetzung traten zwei größere Probleme auf. Zum einen war die Rü
 ###### Schuhe
 ###### Hände
 
-
 ##### Probleme und Lösungen
-#### Erweiterte Funktionen
-##### Farbenordnung
-##### Modul verwendung
-##### Erweiterung für Animationen
 #### Animationen
-##### Umsetzung von Animationen von Unreal
-##### eigene Animation
-###### T-Pose
-###### Gehen
-###### Laufen
-###### ...
-###### Schwierigkeiten und Problem
+###### Schwierigkeiten und Probleme
+#### Musik
