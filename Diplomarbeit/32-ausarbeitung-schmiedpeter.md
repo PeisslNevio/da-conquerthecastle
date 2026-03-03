@@ -406,3 +406,32 @@ Während der Animationsphase traten vor allem Unterschiede zwischen importierten
 Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, gezielte Anpassung der Keyframes und eine vereinheitlichte Struktur der verwendeten Animationen. Dadurch konnte ein stimmiger Bewegungsablauf mit wiederverwendbaren Clips aufgebaut werden.
 
 #### Musik
+
+##### Produktionsumgebung
+Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) verwendet. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Aufbau von Skizzen, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände.
+
+##### Musikalisches Gesamtkonzept
+Die Musik des Projekts wurde bewusst düster angelegt, um die bedrohliche Spielatmosphäre des Bosskampfs zu unterstützen. Inhaltlich orientiert sich dieser Ansatz an den im Theorieteil beschriebenen Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung.
+
+Durch die Wahl dunkler Klangfarben, spannungsorientierter Verläufe und klarer Intensitätsstufen sollte die Wahrnehmung von Gefahr, Unsicherheit und Eskalation gezielt verstärkt werden. Die genaue psychologische Herleitung der einzelnen Stücke wird in einem späteren Schritt noch ergänzt.
+
+##### Vorgehensweise und Einteilung
+Zu Beginn wurde strukturiert festgelegt, welche Musik- und Soundelemente im Spiel benötigt werden. Daraus ergab sich folgende Einteilung:
+
+- **Titlemusik**
+- **Übergangsmusik**
+- **Bossmusik in mehreren Gefahrenstufen** (abhängig vom Bedrohungsgrad)
+- **Siegemusik**
+- **Niederlagenmusik**
+
+Parallel dazu wurden die benötigten Soundeffekte definiert:
+
+- **Schwerthit**
+- **Magiebälle des Bosses** beim Abschuss
+
+Diese Struktur half dabei, Musik und Sound nicht isoliert, sondern als zusammenhängendes Feedback-System für den Spielverlauf zu entwickeln.
+
+##### Exportieren und Einfügen in Unreal
+Nach der Ausarbeitung wurden Musik und Soundeffekte als geeignete Audiodateien exportiert und in Unreal importiert. Für eine saubere Weiterverarbeitung wurde auf konsistente Benennung, sinnvolle Dateistruktur und vergleichbare Pegel geachtet.
+
+In Unreal wurden die Dateien anschließend den jeweiligen Situationen zugeordnet (z. B. Titelbereich, Bosszustände, Sieg/Niederlage, Treffer- und Projektilgeräusche). Dadurch ließ sich das zuvor definierte Audio-Konzept direkt in die Spielzustände übertragen.
