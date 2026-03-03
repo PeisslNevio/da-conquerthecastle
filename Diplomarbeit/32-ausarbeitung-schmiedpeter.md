@@ -418,8 +418,25 @@ Durch die Wahl dunkler Klangfarben, spannungsorientierter Verläufe und klarer I
 ##### Vorgehensweise und Einteilung
 Zu Beginn wurde strukturiert festgelegt, welche Musik- und Soundelemente im Spiel benötigt werden. Daraus ergab sich folgende Einteilung:
 
-- **Titlemusik**
+- **Titelmusik**
+
+Die Titelmusik führt in die düstere Spielwelt ein und bereitet den Spieler emotional auf den finalen Bosskampf vor. Als tonales Fundament wurde D äolisch gewählt, da Moll-Tonarten und insbesondere die kleine Sexte (Bb) eine spannungsgeladene, bedrohliche Wirkung erzeugen. Eine Dur-Auflösung wird bewusst vermieden, um keine emotionale Entlastung zu schaffen.
+Das langsame Tempo (60 BPM) sowie der Verzicht auf Percussion reduzieren die physiologische Aktivierung und lenken den Fokus auf Atmosphäre und Raumwirkung. Die reduzierte Instrumentation (Cello, tiefe Streicher, Chor) unterstützt die mittelalterliche Ästhetik und erzeugt ein Gefühl von Schwere und Monumentalität.
+Das verwendete Leitmotiv (D–F–Bb–A) wird im späteren Bosskampf erneut aufgegriffen. Dadurch entsteht ein motivischer Zusammenhang zwischen Intro und Kampfsituation, was die Immersion verstärkt.
+
+![Projektansicht der Titelmusik in Reaper](img/schmiedpeter/Reaper_Titlemusik.png){width=90%}
+
+Die Abbildung zeigt das Reaper-Projekt zur Titelmusik mit der Anordnung der Spuren und dem zeitlichen Aufbau des Intros.
+
 - **Übergangsmusik**
+Die Übergangsmusik markiert den dramaturgischen Wechsel vom Titelbildschirm zur ersten Gefahrenstufe des Bosskampfs. Ziel ist es, die Spannung innerhalb weniger Sekunden deutlich zu erhöhen, ohne einen hörbaren Bruch zwischen Intro und Kampfmusik zu erzeugen.
+Als zentrales Motiv dienen drei tief gestimmte Glockenschläge (D–Bb–A), die als klangliches Warnsignal den Beginn der Konfrontation ankündigen. Die Tonfolge bleibt im Raum von D äolisch und betont mit dem Bb die kleine Sexte, wodurch die bedrohliche Grundstimmung konsequent erhalten bleibt. Die verwendeten Glockensamples (freesound.org, Big Ben 1988) wurden in Reaper klanglich bearbeitet und an das orchestrale Gesamtbild angepasst.
+Nach dem dritten Schlag setzt tiefe Percussion ein, anschließend führt ein Cello-Ostinato in das erste Layer der Bossmusik (Danger Level 1). So entsteht ein kontrollierter Spannungsaufbau, der den Übergang musikalisch schlüssig vorbereitet.
+
+![Projektansicht der Übergangsmusik in Reaper](img/schmiedpeter/Übergangsmusik.png){width=90%}
+
+Die Abbildung zeigt das Reaper-Projekt der Übergangsmusik und verdeutlicht den zeitlichen Aufbau vom Glockenmotiv zur Überleitung in die Bossmusik.
+
 - **Bossmusik in mehreren Gefahrenstufen** (abhängig vom Bedrohungsgrad)
 - **Siegemusik**
 - **Niederlagenmusik**
