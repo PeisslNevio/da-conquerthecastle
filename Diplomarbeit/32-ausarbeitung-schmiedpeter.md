@@ -406,3 +406,49 @@ Während der Animationsphase traten vor allem Unterschiede zwischen importierten
 Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, gezielte Anpassung der Keyframes und eine vereinheitlichte Struktur der verwendeten Animationen. Dadurch konnte ein stimmiger Bewegungsablauf mit wiederverwendbaren Clips aufgebaut werden.
 
 #### Musik
+
+##### Produktionsumgebung
+Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände.
+
+##### Musikalisches Gesamtkonzept
+Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung.
+
+Durch dunkle Klangfarben, spannungsorientierte Verläufe und klar gestufte Intensitäten wird die Wahrnehmung von Gefahr, Unsicherheit und Eskalation gezielt verstärkt. Die detaillierte psychologische Herleitung der einzelnen Stücke wird in einem späteren Arbeitsschritt ergänzt.
+
+##### Vorgehensweise und Einteilung
+Zu Beginn wurde strukturiert festgelegt, welche Musik- und Soundelemente im Spiel benötigt werden. Daraus ergab sich folgende Einteilung:
+
+- **Titelmusik**
+
+Die Titelmusik führt in die düstere Spielwelt ein und bereitet den Spieler emotional auf den finalen Bosskampf vor. Als tonales Fundament wurde D äolisch gewählt, da Moll-Tonalität und insbesondere die kleine Sexte (Bb) eine spannungsgeladene, bedrohliche Wirkung unterstützen. Eine Dur-Auflösung wird bewusst vermieden, um keine vorzeitige emotionale Entlastung zu erzeugen.
+Das langsame Tempo (60 BPM) sowie der Verzicht auf Percussion reduzieren die physiologische Aktivierung und lenken den Fokus auf Atmosphäre und Raumwirkung. Die reduzierte Instrumentation aus Cello, tiefen Streichern und Chor unterstützt die mittelalterliche Ästhetik und erzeugt ein Gefühl von Schwere und Monumentalität.
+Das Leitmotiv (D–F–Bb–A) wird im späteren Bosskampf erneut aufgegriffen. Dadurch entsteht ein motivischer Zusammenhang zwischen Intro und Kampfsituation, der die Immersion verstärkt.
+
+![Projektansicht der Titelmusik in Reaper](img/schmiedpeter/Reaper_Titlemusik.png){width=90%}
+
+Die Abbildung zeigt das Reaper-Projekt zur Titelmusik mit der Anordnung der Spuren und dem zeitlichen Aufbau des Intros.
+
+- **Übergangsmusik**
+Die Übergangsmusik markiert den dramaturgischen Wechsel vom Titelbildschirm zur ersten Gefahrenstufe des Bosskampfs. Ziel ist es, die Spannung innerhalb weniger Sekunden spürbar zu erhöhen, ohne einen hörbaren Bruch zwischen Intro und Kampfmusik zu erzeugen.
+Als zentrales Motiv dienen drei tief gestimmte Glockenschläge (D–Bb–A), die als klangliches Warnsignal den Beginn der Konfrontation ankündigen. Die Tonfolge bleibt im Raum von D äolisch und betont mit dem Bb die kleine Sexte, wodurch die bedrohliche Grundstimmung konsequent erhalten bleibt. Die verwendeten Glockensamples (freesound.org, Big Ben 1988) wurden in Reaper klanglich bearbeitet und in das orchestrale Gesamtbild integriert.
+Nach dem dritten Schlag setzt tiefe Percussion ein; anschließend führt ein Cello-Ostinato in das erste Layer der Bossmusik (Danger Level 1). So entsteht ein kontrollierter Spannungsaufbau, der den Übergang musikalisch schlüssig vorbereitet.
+
+![Projektansicht der Übergangsmusik in Reaper](img/schmiedpeter/Übergangsmusik.png){width=90%}
+
+Die Abbildung zeigt das Reaper-Projekt der Übergangsmusik und verdeutlicht den zeitlichen Aufbau vom Glockenmotiv zur Überleitung in die Bossmusik.
+
+- **Bossmusik in mehreren Gefahrenstufen** (abhängig vom Bedrohungsgrad)
+- **Siegemusik**
+- **Niederlagenmusik**
+
+Parallel dazu wurden die benötigten Soundeffekte definiert:
+
+- **Schwerthit**
+- **Magiebälle des Bosses** beim Abschuss
+
+Diese Struktur half dabei, Musik und Sound nicht isoliert, sondern als zusammenhängendes Feedback-System für den Spielverlauf zu entwickeln.
+
+##### Exportieren und Einfügen in Unreal
+Nach der Ausarbeitung wurden Musik und Soundeffekte als geeignete Audiodateien exportiert und in Unreal importiert. Für eine saubere Weiterverarbeitung wurde auf konsistente Benennung, eine sinnvolle Dateistruktur und vergleichbare Pegel geachtet.
+
+In Unreal wurden die Dateien anschließend den jeweiligen Spielsituationen zugeordnet (z. B. Titelbereich, Bosszustände, Sieg/Niederlage, Treffer- und Projektilgeräusche). Dadurch ließ sich das zuvor definierte Audio-Konzept direkt in die Spielzustände überführen.
