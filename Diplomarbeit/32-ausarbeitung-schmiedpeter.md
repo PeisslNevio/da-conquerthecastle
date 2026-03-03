@@ -383,5 +383,26 @@ Ein weiteres Problem waren nicht-manifold Geometrien. Darunter versteht man Geom
 Durch diese Kombination aus automatischer Bereinigung und manueller Korrektur wurde das Mesh deutlich stabiler und besser für weitere Schritte wie Rigging, Animation und Export vorbereitet.
 
 #### Animationen
-###### Schwierigkeiten und Probleme
+##### Vorgehensweise beim Rigging
+Die Animationen wurden auf Basis des im Theorieteil beschriebenen Rigging-Ansatzes erstellt. Zuerst wurde eine eigene Armature aufgebaut, inklusive Inverse Kinematik (IK) und Offset-Setups, um kontrollierbare Gelenkbewegungen und saubere Hierarchien zu erhalten.
+
+Anschließend wurden zwei Varianten getestet: die manuell aufgebaute Armature und ein automatisiert erzeugtes Rig. Beide Varianten wurden mit automatischer Gewichtung an den Boss gebunden und praktisch im Animationsprozess verglichen.
+
+##### Einsatz von Rigify
+Für den Vergleich wurde das Blender-Addon **Rigify** verwendet. Der Vorteil von Rigify liegt in der schnellen Erstellung eines funktionsfähigen Kontroll-Rigs, das für die Animation meist angenehmer und effizienter zu bedienen ist als ein vollständig manuell aufgebautes Setup.
+
+In der praktischen Arbeit zeigte sich, dass sich das Rigify-Rig für die meisten Bewegungen besser steuern ließ. Gleichzeitig wurden nicht alle automatisch erzeugten Knochen verwendet, insbesondere im Gesichtsbereich. Diese Teile waren für den benötigten Animationsumfang nicht erforderlich und wurden deshalb im Workflow bewusst ausgeklammert.
+
+Zusätzlich ist relevant, dass Rigify standardisierte Grundriggerüste bereitstellt, unter anderem für humanoide Figuren und auch für vierbeinige Tiere. Dadurch eignet sich das Addon gut als Ausgangspunkt für unterschiedliche Charaktertypen.
+
+##### Recherche und Nutzung von Mixamo
+Bei der Recherche zu geeigneten Animationsquellen wurde die Plattform **Mixamo** von Adobe einbezogen. Mixamo bietet vorkonfigurierte Bewegungsabläufe, die direkt auf Charaktere angewendet und anschließend exportiert werden können. Dadurch lassen sich grundlegende Animationen schnell testen und in einen eigenen Workflow integrieren.
+
+Ein Teil der Animationen wurde aus Mixamo übernommen. Mehrere dieser Clips mussten jedoch nachbearbeitet werden, damit Timing, Haltung und Übergänge zur Figur und zum Spielkontext passen. Zusätzlich wurden einzelne Bewegungen vollständig selbst erstellt, da die verfügbaren Vorlagen die gewünschte Wirkung nicht ausreichend abgedeckt haben.
+
+##### Schwierigkeiten und Probleme
+Während der Animationsphase traten vor allem Unterschiede zwischen importierten und eigenen Bewegungsabläufen auf. Die größten Herausforderungen lagen in der konsistenten Übergangsqualität zwischen Clips sowie in der Anpassung einzelner Posen an die Proportionen des Boss-Charakters.
+
+Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, gezielte Anpassung der Keyframes und eine vereinheitlichte Struktur der verwendeten Animationen. Dadurch konnte ein stimmiger Bewegungsablauf mit wiederverwendbaren Clips aufgebaut werden.
+
 #### Musik
