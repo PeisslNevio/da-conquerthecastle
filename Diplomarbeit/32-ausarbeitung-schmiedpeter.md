@@ -355,15 +355,33 @@ Beim Körper wurde eine spezielle Modellierungstechnik eingesetzt, bei der quer 
 
 Im nächsten Schritt wurde eine Cloth-Simulation angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen. Nach Abschluss dieses Arbeitsschrittes wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
 
-Während der Umsetzung traten zwei größere Probleme auf. Zum einen war die Rüstung an den Seiten deutlich dünner als im restlichen Bereich, während sie am Rücken teilweise kaum Tiefe aufwies. Dieses Problem wurde behoben, indem die betroffenen Bereiche skaliert und anschließend sauber zusammengeführt wurden, sodass alle Endpunkte korrekt verbunden sind. Zum anderen waren einzelne Eckpunkte durch überlagernde Flächen schwer zugänglich. Da eine saubere Bearbeitung dadurch nicht möglich war, wurden die letzten Arbeitsschritte rückgängig gemacht und danach korrekt neu umgesetzt. Vollständig fehlerfrei war das Ergebnis zwar nicht sofort, insgesamt war die überarbeitete Version jedoch deutlich besser.
-
 ###### Hals
+Der Hals wurde bewusst als verbindendes Element zwischen Helm und Körper modelliert. Ziel war keine stark ausgeprägte Eigenform, sondern ein stabiler Übergang, der die Proportionen zusammenführt und die Silhouette technisch wie optisch schlüssig hält.
+
 ###### Beine
+Die Beine entstanden aus einem längeren Zylinder mit mehreren Vertices, um genügend Geometrie für spätere Verformungen zu haben. Im Kniebereich wurde die Form leicht verjüngt und anschließend im Sculpt-Modus mit zusätzlicher Tiefe und Detail versehen.
+
+Besonders beachtet wurde, dass das Knie vorne etwas stärker ausgeprägt ist und auf der Rückseite eine kleine Einbuchtung besitzt. Diese Form unterstützt eine glaubwürdigere Beweglichkeit, da die Gelenkzone beim Beugen mehr Platz erhält.
+
 ###### Arme
-###### Schuhe
+Die Arme wurden nach demselben Grundprinzip wie die Beine aufgebaut: zunächst ein länglicher Grundkörper mit ausreichender Segmentierung, danach gezielte Formanpassungen für Gelenkbereiche und Volumenverteilung. Dadurch blieb die Modellierung konsistent und ließ sich gut in die Gesamtfigur integrieren.
+
 ###### Hände
+Die Hände wurden separat modelliert, um Form und Topologie präziser steuern zu können. Entscheidend war dabei die Verteilung der Vertices in den Fingergelenken. In diesen Bereichen wurde zusätzliche Geometrie vorgesehen, damit Fingerbewegungen bei späterer Animation sauber deformieren und keine harten Knicke entstehen.
+
+Zusätzlich wurden Proportionen und Übergänge zur Armgeometrie mehrfach nachgearbeitet, damit die Hände sowohl im statischen Modell als auch in Bewegung stimmig wirken.
 
 ##### Probleme und Lösungen
+Bereits im Körperbereich zeigten sich Form- und Topologieprobleme. Die Rüstung war an den Seiten zu dünn und am Rücken stellenweise zu flach. Diese Bereiche wurden durch gezielte Skalierung korrigiert und anschließend sauber zusammengeführt. Außerdem waren einzelne Eckpunkte durch überlagernde Flächen nur schwer erreichbar. In diesen Fällen wurden Arbeitsschritte zurückgesetzt und anschließend in korrekter Reihenfolge neu aufgebaut.
+
+Während der praktischen Umsetzung traten mehrere typische Topologieprobleme auf. An einigen Stellen liefen Vertices durch den Körper, was in verschiedenen Ansichtsmodi deutlich sichtbar war. Zusätzlich waren einzelne Körperbereiche fehlerhaft verbunden, sodass unter anderem zwischen Schulter und Rumpf sowie im Handbereich Lücken entstanden.
+
+Diese Übergänge wurden manuell korrigiert: fehlerhafte Vertices wurden gelöscht, neu gesetzt und die betroffenen Bereiche anschließend sauber zusammengeführt. Dadurch konnten offene Kanten und sichtbare Spalte im Mesh weitgehend geschlossen werden.
+
+Ein weiteres Problem waren nicht-manifold Geometrien. Darunter versteht man Geometrieelemente, die keine saubere, geschlossene Oberfläche bilden (z. B. lose, doppelte oder topologisch fehlerhafte Kanten und Vertices). Zur Bereinigung wurde zuerst `Mesh > Clean Up > Merge by Distance` verwendet, um überlappende Punkte zu verschmelzen. Danach wurden über `Select > Select All by Trait > Non Manifold` problematische Stellen markiert und anschließend händisch nachbearbeitet.
+
+Durch diese Kombination aus automatischer Bereinigung und manueller Korrektur wurde das Mesh deutlich stabiler und besser für weitere Schritte wie Rigging, Animation und Export vorbereitet.
+
 #### Animationen
 ###### Schwierigkeiten und Probleme
 #### Musik
