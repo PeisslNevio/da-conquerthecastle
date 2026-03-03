@@ -221,7 +221,7 @@ Für die Klinge wurden helle Metalltöne mit moderater Roughness gewählt, sodas
 **Funktion im Spielkontext:**
 Das Player-Schwert signalisiert einen kontrollierten, direkten Kampfstil. Es wirkt weder überdimensioniert noch ornamental, wodurch der Fokus auf Gameplay und Reaktionsgeschwindigkeit erhalten bleibt.
 
-![Player-Schwert mit Proportionen](img/peissl/praxis/player_sword.png){width=90%}
+![Player-Schwert mit Proportionen](img/peissl/praxis/player-sword.png){width=90%}
 
 #### Boss Schwert
 
@@ -236,7 +236,7 @@ Für das Boss-Schwert wurden dunklere Metallwerte und stärkere Kontraste einges
 **Funktion im Spielkontext:**
 Das Boss-Schwert kommuniziert Reichweite, Schlagkraft und Gefahr. Es dient damit nicht nur als Angriffsobjekt, sondern auch als wichtiges Mittel der Gegnerinszenierung: Bereits durch die Waffengröße entsteht psychologischer Druck auf den Spieler.
 
-![Boss-Schwert mit Proportionen](img/peissl/praxis/boss_sword.png){width=90%}
+![Boss-Schwert mit Proportionen](img/peissl/praxis/boss-sword.png){width=90%}
 
 #### Export & Integration in Unreal Engine
 
@@ -258,7 +258,7 @@ Die primäre Zielsetzung der GUI besteht darin, dem Spieler ausschließlich esse
 
 #### Rolle der GUI im Spielablauf
 
-Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu Beginn leitet das Hauptmenü den Spieler durch die ersten Schritte und ermöglicht den Einstieg ins Spiel. Sobald der Kampf beginnt, übernimmt das HUD die zentrale Rolle: Es zeigt dem Spieler kontinuierlich seine aktuelle Lebenspunkteanzahl sowie seine verfügbare Ausdauer an. Zusätzlich wird die Lebensleiste des Bosses prominent dargestellt, sodass der Spieler den Kampfverlauf nachvollziehen und seine Strategien dynamisch anpassen kann. Nach einem Spieler-Tod erscheint der Death-Screen, der dem Spieler Optionen zur Fortsetzung bietet. Das Statistikmenü ermöglicht es, wichtige Spielinformationen und Errungenschaften einzusehen.
+Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu Beginn leitet das Hauptmenü den Spieler durch die ersten Schritte und ermöglicht den Einstieg ins Spiel. Sobald der Kampf beginnt, übernimmt das HUD die zentrale Rolle: Es zeigt dem Spieler kontinuierlich seine aktuelle Lebenspunkteanzahl sowie seine verfügbare Ausdauer an. Zusätzlich wird die Lebensleiste des Bosses prominent dargestellt, sodass der Spieler den Kampfverlauf nachvollziehen und seine Strategien dynamisch anpassen kann. Nach einem Spieler-Tod erscheint der Death-Screen, der dem Spieler Optionen zur Fortsetzung bietet. Wenn der Boss besiegt wurde, erscheit der Viktory-Screen. Das Statistikmenü ermöglicht es, wichtige Spielinformationen und Errungenschaften einzusehen.
 
 #### Abgrenzung zwischen Spielwelt und Benutzeroberfläche
 
