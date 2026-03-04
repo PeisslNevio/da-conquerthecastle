@@ -189,36 +189,28 @@ Nach dem Import wurde das Modell im Level platziert und mithilfe verschiedenen A
 
 ### Items
 
-Die Items in ConquerTheCastle übernehmen eine zentrale funktionale und visuelle Rolle im Bosskampf. Da der Kampf als Nahkampf-Szenario konzipiert ist, wurden für Spieler und Boss jeweils Schwerter als primäre Waffen umgesetzt. Die Gestaltung dieser Waffen folgt dem mittelalterlichen Gesamtstil des Spiels und unterstützt die direkte Verständlichkeit der Spielmechanik. Der Spieler erkennt ohne zusätzliche Erklärungen sofort, dass beide Figuren auf den Kampf mit Klingenwaffen ausgelegt sind.
+Die Gestaltung dieser Waffen folgt dem mittelalterlichen Gesamtstil des Spiels und unterstützt die direkte Verständlichkeit der Spielmechanik.
 
 #### Zielsetzung der Item-Gestaltung
 
 Bei der Ausarbeitung der Waffen standen drei Ziele im Vordergrund:
 
 1. **Gameplay-Klarheit:** Waffen sollten auf den ersten Blick als kampfrelevante Objekte erkennbar sein.
-2. **Stilistische Konsistenz:** Formensprache und Materialwirkung sollten zum Low-Poly-Mittelalterstil des Spiels passen.
-3. **Proportionale Glaubwürdigkeit:** Die Größe der Waffen musste mit der Körpergröße der jeweiligen Figur harmonieren.
+2. **Konsistenz:** Form und Texxtur sollten zum Low-Poly-Mittelalterstil des Spiels passen.
+3. **Proportionen:** Die Größe der Waffen musste mit der Körpergröße der jeweiligen Figur harmonieren.
 
-Dadurch entsteht eine konsistente visuelle Hierarchie: Das Spielerschwert wirkt agil und kontrollierbar, während das Boss-Schwert Bedrohung und Reichweite vermittelt.
 
 #### Modellierungs-Workflow
 
-Die Modellierung erfolgte in Blender auf Basis einfacher Grundkörper (Cube, Plane, Cylinder), die schrittweise in Form gebracht wurden. Dabei wurde auf eine saubere Trennung von Klinge, Parierstange, Griff und Knauf geachtet, um spätere Materialzuweisungen in Unreal Engine zu vereinfachen. Für symmetrische Bauteile wurde der Mirror-Modifier verwendet, wodurch die Modellierungszeit reduziert und eine exakte Achsensymmetrie sichergestellt wurde.
-
-Die finale Geometrie wurde bewusst low-poly gehalten, um die Performance in Kampfsituationen stabil zu halten. Vor dem Export wurden sämtliche Transformationen angewendet (Apply Rotation/Scale), damit Maßstab und Ausrichtung beim Import in Unreal Engine konsistent bleiben.
+Die Modellierung erfolgte in Blender auf Basis einfacher Grundkörper (Cube, Plane, Cylinder), die schrittweise in Form gebracht wurden. Dabei wurde auf eine saubere Trennung von Klinge und Griff geachtet, um Materialzuweisungen in Unreal Engine zu vereinfachen. Für symmetrische Bauteile wurde der Mirror-Modifier verwendet, wodurch die Modellierungszeit reduziert und eine exakte Achsensymmetrie sichergestellt wurde.
 
 
 #### Player Schwert
 
 Das Schwert des Spielers wurde als Einhandschwert mit einer Gesamtlänge von etwa 1,0 m ausgelegt. Diese Dimension orientiert sich an der Körpergröße des Spielercharakters (ca. 1,80 m) und unterstützt ein ausgewogenes Verhältnis zwischen Reichweite, Lesbarkeit und Beweglichkeit.
 
-**Form und Proportionen:**
-Die Klinge wurde relativ schlank modelliert, um Schnelligkeit und Präzision zu vermitteln. Die Parierstange ist kompakt gehalten und dient primär als visuelles Trennelement zwischen Klinge und Griff. Der Griff wurde so dimensioniert, dass er in der Third-Person-Ansicht klar erkennbar bleibt, ohne den Charakter visuell zu überladen.
+Die Klinge wurde relativ schlank modelliert, um Schnelligkeit und Präzision zu vermitteln. Für die Klinge wurden helle Metalltöne gewählt, damit ein Kontrast zwischen Klinge und Bossraum entsteht. Der Griff verwendet dunklere, lederartige Farbtöne, um eine klare Materialtrennung herzustellen.
 
-**Texturierung und Materialwirkung:**
-Für die Klinge wurden helle Metalltöne mit moderater Roughness gewählt, sodass Lichtreflexe erkennbar sind, jedoch nicht zu stark vom Kampfraum ablenken. Der Griff verwendet dunklere, lederartige Farbtöne, um eine klare Materialtrennung herzustellen. Durch diese Farbwahl bleibt das Schwert auch in dynamischen Kampfsituationen gut lesbar.
-
-**Funktion im Spielkontext:**
 Das Player-Schwert signalisiert einen kontrollierten, direkten Kampfstil. Es wirkt weder überdimensioniert noch ornamental, wodurch der Fokus auf Gameplay und Reaktionsgeschwindigkeit erhalten bleibt.
 
 ![Player-Schwert mit Proportionen](img/peissl/praxis/player-sword.png){width=90%}
@@ -227,23 +219,11 @@ Das Player-Schwert signalisiert einen kontrollierten, direkten Kampfstil. Es wir
 
 Das Boss-Schwert wurde als großformatige Zweihandwaffe mit einer Länge von etwa 2,0 m umgesetzt. Die Dimension ist auf die Körpergröße des Bosses (ca. 3,20 m inklusive Hörner) abgestimmt und unterstreicht dessen dominante Rolle innerhalb des Kampfes.
 
-**Form und Proportionen:**
-Im Vergleich zum Spieler-Schwert ist die Klinge breiter und massiver ausgeführt. Die größere Silhouette erhöht die visuelle Präsenz des Bosses bereits auf Distanz. Die Parierstange und der Griff wurden ebenfalls verstärkt modelliert, um die Größe der Waffe glaubwürdig zu stützen.
-
-**Texturierung und Materialwirkung:**
-Für das Boss-Schwert wurden dunklere Metallwerte und stärkere Kontraste eingesetzt. Dadurch wirkt die Waffe schwerer und bedrohlicher. Einzelne Kantenbereiche wurden heller gehalten, um die Kontur auch bei geringer Beleuchtung klar zu definieren.
-
-**Funktion im Spielkontext:**
-Das Boss-Schwert kommuniziert Reichweite, Schlagkraft und Gefahr. Es dient damit nicht nur als Angriffsobjekt, sondern auch als wichtiges Mittel der Gegnerinszenierung: Bereits durch die Waffengröße entsteht psychologischer Druck auf den Spieler.
-
 ![Boss-Schwert mit Proportionen](img/peissl/praxis/boss-sword.png){width=90%}
 
 #### Export & Integration in Unreal Engine
 
-Nach Abschluss der Modellierung wurden beide Schwerter im FBX-Format aus Blender exportiert und in Unreal Engine als statische Meshes importiert. Während des Imports wurde darauf geachtet, dass Maßstab und Achsenausrichtung den Projektstandards entsprechen. Für beide Waffen wurden separate Materialien angelegt, um metallische und nicht-metallische Bereiche unabhängig steuern zu können.
-
-Die finale Einbindung erfolgte über die jeweiligen Charakter-Blueprints. Dabei wurden die Schwert-Meshes an den Hand-Sockets der Skelette gebunden, sodass die Waffen Bewegungen und Animationen korrekt folgen. Abschließend wurden Sichttests im Bossraum durchgeführt, um sicherzustellen, dass Größe, Lesbarkeit und Stilwirkung in der finalen Spielsituation konsistent sind.
-
+Nach Abschluss der Modellierung wurden beide Schwerter im FBX-Format aus Blender exportiert und in Unreal Engine als statische Meshes importiert. Während des Imports wurde darauf geachtet, dass Maßstab und Achsenausrichtung den Projektstandards entsprechen.
 
 
 \newpage
@@ -258,7 +238,7 @@ Die primäre Zielsetzung der GUI besteht darin, dem Spieler ausschließlich esse
 
 #### Rolle der GUI im Spielablauf
 
-Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu Beginn leitet das Hauptmenü den Spieler durch die ersten Schritte und ermöglicht den Einstieg ins Spiel. Sobald der Kampf beginnt, übernimmt das HUD die zentrale Rolle: Es zeigt dem Spieler kontinuierlich seine aktuelle Lebenspunkteanzahl sowie seine verfügbare Ausdauer an. Zusätzlich wird die Lebensleiste des Bosses prominent dargestellt, sodass der Spieler den Kampfverlauf nachvollziehen und seine Strategien dynamisch anpassen kann. Nach einem Spieler-Tod erscheint der Death-Screen, der dem Spieler Optionen zur Fortsetzung bietet. Wenn der Boss besiegt wurde, erscheit der Viktory-Screen. Das Statistikmenü ermöglicht es, wichtige Spielinformationen und Errungenschaften einzusehen.
+Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu Beginn leitet das Hauptmenü den Spieler durch die ersten Schritte und ermöglicht den Einstieg ins Spiel. Sobald der Kampf beginnt, übernimmt das HUD die zentrale Rolle: Es zeigt dem Spieler kontinuierlich seine aktuelle Lebenspunkteanzahl sowie seine verfügbare Ausdauer an. Zusätzlich wird die Lebensleiste des Bosses prominent dargestellt, sodass der Spieler den Kampfverlauf nachvollziehen und seine Strategien dynamisch anpassen kann. Nach einem Spieler-Tod erscheint der Death-Screen, der dem Spieler Optionen zur Fortsetzung bietet. Wenn der Boss besiegt wurde, erscheit der Viktory-Screen. Das Statistikmenü ermöglicht es, wichtige Spielinformationen und die beste Zeit einzusehen.
 
 #### Abgrenzung zwischen Spielwelt und Benutzeroberfläche
 
@@ -269,12 +249,8 @@ Die GUI existiert außerhalb der eigentlichen Spielwelt und wird als zweidimensi
 
 
 
-#### Umsetzung in UMG
+#### UI-Komponenten und Layout
 
-Unreal Motion Graphics (UMG) ist das integrierte UI-Framework der Unreal Engine und bildet die technische Grundlage für die Erstellung sämtlicher GUI-Elemente in ConquerTheCastle. UMG bietet einen visuellen Editor, der es ermöglicht, Benutzeroberflächen durch Drag-and-Drop von UI-Komponenten zu erstellen, ohne aufwendige manuelle Code-Implementierung.
-
-
-**UI-Komponenten und Layout:**
 Die einzelnen Widgets bestehen aus verschiedenen Standard-UI-Komponenten:
 
 - **Canvas Panel**: Dient als übergeordneter Container, der absolute und relative Positionierung ermöglicht.
@@ -284,7 +260,6 @@ Die einzelnen Widgets bestehen aus verschiedenen Standard-UI-Komponenten:
 - **Images**: Grafische Elemente zur visuellen Gestaltung und Dekoration.
 
 
-**Widget-Erstellung:**
 Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein wiederverwendbares UI-Element, das sowohl visuelle Komponenten als auch zugehörige Logik enthält. Folgende Widgets wurden implementiert:
 
 - **Mainmenu-Widget**: Enthält Buttons für "Play", "Statistics" und "Quit". Das Layout wurde links ausgerichtet und mit konsistenten Abständen zwischen den Buttons versehen, um dem Spieler sicht auf die Burg zu gewähren.
@@ -304,7 +279,12 @@ Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein w
 
 - **Death-Screen-Widget**: Wird bei Spieler-Tod eingeblendet und bietet Optionen zum Neustart oder zur Rückkehr ins Hauptmenü.
 
-![Death-Screen nach Spieler-Tod](img/peissl/praxis/deathscreen-ui.png){width=90%}
+![Death-Screen nach Spieler-Tod](img/peissl/praxis/ui-deathscreen.png){width=90%}
+
+- **Viktory-Screen-Widget**: Wird nach besiegen des Bosses eingeblendet und bietet Optionen zum erneut Spielen oder zur Rückkehr ins Hauptmenü.
+
+![Viktory-Screen nach Boss-Tod](img/peissl/praxis/ui-viktoryscreen.png){width=90%}
+
 
 
 
@@ -312,47 +292,30 @@ Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein w
 
 ### Cutscenes erstellen
 
-Cutscenes dienen in ConquerTheCastle dazu, den Spieler in die Spielwelt einzuführen und wichtige narrative Momente zu inszenieren. Sie schaffen eine atmosphärische Verbindung zwischen den verschiedenen Spielabschnitten und vermitteln dem Spieler das Gefühl einer zusammenhängenden Geschichte. Die Cutscenes wurden mit dem Level Sequencer der Unreal Engine erstellt und über ein Blueprint-System in das Spielgeschehen integriert.
+Cutscenes dienen in ConquerTheCastle dazu, den Spieler in die Spielwelt einzuführen. Die Cutscenes wurden mit dem Level Sequencer der Unreal Engine erstellt und über ein Blueprint-System in das Spielgeschehen integriert.
 
-#### Ziel & Einsatz der Cutscenes
+#### Intro Cutscene
 
-Die Cutscenes in ConquerTheCastle verfolgen mehrere spezifische Zielsetzungen:
+Die Intro-Cutscene führt den Spieler in die Spielwelt ein und zeigt die Welt außerhalb des Bossraumes, bevor das eigentliche Gameplay beginnt. Sie erzeugt eine atmosphärische Stimmung und gibt dem Spieler Zeit, sich auf den bevorstehenden Kampf vorzubereiten. Die Cutscene endet mit dem Anzeigen des Hauptmenüs, das dem Spieler Kontrolle über die weitere Spielprogression gibt.
 
-**Intro-Cutscene:**
-Die Intro-Cutscene führt den Spieler in die Spielwelt ein und zeigt einen Überblick über die Umgebung, bevor das eigentliche Gameplay beginnt. Sie erzeugt eine atmosphärische Stimmung und gibt dem Spieler Zeit, sich auf den bevorstehenden Kampf vorzubereiten. Die Cutscene endet mit dem Anzeigen des Hauptmenüs, das dem Spieler Kontrolle über die weitere Spielprogression gibt.
 
-**Bossraum-Cutscene:**
-Die zweite Cutscene wird beim Betreten des Bossraums abgespielt und dient als cinematischer Übergang. Sie zeigt den Bossraum aus verschiedenen Perspektiven und lenkt die Aufmerksamkeit des Spielers auf wichtige Elemente wie den Thron und die räumliche Ausdehnung des Kampfareals. Diese Cutscene vermittelt dem Spieler visuell die Größe und Bedeutung des bevorstehenden Bosskampfes.
+Durch den Einsatz von Cutscenes wird das Spielerlebnis aufgewertet und erhält eine cinematische Qualität. Die Cutscene verbinded das Main Menu mit dem eigentlichen Spiel.
 
-Durch den Einsatz von Cutscenes wird das Spielerlebnis aufgewertet und erhält eine professionellere, cinematische Qualität. Die Cutscenes fungieren als narrative Klammer, die die einzelnen Spielabschnitte verbindet.
 
 #### Erstellung mit Level Sequencer
 
-Der Level Sequencer ist das zentrale Werkzeug in Unreal Engine für die Erstellung von Cutscenes und cinematischen Sequenzen. Er bietet eine Timeline-basierte Oberfläche, die es ermöglicht, Kamerabewegungen, Aktoren-Transformationen und andere Events zeitlich präzise zu choreographieren.
+Für die Cutscene wurde ein neuer Level Sequencer erstellt. Dies geschah über das Menü "Cinematics > Add Level Sequence". Die Sequenz wurde im Content-Verzeichnis unter einem eigenen Cutscenes-Ordner organisiert, um eine klare Projektstruktur zu gewährleisten. Danach wurde eine Cine Camera Actor hinzugefügt, die als virtuelle Filmkamera fungiert.
 
-**Sequencer-Setup:**
-Für jede Cutscene wurde eine neue Level Sequence erstellt. Dies geschah über das Menü "Cinematics > Add Level Sequence". Die Sequenzen wurden im Content-Verzeichnis unter einem eigenen Cutscenes-Ordner organisiert, um eine klare Projektstruktur zu gewährleisten.
-
-**Kamera-Integration:**
-Zu jeder Sequenz wurde eine Cine Camera Actor hinzugefügt, die als virtuelle Filmkamera fungiert. Die Cine Camera bietet erweiterte Einstellungsmöglichkeiten wie Focal Length (Brennweite), Aperture (Blende) und Focus Settings, die eine filmische Bildgestaltung ermöglichen. Die Kamera wurde im Sequencer als Track hinzugefügt, sodass ihre Position, Rotation und Eigenschaften über die Timeline animiert werden konnten.
-
-**Keyframe-Animation:**
-Die Kamerabewegungen wurden durch das Setzen von Keyframes zu bestimmten Zeitpunkten definiert. An kritischen Positionen in der Timeline wurde die Kamera manuell im Viewport positioniert und ein Keyframe gesetzt ("K" gedrückt). Der Sequencer interpoliert automatisch zwischen diesen Keyframes und erzeugt flüssige Kamerabewegungen. Für die Intro-Cutscene wurden mehrere Keyframes gesetzt, um eine schwenkende und fahrtende Bewegung über die Intro-Welt zu erzeugen.
+Die Kamerabewegungen wurden durch das Setzen von Keyframes zu bestimmten Zeitpunkten definiert. An kritischen Positionen in der Timeline wurde die Kamera manuell im Viewport positioniert und ein Keyframe gesetzt. Der Sequencer berrechnet die Position der Kamera automatisch zwischen diesen Keyframes und erzeugt flüssige Kamerabewegungen. Für die Intro-Cutscene wurden mehrere Keyframes gesetzt, um eine schwenkende und fahrtende Bewegung über die Intro-Welt zu erzeugen.
 
 ![Intro-Welt mit Kameraposition](img/peissl/praxis/intro-world.png){width=90%}
 
-**Timing und Dauer:**
-Die Länge der Cutscenes wurde so gewählt, dass sie informativ sind, ohne den Spielfluss zu unterbrechen. Die Intro-Cutscene wurde auf eine Dauer von etwa 8-10 Sekunden festgelegt, während die Bossraum-Einführungs-Cutscene kürzer gehalten wurde (5-7 Sekunden), da der Spieler bereits im Spielgeschehen ist und schneller ins Gameplay zurückkehren möchte.
+Die Intro-Cutscene wurde auf eine Dauer von etwa 15 Sekunden festgelegt, da dies ausreichend ist um die Außenwelt herzuzeigen.
 
-#### Kameraführung & Timing
 
-Die Kameraführung in den Cutscenes wurde sorgfältig geplant, um dem Spieler relevante Informationen zu vermitteln und gleichzeitig eine ästhetisch ansprechende Präsentation zu gewährleisten.
 
-**Intro-Cutscene Kameraführung:**
-Die Intro-Cutscene beginnt mit einer erhöhten Kameraperspektive, die einen Überblick über die Intro-Welt bietet. Die Kamera bewegt sich langsam und gleichmäßig, um dem Spieler Zeit zu geben, die Umgebung zu erfassen. Die Bewegung folgt einer sanften Kurve, die durch die Interpolation zwischen Keyframes erzeugt wird. Die Kamera senkt sich allmählich ab und richtet sich auf eine zentrale Struktur aus, was einen natürlichen Übergang zum spielbaren Gameplay schafft.
 
-**Bossraum-Cutscene Kameraführung:**
-Beim Betreten des Bossraums wird eine Fade-In-Sequenz ausgelöst. Die Kamera startet aus einer Position nahe dem Eingang und schwenkt langsam in Richtung des Throns. Diese Bewegung führt den Blick des Spielers entlang des roten Teppichs und hebt die zentrale Achse des Raums hervor. Die Kamera verweilt kurz auf dem Thron, um die Bedeutung dieser Position zu unterstreichen, bevor sie sanft zur Spielerperspektive übergeht.
+----------------------------------
 
 ![Bossraum Fade-In Cutscene](img/peissl/praxis/bossroom-fadein-cutscene.png){width=90%}
 
