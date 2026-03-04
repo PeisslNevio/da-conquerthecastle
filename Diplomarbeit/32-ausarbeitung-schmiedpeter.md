@@ -33,13 +33,13 @@ Als Unterstützung in den jeweiligen Modi gibt es das Tool **Anmerkungen**. Dami
   
 ### Konkurrenz
 
-Neben Blender hätten auch andere Modellierungsprogramme verwendet werden können, beispielsweise *Tinkercad, Autodesk Fusion oder OpenSCAD*. 
+Neben Blender hätten auch andere Modellierungsprogramme verwendet werden können, beispielsweise *Tinkercad, Autodesk Fusion oder OpenSCAD* [@blender_konkurrenz; @blender_konkurrenz_tinkercad; @blender_konkurrenz_autodesk; @blender_konkurrenz_openscad]. 
 
-- **Tinkercad:** Das Programm ist vor allem durch das einfache Entwerfen von Schaltungen bekannt und ähnlich niedrigschwellig ist auch die Modellierung. Es ist leicht verständlich und damit gut für Einsteiger geeignet. Für die Diplomarbeit war es jedoch zu eingeschränkt, da viele Formen nur mit vorgefertigten, kaum veränderbaren Grundobjekten erstellt werden können.
+- **Tinkercad:** Das Programm ist vor allem durch das einfache Entwerfen von Schaltungen bekannt und ähnlich niedrigschwellig ist auch die Modellierung. Es ist leicht verständlich und damit gut für Einsteiger geeignet. Für die Diplomarbeit war es jedoch zu eingeschränkt, da viele Formen nur mit vorgefertigten, kaum veränderbaren Grundobjekten erstellt werden können [@blender_konkurrenz_tinkercad].
 
-- **Autodesk Fusion:** Dieses Programm ist stark auf Produktion, Werkzeuge und technische Konstruktion ausgerichtet, kann aber auch für Modellierung eingesetzt werden. Die Handhabung gilt als gut und es wird von großen Unternehmen eingesetzt. Nachteilig sind die Lizenzkosten.
+- **Autodesk Fusion:** Dieses Programm ist stark auf Produktion, Werkzeuge und technische Konstruktion ausgerichtet, kann aber auch für Modellierung eingesetzt werden. Die Handhabung gilt als gut und es wird von großen Unternehmen eingesetzt. Nachteilig sind die Lizenzkosten [@blender_konkurrenz_autodesk].
 
-- **OpenSCAD:** OpenSCAD ist ein Open-Source-Programm für codebasierte Modellierung. Für dieses Projekt war es aufgrund der höheren Komplexität nicht die passende Wahl.
+- **OpenSCAD:** OpenSCAD ist ein Open-Source-Programm für codebasierte Modellierung. Für dieses Projekt war es aufgrund der höheren Komplexität nicht die passende Wahl [@blender_konkurrenz_openscad].
 
 
 
@@ -196,11 +196,11 @@ Im Unterschied zu linearen Medien entsteht Sound im Spielkontext unter interakti
 
 ### Musikpsychologische Grundlagen
 #### Wahrnehmung von Tönen
-Die Wahrnehmung von Tönen wird in der musikpsychologischen Lehre von Ernst Kurth als Erleben von „Strebewirkungen“ beschrieben: Töne und Intervalle wirken nicht statisch, sondern erzeugen den Eindruck von gerichteter Bewegung, Spannung und möglicher Auflösung. Die Strebetendenz-Theorie (Willimek) erweitert diesen Ansatz, indem sie diese Wirkung als psychologische Identifikation des Hörers mit Willensregungen deutet. Vereinfacht bedeutet das: Der Hörer erlebt nicht nur eine Klangbewegung, sondern einen inneren Impuls gegen oder für eine Veränderung.
+Die Wahrnehmung von Tönen wird in der musikpsychologischen Lehre von Ernst Kurth als Erleben von „Strebewirkungen“ beschrieben: Töne und Intervalle wirken nicht statisch, sondern erzeugen den Eindruck von gerichteter Bewegung, Spannung und möglicher Auflösung. Die Strebetendenz-Theorie (Willimek) erweitert diesen Ansatz, indem sie diese Wirkung als psychologische Identifikation des Hörers mit Willensregungen deutet. Vereinfacht bedeutet das: Der Hörer erlebt nicht nur eine Klangbewegung, sondern einen inneren Impuls gegen oder für eine Veränderung [@willimek_musik_und_emotionen_2011].
 
 > „Wir erleben einen Ton nicht als Frequenz, sondern als undefinierbares Ding, das wir jedoch nicht als sinnvoll in unsere materielle Welt eingegliedert erfahren können.“ (Musik und Emotionen, S. 3)
 
-Diese Sichtweise verdeutlicht, dass Töne nicht nur als messbare physikalische Signale verarbeitet werden, sondern als psychisch bedeutungsvolle Klangereignisse.
+Diese Sichtweise verdeutlicht, dass Töne nicht nur als messbare physikalische Signale verarbeitet werden, sondern als psychisch bedeutungsvolle Klangereignisse [@willimek_musik_und_emotionen_2011].
 
 Für Leitton- und Vorhaltswirkungen wird dieses Prinzip konkret über Spannung erklärt. Dissonante Reibungen (z. B. Sekundreibungen im Obertonbereich) werden teilweise unbewusst wahrgenommen und erzeugen ein Spannungsfeld, das eine Auflösung erwartet. Daraus entsteht der typische Eindruck von Erwartung und Zielgerichtetheit in musikalischen Verläufen. Für den Gamesound ist dieser Mechanismus zentral, weil er genutzt werden kann, um Aufmerksamkeit zu lenken, Unsicherheit zu steigern und Auflösungsmomente dramaturgisch wirksam zu setzen.
 
@@ -223,7 +223,7 @@ Diese Zuordnungen sind für Gamesound praktisch nutzbar, weil sie eine gezielte 
 ![Notenabbildung zu Harmoniewirkungen](img/schmiedpeter/Noten_Abb.png){width=70%}
 
 #### Mechanismen der Musikemotion
-Ein etablierter Erklärungsrahmen für musikalisch ausgelöste Emotionen ist das BRECVEM-Modell nach Juslin & Västfjäll. Es beschreibt sieben unterschiedliche Auslösemechanismen, die parallel oder kombiniert wirken können:
+Ein etablierter Erklärungsrahmen für musikalisch ausgelöste Emotionen ist das BRECVEM-Modell nach Juslin & Västfjäll. Es beschreibt sieben unterschiedliche Auslösemechanismen, die parallel oder kombiniert wirken können [@neurophysiological_emotion_analysis_music_2014]:
 
 - **B – Brain Stem Reflex**: Plötzliche, laute, dissonante oder sehr schnelle Signale lösen unmittelbare Alarm- bzw. Aktivierungsreaktionen aus.
 - **R – Rhythmic Entrainment**: Externe Rhythmen synchronisieren innere Rhythmen (z. B. Herzrate), wodurch Aktivierung und Erregung mitgesteuert werden.
@@ -423,12 +423,12 @@ Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, g
 #### Musik
 
 ##### Produktionsumgebung
-Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände.
+Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände [@collins_game_sound; @hofmann_szczypula_game_sound_2006].
 
 ##### Musikalisches Gesamtkonzept
-Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung.
+Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung [@schulz_entwicklung_musik_videospielen_2022; @collins_game_sound; @youtube_music_controls_you].
 
-Durch dunkle Klangfarben, spannungsorientierte Verläufe und klar gestufte Intensitäten wird die Wahrnehmung von Gefahr, Unsicherheit und Eskalation gezielt verstärkt. Die detaillierte psychologische Herleitung der einzelnen Stücke wird in einem späteren Arbeitsschritt ergänzt.
+Durch dunkle Klangfarben, spannungsorientierte Verläufe und klar gestufte Intensitäten wird die Wahrnehmung von Gefahr, Unsicherheit und Eskalation gezielt verstärkt. Die detaillierte psychologische Herleitung der einzelnen Stücke wird in einem späteren Arbeitsschritt ergänzt [@youtube_write_music_for_games; @youtube_music_transcends_game].
 
 ##### Vorgehensweise und Einteilung
 Zu Beginn wurde strukturiert festgelegt, welche Musik- und Soundelemente im Spiel benötigt werden. Daraus ergab sich folgende Einteilung:
@@ -445,7 +445,7 @@ Die Abbildung zeigt das Reaper-Projekt zur Titelmusik mit der Anordnung der Spur
 
 - **Übergangsmusik**
 Die Übergangsmusik markiert den dramaturgischen Wechsel vom Titelbildschirm zur ersten Gefahrenstufe des Bosskampfs. Ziel ist es, die Spannung innerhalb weniger Sekunden spürbar zu erhöhen, ohne einen hörbaren Bruch zwischen Intro und Kampfmusik zu erzeugen.
-Als zentrales Motiv dienen drei tief gestimmte Glockenschläge (D–Bb–A), die als klangliches Warnsignal den Beginn der Konfrontation ankündigen. Die Tonfolge bleibt im Raum von D äolisch und betont mit dem Bb die kleine Sexte, wodurch die bedrohliche Grundstimmung konsequent erhalten bleibt. Die verwendeten Glockensamples (freesound.org, Big Ben 1988) wurden in Reaper klanglich bearbeitet und in das orchestrale Gesamtbild integriert.
+Als zentrales Motiv dienen drei tief gestimmte Glockenschläge (D–Bb–A), die als klangliches Warnsignal den Beginn der Konfrontation ankündigen. Die Tonfolge bleibt im Raum von D äolisch und betont mit dem Bb die kleine Sexte, wodurch die bedrohliche Grundstimmung konsequent erhalten bleibt. Die verwendeten Glockensamples (freesound.org, Big Ben 1988) wurden in Reaper klanglich bearbeitet und in das orchestrale Gesamtbild integriert [@freesound_signtoast_259965].
 Nach dem dritten Schlag setzt tiefe Percussion ein; anschließend führt ein Cello-Ostinato in das erste Layer der Bossmusik (Danger Level 1). So entsteht ein kontrollierter Spannungsaufbau, der den Übergang musikalisch schlüssig vorbereitet.
 
 ![Projektansicht der Uebergangsmusik in Reaper](img/schmiedpeter/Uebergangsmusik.png){width=80%}
