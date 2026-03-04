@@ -210,6 +210,7 @@ Im Kontext von Musik und Emotionen werden Basisemotionen nicht isoliert betracht
 Eine besondere Rolle spielt das Tempo. Schnellere Verläufe erhöhen typischerweise Aktivierung und werden häufiger mit Erregung, Anspannung oder Durchsetzungskraft verbunden, während langsamere Verläufe eher Ruhe, Trauer oder Gelöstheit stützen. Zusätzlich zeigen physiologische Befunde, dass aktivierende Musik mit erhöhter Herzfrequenz und Muskelspannung korreliert, beruhigende Musik hingegen mit sinkender Herzfrequenz. Damit wird die emotionale Wirkung nicht nur subjektiv beschrieben, sondern auch körperlich nachvollziehbar.
 
 Typische emotionale Zuordnungen aus den dargestellten Harmoniezusammenhängen sind:
+
 - **Dur-Tonika**: nüchternes Einverstanden-Sein mit dem Gegenwärtigen.
 - **Moll-Tonika**: Trauer (bei leiser/langsamer Ausprägung) oder Zorn (bei lauter/schneller Ausprägung).
 - **Äolisches Moll**: Mut, Abenteuer, Spannung, Gefahr.
@@ -218,6 +219,8 @@ Typische emotionale Zuordnungen aus den dargestellten Harmoniezusammenhängen si
 - **Übermäßiger Dreiklang**: Staunen, Überraschung, Verwandlung.
 
 Diese Zuordnungen sind für Gamesound praktisch nutzbar, weil sie eine gezielte Kopplung von Spielsituation und musikalischem Ausdruck erlauben (z. B. Gefahrensignal, Triumphmoment, Trauerphase).
+
+![Notenabbildung zu Harmoniewirkungen](img/schmiedpeter/Noten_Abb.png){width=70%}
 
 #### Mechanismen der Musikemotion
 Ein etablierter Erklärungsrahmen für musikalisch ausgelöste Emotionen ist das BRECVEM-Modell nach Juslin & Västfjäll. Es beschreibt sieben unterschiedliche Auslösemechanismen, die parallel oder kombiniert wirken können:
@@ -343,6 +346,10 @@ Das Design war bereits grob festgelegt, daher musste eine sinnvolle Umsetzungsst
 
 Die Modellierung des Bosses erfolgte nach dem Prinzip, von oben nach unten zu arbeiten, wobei die Gliedmaßen bewusst erst am Ende ausgearbeitet wurden. Diese Vorgehensweise erleichterte es, zunächst die grundlegenden Proportionen und die visuelle Wirkung der Figur festzulegen, bevor Details ergänzt wurden. Der Fokus lag dabei auf einer klaren Silhouette und einer gut erkennbaren Formensprache, die bereits aus der Distanz die Rolle des Bossgegners vermittelt.
 
+Die folgende Abbildung zeigt den fertig modellierten Boss als Ergebnis dieses Arbeitsschritts.
+
+![Fertig modellierter Boss](img/schmiedpeter/Boss_fertig.png){width=70%}
+
 ###### Helm
 
 Die Kopfform des Helms wurde bewusst höher als rund gestaltet und orientiert sich eher an einer quaderartigen Grundform. Dadurch wirkt der Kopf massiver und dominanter, was die bedrohliche Erscheinung des Bosses zusätzlich verstärkt. Die Gesichtsform weist einen klaren, basalen Schnitt auf, der gezielt hervorgehoben wurde. Das Visier wurde leuchtend gestaltet, um einen mysteriösen und leicht übernatürlichen Eindruck zu erzeugen.
@@ -388,8 +395,16 @@ Die Animationen wurden auf Basis des im Theorieteil beschriebenen Rigging-Ansatz
 
 Anschließend wurden zwei Varianten getestet: die manuell aufgebaute Armature und ein automatisiert erzeugtes Rig. Beide Varianten wurden mit automatischer Gewichtung an den Boss gebunden und praktisch im Animationsprozess verglichen.
 
+Die folgende Abbildung zeigt das praktische Rigging-Setup; **gelb steht für die Inverse Kinematik (IK)**.
+
+![Armature mit IK (Gelb = Inverse Kinematik)](img/schmiedpeter/Armature_mit_IK.png){width=60%}
+
 ##### Einsatz von Rigify
 Für den Vergleich wurde das Blender-Addon **Rigify** verwendet. Der Vorteil von Rigify liegt in der schnellen Erstellung eines funktionsfähigen Kontroll-Rigs, das für die Animation meist angenehmer und effizienter zu bedienen ist als ein vollständig manuell aufgebautes Setup.
+
+Die folgende Abbildung zeigt das in Blender erzeugte Rigify-Kontroll-Rig. Sichtbar sind die typischen Controller-Formen; die Controls sind überwiegend blau dargestellt, während gelbe Elemente die IK-relevanten Bereiche markieren.
+
+![Armature Rigify (Kontroll-Rig)](img/schmiedpeter/Armature_Rigify.png){width=80%}
 
 In der praktischen Arbeit zeigte sich, dass sich das Rigify-Rig für die meisten Bewegungen besser steuern ließ. Gleichzeitig wurden nicht alle automatisch erzeugten Knochen verwendet, insbesondere im Gesichtsbereich. Diese Teile waren für den benötigten Animationsumfang nicht erforderlich und wurden deshalb im Workflow bewusst ausgeklammert.
 
@@ -424,7 +439,7 @@ Die Titelmusik führt in die düstere Spielwelt ein und bereitet den Spieler emo
 Das langsame Tempo (60 BPM) sowie der Verzicht auf Percussion reduzieren die physiologische Aktivierung und lenken den Fokus auf Atmosphäre und Raumwirkung. Die reduzierte Instrumentation aus Cello, tiefen Streichern und Chor unterstützt die mittelalterliche Ästhetik und erzeugt ein Gefühl von Schwere und Monumentalität.
 Das Leitmotiv (D–F–Bb–A) wird im späteren Bosskampf erneut aufgegriffen. Dadurch entsteht ein motivischer Zusammenhang zwischen Intro und Kampfsituation, der die Immersion verstärkt.
 
-![Projektansicht der Titelmusik in Reaper](img/schmiedpeter/Reaper_Titlemusik.png){width=90%}
+![Projektansicht der Titelmusik in Reaper](img/schmiedpeter/Reaper_Titlemusik.png){width=80%}
 
 Die Abbildung zeigt das Reaper-Projekt zur Titelmusik mit der Anordnung der Spuren und dem zeitlichen Aufbau des Intros.
 
@@ -433,7 +448,7 @@ Die Übergangsmusik markiert den dramaturgischen Wechsel vom Titelbildschirm zur
 Als zentrales Motiv dienen drei tief gestimmte Glockenschläge (D–Bb–A), die als klangliches Warnsignal den Beginn der Konfrontation ankündigen. Die Tonfolge bleibt im Raum von D äolisch und betont mit dem Bb die kleine Sexte, wodurch die bedrohliche Grundstimmung konsequent erhalten bleibt. Die verwendeten Glockensamples (freesound.org, Big Ben 1988) wurden in Reaper klanglich bearbeitet und in das orchestrale Gesamtbild integriert.
 Nach dem dritten Schlag setzt tiefe Percussion ein; anschließend führt ein Cello-Ostinato in das erste Layer der Bossmusik (Danger Level 1). So entsteht ein kontrollierter Spannungsaufbau, der den Übergang musikalisch schlüssig vorbereitet.
 
-![Projektansicht der Übergangsmusik in Reaper](img/schmiedpeter/Übergangsmusik.png){width=90%}
+![Projektansicht der Uebergangsmusik in Reaper](img/schmiedpeter/Uebergangsmusik.png){width=80%}
 
 Die Abbildung zeigt das Reaper-Projekt der Übergangsmusik und verdeutlicht den zeitlichen Aufbau vom Glockenmotiv zur Überleitung in die Bossmusik.
 
