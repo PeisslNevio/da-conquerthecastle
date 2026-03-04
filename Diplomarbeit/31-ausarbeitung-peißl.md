@@ -130,7 +130,7 @@ Die Modellierung des Bossraumes wurde vollständig im 3D-Modellierungsprogramm B
 
 Anschließend wurden die tragenden Säulen sowie der Thronsessel als zentrale Designelemente integriert. Der Thronsessel wurde bewusst auf einer erhöhten Plattform positioniert, die durch eine Treppe erreichbar ist. Diese Designentscheidung verfolgt das Ziel, der Boss-Figur eine visuelle Hierarchie und eine übergeordnete Positionierung gegenüber dem Spieler zu verleihen. Die Fensterpositionierung wurde strategisch so gewählt, dass stets mindestens eine Säule zwischen benachbarten Fenstern positioniert ist, um Sichtblockaden zu erzeugen.
 
-![Bossraum Konzept](img/peissl/praxis/bossraum-blender.png){width=90%}
+![Bossraum](img/peissl/praxis/bossroom-blender.png){width=90%}
 
 Für die Eingangstür wurde eine Öffnung aus der Wandfläche geschnitten, um eine authentische Türöffnung zu schaffen und dem Spieler eine intuitive räumliche Wahrnehmung zu ermöglichen. Für die Raumdecke wurde ein Gewölbesystem gewählt, da es die Blickrichtung des Spielers gezielt auf die zentrale Boss-Position lenkt. Das Gewölbesystem wird durch mehrere kleinere, stützende Gewölbe strukturiert, die die Deckenarchitektur mit den tragenden Säulen und dem Boden verbinden und damit eine statisch wirkungsvolle Raumkomposition erzeugen.
 
@@ -182,6 +182,9 @@ Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Project
 Die Kollisionsdaten wurden basierend auf der importierten Geometrie automatisch generiert. Dannach wurde die Collision im Details-Panel auf `Use Complex Collision As Simple` gesetzt.
 
 Nach dem Import wurde das Modell im Level platziert und mithilfe verschiedenen Ansichten (Lit, Unlit, Wireframe, Normalansicht) wurde überprüft, ob alles richtig gerendert wird.
+
+
+![Bossraum](img/peissl/praxis/bossroom-ue5.png){width=90%}
 
 
 \newpage
@@ -292,51 +295,52 @@ Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein w
 
 ### Cutscenes erstellen
 
-Cutscenes dienen in ConquerTheCastle dazu, den Spieler in die Spielwelt einzuführen. Die Cutscenes wurden mit dem Level Sequencer der Unreal Engine erstellt und über ein Blueprint-System in das Spielgeschehen integriert.
+Cutscenes dienen in ConquerTheCastle der Einführung des Spielers in die Spielwelt. Die Sequenzen wurden mit dem Level Sequencer der Unreal Engine erstellt und über ein Blueprint-System in das Spielgeschehen integriert.
 
 #### Intro Cutscene
 
-Die Intro-Cutscene führt den Spieler in die Spielwelt ein und zeigt die Welt außerhalb des Bossraumes, bevor das eigentliche Gameplay beginnt. Sie erzeugt eine atmosphärische Stimmung und gibt dem Spieler Zeit, sich auf den bevorstehenden Kampf vorzubereiten. Die Cutscene endet mit dem Anzeigen des Hauptmenüs, das dem Spieler Kontrolle über die weitere Spielprogression gibt.
+Die Intro-Cutscene führt den Spieler in die Spielwelt ein und zeigt die Umgebung außerhalb des Bossraums, bevor das eigentliche Gameplay beginnt. Sie erzeugt gibt dem Spieler Zeit, sich auf den bevorstehenden Kampf vorzubereiten. Die Sequenz endet mit der Einblendung des Hauptmenüs, das die weitere Spielprogression steuert.
 
 
-Durch den Einsatz von Cutscenes wird das Spielerlebnis aufgewertet und erhält eine cinematische Qualität. Die Cutscene verbinded das Main Menu mit dem eigentlichen Spiel.
+Der Einsatz von Cutscenes erhöht die narrative Kohärenz und verleiht dem Spiel eine cinematische Qualität. Zugleich verbindet die Intro-Cutscene das Main Menu mit dem Übergang in das eigentliche Spielgeschehen.
 
 
 #### Erstellung mit Level Sequencer
 
-Für die Cutscene wurde ein neuer Level Sequencer erstellt. Dies geschah über das Menü "Cinematics > Add Level Sequence". Die Sequenz wurde im Content-Verzeichnis unter einem eigenen Cutscenes-Ordner organisiert, um eine klare Projektstruktur zu gewährleisten. Danach wurde eine Cine Camera Actor hinzugefügt, die als virtuelle Filmkamera fungiert.
+Für die Cutscene wurde ein neuer Level Sequencer erstellt. Dies erfolgte über den Menüpfad "Cinematics > Add Level Sequence". Die Sequenz wurde im Content-Verzeichnis unter einem eigenen Cutscenes-Ordner organisiert, um eine klare Projektstruktur zu gewährleisten. Anschließend wurde ein Cine Camera Actor hinzugefügt, der als virtuelle Filmkamera fungiert.
 
-Die Kamerabewegungen wurden durch das Setzen von Keyframes zu bestimmten Zeitpunkten definiert. An kritischen Positionen in der Timeline wurde die Kamera manuell im Viewport positioniert und ein Keyframe gesetzt. Der Sequencer berrechnet die Position der Kamera automatisch zwischen diesen Keyframes und erzeugt flüssige Kamerabewegungen. Für die Intro-Cutscene wurden mehrere Keyframes gesetzt, um eine schwenkende und fahrtende Bewegung über die Intro-Welt zu erzeugen.
+Die Kamerabewegungen wurden durch das Setzen von Keyframes zu bestimmten Zeitpunkten festgelegt. An relevanten Positionen der Timeline wurde die Kamera im Viewport manuell positioniert und jeweils ein Keyframe gesetzt. Der Sequencer berechnet die Kameraposition zwischen diesen Keyframes automatisch und erzeugt dadurch flüssige Bewegungsabläufe. Für die Intro-Cutscene wurden mehrere Keyframes gesetzt, um eine schwenkende und fahrende Bewegung über die Intro-Welt zu erzeugen.
 
 ![Intro-Welt](img/peissl/praxis/intro-world.png){width=90%}
 
-Die Intro-Cutscene wurde auf eine Dauer von etwa 15 Sekunden festgelegt, da dies ausreichend ist um die Außenwelt herzuzeigen. Sie zeigt außerdem die Burg, in der der Kampf stadtfindet sowie die Stadt, die sie umgibt.
+Die Intro-Cutscene wurde auf eine Dauer von etwa 15 Sekunden festgelegt, da dieser Zeitraum ausreicht, um die Außenwelt darzustellen. Gezeigt werden die Burg als zentraler Ort des Kampfes sowie die umliegende Stadt.
 
 #### Spielablauf
 
-Wenn das Spiel gestartet wird, startet zunächst die Intro-Cutscene. Der nachfolgende Blueprint zeigt den grundlegenden Ablauf der Sequenz und macht die Übergänge zwischen Cutscene, Hauptmenü und Spielstart nachvollziehbar.
+Beim Start des Spiels wird zunächst die Intro-Cutscene abgespielt. Der nachfolgende Blueprint zeigt den grundlegenden Ablauf der Sequenz und macht die Übergänge zwischen Cutscene, Hauptmenü und Spielstart nachvollziehbar.
 
 ![Level-Blueprint für Intro-Welt](img/peissl/praxis/code-intro-world.png){width=90%}
 
-Hier sieht man, wie die Cutscene gestertet wird. Dazu wird der Level Sequenzer benötigt. Nach 16,8 Sekunden wird die Cutscene pausiert, um das Main Menu anzuzeigen.
+Der folgende Blueprint zeigt den Start der Cutscene über den Level Sequencer. Nach etwa 17 Sekunden wird die Sequenz pausiert, um das Main Menu anzuzeigen.
 
 ![Blueprint-Code zum Start der Cutscene](img/peissl/praxis/code-start-cutscene.png){width=90%}
 
-Nach dem Pausieren wird das Main Menu angezeigt und die Maus Eingabe wird für den Spieler aktiviert.
+Nach dem Pausieren wird das Main Menu angezeigt, und die Mauseingabe für den Spieler wird aktiviert.
 
 ![Blueprint-Code zur Erstellung des Hauptmenüs](img/peissl/praxis/code-create-mainmenu.png){width=90%}
 
 
 
 
-Die Cutscene soll fortgesetzt werden, wenn der Spieler ´play´ auswählt. Außerdem wird der Input des Spielers wieder deaktiviert.
+Wählt der Spieler "Play", wird die Cutscene fortgesetzt. Gleichzeitig wird der Input des Spielers erneut deaktiviert, um eine unterbrechungsfreie Sequenzwiedergabe sicherzustellen.
 
 ![Logik des Play-Buttons](img/peissl/praxis/logic-play-button.png){width=90%}
+
 ![Blueprint zur Fortsetzung der Cutscene](img/peissl/praxis/continiue-cutscene.png){width=90%}
 
 
 
-Nach dem du Cutscene fertig ist, wird der Bossraum geöfnet, der Input aktiviert und ein ´Fade-In´ abgespielt, um einen guten Übergang zwischen Cutscene und Kampf zu schaffen. Nun beginnt der Kampf.
+Nach Abschluss der Cutscene wird der Bossraum geöffnet, der Input aktiviert und ein "Fade-In" abgespielt, um einen konsistenten Übergang zwischen Cutscene und Kampf zu schaffen. Anschließend beginnt der Kampf.
 
 ![Bossraum Fade-In Cutscene](img/peissl/praxis/bossroom-fadein-cutscene.png){width=90%}
 
