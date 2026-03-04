@@ -275,6 +275,38 @@ In diesem Kapitel wird die praktische Umsetzung in Unreal Engine beschrieben. De
 
 Das Spiel besteht aus mehreren zentralen Komponenten: dem Player-System, der Boss-KI, dem Kampfsystem und verschiedenen Projektilmechaniken. Diese Systeme greifen ineinander, um einen interaktiven und spielerisch fordernden Bosskampf zu ermöglichen.
 
+
+### Warum Blueprints statt reinem Textcode?
+
+Für die praktische Umsetzung wurde im Gameplay-Bereich bewusst mit `Blueprints` gearbeitet und nicht ausschließlich mit selbst geschriebenem Textcode (z. B. C++).
+
+**Vorteile von Blueprints (Code-Blöcke):**
+
+* deutlich schnellere Umsetzung und Iteration bei Gameplay-Features
+* hohe Verständlichkeit durch visuelle Darstellung von Logik und Datenfluss
+* Fehler lassen sich im Graph oft schneller finden und korrigieren
+* ideal für Prototyping und häufige Änderungen während der Entwicklung
+
+**Nachteile von Blueprints:**
+
+* große Graphen können bei sehr komplexer Logik unübersichtlich werden
+* für stark performancekritische Systeme ist C++ oft effizienter
+* saubere Strukturierung ist wichtig, sonst leidet die Wartbarkeit
+
+**Vorteile von selbst geschriebenem Textcode (z. B. C++):**
+
+* bessere Kontrolle bei komplexen und performancekritischen Systemen
+* gute Skalierbarkeit bei großen Projektstrukturen
+* präzise Versionierung und Review-Prozesse über klassische Code-Workflows
+
+**Nachteile von reinem Textcode:**
+
+* langsameres Prototyping bei Gameplay-Experimenten
+* höhere Einstiegshürde durch Syntax und Debugging-Aufwand
+* für Nicht-Programmierer schwerer zugänglich
+
+Für dieses Projekt war der Blueprint-Ansatz sinnvoll, weil Gameplay-Mechaniken wie Dodge, Angriff, Parry und Hit-Detection schnell testbar und leicht nachvollziehbar umgesetzt werden konnten.
+
 ### Architektur des Spiels
 
 Die wichtigsten Blueprints sind:
@@ -286,15 +318,13 @@ Die wichtigsten Blueprints sind:
 
 Die Klassen haben klar getrennte Aufgaben. `BP_FirstPersonCharacter` steuert Bewegung, Kamera, Angriff, Stamina und Parry-Logik. `BP_Boss` verwaltet Boss-Leben, Angriffsabläufe und das Spawnen der Projektile. Die Projektil-Blueprints übernehmen Flugverhalten, Kollision und Spezialverhalten wie Homing und Reflexion.
 
-**Bildhinweis:** Übersichts-Screenshot des Blueprint-Ordners oder der wichtigsten Klassen im Content Browser, damit die Systemstruktur sofort erkennbar ist.
-
 ### Player-System
 
 #### Bewegung und Grundkonfiguration
 
 Der Spieler wird über `BP_FirstPersonCharacter` gesteuert. Die Kamera ist an die Blickrichtung gekoppelt, sodass sich die Figur beim horizontalen Drehen mitorientiert. Das eigene Character-Mesh ist für die First-Person-Kamera unsichtbar geschaltet, damit keine störenden Körperteile im Sichtfeld auftauchen. Zusätzlich wurden Bewegungswerte wie Laufgeschwindigkeit und Grundbeschleunigung auf das Kampfsystem abgestimmt.
 
-**Bildhinweis:** Screenshot der Kamera- und Movement-Einstellungen in `BP_FirstPersonCharacter` (Camera Component, Mesh-Visibility, Rotation/Movement Settings).
+![Kamera+Einstellungen\label{fig:Kamera + Einstellungen}](img/grgic/Camera.png){width=90%}
 
 #### Dodge-System
 
@@ -306,7 +336,8 @@ Das Ausweichsystem (Dodge) basiert auf der Unreal-Engine-Funktion **Launch Chara
 
 Damit ist das Ausweichen ein bewusst eingesetztes Verteidigungswerkzeug und keine dauerhaft verfügbare Bewegungstechnik.
 
-**Bildhinweis:** Blueprint-Abschnitt mit `InputAction Dodge`, `Launch Character`, Stamina-Abzug und `isDodging`-Cooldown.
+![Erster Part von dem Ausweich Sytems\label{fig:Erster Part von dem Ausweich Sytems}](img/grgic/DodgeSystem1.png){width=90%}
+![Zweiter Part von dem Ausweich Sytems\label{fig:Zweiter Part von dem Ausweich Sytems}](img/grgic/DodgeSystem2.png){width=90%}
 
 #### Angriffssystem
 
@@ -322,7 +353,8 @@ Der Angriff wird über ein Action Mapping in den Projekteinstellungen ausgelöst
 
 Diese Reihenfolge stellt sicher, dass das Kampfsystem kontrolliert, fair und gut ausbalancierbar bleibt.
 
-**Bildhinweis:** Blueprint-Flow von `InputAction Attack` mit `isAttacking`, `Clear hitActorsThisSwing`, `Play Animation`, Delay und `Set Animation Mode`.
+![Erster Part von dem Angriff Systems\label{fig:Erster Part von dem Angriff System}](img/grgic/AttackSystem1.png){width=90%}
+![Erster Part von dem Angriff System\label{fig:Erster Part von dem Angriff System}](img/grgic/AttackSystem2.png){width=90%}
 
 #### Hit-Detection (Schlag-Erkennung)
 
@@ -345,7 +377,8 @@ Ablauf der Trefferprüfung:
 
 Damit wird verhindert, dass ein Gegner innerhalb eines einzelnen Schlages mehrfach Schaden erhält.
 
-**Bildhinweis:** Blueprint der Funktion `Hitdetect` mit Sphere-Trace/Collision, `Break Hit Result`, Array-Prüfung (`hitActorsThisSwing`) und Interface-Check (`BPI_Attack`).
+![Erster Part von dem HitDetect Systems\label{fig:Erster Part von dem HitDetect System}](img/grgic/HitDetect1.png){width=90%}
+![Erster Part von dem HitDetect Systems\label{fig:Erster Part von dem HitDetect System}](img/grgic/HitDetect2.png){width=90%}
 
 #### Parry und Projektil-Reflexion
 
@@ -359,7 +392,8 @@ Zusätzlich gibt es beim Angreifen ein kurzes Parry-Fenster:
 
 Der Cast ist notwendig, damit nur Projektile mit passender Klasse reflektiert werden und die projektilspezifische Logik sicher verfügbar ist.
 
-**Bildhinweis:** Blueprint-Screenshot mit `parryActive`, Tag-Check `Reflectable`, `Cast To BP_HomingProjectile` und `Reflect`-Event.
+![Erster Part von dem Konter Systems\label{fig:Erster Part von dem Konter System}](img/grgic/Parry1.png){width=90%}
+![Erster Part von dem Konter Systems\label{fig:Erster Part von dem Konter System}](img/grgic/Parry2.png){width=90%}
 
 #### Zwischenfazit zum Player-System
 
