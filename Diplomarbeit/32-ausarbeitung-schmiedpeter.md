@@ -210,6 +210,7 @@ Im Kontext von Musik und Emotionen werden Basisemotionen nicht isoliert betracht
 Eine besondere Rolle spielt das Tempo. Schnellere Verläufe erhöhen typischerweise Aktivierung und werden häufiger mit Erregung, Anspannung oder Durchsetzungskraft verbunden, während langsamere Verläufe eher Ruhe, Trauer oder Gelöstheit stützen. Zusätzlich zeigen physiologische Befunde, dass aktivierende Musik mit erhöhter Herzfrequenz und Muskelspannung korreliert, beruhigende Musik hingegen mit sinkender Herzfrequenz. Damit wird die emotionale Wirkung nicht nur subjektiv beschrieben, sondern auch körperlich nachvollziehbar.
 
 Typische emotionale Zuordnungen aus den dargestellten Harmoniezusammenhängen sind:
+
 - **Dur-Tonika**: nüchternes Einverstanden-Sein mit dem Gegenwärtigen.
 - **Moll-Tonika**: Trauer (bei leiser/langsamer Ausprägung) oder Zorn (bei lauter/schneller Ausprägung).
 - **Äolisches Moll**: Mut, Abenteuer, Spannung, Gefahr.
