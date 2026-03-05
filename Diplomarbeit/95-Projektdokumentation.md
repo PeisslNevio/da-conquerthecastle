@@ -14,7 +14,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 * Es gab noch keine kontinuierliche technische Umsetzung.
 
 | Dimension      | Status            | Maßnahmen |
-|:---------------|:------------------|:----------|
+|:---------------|:----------------|:-------------------------|
 | Leistungsziele | Nicht in Ordnung  | Projektstart neu strukturieren und Mindestziele definieren |
 | Terminziele    | Nicht in Ordnung  | Meilensteine neu priorisieren |
 | Kostenziele    | In Ordnung        | Keine zusätzlichen Ausgaben vor Freigabe tätigen |
@@ -47,7 +47,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 * Der Projektauftrag wurde inhaltlich konkretisiert.
 
 | Dimension      | Status            | Maßnahmen |
-|:---------------|:------------------|:----------|
+|:---------------|:----------------|:-------------------------|
 | Leistungsziele | Teilweise erfüllt | Offene Detailanforderungen ergänzen |
 | Terminziele    | Kritisch          | Umsetzung der nächsten Schritte in kurzen Iterationen |
 | Kostenziele    | In Ordnung        | Geplante Kostenpositionen bestätigen |
@@ -83,7 +83,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 * Der Prototyp war funktional, jedoch noch nicht präsentationsreif.
 
 | Dimension      | Status            | Maßnahmen |
-|:---------------|:------------------|:----------|
+|:---------------|:----------------|:-------------------------|
 | Leistungsziele | Teilweise erfüllt | Fokus auf Kernfunktionen statt Detailtiefe |
 | Terminziele    | Nicht in Ordnung  | Zusätzliche Arbeitsblöcke einplanen |
 | Kostenziele    | In Ordnung        | Keine Scope-Erweiterung mit Zusatzkosten |
@@ -121,7 +121,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 * Die Umsetzung erfolgte in diesem Zeitraum mit hoher Arbeitsintensität.
 
 | Dimension      | Status             | Maßnahmen |
-|:---------------|:-------------------|:----------|
+|:---------------|:----------------|:-------------------------|
 | Leistungsziele | Teilweise erfüllt  | Feedback aus Zwischenpräsentation priorisiert umsetzen |
 | Terminziele    | Kritisch erreicht  | Realistischere Sprint-Planung für Folgephase |
 | Kostenziele    | In Ordnung         | Budgetkontrolle beibehalten |
@@ -159,7 +159,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 * Die Zusammenarbeit war stabil und zielgerichtet.
 
 | Dimension      | Status      | Maßnahmen |
-|:---------------|:------------|:----------|
+|:---------------|:----------------|:-------------------------|
 | Leistungsziele | In Ordnung  | — |
 | Terminziele    | In Ordnung  | — |
 | Kostenziele    | In Ordnung  | Budgetrahmen unverändert beibehalten |
@@ -197,7 +197,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 * Der Fokus wurde auf stabile Kernfunktionen gelegt.
 
 | Dimension      | Status            | Maßnahmen |
-|:---------------|:------------------|:----------|
+|:---------------|:----------------|:-------------------------|
 | Leistungsziele | Teilweise erfüllt | Funktionsumfang priorisieren und Detailfeatures verschieben |
 | Terminziele    | Kritisch          | Puffer für Fehlerbehebung und Nacharbeit einplanen |
 | Kostenziele    | In Ordnung        | Zusatzkosten vermeiden, vorhandene Tools nutzen |
@@ -235,7 +235,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 * Der Meilenstein „Feinschliff & Finale Tests“ (09.01.2026) wurde mit kritischem Terminpuffer erreicht.
 
 | Dimension      | Status             | Maßnahmen |
-|:---------------|:-------------------|:----------|
+|:---------------|:----------------|:-------------------------|
 | Leistungsziele | In Ordnung         | Offene Kernpunkte priorisiert abschließen |
 | Terminziele    | Kritisch erreicht  | Test- und Bugfix-Zyklen eng takten |
 | Kostenziele    | In Ordnung         | Kostenkontrolle laut Projektbudget fortführen |
@@ -273,7 +273,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 * Der Meilenstein „Spiel abgeschlossen“ wurde erreicht.
 
 | Dimension      | Status      | Maßnahmen |
-|:---------------|:------------|:----------|
+|:---------------|:----------------|:-------------------------|
 | Leistungsziele | In Ordnung  | — |
 | Terminziele    | In Ordnung  | — |
 | Kostenziele    | In Ordnung  | Budgetrahmen weiterhin eingehalten |
