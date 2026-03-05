@@ -16,7 +16,7 @@ Die Mission von Blender ist es, ein leistungsstarkes 3D-Programm für jeden frei
 
 Blender ist für diese Arbeit eine optimale Lösung, da es frei verfügbar, leistungsstark und durch eine große, aktive Community unterstützt wird. Zudem gibt es zahlreiche frei zugängliche Online-Tutorials und umfangreiche Dokumentationen. Die Software erhält regelmäßig Updates und wird kontinuierlich erweitert. Blender ist auf den gängigen Betriebssystemen (Linux, Windows und macOS) verfügbar und basiert auf OpenGL. [@blender_manual]
 
-#### Koordinatensystem
+#### Koordinatensystem {#theorie-koordinatensystem}
 
 Beim Erstellen eines neuen Blender-Projekts ist zunächst nur das Koordinatensystem sichtbar. Dieses besteht aus drei Achsen: X, Y und Z. Die Achsen erstrecken sich jeweils vom positiven bis zum negativen Bereich und treffen sich im Nullpunkt. Sie dienen als Orientierungshilfe und bieten dem Benutzer einen festen Bezugspunkt innerhalb der Szene. Zusätzlich befindet sich rechts oben ein kleines Achsendiagramm, das die Orientierung des Nutzers in Echtzeit anzeigt (siehe Abb. 1). [@blender_manual]
 
@@ -27,7 +27,7 @@ Die Kamera kann mit dem Mausrad rotiert und mit Shift + Mausrad verschoben werde
 
 Der 3D-Cursor, der in Abb. 1 sichtbar ist, definiert die Position, an der neue Objekte hinzugefügt werden. Standardmäßig befindet er sich im Nullpunkt und kann mit Shift + rechter Maustaste frei im 3D-Raum verschoben werden. Wird der Cursor versetzt, ändert sich entsprechend die Einfügeposition neuer Objekte. Mit Shift + C kann der Cursor wieder auf den Nullpunkt zurückgesetzt werden. [@blender_manual]
 
-#### Primitive Objekte
+#### Primitive Objekte {#theorie-primitive-objekte}
 
 Blender bietet mehrere primitive Basisobjekte, die mithilfe der Tastenkombination Shift + A eingefügt werden können. Dazu zählen unter anderem der Würfel, der Zylinder oder die Kugel (siehe Abb. 2). Diese Objekte besitzen typische Anwendungsfälle: Für Gebäude wird häufig ein Würfel verwendet, während sich ein Zylinder besonders für Säulen eignet. [@blender_manual]
 
@@ -40,24 +40,24 @@ Objekte bestehen aus Vertices, Edges und Faces. Ein Vertex stellt einen einzelne
 
 Diese Objekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objekte können verschoben (`G`), rotiert (`R`) und skaliert (`S`) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (X, Y oder Z) ausgewählt wird, verschiebt sich das Objekt nur auf dieser Achse. Wenn ein Objekt genau einen Meter nach X positiv verschoben werden sollte, lautet der Befehl `G + X + 1`. [@blender_manual]
 
-#### Bearbeitungsmodi
+#### Bearbeitungsmodi {#theorie-bearbeitungsmodi}
 
-##### Object Mode
+##### Object Mode {#theorie-object-mode}
 
 Der Object Mode ist der Standardmodus in Blender. In diesem Modus können Objekte eingefügt, gruppiert, verschoben, skaliert und rotiert werden. Er dient der Anordnung von Objekten innerhalb der Szene. Die Geometrie der Objekte kann in diesem Modus nicht verändert werden. Der Object Mode ist essenziell, um den Überblick über die gesamte Szene zu behalten. [@blender_manual]
 
-##### Edit Mode
+##### Edit Mode {#theorie-edit-mode}
 
 Im Edit Mode bearbeitet man die Geometrie einzelner Objekte. Um in den Edit Mode zu kommen muss man das Objekt auswählen und `Tab` drücken. Ein weiteres `Tab` und man gelangt wieder im Object Mode. Wichtige Edit Mode Tools sind Extrude `E`, Insert `I`, Loop Cut `Ctrl + R`, Bevel `B` und Merge Vertices `M`. Mit den Tasten `1`, `2` und `3` kann zwischen der Auswahl von Vertices, Edges und Faces gewechselt werden. [@blender_manual]
 
-#### Mirror
+#### Mirror {#theorie-mirror}
 Der Mirror Modifier spiegelt ein Objekt entlang einer oder mehrerer Achsen, wobei die Spiegelung über den Objektursprung erfolgt. Dieser Modifier reduziert den Arbeitsaufwand bei symmetrischen Modellen erheblich und stellt sicher, dass beide Seiten exakt identisch sind. [@blender_manual]
 
-#### Solidify
+#### Solidify {#theorie-solidify}
 Der Solidify Modifier verleiht Objekten eine Dicke. Die einfachste Anwendung ähnelt dem Extrude-Werkzeug im Edit Mode. Die Dicke kann im Modifier-Tab über den Parameter Thickness eingestellt werden. Zusätzliche Optionen ermöglichen eine weitere Anpassung des Ergebnisses. Die Einstellung Even Thickness sorgt für eine gleichmäßige Dicke an allen Kanten, während Fill Rim offene Kanten schließt und Hohlräume verhindert. [@blender_manual]
 
 
-#### Extra Mesh Objects
+#### Extra Mesh Objects {#theorie-extra-mesh-objects}
 
 Extra Mesh Objects ist ein Add-on für Blender, das die dynamische Erstellung komplexer Strukturen wie Wände ermöglicht. Um es zu nutzen, muss das Add-on installiert sein. Neue Wall Objekte werden mit `Shift + A` und dem Wall Builder erstellt (siehe Abb. 3). [@blender_extra_mesh_objects]
 
@@ -68,20 +68,20 @@ Es können nun die Eigenschaften dieser Wand bearbeitet werden. Darunter zählen
 
 
 
-#### UV-Mapping
+#### UV-Mapping {#theorie-uv-mapping}
 
 UV-Mapping wird zum Texturieren von Objekten benötigt. Es ist der Prozess, bei dem eine 3D-Grafik auf eine 2D-Fläche projiziert wird. Das Objekt wird aufgeschnitten und auf eine 2D Textur gelegt. Jede Fläche (Face) bekommt Koordinaten auf einer 2D-Textur. Wenn diese Textur bearbeitet wird, verändert sich auch das Aussehen des Objektes. Ohne UV-Mapping wären Texturen verzerrt, und Details gehen verloren. [@uv_mapping_guide] [@gpt_uv_mapping]
 
 ![UV Mapping [@uv_mapping_guide]](img/peissl/theorie/uv-mapping.png){width=90%}
 
 
-#### Low-Poly-Modellierung
+#### Low-Poly-Modellierung {#theorie-low-poly-modellierung}
 
 Durch die geringe Anzahl von Polygonen bleibt der Rechenaufwand eher gering und die Framerate ist stabiler. Außerdem verkürzen sich Ladezeiten, besonders auf älteren Geräten. Low-Poly hält den Style einheitlich und reduziert den Modellierungsaufwand drastisch. Ein Low-Poly Spiel setzt nicht auf hochauflösende Grafik oder komplexe Modelle, sondern auf die Einfachheit und Effizienz. [@low_poly] [@why_low_poly]
 
 ![Low-Poly Beispiel [@low_poly_example]](img/peissl/theorie/low-poly-example.png){width=90%}
 
-#### Exportformat
+#### Exportformat {#theorie-exportformat}
 
 Blender unterstützt das Exportformat FBX, welches zum Datenaustausch zwischen verschiedenen Programmen benötigt wird. FBX ist weit verbreitet und wird von Unreal Engine sowie von vielen anderen unterstützt. Dieses Exportformat ist auf schnellen Export und Speichereffizienz optimiert und hat viele nützliche Exportfunktionen. [@blender_manual]
 
@@ -92,17 +92,25 @@ Blender unterstützt das Exportformat FBX, welches zum Datenaustausch zwischen v
 
 Die Unreal Engine (im Folgenden UE genannt) ist eine leistungsstarke, kostenlose 3D-Entwicklungssoftware, die vielseitig eingesetzt werden kann. Egal ob Spiele programmieren, Filme produzieren oder animieren. UE verfügt über die gleichen Technologien wie AAA-Gamestudios und ist für jeden nutzbar. Mit Unreal Engine ist (fast) jeder Entwicklungsschritt in einem einheitlichen Ökosystem integriert, was den Entwicklungsprozess deutlich vereinfacht und es ermöglicht, selbst als kleines Entwicklerteam hochwertige Spiele zu entwickeln. [@what_is_unreal_engine] [@unreal_engine_indie]
 
-#### GUI
+#### GUI {#theorie-gui}
 
 Das Graphical User Interface (GUI), auch Benutzeroberfläche genannt, ist eines der wichtigsten Bestandteile eines Spiels. Unter GUI versteht man alles, was vor dem eigentlichen Spiel angezeigt wird. Darunter zählt man alle Menüs sowie Lebens- und andere Statistikanzeigen. Es wird benötigt, um dem User die nötigen Informationen zu geben. Das GUI dient als Schnittstelle zwischen User und Spiel. Eine Benutzeroberfläche soll einfach, effizient und intuitiv sein. Es ist wichtig, dass jedes Element einen Namen hat, der die Funktion des Elementes intuitiv beschreibt. Mithilfe von Farben kann man den Benutzer auf bestimmte Elemente aufmerksam machen und dessen Erfahrung verbessern. Außerdem sollte jede Funktion innerhalb weniger Klicks zu erreichen sein. Funktionen, welche häufiger verwendet werden sollen leicht erreichbar sein. Das GUI muss eine Balance zwischen Funktionen und Design sein. [@ui_guide] [@what_is_a_good_ui]
 
 Die GUI wird in Unreal Engine mithilfe von UMG (Unreal Motion Graphics) erstellt. Dazu erstellt man Widgets und bindet diese in das Spiel ein. Diese Widgets werden mit dem HUD (Heads Up Display) angezeigt und der Blueprint im Hintergrund steuert das Verhalten des Widgets. Dazu gibt es einen eigenen UMG-Editor in UE, der alle notwendigen Funktionen an einem Platz bündelt. [@ui_tutorial]
 
-#### Cutscenes
+#### Cutscenes {#theorie-cutscenes}
 
 Eine Cutscene, auch genannt Zwischensequenz, ist eine kurze Filmsequenz in einem Videospiel, welche die Geschichte weiter erzählt. Der Spieler kann während dieser Cutscene nicht eingreifen, er ist der Zuschauer. [@cutscene_explanation]
 
 In UE wird die Cutscene mithilfe des Level Sequenzers erstellt. Zu diesem Sequenzer wird eine Kamera hinzugefügt und in der Timeline wird mithilfe von Keyframes die Kameraposition zu bestimmten Zeitpunkten angegeben. Mithilfe eines Blueprints wird festgelegt, wann die Cutscene aufgerufen wird.  [@cutscene_tutorial]
+
+#### Projektspezifische Ableitungen
+
+Aus den oben beschriebenen Grundlagen wurden für *ConquerTheCastle* drei konkrete technische Entscheidungen abgeleitet:
+
+- Der Bossraum wurde als modularer Low-Poly-Raum aufgebaut, weil die in den Abschnitten [Primitive Objekte](#theorie-primitive-objekte), [Mirror](#theorie-mirror), [Solidify](#theorie-solidify) und [Low-Poly-Modellierung](#theorie-low-poly-modellierung) beschriebenen Verfahren eine schnelle, konsistente und performante Umsetzung erlauben.
+- Die GUI wurde bewusst reduziert und informationszentriert umgesetzt, entsprechend den in [GUI](#theorie-gui) beschriebenen Prinzipien zu Lesbarkeit, Funktionstrennung und UMG-basierter Implementierung.
+- Die Intro-Sequenz wurde mit dem Level Sequencer umgesetzt, wie in [Cutscenes](#theorie-cutscenes) beschrieben, um eine kontrollierte, reproduzierbare Übergangslogik zwischen Filmsequenz, Menü und Gameplay zu erhalten.
 
 \newpage
 
@@ -126,26 +134,26 @@ Nachfolgend ist die Skizze des Bossraums dargestellt. In der Skizze sind die Ein
 
 #### Modellierung
 
-Die Modellierung des Bossraumes wurde vollständig im 3D-Modellierungsprogramm Blender durchgeführt. Das Modellierungsverfahren erfolgte in mehreren iterativen Schritten: Zunächst wurden die Grundstrukturen des Bodens und der Wandflächen grob modelliert, um die räumliche Grundform zu etablieren. Die Wandkonstruktion wurde unter Verwendung des Blender-Add-ons „Wall Builder" erstellt, um eine effiziente und realistische Modellierung zu ermöglichen. 
+Die Modellierung des Bossraumes wurde vollständig im 3D-Modellierungsprogramm Blender durchgeführt. Das Modellierungsverfahren erfolgte in mehreren iterativen Schritten: Zunächst wurden die Grundstrukturen des Bodens und der Wandflächen grob modelliert, um die räumliche Grundform zu etablieren. Die Wandkonstruktion wurde unter Verwendung des Blender-Add-ons „Wall Builder" erstellt, um eine effiziente und realistische Modellierung zu ermöglichen (vgl. [Primitive Objekte](#theorie-primitive-objekte), [Bearbeitungsmodi](#theorie-bearbeitungsmodi), [Extra Mesh Objects](#theorie-extra-mesh-objects)).
 
 Anschließend wurden die tragenden Säulen sowie der Thronsessel als zentrale Designelemente integriert. Der Thronsessel wurde bewusst auf einer erhöhten Plattform positioniert, die durch eine Treppe erreichbar ist. Diese Designentscheidung verfolgt das Ziel, der Boss-Figur eine visuelle Hierarchie und eine übergeordnete Positionierung gegenüber dem Spieler zu verleihen. Die Fensterpositionierung wurde strategisch so gewählt, dass stets mindestens eine Säule zwischen benachbarten Fenstern positioniert ist, um Sichtblockaden zu erzeugen.
 
 ![Bossraum](img/peissl/praxis/bossroom-blender.png){width=90%}
 
-Für die Eingangstür wurde eine Öffnung aus der Wandfläche geschnitten, um eine authentische Türöffnung zu schaffen und dem Spieler eine intuitive räumliche Wahrnehmung zu ermöglichen. Für die Raumdecke wurde ein Gewölbesystem gewählt, da es die Blickrichtung des Spielers gezielt auf die zentrale Boss-Position lenkt. Das Gewölbesystem wird durch mehrere kleinere, stützende Gewölbe strukturiert, die die Deckenarchitektur mit den tragenden Säulen und dem Boden verbinden und damit eine statisch wirkungsvolle Raumkomposition erzeugen.
+Für die Eingangstür wurde eine Öffnung aus der Wandfläche geschnitten, um eine authentische Türöffnung zu schaffen und dem Spieler eine intuitive räumliche Wahrnehmung zu ermöglichen. Für die Raumdecke wurde ein Gewölbesystem gewählt, da es die Blickrichtung des Spielers gezielt auf die zentrale Boss-Position lenkt. Das Gewölbesystem wird durch mehrere kleinere, stützende Gewölbe strukturiert, die die Deckenarchitektur mit den tragenden Säulen und dem Boden verbinden und damit eine statisch wirkungsvolle Raumkomposition erzeugen. Symmetrische Bauteile wurden mit dem [Mirror-Modifier](#theorie-mirror) erstellt; Flächen mit erforderlicher Materialstärke wurden über [Solidify](#theorie-solidify) umgesetzt.
 
 
 
 #### Texturierung
 
-Für die Wandoberflächen wurde ein neutrales Grau gewählt, das Steinoberflächen realistisch darstellt. Durch die Verwendung von verschiedenen Grautönen und Schattierungen wurde eine räumliche Tiefenwirkung erzeugt und bestimmte Bereiche visuell hervorgehoben, um gewisse Teile der Raumarchitektur besser darzustellen.
+Für die Wandoberflächen wurde ein neutrales Grau gewählt, das Steinoberflächen realistisch darstellt. Durch die Verwendung von verschiedenen Grautönen und Schattierungen wurde eine räumliche Tiefenwirkung erzeugt und bestimmte Bereiche visuell hervorgehoben, um gewisse Teile der Raumarchitektur besser darzustellen. Die Zuordnung der Texturen basiert auf dem zuvor beschriebenen [UV-Mapping](#theorie-uv-mapping).
 
 Der Fußbodenteppich wurde bewusst in intensivem Rot texturiert, da diese Farbwahl eine mehrfache Funktion erfüllt: Zum einen lenkt sie die Blickrichtung des Spielers unmittelbar zur Boss-Position hin. Zum anderen vermittelt die rote Färbung durch ihre typische Assoziation mit Gefahr, Macht und Autorität ein Gefühl von Respekt gegenüber dem Boss-Charakter.
 
 
 #### Optimierung
 
-Um die Polygonenanzahl des Bossraummodelles möglichst gering zu halten, wurden sämtliche Optimierungsstrategien angewendet. Die Grundstrukturen des Raumes (Boden, Wände, Decke) wurden mit minimaler Geometrie konstruiert. Statt komplexer, organischer Formen wurden hauptsächlich einfache geometrische Flächen und Formen verwendet. Dies reduzierte die Verarbeitungslast erheblich, ohne die visuelle Qualität wesentlich zu beeinträchtigen.
+Um die Polygonenanzahl des Bossraummodelles möglichst gering zu halten, wurden sämtliche Optimierungsstrategien angewendet. Die Grundstrukturen des Raumes (Boden, Wände, Decke) wurden mit minimaler Geometrie konstruiert. Statt komplexer, organischer Formen wurden hauptsächlich einfache geometrische Flächen und Formen verwendet. Dies reduzierte die Verarbeitungslast erheblich, ohne die visuelle Qualität wesentlich zu beeinträchtigen und folgt den Prinzipien der [Low-Poly-Modellierung](#theorie-low-poly-modellierung).
 
 Sich wiederholende Elemente wie Säulen und Wandsegmente wurden als wiederverwendbare Modelle erstellt und mehrfach platziert, statt individuelle Geometrie für jedes Element zu modellieren. Dies reduzierte die Modellierungszeit drastisch.
 
@@ -153,7 +161,7 @@ Das resultierende Modell hat etwa 80.000 Polygone, was eine optimale Balance zwi
 
 #### Export & Integration in Unreal Engine
 
-Zunächst wurde sichergestellt, dass alle Komponenten des Bossraums korrekt in Blender organisiert waren. Das Modell bestand aus mehreren separaten Objekten (Wände, Säulen, Thronsessel, Tür, Treppen, dekorative Elemente), die zunächst alle aus einzelnen Objekten bestanden. Diese verteilte Struktur ermöglichte Flexibilität bei der Modellierung, musste aber für den Export konsolidiert werden.
+Zunächst wurde sichergestellt, dass alle Komponenten des Bossraums korrekt in Blender organisiert waren. Das Modell bestand aus mehreren separaten Objekten (Wände, Säulen, Thronsessel, Tür, Treppen, dekorative Elemente), die zunächst alle aus einzelnen Objekten bestanden. Diese verteilte Struktur ermöglichte Flexibilität bei der Modellierung, musste aber für den Export konsolidiert werden (vgl. [Exportformat](#theorie-exportformat)).
 
 Vor dem Export wurden alle angewendeten Modifier (insbesondere Mirror und Solidify) "angewendet", um sicherzustellen, dass diese Transformationen in der FBX-Datei persistent gespeichert werden. Dies geschah durch Auswahl des Modifiers und Klick auf "Apply" im Modifier-Panel.
 
@@ -205,7 +213,7 @@ Bei der Ausarbeitung der Waffen standen drei Ziele im Vordergrund:
 
 #### Modellierungs-Workflow
 
-Die Modellierung erfolgte in Blender auf Basis einfacher Grundkörper (Cube, Plane, Cylinder), die schrittweise in Form gebracht wurden. Dabei wurde auf eine saubere Trennung von Klinge und Griff geachtet, um Materialzuweisungen in Unreal Engine zu vereinfachen. Für symmetrische Bauteile wurde der Mirror-Modifier verwendet, wodurch die Modellierungszeit reduziert und eine exakte Achsensymmetrie sichergestellt wurde.
+Die Modellierung erfolgte in Blender auf Basis einfacher Grundkörper (Cube, Plane, Cylinder), die schrittweise in Form gebracht wurden. Dabei wurde auf eine saubere Trennung von Klinge und Griff geachtet, um Materialzuweisungen in Unreal Engine zu vereinfachen. Für symmetrische Bauteile wurde der Mirror-Modifier verwendet, wodurch die Modellierungszeit reduziert und eine exakte Achsensymmetrie sichergestellt wurde (vgl. [Primitive Objekte](#theorie-primitive-objekte), [Edit Mode](#theorie-edit-mode), [Mirror](#theorie-mirror)).
 
 
 #### Player Schwert
@@ -226,14 +234,14 @@ Das Boss-Schwert wurde als großformatige Zweihandwaffe mit einer Länge von etw
 
 #### Export & Integration in Unreal Engine
 
-Nach Abschluss der Modellierung wurden beide Schwerter im FBX-Format aus Blender exportiert und in Unreal Engine als statische Meshes importiert. Während des Imports wurde darauf geachtet, dass Maßstab und Achsenausrichtung den Projektstandards entsprechen.
+Nach Abschluss der Modellierung wurden beide Schwerter im FBX-Format aus Blender exportiert und in Unreal Engine als statische Meshes importiert. Während des Imports wurde darauf geachtet, dass Maßstab und Achsenausrichtung den Projektstandards entsprechen (vgl. [Exportformat](#theorie-exportformat)).
 
 
 \newpage
 
 ### GUI
 
-Die GUI (Graphical User Interface) bildet die visuelle Schnittstelle zwischen Spieler und Spiel. Sie umfasst alle Bildschirmelemente, die außerhalb der eigentlichen Spielwelt dargestellt werden. Während die GUI alle visuellen Elemente der Benutzeroberfläche bezeichnet, beschreibt das HUD speziell jene Informationsfläche, die während des Spielgeschehens relevante Daten wie Spieler-Lebenspunkte, Ausdauer und Boss-Lebenspunkte anzeigt.
+Die GUI (Graphical User Interface) bildet die visuelle Schnittstelle zwischen Spieler und Spiel. Sie umfasst alle Bildschirmelemente, die außerhalb der eigentlichen Spielwelt dargestellt werden. Während die GUI alle visuellen Elemente der Benutzeroberfläche bezeichnet, beschreibt das HUD speziell jene Informationsfläche, die während des Spielgeschehens relevante Daten wie Spieler-Lebenspunkte, Ausdauer und Boss-Lebenspunkte anzeigt. Die praktische Umsetzung folgt den im Theorie-Abschnitt [GUI](#theorie-gui) beschriebenen Prinzipien.
 
 #### Zielsetzung der Benutzeroberfläche
 
@@ -295,7 +303,7 @@ Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein w
 
 ### Cutscenes erstellen
 
-Cutscenes dienen in ConquerTheCastle der Einführung des Spielers in die Spielwelt. Die Sequenzen wurden mit dem Level Sequencer der Unreal Engine erstellt und über ein Blueprint-System in das Spielgeschehen integriert.
+Cutscenes dienen in ConquerTheCastle der Einführung des Spielers in die Spielwelt. Die Sequenzen wurden mit dem Level Sequencer der Unreal Engine erstellt und über ein Blueprint-System in das Spielgeschehen integriert. Grundlage dafür ist der Theorie-Abschnitt [Cutscenes](#theorie-cutscenes).
 
 #### Intro Cutscene
 

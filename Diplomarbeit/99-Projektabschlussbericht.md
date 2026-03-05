@@ -8,6 +8,8 @@ Die ursprünglich vereinbarten Leistungsziele wurden im Kern erreicht. Das zentr
 
 Auch das Qualitätsziel einer konsistenten Spielerfahrung wurde in wesentlichen Punkten erreicht: Der Gameplay-Loop ist durchgängig, die Kernfunktionen wurden wiederholt intern getestet und kritische Fehler vor der Finalisierung reduziert. Zusätzlich wurden technische Entscheidungen und Arbeitsschritte nachvollziehbar dokumentiert.
 
+Die zugrunde liegende Prüfmethodik und die Verifikation der Kernfunktionen sind im Abschnitt *Methodik & Verifikation* dokumentiert.
+
 Abweichungen gab es vor allem beim Umfang optionaler Erweiterungen. Einige Nice-to-have-Ideen wurden bewusst nicht mehr umgesetzt, um Stabilität und Abgabequalität sicherzustellen. Dieser Scope-Cut war eine gezielte Maßnahme zur Qualitätssicherung.
 
 #### Erreichung Terminziele
@@ -21,6 +23,39 @@ Zusammenfassend wurden die wichtigsten Abgabetermine eingehalten, obwohl dafür 
 Das Kostenziel wurde im geplanten Rahmen eingehalten. Laut Projektplan lag der kalkulierte Kostenrahmen bei 359,93 Euro (Software-Abonnement, Assets und Druckkosten). Es traten keine wesentlichen ungeplanten Zusatzkosten auf, insbesondere keine zusätzlichen Hardware- oder Infrastrukturkosten.
 
 Beim personellen Aufwand zeigte sich, dass der tatsächliche Zeitaufwand in intensiven Integrations- und Testphasen höher war als zu Beginn angenommen. Dieses Risiko wurde durch Scope-Freeze, Priorisierung kritischer Aufgaben und Verzicht auf nicht zwingende Erweiterungen ausgeglichen.
+
+### Methodik & Verifikation
+
+#### Vorgehensmodell
+Die praktische Entwicklung erfolgte iterativ in kurzen Umsetzungs- und Prüfzyklen. Neue Funktionen wurden nicht gesammelt am Ende geprüft, sondern direkt nach der Implementierung im laufenden Spielstand validiert. Dadurch konnten Fehler früh erkannt und Abhängigkeiten zwischen Gameplay, Assets, UI und Audio schrittweise stabilisiert werden.
+
+Der Ablauf pro Zyklus war dabei einheitlich:
+
+1. Implementierung einer klar abgegrenzten Funktion (z. B. Dodge, Hit-Detection, Bossprojektil).
+2. Sofortiger In-Engine-Funktionstest im relevanten Spielszenario.
+3. Fehleranalyse und Korrektur im gleichen Arbeitsblock.
+4. Nachtest nach Integration mit angrenzenden Systemen.
+
+#### Teststrategie
+Die Verifikation wurde über vier komplementäre Testarten durchgeführt:
+
+- **Modultests auf Feature-Ebene:** Einzeltests von Spieleraktionen, Bossverhalten, UI-Events, Audio-Triggern und Cutscene-Übergängen.
+- **Integrations- und Ablauftests:** Prüfung des vollständigen Game-Loops vom Startmenü über den Kampf bis zu Victory-/Death-Zuständen.
+- **Regressionsnahe Wiederholungstests:** Wiederholung zentraler Kernabläufe nach Änderungen an Blueprints, Animationen oder Import-Pipelines.
+- **Plausibilitäts- und Balancing-Tests:** Prüfung von Spielgefühl, Reaktionsfenstern (z. B. Parry), Lesbarkeit der GUI und Nachvollziehbarkeit von Zustandswechseln.
+
+#### Verifikationskriterien und Ergebnisse
+
+| Prüfbereich | Prüfmethode | Akzeptanzkriterium | Ergebnis im Endstand |
+|:------------|:------------|:------------|:------------|
+| Start- und Abschlussfluss | Ablauftests (Intro, Menü, Spielstart, Sieg/Niederlage) | Kein Blocker im Übergang zwischen Zuständen | Erfüllt |
+| Kampfsystem (Nahkampf, Dodge, Parry, Treffer) | Modultests und Wiederholungstests | Mechaniken reagieren reproduzierbar und ohne ungewollte Mehrfachtreffer | Erfüllt |
+| Boss-KI und Fernkampflogik | Integrations- und Verhaltensprüfungen | Boss wechselt nachvollziehbar zwischen Nah- und Fernkampfzuständen | Erfüllt |
+| UI/HUD und Feedback | Sicht- und Zustandsprüfungen im Spielbetrieb | Lebens-/Ausdauer-/Bosswerte werden konsistent angezeigt | Erfüllt |
+| Content-Integration (Modelle, Animationen, Audio) | Import-/Nachtests nach Pipeline-Änderungen | Keine kritischen Importfehler im finalen Buildstand | Erfüllt |
+
+#### Grenzen der Verifikation
+Die Tests wurden überwiegend als interne Projektverifikation durchgeführt. Eine formale externe Benutzerstudie mit größerer Testgruppe war im Projektumfang nicht vorgesehen. Damit ist die technische Funktionsfähigkeit der Kernmechaniken abgesichert, während Aussagen zur breiten Nutzerwirkung (z. B. Schwierigkeitswahrnehmung verschiedener Zielgruppen) nur eingeschränkt möglich sind.
 
 ### Reflexion / Lessons Learned
 
