@@ -17,6 +17,8 @@ da-author:
   ki-tools:
   - name: ChatGPT5.2
     zweck: Informationsbeschaffung, Rechtschreibkorrektur
+  - name: GitHub Copilot Pro
+    zweck: Rechtschreibkorrektur
 
 - vorname: Rhys 
   nachname: Schmiedpeter
@@ -25,6 +27,8 @@ da-author:
   ki-tools:
   - name: ChatGPT5.2
     zweck: Inspirations & Informationsbeschaffung, Rechtschreibkorrektur
+  - name: GitHub Copilot Pro
+    zweck: Rechtschreibkorrektur
 
 - vorname: Elias 
   nachname: Grgic
@@ -48,14 +52,13 @@ da-kurzfassung-en: As part of this diploma project, a minimalist medieval-themed
 
 
 
-# KI Quellen müssen noch ersetzt werden
 da-kiquellen:
-- ki: ChatGPT4
-  short-prompt: Erklärung Pandoc
-  pdf-file: gpt-pandoc.pdf
+- ki: ChatGPT5.2
+  short-prompt: Erklärung UV-Mapping
+  pdf-file: gpt-uv-mapping.pdf
 
-- ki: ChatGPT3.5
-  short-prompt: Aufbau eines Atoms
+- ki: ChatGPT5.2
+  short-prompt: Ritterrüstung für Mittelalterboss
   pdf-file: gpt-atom.pdf
 
 
