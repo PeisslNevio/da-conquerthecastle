@@ -71,7 +71,7 @@ In Unity sind häufiger Test-Builds notwendig. Das Endergebnis hängt stärker v
 
 #### Grundidee der Blueprints
 
-Unreal Engine bietet ein vollständig integriertes visuelles Skripting-System. Die Spiellogik wird über node-basierte Graphen abgebildet. Funktionen, Events und Variablen sind grafisch darstellbar, wodurch auf klassischen Textcode teilweise verzichtet werden kann. Der Fokus liegt auf Verständlichkeit, Übersichtlichkeit und logischem Aufbau statt auf Syntax.
+Unreal Engine bietet ein vollständig integriertes visuelles Skripting-System. Die Spiellogik wird über nodebasierte Graphen abgebildet. Funktionen, Events und Variablen sind grafisch darstellbar, wodurch auf klassischen Textcode teilweise verzichtet werden kann. Der Fokus liegt auf Verständlichkeit, Übersichtlichkeit und logischem Aufbau statt auf Syntax.
 
 #### Programmieren ohne klassischen Code
 
@@ -197,22 +197,62 @@ Ein Blueprint ist ein visuelles Skript in Unreal Engine, mit dem Gameplay-Logik 
 
 Ein Event Graph ist der zentrale Ablaufbereich eines Blueprints, in dem die Laufzeitlogik miteinander verbunden wird. Eine InputAction ist ein in den Projekteinstellungen definierter Eingabebefehl, der auf Tastatur oder Maus gelegt wird und anschließend ein Event auslösen kann.
 
-Ein Branch ist eine if-Abfrage mit den Ausgängen True und False. 
+BeginPlay ist ein Start-Event, das beim Laden eines Actors in die Spielwelt automatisch einmal ausgeführt wird.
+
+Ein Branch ist eine If-Abfrage mit den Ausgängen True und False.
 
 Über einen Cast To wird geprüft, ob ein Objekt zu einer bestimmten Klasse gehört; nur bei erfolgreichem Cast kann auf klassenspezifische Variablen und Funktionen zugegriffen werden.
 
-Ein Actor ist jedes Objekt, das in der Spielwelt existieren kann, zum Beispiel Spieler, Boss oder Projektil. 
+Ein Interface legt fest, welche Funktionen eine Klasse bereitstellen muss. Damit kann zur Laufzeit einheitlich geprüft werden, ob ein Actor eine bestimmte Reaktion unterstützt.
+
+Ein Actor ist jedes Objekt, das in der Spielwelt existieren kann, zum Beispiel Spieler, Boss oder Projektil.
+
+Eine Referenz ist eine gespeicherte Verknüpfung auf ein vorhandenes Objekt, damit dessen Funktionen und Variablen direkt verwendet werden können.
 
 Ein Tag ist eine kurze Kennzeichnung wie Enemy oder Reflectable, mit der Objekte in der Logik schnell kategorisiert werden.
 
-Hit-Detection bezeichnet die technische Treffererkennung. Eine Hitbox ist das Kollisionsvolumen für Treffer, hier als Sphere Collision. 
+Hit-Detection bezeichnet die technische Treffererkennung. Eine Hitbox ist das Kollisionsvolumen für Treffer, hier als Sphere Collision.
 Mit Break Hit Result wird ein Treffer-Objekt aufgeschlüsselt, damit unter anderem der getroffene Actor ausgelesen werden kann.
+
+Ein Overlap-Event wird ausgelöst, wenn sich zwei Kollisionskomponenten berühren. Es eignet sich für Trigger-Logik wie das zeitlich begrenzte Parry-Fenster.
 
 Launch Character ist eine Funktion, die den Spielercharakter mit einem Impuls bewegt und deshalb für das Dodge-System geeignet ist. Der Animation Mode steuert, wie Animationen abgespielt werden; nach einem Angriff muss dieser wieder korrekt gesetzt werden, damit die Figur nicht in einer Animation hängen bleibt.
 
-Stamina ist die Ausdauer-Ressource für Aktionen wie Dodge oder Angriff. 
+Ein Widget ist ein Benutzeroberflächen-Element. Add to Viewport bedeutet, dass dieses Element sichtbar auf dem Bildschirm angezeigt wird.
+
+Set Timer by Event ist eine Funktion, mit der ein Event nach einem Intervall einmalig oder wiederholt ausgeführt wird.
+
+Set Timer by Function Name ruft eine Funktion über ihren Namen in einem definierten Intervall auf, bis der Timer explizit gestoppt wird.
+
+AI Move To ist eine Navigationsfunktion für KI-gesteuerte Figuren. Dabei bewegt sich die Figur zu einem Zielpunkt oder Ziel-Actor, bis der Akzeptanzradius erreicht ist.
+
+Ein AI Controller steuert die Bewegungs- und Entscheidungslogik einer KI-Figur.
+
+Ein For Loop ist eine Schleife mit Start- und Endindex. Der enthaltene Ablauf wird für jeden Indexwert einmal ausgeführt.
+
+Length liefert die Anzahl der Einträge in einem Array.
+
+Random Float in Range erzeugt einen Zufallswert in einem festgelegten Zahlenbereich, zum Beispiel zwischen 0 und 1.
+
+Ein Timer Handle ist eine Referenz auf einen laufenden Timer. Damit kann dieser Timer später gezielt beendet oder zurückgesetzt werden.
+
+Do Once ist ein Kontrollknoten, der einen Ablauf nur einmal ausführt, bis er über einen Reset wieder freigegeben wird.
+
+Clear and Invalidate Timer by Handle beendet einen laufenden Timer und macht den zugehörigen Timer Handle ungültig.
+
+Vector Length berechnet aus einem Geschwindigkeitsvektor den Betrag der Geschwindigkeit als einzelnen Zahlenwert.
+
+Normalize normiert einen Vektor auf die Länge 1 und behält dabei nur die Richtung bei.
+
+Ein Target Point ist ein berechneter Zielpunkt im Raum, der für präziseres Ausrichten von Projektilen verwendet wird.
+
+Stamina ist die Ausdauer-Ressource für Aktionen wie Dodge oder Angriff.
 
 Ein Cooldown ist eine kurze Sperrzeit nach einer Aktion, damit Eingaben nicht beliebig oft hintereinander ausgeführt werden können.
+
+DrainStamina und GainStamina sind Events zur zeitbasierten Steuerung der Ausdauer. DrainStamina reduziert den Wert kontinuierlich, GainStamina stellt ihn schrittweise wieder her.
+
+Ragdoll Physics bedeutet, dass auf das Skelett-Mesh eines Charakters Physik angewendet wird. Der Körper fällt dann physikalisch korrekt zu Boden und signalisiert den Todeszustand.
 
 ### Architektur des Spiels
 
@@ -222,49 +262,110 @@ Die zentralen Klassen der Spielarchitektur sind BP_FirstPersonCharacter, BP_Boss
 
 #### Bewegung und Grundkonfiguration
 
-Der Spieler wird über BP_FirstPersonCharacter gesteuert. Die Kamera ist an die Blickrichtung gekoppelt, sodass sich die Figur beim horizontalen Drehen mitorientiert. Das eigene Character-Mesh ist für die First-Person-Kamera unsichtbar geschaltet, damit keine störenden Körperteile im Sichtfeld auftauchen. Zusätzlich wurden Bewegungswerte wie Laufgeschwindigkeit und Grundbeschleunigung auf das Kampfsystem abgestimmt.
+Der Spieler wird über BP_FirstPersonCharacter gesteuert. Beim Start des Spiels wird der Charakter initialisiert. Dabei wird die vertikale Kamerabewegung auf einen Bereich von minus 45 bis plus 45 Grad begrenzt, damit die Blicksteuerung kontrollierbar bleibt. Zusätzlich wird eine Referenz auf den Boss gesetzt, um während des Kampfs direkt auf relevante Funktionen und Zustände zugreifen zu können. Das Frontend wird initialisiert und eingeblendet. Danach werden Leben und Ausdauer auf ihre Startwerte gesetzt.
+
+Die Kamera ist an die Blickrichtung gekoppelt, sodass sich die Figur beim horizontalen Drehen mitorientiert. Das eigene Character-Mesh ist für die First-Person-Kamera unsichtbar geschaltet, damit keine störenden Körperteile im Sichtfeld auftauchen. Zusätzlich wurden Bewegungswerte wie Laufgeschwindigkeit und Grundbeschleunigung auf das Kampfsystem abgestimmt.
+
+#### Stamina-System
+
+Das Sprinten ist direkt an die Ausdauerverwaltung gekoppelt. Beim Event StartSprinting wird Max Walk Speed auf 600 gesetzt, isSprinting auf true gesetzt und anschließend geprüft, ob sich der Charakter am Boden befindet. Nur wenn diese Bedingung erfüllt ist, startet das Event DrainStamina.
+
+DrainStamina reduziert currentStamina kontinuierlich um 2 Punkte pro Sekunde. Nach jeder Änderung wird die Benutzeroberfläche aktualisiert, damit der aktuelle Wert korrekt angezeigt wird. Sobald currentStamina den Wert 0 erreicht, wird StopSprinting ausgelöst.
+
+StopSprinting setzt Max Walk Speed auf 300 zurück, setzt isSprinting auf false und startet anschließend GainStamina. Dieses Event erhöht currentStamina mit 1 Punkt pro Sekunde. Dabei wird fortlaufend geprüft, ob currentStamina bereits maxStamina erreicht hat. Solange der Maximalwert nicht erreicht ist, wird zusätzlich abgefragt, ob der Spieler aktuell sprintet oder dodged. Nur wenn beide Zustände nicht aktiv sind, wird die Regeneration weitergeführt.
 
 #### Dodge-System
 
-Das Ausweichsystem (Dodge) basiert auf der Unreal-Engine-Funktion Launch Character und ist direkt mit dem Stamina-System verbunden. Pro Dodge werden 20 Stamina von insgesamt 100 verbraucht. Die Boolean-Variable isDodging verhindert Spam und setzt einen Cooldown von einer Sekunde, wodurch während der Dodge-Aktion kein erneuter Dodge möglich ist. Damit ist das Ausweichen ein bewusst eingesetztes Verteidigungswerkzeug und keine dauerhaft verfügbare Bewegungstechnik.
+Das Ausweichsystem (Dodge) basiert auf der Unreal-Engine-Funktion Launch Character und ist direkt mit dem Stamina-System verbunden. Pro Dodge werden 20 Stamina von insgesamt 100 verbraucht. Die Boolean-Variable isDodging verhindert eine wiederholte Ausführung in sehr kurzer Zeit und setzt einen Cooldown von einer Sekunde, wodurch während der Dodge-Aktion kein erneuter Dodge möglich ist. Damit ist das Ausweichen ein bewusst eingesetztes Verteidigungswerkzeug und keine dauerhaft verfügbare Bewegungstechnik.
 
 #### Angriffssystem
 
-Der Angriff wird über ein Action Mapping in den Projekteinstellungen ausgelöst (InputAction Attack auf linker Maustaste). Beim Drücken läuft folgender Ablauf ab:
+Der Angriff wird über ein Action Mapping in den Projekteinstellungen ausgelöst, konkret über InputAction Attack auf der linken Maustaste. Beim Start des Angriffs wird zunächst isAttacking auf true gesetzt, damit keine überlappenden Angriffe parallel ausgelöst werden können. Danach wird das Array hitActorsThisSwing geleert, sodass innerhalb eines einzelnen Schlages jeder Actor nur einmal verarbeitet wird. Anschließend wird die Schlaganimation abgespielt und pro Angriff werden 10 Stamina abgezogen.
 
-1. isAttacking wird auf true gesetzt, damit keine überlappenden Angriffe starten.
-2. Das Array hitActorsThisSwing wird geleert, damit pro Schlag jeder Actor nur einmal Schaden erhält.
-3. Die Schlaganimation wird abgespielt.
-4. Pro Schlag werden 10 Stamina abgezogen.
-5. Nach 1,0 s wird isAttacking wieder auf false gesetzt.
-6. Der Animation Mode wird zurückgesetzt, damit die Figur nicht in der Attack-Animation hängen bleibt.
-7. Die Stamina-Regeneration startet erst nach weiteren 1,5 s.
-
-Diese Reihenfolge stellt sicher, dass das Kampfsystem kontrolliert, fair und gut ausbalancierbar bleibt.
+Nach einem zeitlichen Fenster von 1,0 Sekunden wird isAttacking wieder auf false gesetzt. Direkt danach wird der Animation Mode zurückgesetzt, damit die Figur nicht in der Angriffsanimation verbleibt. Die Stamina-Regeneration startet bewusst verzögert und wird erst nach weiteren 1,5 Sekunden wieder freigegeben. Diese Abfolge sorgt dafür, dass das Kampfsystem kontrolliert, fair und technisch stabil bleibt.
 
 #### Hit-Detection (Schlag-Erkennung)
 
 Die Treffererkennung erfolgt über die Funktion Hitdetect. Dafür wird in der Animation ein Knochen ausgewählt, um den während aktiver Angriffsframes eine Hitbox erzeugt wird. Als Beispiel sind Frames zwischen 20 und 35 aktiv. Die Hitbox ist eine unsichtbare Sphere Collision mit einem anpassbaren Standardradius von 20 cm. Da Unreal Engine in Zentimetern rechnet, gilt Radius 1 gleich 1 cm.
 
-Ablauf der Trefferprüfung:
+Die eigentliche Prüfung beginnt mit einem Branch, der feststellt, ob die Sphere einen Treffer meldet. Bei einem Treffer wird über Break Hit Result der getroffene Actor ausgelesen und mit dem Array hitActorsThisSwing abgeglichen. Ist der Actor dort noch nicht enthalten, wird er ergänzt und erst danach weiterverarbeitet. Im nächsten Schritt wird geprüft, ob der Actor den Tag Enemy besitzt. Trifft das zu, folgt zusätzlich die Prüfung, ob das Interface BPI_Attack implementiert ist. Nur wenn diese Bedingung ebenfalls erfüllt ist, wird HitReaction ausgelöst.
 
-1. Ein Branch (if-Abfrage) prüft, ob die Sphere einen Treffer meldet.
-2. Über Break Hit Result wird der getroffene Actor ausgelesen.
-3. Es wird geprüft, ob der Actor bereits in hitActorsThisSwing enthalten ist.
-4. Falls nicht enthalten, wird er hinzugefügt und weiter verarbeitet.
-5. Danach folgt die Tag-Prüfung auf Enemy.
-6. Bei Enemy wird geprüft, ob das Interface BPI_Attack implementiert ist.
-7. Wenn ja, wird HitReaction ausgelöst.
-
-Damit wird verhindert, dass ein Gegner innerhalb eines einzelnen Schlages mehrfach Schaden erhält.
+Durch diese mehrstufige Filterung wird verhindert, dass ein Gegner innerhalb eines einzelnen Schlages mehrfach Schaden erhält oder dass ungeeignete Trefferobjekte in die Schadenslogik gelangen.
 
 #### Parry und Projektil-Reflexion
 
-Zusätzlich gibt es beim Angreifen ein kurzes Parry-Fenster. Beim Drücken von InputAction Attack wird parryActive für 0,5 Sekunden auf true gesetzt. Trifft der Spieler in dieser Zeit keinen Enemy, wird geprüft, ob ein reflektierbares Projektil getroffen wurde. Der getroffene Actor muss dafür den Tag Reflectable besitzen, danach wird Cast To BP_HomingProjectile ausgeführt und bei erfolgreichem Cast das Reflect-Event aufgerufen. Der Cast ist notwendig, damit nur Projektile mit passender Klasse reflektiert werden und die projektilspezifische Logik sicher verfügbar ist.
+Beim Drücken von InputAction Attack wird zusätzlich ein Parry-Fenster gestartet. Dabei wird parryActive auf true gesetzt und die Collision-Komponente ParryCollider aktiviert. Nach einem Delay von 0,5 Sekunden wird parryActive wieder auf false gesetzt und ParryCollider deaktiviert.
+
+Wenn ParryCollider in diesem Zeitfenster mit einem Homing-Projektil überlappt, wird ein Cast To BP_HomingProjectile ausgeführt. Bei erfolgreichem Cast wird das Event Reflect aufgerufen, wodurch das Projektil zurückgelenkt wird.
+
+#### HitReaction und Todeszustand
+
+Das Event HitReaction wird im Kampf vom Boss verwendet, wenn der Spieler getroffen wird. Dabei wird der Lebenswert reduziert und anschließend geprüft, ob Leben kleiner oder gleich 0 ist. Ist diese Bedingung erfüllt, werden Ragdoll Physics aktiviert und der Spielercharakter ist tot.
 
 #### Zwischenfazit zum Player-System
 
 Das Player-System kombiniert Bewegung, Ressourcenkontrolle (Stamina), Nahkampf und defensive Mechaniken (Dodge/Parry) zu einem geschlossenen Regelwerk. Durch Cooldowns, Zustandsvariablen und klare Trefferlogik entsteht ein System, das sowohl spielbar als auch technisch nachvollziehbar bleibt.
 
+### Boss-System
 
+#### Initialisierung und BeginPlay
 
+Der Boss wird beim Spielstart im Event BeginPlay initialisiert. Zunächst wird über Get Player Character und Cast To BP_FirstPersonCharacter eine Player-Referenz gesetzt, damit der Boss auf den Spieler zugreifen kann. Danach folgt ein kurzes Delay von 1,0 Sekunden, anschließend wird das Bossbar-Widget erstellt und über Add to Viewport sichtbar eingeblendet.
+
+Im nächsten Schritt wird das Widget über Initialize Boss mit der Boss-Instanz verknüpft. Anschließend werden die Lebenswerte gesetzt, wobei Max Health Boss auf 500 initialisiert wird und Current Health Boss zu Beginn auf den Maximalwert gesetzt ist. Direkt danach wird E Boss Health Updated aufgerufen, damit die Bossbar den korrekten Startwert anzeigt.
+
+Nach dem Erstellen der Bossbar folgt ein weiteres Delay von 5,0 Sekunden. Danach wird ein Timer gestartet, der das Event FollowPlayer periodisch ausführt. Der Timer läuft im Intervall von 0,2 Sekunden und hält damit die Verfolgungslogik des Bosses kontinuierlich aktiv.
+
+#### BossHitReaction
+
+Die BossHitReaction wird vom Player über das Angriffssystem ausgelöst, sobald ein Treffer am Boss registriert wurde. Im Event HitReaction werden dem Boss pro Treffer 10 Lebenspunkte abgezogen. Danach wird E Boss Health Updated erneut aufgerufen, damit die Bossbar den reduzierten Lebenswert unmittelbar anzeigt.
+
+#### Laufende Bosslogik
+
+Die zentrale Bosslogik läuft im Event FollowPlayer, das durch den zuvor gesetzten Timer in kurzen Intervallen wiederholt ausgeführt wird und damit permanent aktiv ist. Zu Beginn erfolgt die Abfrage, ob Current Health Boss den Wert 0 erreicht hat. Wenn diese Bedingung erfüllt ist, wird das Event Death ausgeführt. Im Death-Event wird über einen Cast zum AI Controller zuerst die Bewegung gestoppt und anschließend die Todesanimation abgespielt, sodass der Boss aus der aktiven Kampfsteuerung sauber herausgenommen wird.
+
+Falls der Boss noch lebt, folgt die Abfrage von Can Shoot Projectile. Ist diese Bedingung false, nutzt der Boss AI Move To und bewegt sich mit einem Acceptance Radius von 250 in Richtung Spielerposition. Sobald der Boss den Zielbereich erreicht, wird geprüft, ob Can Punch aktiv ist. Wenn ja, wird Can Punch zunächst auf false gesetzt, das Array Hit Actors This Swing geleert und die Schlaganimation abgespielt, damit der Nahkampfzyklus mit einem definierten Ausgangszustand startet.
+
+Für das aktive Trefferfenster wird nach einem kurzen Delay ein Set Timer by Function Name gestartet, der HitDetectBoss in einer Schleife aufruft. Nach einer weiteren kurzen Verzögerung wird dieser Funktionstimer wieder beendet, damit die Trefferprüfung nicht dauerhaft weiterläuft. Danach wird der Animationsmodus auf den normalen Bewegungszustand zurückgesetzt und Can Punch wieder auf true gesetzt, wodurch der Boss für den nächsten Nahkampfanlauf erneut freigegeben ist.
+
+In HitDetectBoss selbst wird analog zur Player-Logik ein Knochen des Boss-Meshes als Ausgangspunkt verwendet und über Sphere Trace for Objects mit einem Radius von 200 die Trefferprüfung durchgeführt. Dabei wird das Array Hit Actors This Swing verwendet, sodass ein Ziel pro Schlag nur einmal verarbeitet wird. Anschließend wird geprüft, ob der getroffene Actor den Tag Player besitzt und ob das Interface BPI_Attack implementiert ist. Trifft beides zu, wird HitReaction aufgerufen, wodurch der Spieler 10 Schaden erhält.
+
+Ist Can Shoot Projectile dagegen true, stoppt der Boss über den AI Controller zuerst die Bewegung, führt anschließend das Event WhatRangedAttack aus und setzt Can Punch wieder auf true.
+
+#### Fernkampfentscheidung über WhatRangedAttack
+
+Das Event WhatRangedAttack steuert, welche Fernkampfvariante im nächsten Zyklus ausgeführt wird. Zu Beginn wird ein Zufallswert zwischen 0 und 1 erzeugt und in Random Ranged Attack gespeichert. Anschließend entscheidet eine Abfrage mit dem Schwellenwert 0,3 zwischen der Homing-Variante und der normalen Projektilvariante.
+
+Zur Ablaufkontrolle wird Do Once verwendet. Dadurch wird verhindert, dass derselbe Angriffszweig innerhalb eines Zyklus mehrfach startet. Über die Variable Next Is Reset wird gesteuert, wann Do Once wieder freigegeben wird. Die Cooldown-Rücksetzung nach der Schusssequenz erfolgt über das Event WaitUntilShotsFinished, das den Abschluss der Projektilserie überwacht und danach Can Shoot Projectile sowie Next Is Reset in den nächsten Zustand überführt.
+
+#### Shoot und shootNext
+
+Das Event Shoot initialisiert die eigentliche Schusssequenz. Dafür wird Shoot Index auf 0 gesetzt und ein wiederholt laufender Set Timer by Event mit einem Intervall von 1,0 Sekunden gestartet. Dieser Timer ruft shootNext periodisch auf.
+
+In shootNext wird zuerst geprüft, ob der aktuelle Shoot Index noch innerhalb der verfügbaren Projektil-Arrays liegt. Für die normale Variante erfolgt die Prüfung gegen die Länge von Spawned Projectiles, für die Homing-Variante gegen die Länge von Spawned Homing Projectiles. Solange gültige Einträge vorhanden sind, wird die Sequenz fortgesetzt und ein weiterer Schuss ausgeführt.
+
+Bei Random Ranged Attack kleiner oder gleich 0,3 wird die Homing-Variante verwendet. Da in diesem Modus nur ein einzelnes Homing-Projektil gespawnt wird, wird dieses mit festem Index 0 aus Spawned Homing Projectiles geholt und über Fire ausgelöst.
+
+Bei der normalen Variante wird das Projektil über Spawned Projectiles mit Shoot Index adressiert. Zusätzlich wird Target Actor auf Player Ref gesetzt und abhängig vom Sprint-Zustand des Spielers ein geeigneter Zielpunkt berechnet. Danach wird Fire ausgeführt und Shoot Index um 1 erhöht.
+
+Wenn keine weiteren gültigen Array-Einträge mehr vorhanden sind, wird der Timer über Clear and Invalidate Timer by Handle gestoppt, damit shootNext nicht weiterläuft.
+
+#### WaitUntilShotsFinished
+
+WaitUntilShotsFinished wird nach der normalen Schusssequenz ausgeführt und prüft, ob alle geplanten Schüsse bereits verarbeitet wurden. Dafür wird Length von Spawned Projectiles mit Shoot Index verglichen. Solange Length größer als Shoot Index ist, sind noch Schüsse offen. In diesem Fall wird die Prüfung über Set Timer by Event in kurzen Intervallen von 0,1 Sekunden erneut ausgeführt, sodass der Abschlusszustand nicht über einen festen Zeitpunkt, sondern über die tatsächliche Abarbeitung der Schussserie bestimmt wird.
+
+Sobald die Bedingung nicht mehr erfüllt ist, gilt die Schussserie als abgeschlossen. Danach wird Can Shoot Projectile zunächst auf false gesetzt und der Cooldown gestartet. Nach einem Delay von 10,0 Sekunden wird Can Shoot Projectile wieder auf true gesetzt und Next Is Reset auf true gesetzt, damit der nächste Fernkampfzyklus wieder freigegeben ist und Do Once erneut korrekt zurückgesetzt werden kann.
+
+#### SpawnProjectileAtSocket und SpawnHoming
+
+SpawnProjectileAtSocket erzeugt die normale Projektilserie. Zuerst werden Spawned Projectiles und Spawn Points geleert. Danach werden die verfügbaren Spawn-Komponenten in Spawn Points eingetragen. Die Anzahl der zu spawnenden Projektile wird dynamisch über den Boss-Lebenszustand bestimmt. Liegt Current Health Boss bei höchstens der Hälfte von Max Health Boss, wird Spawn Count auf 5 gesetzt, sonst auf 3.
+
+Für die Schleife wird Spawn Count minus 1 als Last Index verwendet, damit der Arrayzugriff über Get korrekt zur Anzahl der Spawn Points passt. In jedem Schleifendurchlauf wird über den Transform des jeweiligen Spawn Points ein BP Projectile erzeugt und in Spawned Projectiles gespeichert.
+
+SpawnHoming erzeugt die Homing-Variante. Dafür wird Spawned Homing Projectiles geleert, Shoot Index auf 0 gesetzt und ein BP Homing Projectile am definierten Spawnpunkt erzeugt. Das erzeugte Projektil wird in Spawned Homing Projectiles gespeichert, als Referenz gesetzt und mit der Boss-Referenz sowie der Zielkomponente des Spielers initialisiert.
+
+#### Zielpunktberechnung mit GetPlayerLocation
+
+GetPlayerLocation und GetPlayerSprintingLocation berechnen den Zielpunkt für die normale Schussvariante. Beide Events lesen zunächst Position und Geschwindigkeit des Spielers aus und berechnen über Vector Length den aktuellen Speed-Wert. Wenn der Spieler nahezu stillsteht, wird direkt die aktuelle Spielerposition als Zielpunkt verwendet.
+
+Bewegt sich der Spieler, wird aus der Bewegungsrichtung ein Vorhaltepunkt berechnet. Dazu wird der Geschwindigkeitsvektor normalisiert und auf die Spielerposition addiert. In GetPlayerLocation wird mit einem Faktor von 200 gerechnet, in GetPlayerSprintingLocation mit 400. Dadurch wird bei Sprint ein weiter vorausliegender Zielpunkt verwendet, was die Treffergenauigkeit gegen schnelle Bewegung erhöht.
