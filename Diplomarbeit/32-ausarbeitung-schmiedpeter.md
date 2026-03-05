@@ -33,7 +33,7 @@ Als Unterstützung in den jeweiligen Modi gibt es das Tool **Anmerkungen**. Dami
   
 ### Konkurrenz
 
-Neben Blender hätten auch andere Modellierungsprogramme verwendet werden können, beispielsweise *Tinkercad, Autodesk Fusion oder OpenSCAD* [@blender_konkurrenz; @blender_konkurrenz_tinkercad; @blender_konkurrenz_autodesk; @blender_konkurrenz_openscad]. 
+Neben Blender hätten auch andere Modellierungsprogramme verwendet werden können, beispielsweise *Tinkercad, Autodesk Fusion oder OpenSCAD* [@blender_konkurrenz] [@blender_konkurrenz_tinkercad] [@blender_konkurrenz_autodesk] [@blender_konkurrenz_openscad]. 
 
 - **Tinkercad:** Das Programm ist vor allem durch das einfache Entwerfen von Schaltungen bekannt und ähnlich niedrigschwellig ist auch die Modellierung. Es ist leicht verständlich und damit gut für Einsteiger geeignet. Für die Diplomarbeit war es jedoch zu eingeschränkt, da viele Formen nur mit vorgefertigten, kaum veränderbaren Grundobjekten erstellt werden können [@blender_konkurrenz_tinkercad].
 
@@ -423,12 +423,12 @@ Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, g
 #### Musik
 
 ##### Produktionsumgebung
-Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände [@collins_game_sound; @hofmann_szczypula_game_sound_2006].
+Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände [@collins_game_sound] [@hofmann_szczypula_game_sound_2006].
 
 ##### Musikalisches Gesamtkonzept
-Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung [@schulz_entwicklung_musik_videospielen_2022; @collins_game_sound; @youtube_music_controls_you].
+Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung [@schulz_entwicklung_musik_videospielen_2022] [@collins_game_sound] [@youtube_music_controls_you].
 
-Durch dunkle Klangfarben, spannungsorientierte Verläufe und klar gestufte Intensitäten wird die Wahrnehmung von Gefahr, Unsicherheit und Eskalation gezielt verstärkt. Die detaillierte psychologische Herleitung der einzelnen Stücke wird in einem späteren Arbeitsschritt ergänzt [@youtube_write_music_for_games; @youtube_music_transcends_game].
+Durch dunkle Klangfarben, spannungsorientierte Verläufe und klar gestufte Intensitäten wird die Wahrnehmung von Gefahr, Unsicherheit und Eskalation gezielt verstärkt. Die detaillierte psychologische Herleitung der einzelnen Stücke wird in einem späteren Arbeitsschritt ergänzt [@youtube_write_music_for_games] [@youtube_music_transcends_game].
 
 ##### Vorgehensweise und Einteilung
 Zu Beginn wurde strukturiert festgelegt, welche Musik- und Soundelemente im Spiel benötigt werden. Daraus ergab sich folgende Einteilung:
