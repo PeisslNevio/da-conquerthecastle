@@ -11,7 +11,7 @@ Blender ist ein Programm mit vielfältigen Einsatzmöglichkeiten. Es eignet sich
 
 #### Basics der Modellierung
 
-Blender ist wie folgt aufgebaut: In der Mitte befindet sich das Koordinatensystem, in dem der Großteil der Arbeit stattfindet. Links liegen die wichtigsten Werkzeuge. Rechts befindet sich die Objekthierarchie mit Kamera, Licht und allen Objekten. Im unteren beziehungsweise rechten Modulbereich befinden sich Funktionen wie Modifier, Material und Physik.
+Blender ist wie folgt aufgebaut: In der Mitte befindet sich das Koordinatensystem, in dem der Großteil der Arbeit stattfindet. Links liegen die wichtigsten Werkzeuge. Rechts befindet sich die Objekthierarchie mit Kamera, Licht und allen Objekten. Im unteren beziehungsweise rechten Bedienbereich befinden sich Funktionen wie Modifier, Material und Physik.
 
 ![Koordinatensystem [@blender]](img/schmiedpeter/Defaultscreen-blender.png){width=90%}
 
@@ -21,15 +21,15 @@ In der Modellierungsansicht gibt es drei Modi mit jeweils eigener Funktion:
   
 - **Editmodus:** Dieser Modus dient der Bearbeitung einzelner Objekte.
 
-  > Der Modus funktioniert auch mit mehreren Objekten. Dies ist jedoch nicht empfohlen, weil dabei leicht ungewollte Fehler entstehen können.
+  > Der Modus funktioniert auch mit mehreren Objekten. Dies wird jedoch nicht empfohlen, weil dabei leicht ungewollte Fehler entstehen.
 
 
   Die Auswahl funktioniert hier anders als im Objektmodus: Es werden keine ganzen Objekte, sondern Punkte, Kanten oder Flächen ausgewählt. Standardmäßig ist die Punktansicht aktiv. Nach demselben Prinzip funktionieren die Kanten- und Flächenansicht. *Tipp: Mit `Shift` können mehrere Elemente ausgewählt werden.*
-  Wichtige Werkzeuge sind Loop Cuts und das Messer (zum Hinzufügen von Kanten), Bewegen, Einsetzen beziehungsweise Verkleinern von Flächen, Extrahieren sowie Füllen.
+  Wichtige Werkzeuge sind Loop Cuts und das Messer (zum Hinzufügen von Kanten), Bewegen, Einsetzen beziehungsweise Verkleinern von Flächen, Extrahieren und Füllen.
 
-- **Skulpturmodus:** Dieser Modus nutzt Werkzeuge, die Polygone auf unterschiedliche Weise verformen. Dabei ist zu beachten, dass die Verformung nicht exakt maßbasiert erfolgt. Zusätzlich sollte das Objekt genügend Polygone besitzen, da das Ergebnis sonst oft nicht den Erwartungen entspricht.
+- **Skulpturmodus:** Dieser Modus nutzt Werkzeuge, die Polygone auf unterschiedliche Weise verformen. Dabei ist zu beachten, dass die Verformung nicht exakt maßbasiert erfolgt. Zusätzlich sollte das Objekt genügend Polygone besitzen, da das Ergebnis sonst häufig nicht den Erwartungen entspricht.
 
-Als Unterstützung in den jeweiligen Modi gibt es das Tool **Anmerkungen**. Damit können in der aktuellen Perspektive Markierungen eingezeichnet werden. Im Edit- und Objektmodus kann zusätzlich das Tool **Messen** verwendet werden. Dieses funktioniert ebenfalls perspektivbezogen und arbeitet wie Anmerkungen in 2D.
+Als Unterstützung in den jeweiligen Modi gibt es das Tool **Anmerkungen**. Damit können in der aktuellen Perspektive Markierungen eingezeichnet werden. Im Edit- und Objektmodus kann zusätzlich das Tool **Messen** verwendet werden. Dieses funktioniert ebenfalls perspektivbezogen und arbeitet wie die Anmerkungen in 2D.
   
 ### Konkurrenz
 
@@ -37,7 +37,7 @@ Neben Blender hätten auch andere Modellierungsprogramme verwendet werden könne
 
 - **Tinkercad:** Das Programm ist vor allem durch das einfache Entwerfen von Schaltungen bekannt und ähnlich niedrigschwellig ist auch die Modellierung. Es ist leicht verständlich und damit gut für Einsteiger geeignet. Für die Diplomarbeit war es jedoch zu eingeschränkt, da viele Formen nur mit vorgefertigten, kaum veränderbaren Grundobjekten erstellt werden können [@blender_konkurrenz_tinkercad].
 
-- **Autodesk Fusion:** Dieses Programm ist stark auf Produktion, Werkzeuge und technische Konstruktion ausgerichtet, kann aber auch für Modellierung eingesetzt werden. Die Handhabung gilt als gut und es wird von großen Unternehmen eingesetzt. Nachteilig sind die Lizenzkosten [@blender_konkurrenz_autodesk].
+- **Autodesk Fusion:** Dieses Programm ist stark auf Produktion, Werkzeuge und technische Konstruktion ausgerichtet, kann aber auch für die Modellierung eingesetzt werden. Die Handhabung gilt als gut und es wird von großen Unternehmen eingesetzt. Nachteilig sind die Lizenzkosten [@blender_konkurrenz_autodesk].
 
 - **OpenSCAD:** OpenSCAD ist ein Open-Source-Programm für codebasierte Modellierung. Für dieses Projekt war es aufgrund der höheren Komplexität nicht die passende Wahl [@blender_konkurrenz_openscad].
 
@@ -104,7 +104,7 @@ Der Mirror-Modifier spiegelt ein Objekt entlang der gewählten Achse. Gespiegelt
 
 #### Physik
 
-Physik ist kein einzelner Modifier, sondern eine eigene Kategorie. Hier reagieren Objekte nach physikalischen Regeln der realen Welt. Möglich sind beispielsweise Simulationen mit Flüssigkeiten oder Stoffen. Viele Physik-Modifier benötigen ein zweites Objekt mit dem Modifier **Collision**, damit Kollisionen überhaupt erkannt werden.
+Physik ist kein einzelner Modifier, sondern eine eigene Kategorie. Hier reagieren Objekte nach physikalischen Regeln der realen Welt. Möglich sind beispielsweise Simulationen mit Flüssigkeiten oder Stoffen. Viele Physik-Modifier benötigen ein zweites Objekt mit dem Modifier **Collision**, damit Kollisionen erkannt werden.
 
 Ein typisches Beispiel ist der Cloth-Modifier. Er verhält sich wie ein Stofftuch: Startet man die Simulation mit `LEERZEICHEN`, fällt das Objekt nach unten. Befindet sich ein Collision-Objekt im Weg, bleibt der Stoff daran hängen. Da Flächen aus Polygonen bestehen, hängt die Qualität stark von der Geometrie und den Einstellungen (z. B. Gewicht, Steifigkeit) ab. Nach dem Anwenden wird die simulierte Form als fester Zustand übernommen.
 
@@ -112,20 +112,20 @@ Ein typisches Beispiel ist der Cloth-Modifier. Er verhält sich wie ein Stofftuc
 
 ## Animationen {#sec32-theorie-animationen}
 ### Zweck und Nutzen von Animationen
-Animationen sind notwendig, um statische Modelle in glaubwürdige, lesbare und emotionale Figuren zu verwandeln. In Spielen und Visualisierungen übernehmen sie mehrere Aufgaben: Sie machen Handlungen verständlich (z. B. Gehen, Angreifen), stärken die Identität einer Figur durch charakteristische Bewegungen und unterstützen die Spielmechanik durch klare Rückmeldungen (z. B. Treffer, Ausweichen). Ohne Animationen bleibt ein Modell reiner Blickfang, aber es kann keine Handlung vermitteln und wirkt technisch wie dramaturgisch unvollständig.
+Animationen sind notwendig, um statische Modelle in glaubwürdige, lesbare und emotionale Figuren zu verwandeln. In Spielen und Visualisierungen übernehmen sie mehrere Aufgaben: Sie machen Handlungen verständlich (z. B. Gehen, Angreifen), stärken die Identität einer Figur durch charakteristische Bewegungen und unterstützen die Spielmechanik durch klare Rückmeldungen (z. B. Treffer, Ausweichen). Ohne Animationen bleibt ein Modell ein reiner Blickfang, vermittelt jedoch keine Handlung und wirkt technisch wie dramaturgisch unvollständig.
 
 ### Grundlagen des Rigging mit Armature {#sec32-theorie-rigging}
-Die Armature ist das Skelett einer Figur. Sie besteht aus Knochen (Bones), die hierarchisch verbunden sind und die spätere Bewegung definieren. Jeder Knochen besitzt einen Kopf und ein Ende; aus der Ausrichtung ergibt sich die lokale Achse, die für Rotationen entscheidend ist. Damit eine Armature sauber funktioniert, müssen die Skalen der Meshes angewendet sein und die Bone-Orientierungen konsistent angelegt werden.
+Die Armature ist das Skelett einer Figur. Sie besteht aus Knochen (Bones), die hierarchisch verbunden sind und die spätere Bewegung definieren. Jeder Knochen besitzt einen Kopf und ein Ende; aus der Ausrichtung ergibt sich die lokale Achse, die für Rotationen entscheidend ist. Damit eine Armature sauber funktioniert, müssen die Skalierungen der Meshes angewendet sein, und die Bone-Orientierungen müssen konsistent angelegt werden.
 
 **Parent-Knochen (Elternknochen)** bestimmen die Hierarchie. Bewegungen eines Elternknochens wirken auf alle darunterliegenden Kinderknochen. Dadurch lassen sich Ketten wie Wirbelsäule, Arm oder Bein logisch aufbauen. Ein Unterarm ist z. B. Kind des Oberarms, sodass eine Rotation des Oberarms die gesamte Kette mitführt.
 
 ![Armature-Struktur einer Figur](img/schmiedpeter/Armature.png){width=80%}
 
-**Keep Offset** entsteht, wenn ein Knochen einem Elternknochen zugewiesen wird, seine aktuelle Position jedoch beibehält. Das bedeutet: Die Hierarchie wirkt, aber der Kindknochen verschiebt sich beim Parenten nicht an den Kopf des Elternknochens. Diese Variante ist sinnvoll, wenn der Abstand zwischen Knochen bewusst erhalten bleiben soll, z. B. bei Zubehör, Sekundärbewegungen oder technischen Rigs. Erstellt wird dies im Pose- oder Edit-Mode durch Auswahl von Kind- und Elternknochen und anschließend `Strg + P` mit der Option Keep Offset. So bleibt der Abstand erhalten, die Vererbung der Bewegung ist jedoch aktiv.
+**Keep Offset** entsteht, wenn ein Knochen einem Elternknochen zugewiesen wird, seine aktuelle Position jedoch beibehält. Das bedeutet: Die Hierarchie wirkt, aber der Kindknochen verschiebt sich beim Parenten nicht an den Kopf des Elternknochens. Diese Variante ist sinnvoll, wenn der Abstand zwischen Knochen bewusst erhalten bleiben soll, z. B. bei Zubehör, Sekundärbewegungen oder technischen Rigs. Erstellt wird dies im Pose- oder Edit-Mode durch die Auswahl von Kind- und Elternknochen und anschließend `Strg + P` mit der Option Keep Offset. So bleibt der Abstand erhalten, die Vererbung der Bewegung ist jedoch aktiv.
 
 ![Keep Offset im Parenting-Vergleich](img/schmiedpeter/KeepOffset.png){width=80%}
 
-**Inverse Kinematik (IK)** wird eingesetzt, wenn man das Ende einer Knochenkette direkt steuern möchte, z. B. Hände, Füße oder ein Knie beim Aufsetzen auf den Boden. Im Gegensatz zur Vorwärtskinematik (FK), bei der jeder Knochen einzeln rotiert wird, berechnet IK die Winkel der gesamten Kette automatisch, damit das Endglied ein Ziel erreicht. Technisch wird dazu ein Ziel-Objekt (IK-Target) definiert und ein IK-Constraint auf den Endknochen gesetzt; eine Kettenlänge bestimmt, wie viele Knochen beeinflusst werden. So lassen sich stabile Kontaktpunkte erzeugen, etwa wenn eine Hand eine Waffe hält oder ein Fuß sauber am Boden bleibt.
+**Inverse Kinematik (IK)** wird eingesetzt, wenn das Ende einer Knochenkette direkt gesteuert werden soll, z. B. Hände, Füße oder ein Knie beim Aufsetzen auf den Boden. Im Gegensatz zur Vorwärtskinematik (FK), bei der jeder Knochen einzeln rotiert wird, berechnet IK die Winkel der gesamten Kette automatisch, damit das Endglied ein Ziel erreicht. Technisch wird dazu ein Zielobjekt (IK-Target) definiert und ein IK-Constraint auf den Endknochen gesetzt; eine Kettenlänge bestimmt, wie viele Knochen beeinflusst werden. So lassen sich stabile Kontaktpunkte erzeugen, etwa wenn eine Hand eine Waffe hält oder ein Fuß sauber am Boden bleibt.
 
 ### Anwendung an Figuren: Vorgehensweise
 Für die Anwendung an einer Figur werden ein Mesh, eine Armature und eine klare Bindung zwischen beiden benötigt. Ziel ist es, dass die Knochenbewegung das Mesh nachvollziehbar verformt, ohne sichtbare Artefakte zu erzeugen. Eine Abbildung kann hier optional den Aufbau von Mesh, Armature und Gewichtung verdeutlichen.
@@ -137,18 +137,18 @@ Benötigte Schritte:
 3. Parenting zwischen Mesh und Armature herstellen.
 4. Gewichte (Weights) prüfen und bei Bedarf korrigieren.
 
-Gerade bei organischen oder flexiblen Objekten ist die Verteilung der Gewichte entscheidend, da zu harte Übergänge die Bewegung unnatürlich wirken lassen.
+Gerade bei organischen oder flexiblen Objekten ist die Verteilung der Gewichte entscheidend, da harte Übergänge die Bewegung unnatürlich wirken lassen.
 
 ![Armature im Mesh (On-Figure Ansicht)](img/schmiedpeter/OnFigure.png){width=80%}
 
 ### Gewichtung und Bindung des Meshes {#sec32-theorie-gewichtung}
 Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabei gibt es mehrere Modi, die das Grundgerüst der Gewichtung erzeugen und den Ausgangspunkt für die spätere Feinabstimmung liefern:
 
-**Automatic Weights**: Blender berechnet die Gewichte automatisch anhand der Nähe zu den Knochen. Dieser Modus ist effizient und liefert oft brauchbare Ergebnisse, ist jedoch bei komplexen Formen fehleranfällig. Typische Probleme sind ungewollte Verzerrungen, wenn Knochen zu nah an anderen Bereichen liegen. Deshalb ist eine anschließende manuelle Korrektur in den Weight-Painting-Modi fast immer notwendig. In der Praxis gilt: Automatic Weights sind der Startpunkt, nicht der Abschluss.
+**Automatic Weights**: Blender berechnet die Gewichte automatisch anhand der Nähe zu den Knochen. Dieser Modus ist effizient und liefert oft brauchbare Ergebnisse, ist jedoch bei komplexen Formen fehleranfällig. Typische Probleme sind ungewollte Verzerrungen, wenn Knochen zu nah an anderen Bereichen liegen. Deshalb ist eine anschließende manuelle Korrektur im Weight Painting fast immer notwendig. In der Praxis gilt: Automatic Weights sind der Startpunkt, nicht der Abschluss.
 
 **With Empty Groups**: Erzeugt nur die notwendigen Vertex-Gruppen ohne Gewichte. Dieser Modus ist sinnvoll, wenn die Gewichtung bewusst manuell angelegt werden soll, etwa bei technischen oder sehr klar strukturierten Modellen.
 
-**With Envelope Weights**: Nutzt die Bone-Envelopes (Einflussbereiche) anstelle von Distanzberechnung. Der Vorteil liegt in der direkten Kontrolle über Einflussradien, allerdings ist die Methode weniger präzise bei feineren Strukturen und erfordert eine saubere Envelope-Konfiguration.
+**With Envelope Weights**: Nutzt die Bone-Envelopes (Einflussbereiche) anstelle einer Distanzberechnung. Der Vorteil liegt in der direkten Kontrolle über Einflussradien, allerdings ist die Methode bei feineren Strukturen weniger präzise und erfordert eine saubere Envelope-Konfiguration.
 
 **Bone-Parenting (Bone)**: Das Mesh wird einem einzelnen Knochen untergeordnet. Diese Methode eignet sich für starre Objekte (z. B. Waffen, Schilder) und lässt keine organische Deformation zu.
 
@@ -201,10 +201,10 @@ Die Wahrnehmung von Tönen wird in der musikpsychologischen Lehre von Ernst Kurt
 
 Diese Sichtweise verdeutlicht, dass Töne nicht nur als messbare physikalische Signale verarbeitet werden, sondern als psychisch bedeutungsvolle Klangereignisse [@willimek_musik_und_emotionen_2011].
 
-Für Leitton- und Vorhaltswirkungen wird dieses Prinzip konkret über Spannung erklärt. Dissonante Reibungen (z. B. Sekundreibungen im Obertonbereich) werden teilweise unbewusst wahrgenommen und erzeugen ein Spannungsfeld, das eine Auflösung erwartet. Daraus entsteht der typische Eindruck von Erwartung und Zielgerichtetheit in musikalischen Verläufen. Für den Gamesound ist dieser Mechanismus zentral, weil er genutzt werden kann, um Aufmerksamkeit zu lenken, Unsicherheit zu steigern und Auflösungsmomente dramaturgisch wirksam zu setzen.
+Für Leitton- und Vorhaltswirkungen wird dieses Prinzip konkret über Spannung erklärt. Dissonante Reibungen (z. B. Sekundreibungen im Obertonbereich) werden teilweise unbewusst wahrgenommen und erzeugen ein Spannungsfeld, das eine Auflösung erwartet. Daraus entsteht der typische Eindruck von Erwartung und Zielgerichtetheit in musikalischen Verläufen. Für den Gamesound ist dieser Mechanismus zentral, weil er genutzt werden kann, um Aufmerksamkeit zu lenken, Unsicherheit zu steigern und Auflösungsmomente dramaturgisch wirksam zu gestalten.
 
 #### Basisemotionen
-Im Kontext von Musik und Emotionen werden Basisemotionen nicht isoliert betrachtet, sondern als Ergebnis mehrerer Parameter, vor allem Harmonik, Tempo und Lautstärke. In den dargestellten Testansätzen wurden Musikbeispiele bewusst auf wenige Parameter reduziert, um den emotionalen Kern sichtbar zu machen. Dabei zeigt sich: Das Zusammenspiel aus harmonischer Struktur und zeitlicher/klanglicher Gestaltung bestimmt maßgeblich die wahrgenommene Emotion.
+Im Kontext von Musik und Emotionen werden Basisemotionen nicht isoliert betrachtet, sondern als Ergebnis mehrerer Parameter, vor allem Harmonik, Tempo und Lautstärke. In den dargestellten Testansätzen wurden Musikbeispiele bewusst auf wenige Parameter reduziert, um den emotionalen Kern sichtbar zu machen. Dabei zeigt sich: Das Zusammenspiel aus harmonischer Struktur sowie zeitlicher und klanglicher Gestaltung bestimmt maßgeblich die wahrgenommene Emotion.
 
 Eine besondere Rolle spielt das Tempo. Schnellere Verläufe erhöhen typischerweise Aktivierung und werden häufiger mit Erregung, Anspannung oder Durchsetzungskraft verbunden, während langsamere Verläufe eher Ruhe, Trauer oder Gelöstheit stützen. Zusätzlich zeigen physiologische Befunde, dass aktivierende Musik mit erhöhter Herzfrequenz und Muskelspannung korreliert, beruhigende Musik hingegen mit sinkender Herzfrequenz. Damit wird die emotionale Wirkung nicht nur subjektiv beschrieben, sondern auch körperlich nachvollziehbar.
 
@@ -235,21 +235,35 @@ Ein etablierter Erklärungsrahmen für musikalisch ausgelöste Emotionen ist das
 Gerade für interaktive Medien ist dieses Modell hilfreich, weil es zeigt, dass Musikemotionen nicht nur über Harmonik entstehen, sondern auch über Konditionierung, Rhythmuskopplung, Erwartungssteuerung und Erinnerungseffekte vermittelt werden.
 
 ### Interaktive Musik in Videospielen {#sec-interaktive-musik}
-Interaktive Musik ist im Gamesound kein statischer Hintergrund, sondern ein steuerbares System. Ihre zentrale Aufgabe besteht darin, das Spielgeschehen emotional zu unterstützen, ohne den Spielfluss zu stören. Im Unterschied zur Filmmusik ist der genaue Zeitpunkt von Szenenwechseln oder Gefahrensituationen im Spiel oft nicht vorhersehbar. Dadurch muss Musik so entworfen werden, dass sie flexibel auf Spielerhandlungen reagieren kann und trotzdem musikalisch zusammenhängend bleibt.
+Interaktive Musik ist im Gamesound kein statischer Hintergrund, sondern ein steuerbares System.
+
+Ihre zentrale Aufgabe besteht darin, das Spielgeschehen emotional zu unterstützen, ohne den Spielfluss zu stören.
+
+Im Unterschied zur Filmmusik ist der genaue Zeitpunkt von Szenenwechseln oder Gefahrensituationen im Spiel oft nicht vorhersehbar. Deshalb muss Musik flexibel auf Spielerhandlungen reagieren und trotzdem musikalisch zusammenhängend bleiben.
 
 #### Adaptive vs. dynamische Musik
 
-Im praktischen Einsatz lassen sich zwei komplementäre Verfahren unterscheiden, die oft kombiniert werden:
+Im praktischen Einsatz lassen sich zwei komplementäre Verfahren unterscheiden, die oft kombiniert werden.
 
-**Adaptive Musik** funktioniert zustandsorientiert. Sie wechselt zwischen vordefinierten Musikzuständen (States), die jeweils an eine konkrete Spielsituation gebunden sind. Mit **Musikzuständen** sind klar definierte Spielphasen gemeint, beispielsweise:
+**Definition**
+
+**Adaptive Musik** funktioniert zustandsorientiert. Sie wechselt zwischen vordefinierten Musikzuständen (States), die jeweils an eine konkrete Spielsituation gebunden sind.
+
+**Erklärung**
+
+Mit **Musikzuständen** sind klar definierte Spielphasen gemeint, beispielsweise:
 - **Erkundung** (ruhig, wenig rhythmische Dichte),
 - **Gefahr im Anmarsch** (wachsender Puls/Spannung),
 - **Kampf** (hohe Intensität, dichteres Arrangement),
 - **Nach dem Kampf** (Reduktion und Entspannung).
 
-Der Wechsel zwischen diesen States wird durch konkrete Spielparameter ausgelöst – etwa Gegnernähe, Alarmstatus, Lebenspunkte, Ortswechsel oder Missionsfortschritt. Die Musik wechselt einmal, wenn der State eintritt, und bleibt dann in diesem Zustand, bis sich eine neue Spielbedingung ergibt.
+Der Wechsel zwischen diesen States wird durch konkrete Spielparameter ausgelöst – etwa Gegnernähe, Alarmstatus, Lebenspunkte, Ortswechsel oder Missionsfortschritt. Die Musik wechselt, wenn der State eintritt, und bleibt in diesem Zustand, bis sich eine neue Spielbedingung ergibt.
 
-**Dynamische Musik** hingegen arbeitet parametrisch und kontinuierlich. Während ein Musikstück läuft, werden einzelne Parameter in Echtzeit angepasst – nicht der State selbst, sondern die Eigenschaften der bereits spielenden Musik. Typische dynamische Parameter sind:
+**Dynamische Musik** hingegen arbeitet parametrisch und kontinuierlich. Während ein Musikstück läuft, werden einzelne Parameter in Echtzeit angepasst – nicht der State selbst, sondern die Eigenschaften der bereits laufenden Musik.
+
+**Beispiel**
+
+Typische dynamische Parameter sind:
 - **Lautstärke:** Erhöhung bei Gegnerannaherung, Reduktion bei Sicherheit,
 - **Instrumentierung:** Hinzufügen von aggressiveren Instrumenten oder Entfernung von beruhigenden Pads mit wachsender Gefahr,
 - **Rhythmische Dichte:** Das Tempo der Schlagzeug- oder Bassmuster wird schneller/komplexer, je intensiver die Situation wird,
@@ -257,28 +271,34 @@ Der Wechsel zwischen diesen States wird durch konkrete Spielparameter ausgelöst
 
 Ein konkretes Beispiel: Ein Boss-Kampf könnte mit einem Musikstück im "Kampf"-State beginnen. Während der Spieler den Boss bekämpft, werden Lautstärke und Rhythmusdichte dynamisch an die verbliebenen Lebenspunkte des Gegners angekoppelt. Sinken diese kritisch ab, könnte ein zusätzlicher Streicher-Swell hinzugefügt werden, ohne den State zu wechseln. Nach dem Kampf erfolgt dann der Umschlag auf den State "Nach dem Kampf".
 
-**Zusammenhang:** Beide Ansätze verfolgen dasselbe Ziel: Die Musik soll den aktuellen Spielzustand hörbar machen. Adaptive Musik bietet große emotionale Sprünge (z. B. von Erkundung zu Kampf), während dynamische Musik feinere Abstufungen ermöglicht. Diese Reaktionsfähigkeit ist entscheidend, weil in interaktiven Medien mehrere Soundebenen (Atmosphäre, Geräusche, Sprache, Musik) gleichzeitig aktiv sein können. Musik muss daher nicht nur emotional passen, sondern sich auch in das Gesamtmixing einordnen, damit etwa Sprachverständlichkeit nicht leidet.
+**Praxis**
+
+Beide Ansätze verfolgen dasselbe Ziel: Die Musik soll den aktuellen Spielzustand hörbar machen. Adaptive Musik bietet große emotionale Sprünge (z. B. von Erkundung zu Kampf), während dynamische Musik feinere Abstufungen ermöglicht. Diese Reaktionsfähigkeit ist entscheidend, weil in interaktiven Medien mehrere Soundebenen (Atmosphäre, Geräusche, Sprache, Musik) gleichzeitig aktiv sein können. Musik muss daher nicht nur emotional passen, sondern sich auch in das Gesamtmixing einordnen, damit die Sprachverständlichkeit nicht leidet.
 
 #### Looping-Techniken
-Looping ist eine Grundtechnik interaktiver Musik, da Spielsituationen unterschiedlich lange dauern. Musik wird deshalb meist als nahtloser Kreis aufgebaut, damit keine hörbaren Brüche entstehen, wenn ein Abschnitt länger aktiv bleibt.
+**Definition:** Looping ist eine Grundtechnik interaktiver Musik, weil Spielsituationen unterschiedlich lange dauern.
 
-Für professionelle Übergänge zwischen Zuständen werden laut den beschriebenen Produktionsansätzen vor allem zwei Verfahren genutzt:
+**Erklärung:** Musik wird als nahtloser Kreis aufgebaut, damit bei längerer Wiedergabe keine hörbaren Brüche entstehen.
+
+**Beispiel:** Für Übergänge zwischen Zuständen werden vor allem zwei Verfahren genutzt:
 
 - **Überblendung (Crossfade)** zwischen zwei Musikzuständen.
 - **Takt- oder phasenbezogener Wechsel**, bei dem der Übergang an musikalisch sinnvollen Punkten erfolgt.
 
-In der Praxis ist die Überblendung robuster, weil sie auch bei unvorhersehbaren Spieleraktionen funktioniert. Taktgenaue Wechsel klingen musikalisch sauberer, benötigen jedoch ein enger abgestimmtes Musiksystem.
+**Praxis:** Die Überblendung ist robuster, weil sie auch bei unvorhersehbaren Spieleraktionen funktioniert. Taktgenaue Wechsel klingen musikalisch sauberer, benötigen jedoch ein enger abgestimmtes Musiksystem.
 
 #### Layer-Systeme
-Layer-Systeme teilen einen Musikzustand in mehrere Ebenen, die je nach Spielsituation zu- oder abgeschaltet werden. Typische Layer sind z. B. Rhythmus, Harmonie, Flächen oder Percussion-Akzente. Dadurch kann die Musik stufenlos verdichtet werden, ohne dass das Grundthema wechselt.
+**Definition:** Layer-Systeme teilen einen Musikzustand in mehrere Ebenen, die je nach Spielsituation zu- oder abgeschaltet werden.
 
-Der Vorteil liegt in der hohen Kontrolle über Intensität und Dramaturgie:
+**Erklärung:** Typische Layer sind Rhythmus, Harmonie, Flächen oder Percussion-Akzente. So kann die Musik stufenlos verdichtet werden, ohne das Grundthema zu wechseln.
+
+**Beispiel:** Der Vorteil liegt in der hohen Kontrolle über Intensität und Dramaturgie:
 
 - Bei ruhigen Phasen laufen nur Basis-Layer.
 - Bei steigender Gefahr werden zusätzliche Layer aktiviert.
 - Nach einer Entspannung werden Layer wieder reduziert.
 
-Dieses Verfahren passt besonders gut zu den Anforderungen interaktiver Klanggestaltung, weil es musikalische Kontinuität mit klarer Spielrückmeldung kombiniert und Überlagerungen mit Sprache/Atmo besser steuerbar macht.
+**Praxis:** Dieses Verfahren passt besonders gut zu interaktiver Klanggestaltung, weil es musikalische Kontinuität mit klarer Spielrückmeldung kombiniert und Überlagerungen mit Sprache und Atmo besser steuerbar macht.
 
 #### Produktionswerkzeuge im Kontext interaktiver Musik
 Die zuvor beschriebenen Konzepte (States, Layer, Looping, Übergänge) werden in der Praxis meist in einer **Digital Audio Workstation (DAW)** vorbereitet. Eine DAW dient dabei als Produktionsumgebung, in der musikalische Bausteine komponiert, arrangiert, gemischt und für den späteren Einsatz in der Engine exportiert werden.
@@ -291,28 +311,29 @@ Eine zentrale Rolle spielt dabei **MIDI**. MIDI enthält keine Audiodaten, sonde
 
 ### Design
 
-Die grundlegende Inspiration stammt von den Rittern des Mittelalters. Vor allem in der Rüstungskonstruktion zeigt sich dieser Bezug deutlich. Verwendet wurde eine Kombination aus Kettenrüstung sowie Helm und Brustpanzer mit Arm- und Beinschienen.
-
-Die Kettenrüstung ist jedoch nicht gut geeignet für den Modellierungsstil **Low-Poly**.
-
 #### Low-Poly-Stil
 
-Low-Poly ist ein einfach gehaltener Stil mit relativ wenigen Polygonen (Punkten).  
-Der große Vorteil dieses Stils liegt vor allem in der Performance.
+**Definition:** Low-Poly ist ein bewusst reduzierter Modellierungsstil mit relativ wenigen Polygonen (Punkten).
 
-Grundsätzlich gilt:
-> Je weniger Punkte ein Modell besitzt, desto weniger muss der PC beim Rendern berechnen.
+**Erklärung:** Der wichtigste Vorteil liegt in der Performance. Je weniger Punkte ein Modell besitzt, desto weniger Rechenaufwand entsteht beim Rendern.
 
-Um zu überprüfen, wie viele Punkte ein Modell besitzt, kann es exportiert und anschließend als **FBX-Datei** betrachtet werden. Auf **3dviewer.net** erhält man dafür eine gute Übersicht.
+**Beispiel:** Die Polygonzahl lässt sich nach dem Export als **FBX-Datei** prüfen, etwa mit **3dviewer.net**.
+
+**Praxis:** Für das Projekt wurde die Figur deshalb in einem klaren, polygonarmen Stil geplant.
+
+#### Gestalterische Orientierung
+
+Die grundlegende Inspiration stammt von Ritterdarstellungen des Mittelalters. Besonders sichtbar ist das in der Rüstungskonstruktion mit Helm, Brustpanzer sowie Arm- und Beinschienen.
+
+Da eine dichte Kettenrüstung für Low-Poly nur eingeschränkt geeignet ist, wurde die Formensprache vereinfacht und stärker über große Flächen sowie markante Konturen gelöst.
 
 #### Helmgestaltung
 
-Eine weitere unübliche Gestaltung ist der Helm. Untypisch sind dabei vor allem die Hörner sowie generell die auffällige Farbgestaltung. Hörner an Helmen gab es im Mittelalter nur sehr selten. Wahrscheinlich wurden sie damals kaum verwendet, da sie im Kampf eher hinderlich waren.
+Der Helm ist bewusst untypisch gestaltet. Auffällig sind vor allem die Hörner und die starke Farbwirkung. Historisch waren Hörner an Helmen selten, vermutlich weil sie im Kampf hinderlich sein konnten.
 
 #### Farbwahl
 
-Die Farben wurden bewusst gewählt, da sie eine klare Funktion erfüllen.  
-Sie unterstützen die Darstellung des Bosses als Oberhaupt des Gegners und tragen zusätzlich eine symbolische Bedeutung.
+Die Farben wurden bewusst gewählt und erfüllen eine klare Funktion. Sie unterstützen die Darstellung des Bosses als Oberhaupt des Gegners und tragen zusätzlich eine symbolische Bedeutung.
 
 Die Farbe **Lila** wird beispielsweise häufig mit Macht, Reichtum und Autorität assoziiert. Historisch gesehen war Lila zudem eine Farbe, die sehr schwer herzustellen war und daher auch im Mittelalter als Zeichen von Wohlstand galt.
 
@@ -330,7 +351,7 @@ Die Rüstung selbst erinnert eher an das **Hoch- bzw. Spätmittelalter** beziehu
 #### Modellierung
 ##### Entwickelte Techniken
 
-Im Verlauf eines längeren Projekts werden immer wieder neue Funktionen entdeckt. Teilweise entstehen dabei auch eigene Arbeitsweisen. In Blender wurden unter anderem folgende Techniken genutzt:
+Im Verlauf eines längeren Projekts werden immer wieder neue Funktionen entdeckt. Teilweise entstehen dabei auch eigene Arbeitsweisen. In Blender wurden unter anderem die folgenden Techniken genutzt:
 
 - **Alternative zu Insert:** Eine Fläche wird ohne zusätzliche Höhe extrahiert und anschließend mit `S` skaliert. Dabei ist darauf zu achten, dass sich keine Flächen überschneiden.
 - **Objekte auf Kreisbahn verschieben:** Diese Technik nutzt einen frei gesetzten Ursprung. Für Objekte auf einer kugelförmigen Oberfläche wird derselbe Ursprung wie bei der Kugel gesetzt. Mit `R` kann das Objekt dann im gleichen Abstand bzw. mit gleicher Neigung entlang der Kugel bewegt werden (siehe Abbildung).
@@ -341,9 +362,13 @@ Im Verlauf eines längeren Projekts werden immer wieder neue Funktionen entdeckt
 
 ##### Vorgehensweise
 
-Das Design war bereits grob festgelegt, daher musste eine sinnvolle Umsetzungsstrategie definiert werden. Gestartet wurde beim Kopf, anschließend wurde nach unten weitergearbeitet. Die Gliedmaßen wurden bewusst später ausgearbeitet. Die Reihenfolge lautete: Helm und Kopf, danach Körper, anschließend Hals als Verbindung sowie danach Beine und Arme; zum Schluss folgten Füße und Hände.
+**Definition:** Die Modellierung folgte einer Top-down-Strategie.
 
-Die Modellierung des Bosses erfolgte nach dem Prinzip, von oben nach unten zu arbeiten, wobei die Gliedmaßen bewusst erst am Ende ausgearbeitet wurden. Diese Vorgehensweise erleichterte es, zunächst die grundlegenden Proportionen und die visuelle Wirkung der Figur festzulegen, bevor Details ergänzt wurden. Der Fokus lag dabei auf einer klaren Silhouette und einer gut erkennbaren Formensprache, die bereits aus der Distanz die Rolle des Bossgegners vermittelt.
+**Erklärung:** Das Design war grob festgelegt, daher wurde zuerst die Gesamtform aufgebaut und danach verfeinert. So konnten Proportionen und Silhouette früh gesichert werden.
+
+**Beispiel:** Die Reihenfolge lautete: Helm und Kopf, danach Körper, anschließend Hals als Verbindung, dann Beine und Arme, zum Schluss Füße und Hände.
+
+**Praxis:** Die Gliedmaßen wurden bewusst später ausgearbeitet. Dadurch blieb die Figur schon früh als Bossgegner erkennbar und Details konnten gezielt ergänzt werden.
 
 Die folgende Abbildung zeigt den fertig modellierten Boss als Ergebnis dieses Arbeitsschritts.
 
@@ -351,15 +376,23 @@ Die folgende Abbildung zeigt den fertig modellierten Boss als Ergebnis dieses Ar
 
 ###### Helm
 
-Die Kopfform des Helms wurde bewusst höher als rund gestaltet und orientiert sich eher an einer quaderartigen Grundform. Dadurch wirkt der Kopf massiver und dominanter, was die bedrohliche Erscheinung des Bosses zusätzlich verstärkt. Die Gesichtsform weist einen klaren, basalen Schnitt auf, der gezielt hervorgehoben wurde. Das Visier wurde leuchtend gestaltet, um einen mysteriösen und leicht übernatürlichen Eindruck zu erzeugen.
+Die Kopfform des Helms wurde bewusst höher als rund gestaltet und orientiert sich eher an einer quaderartigen Grundform. Dadurch wirkt der Kopf massiver und dominanter, was die bedrohliche Erscheinung des Bosses verstärkt.
 
-Ein weiteres markantes Merkmal des Helms sind die Hörner. Diese verlaufen mit ihrer Masse nach hinten, wurden jedoch relativ flach gehalten, um die Gesamtform nicht zu überladen. Während der Modellierung zeigte sich, dass die Spitzen der Hörner zunächst an einer falschen Position lagen. Aus diesem Grund wurden sie im weiteren Verlauf neu ausgerichtet, sodass sie sich harmonisch in die Gesamtform des Helms einfügen und die Silhouette nicht negativ beeinflussen.
+Die Gesichtsform weist einen klaren, basalen Schnitt auf, der gezielt hervorgehoben wurde. Das Visier wurde leuchtend gestaltet, um einen mysteriösen und leicht übernatürlichen Eindruck zu erzeugen.
+
+Ein weiteres markantes Merkmal sind die Hörner. Sie verlaufen mit ihrer Masse nach hinten, wurden jedoch relativ flach gehalten, um die Gesamtform nicht zu überladen.
+
+Während der Modellierung zeigte sich, dass die Spitzen zunächst an einer falschen Position lagen. Sie wurden daher neu ausgerichtet, sodass sie sich harmonisch in die Helmform einfügen und die Silhouette nicht negativ beeinflussen.
 
 ###### Körper
 
-Beim Körper wurde eine spezielle Modellierungstechnik eingesetzt, bei der quer verlaufende Akzente genutzt wurden, um die körperlichen Strukturen gezielt hervorzuheben. Der Fokus lag dabei insbesondere auf der Brust- und Bauchmuskulatur sowie auf den Schultern, da diese Bereiche maßgeblich zur kraftvollen und einschüchternden Wirkung des Bosses beitragen. Zusätzlich wurden auch sekundäre Elemente wie der Gürtel in das Modell integriert, um den Gesamteindruck stimmig abzurunden.
+Beim Körper wurde eine Modellierungstechnik mit quer verlaufenden Akzenten eingesetzt, um die körperlichen Strukturen gezielt hervorzuheben.
 
-Im nächsten Schritt wurde eine Cloth-Simulation angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen. Nach Abschluss dieses Arbeitsschritts wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
+Der Fokus lag auf Brust- und Bauchmuskulatur sowie auf den Schultern, da diese Bereiche maßgeblich zur kraftvollen und einschüchternden Wirkung des Bosses beitragen. Zusätzlich wurden sekundäre Elemente wie der Gürtel integriert, um den Gesamteindruck stimmig abzurunden.
+
+Im nächsten Schritt wurde eine Cloth-Simulation angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen.
+
+Nach Abschluss dieses Arbeitsschritts wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
 
 ###### Hals
 Der Hals wurde bewusst als verbindendes Element zwischen Helm und Körper modelliert. Ziel war keine stark ausgeprägte Eigenform, sondern ein stabiler Übergang, der die Proportionen zusammenführt und die Silhouette technisch wie optisch schlüssig hält.
@@ -378,7 +411,7 @@ Die Hände wurden separat modelliert, um Form und Topologie präziser steuern zu
 Zusätzlich wurden Proportionen und Übergänge zur Armgeometrie mehrfach nachgearbeitet, damit die Hände sowohl im statischen Modell als auch in Bewegung stimmig wirken.
 
 ##### Probleme und Lösungen
-Bereits im Körperbereich zeigten sich Form- und Topologieprobleme. Die Rüstung war an den Seiten zu dünn und am Rücken stellenweise zu flach. Diese Bereiche wurden durch gezielte Skalierung korrigiert und anschließend sauber zusammengeführt. Außerdem waren einzelne Eckpunkte durch überlagernde Flächen nur schwer erreichbar. In diesen Fällen wurden Arbeitsschritte zurückgesetzt und anschließend in korrekter Reihenfolge neu aufgebaut.
+Bereits im Körperbereich zeigten sich Form- und Topologieprobleme. Die Rüstung war an den Seiten zu dünn und am Rücken stellenweise zu flach. Diese Bereiche wurden durch gezielte Skalierung korrigiert und anschließend sauber zusammengeführt. Außerdem waren einzelne Eckpunkte durch überlagernde Flächen nur schwer erreichbar. In diesen Fällen wurden Arbeitsschritte zurückgesetzt und in korrekter Reihenfolge neu aufgebaut.
 
 Während der praktischen Umsetzung traten mehrere typische Topologieprobleme auf. An einigen Stellen liefen Vertices durch den Körper, was in verschiedenen Ansichtsmodi deutlich sichtbar war. Zusätzlich waren einzelne Körperbereiche fehlerhaft verbunden, sodass unter anderem zwischen Schulter und Rumpf sowie im Handbereich Lücken entstanden.
 
@@ -390,7 +423,7 @@ Durch diese Kombination aus automatischer Bereinigung und manueller Korrektur wu
 
 #### Animationen
 ##### Vorgehensweise beim Rigging
-Die Animationen wurden auf Basis des im Theorieteil beschriebenen Rigging-Ansatzes erstellt (vgl. [Grundlagen des Rigging mit Armature](#sec32-theorie-rigging), [Gewichtung und Bindung des Meshes](#sec32-theorie-gewichtung), [Animation erstellen in Blender](#sec32-theorie-animation-erstellen)). Zuerst wurde eine eigene Armature aufgebaut, inklusive Inverse Kinematik (IK) und Offset-Setups, um kontrollierbare Gelenkbewegungen und saubere Hierarchien zu erhalten.
+Die Animationen wurden auf Basis des im Theorieteil beschriebenen Rigging-Ansatzes erstellt (vgl. [Grundlagen des Rigging mit Armature](#sec32-theorie-rigging), [Gewichtung und Bindung des Meshes](#sec32-theorie-gewichtung), [Animation erstellen in Blender](#sec32-theorie-animation-erstellen)). Zuerst wurde eine eigene Armature aufgebaut, inklusive Inverser Kinematik (IK) und Offset-Setups, um kontrollierbare Gelenkbewegungen und saubere Hierarchien zu erhalten.
 
 Anschließend wurden zwei Varianten getestet: die manuell aufgebaute Armature und ein automatisiert erzeugtes Rig. Beide Varianten wurden mit automatischer Gewichtung an den Boss gebunden und praktisch im Animationsprozess verglichen.
 
@@ -424,7 +457,7 @@ Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, g
 ##### Produktionsumgebung
 Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände [@collins_game_sound] [@hofmann_szczypula_game_sound_2006].
 
-Ein zentraler praktischer Befund war, dass die Entwicklung passender Spielmusik deutlich mehr Zeit benötigt als zunächst erwartet. Bis musikalische Idee, Stimmung, Dramaturgie und technische Einsetzbarkeit im Spiel zusammenpassen, sind mehrere Iterationen beim Komponieren, Testen und Überarbeiten erforderlich.
+Ein zentraler praktischer Befund war der hohe Zeitaufwand: Bis Idee, Stimmung, Dramaturgie und technische Einsetzbarkeit zusammenpassen, sind mehrere Iterationen aus Komponieren, Testen und Überarbeiten nötig.
 
 ##### Musikalisches Gesamtkonzept
 Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung [@schulz_entwicklung_musik_videospielen_2022] [@collins_game_sound] [@youtube_music_controls_you].
@@ -432,16 +465,24 @@ Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmo
 Durch dunkle Klangfarben, spannungsorientierte Verläufe und klar gestufte Intensitäten wird die Wahrnehmung von Gefahr, Unsicherheit und Eskalation gezielt verstärkt. Die detaillierte psychologische Herleitung der einzelnen Stücke wird in einem späteren Arbeitsschritt ergänzt [@youtube_write_music_for_games] [@youtube_music_transcends_game].
 
 ##### Vorgehensweise und Einteilung
-Zu Beginn wurde strukturiert festgelegt, welche Musik- und Soundelemente im Spiel benötigt werden. Die konzeptionelle Orientierung erfolgte dabei über unterschiedliche Referenzquellen: Beiträge und Analysen von Creator:innen auf YouTube, musikalische Eindrücke aus Spotify sowie Vergleichswerte aus anderen Spielen und Filmen. Diese Referenzen dienten nicht als direkte Übernahme, sondern als Grundlage für Stimmung, Klangfarbe und dramaturgische Ausrichtung der eigenen Kompositionen.
+**Definition:** In diesem Abschnitt wird die praktische Struktur der Musik- und Soundelemente des Spiels festgelegt.
 
-Zusätzlich floss das im Theorieteil erarbeitete Wissen gezielt in die praktische Umsetzung ein, insbesondere zu Zustandswechseln, Layering und musikalischer Reaktionslogik (vgl. [Interaktive Musik in Videospielen](#sec-interaktive-musik)).
+**Erklärung:** Die konzeptionelle Orientierung erfolgte über Referenzquellen wie YouTube-Analysen, Spotify-Eindrücke sowie Vergleichswerte aus anderen Spielen und Filmen. Die Referenzen wurden nicht direkt übernommen, sondern als Grundlage für Stimmung, Klangfarbe und dramaturgische Ausrichtung genutzt.
 
-Daraus ergab sich folgende Einteilung:
+**Beispiel:** Aus dem Theorieteil wurden insbesondere Zustandswechsel, Layering und musikalische Reaktionslogik übernommen (vgl. [Interaktive Musik in Videospielen](#sec-interaktive-musik)).
+
+**Praxis:** Daraus entstand die folgende Einteilung der im Projekt verwendeten Musikstücke und Soundeffekte.
+
+
 
 - **Titelmusik**
 
-Die Titelmusik führt in die düstere Spielwelt ein und bereitet den Spieler emotional auf den finalen Bosskampf vor. Als tonales Fundament wurde D äolisch gewählt, da Moll-Tonalität und insbesondere die kleine Sexte (Bb) eine spannungsgeladene, bedrohliche Wirkung unterstützen. Eine Dur-Auflösung wird bewusst vermieden, um keine vorzeitige emotionale Entlastung zu erzeugen.
+Die Titelmusik führt in die düstere Spielwelt ein und bereitet den Spieler emotional auf den finalen Bosskampf vor.
+
+Als tonales Fundament wurde D äolisch gewählt, da Moll-Tonalität und insbesondere die kleine Sexte (Bb) eine spannungsgeladene, bedrohliche Wirkung unterstützen. Eine Dur-Auflösung wird bewusst vermieden, um keine vorzeitige emotionale Entlastung zu erzeugen.
+
 Das langsame Tempo (60 BPM) sowie der Verzicht auf Percussion reduzieren die physiologische Aktivierung und lenken den Fokus auf Atmosphäre und Raumwirkung. Die reduzierte Instrumentation aus Cello, tiefen Streichern und Chor unterstützt die mittelalterliche Ästhetik und erzeugt ein Gefühl von Schwere und Monumentalität.
+
 Das Leitmotiv (D–F–Bb–A) wird im späteren Bosskampf erneut aufgegriffen. Dadurch entsteht ein motivischer Zusammenhang zwischen Intro und Kampfsituation, der die Immersion verstärkt.
 
 ![Projektansicht der Titelmusik in Reaper](img/schmiedpeter/Reaper_Titlemusik.png){width=80%}
@@ -449,9 +490,13 @@ Das Leitmotiv (D–F–Bb–A) wird im späteren Bosskampf erneut aufgegriffen. 
 Die Abbildung zeigt das Reaper-Projekt zur Titelmusik mit der Anordnung der Spuren und dem zeitlichen Aufbau des Intros.
 
 - **Übergangsmusik**
-Die Übergangsmusik markiert den dramaturgischen Wechsel vom Titelbildschirm zur ersten Gefahrenstufe des Bosskampfs. Ziel ist es, die Spannung innerhalb weniger Sekunden spürbar zu erhöhen, ohne einen hörbaren Bruch zwischen Intro und Kampfmusik zu erzeugen.
-Als zentrales Motiv dienen drei tief gestimmte Glockenschläge (D–Bb–A), die als klangliches Warnsignal den Beginn der Konfrontation ankündigen. Die Tonfolge bleibt im Raum von D äolisch und betont mit dem Bb die kleine Sexte, wodurch die bedrohliche Grundstimmung konsequent erhalten bleibt. Die verwendeten Glockensamples (freesound.org, Big Ben 1988) wurden in Reaper klanglich bearbeitet und in das orchestrale Gesamtbild integriert [@freesound_signtoast_259965].
-Nach dem dritten Schlag setzt tiefe Percussion ein; anschließend führt ein Cello-Ostinato in das erste Layer der Bossmusik (Danger Level 1). So entsteht ein kontrollierter Spannungsaufbau, der den Übergang musikalisch schlüssig vorbereitet.
+Die Übergangsmusik markiert den dramaturgischen Wechsel vom Titelbildschirm zur ersten Gefahrenstufe des Bosskampfs.
+
+Ziel ist es, die Spannung innerhalb weniger Sekunden spürbar zu erhöhen, ohne einen hörbaren Bruch zwischen Intro und Kampfmusik zu erzeugen.
+
+Als zentrales Motiv dienen drei tief gestimmte Glockenschläge (D–Bb–A), die als klangliches Warnsignal den Beginn der Konfrontation ankündigen. Die Tonfolge bleibt im Raum von D äolisch und betont mit dem Bb die kleine Sexte, wodurch die bedrohliche Grundstimmung konsequent erhalten bleibt.
+
+Die verwendeten Glockensamples (freesound.org, Big Ben 1988) wurden in Reaper klanglich bearbeitet und in das orchestrale Gesamtbild integriert [@freesound_signtoast_259965].
 
 ![Projektansicht der Uebergangsmusik in Reaper](img/schmiedpeter/Uebergangsmusik.png){width=80%}
 
@@ -460,7 +505,7 @@ Die Abbildung zeigt das Reaper-Projekt der Übergangsmusik und verdeutlicht den 
 - **Bossmusik in mehreren Gefahrenstufen** (abhängig vom Bedrohungsgrad)
 Die Bosskampfmusik wurde als dynamisches Layer-System konzipiert, bei dem sich die musikalische Intensität entsprechend des Kampfverlaufs stufenweise erhöht. **Danger Level 1** bildet dabei die klangliche Grundebene des gesamten Bosskampfs.
 
-Ein rhythmisches Cello-Ostinato fungiert als zentrales Bewegungselement und erzeugt eine kontinuierliche Spannungswirkung. Ergänzt wird dieses durch tiefe Percussion mit langsamem, schwerem Puls, welche den bedrohlichen Charakter der Situation akzentuiert. Im Hintergrund stützen tiefe Streicherflächen die düstere Grundatmosphäre.
+Ein rhythmisches Cello-Ostinato fungiert als zentrales Bewegungselement und erzeugt eine kontinuierliche Spannungswirkung. Ergänzt wird es durch tiefe Percussion mit langsamem, schwerem Puls, die den bedrohlichen Charakter der Situation akzentuiert. Im Hintergrund stützen tiefe Streicherflächen die düstere Grundatmosphäre.
 
 Harmonisch bleibt die Gestaltung in **D äolisch** verankert, wodurch eine dunkle und bewusst instabile Klangfarbe erhalten wird. Die erste Gefahrenstufe ist kontrolliert und zurückhaltend angelegt, sodass bei zunehmender Bedrohung weitere Layer ergänzt werden können, ohne einen abrupten musikalischen Bruch zu erzeugen.
 
@@ -482,7 +527,7 @@ Die Niederlagenmusik soll **Scheitern**, **Hoffnungslosigkeit** und **Leere** ve
 
 Harmonisch bleibt das Thema in **D-Moll** ohne Auflösung. Verwendet wird **Dm – Bb** oder in der minimalsten Form nur **Dm**.
 
-Die Instrumentierung ist minimal: **Cello**, **tiefe Streicher** und sehr leiser **Chor**, ohne Percussion. Die Melodie bleibt langsam und fragmentarisch (z. B. **D–F–Bb / A**) und endet absichtlich offen. Die Länge beträgt nur **wenige Sekunden**, danach folgt der Game-Over-Screen.
+Die Instrumentierung ist minimal: **Cello**, **tiefe Streicher** und sehr leiser **Chor**, ohne Percussion. Die Melodie bleibt langsam und fragmentarisch (z. B. **D–F–Bb / A**) und endet absichtlich offen. Die Länge beträgt nur **wenige Sekunden**; danach folgt der Game-Over-Screen.
 
 Parallel dazu wurden die benötigten Soundeffekte definiert:
 
