@@ -258,6 +258,7 @@ Ragdoll Physics bedeutet, dass auf das Skelett-Mesh eines Charakters Physik ange
 
 Die zentralen Klassen der Spielarchitektur sind BP_FirstPersonCharacter, BP_Boss, BP_Projectile und BP_HomingProjectile. BP_FirstPersonCharacter steuert Bewegung, Kamera, Angriff, Stamina und Parry-Logik. BP_Boss verwaltet Boss-Leben, Angriffsabläufe und das Spawnen von Projektilen. Die Projektil-Blueprints übernehmen Flugverhalten, Kollision und Spezialverhalten wie Homing und Reflexion.
 
+\newpage
 ### Player-System
 
 #### Bewegung und Grundkonfiguration
@@ -274,6 +275,7 @@ DrainStamina reduziert currentStamina kontinuierlich um 2 Punkte pro Sekunde. Na
 
 StopSprinting setzt Max Walk Speed auf 300 zurück, setzt isSprinting auf false und startet anschließend GainStamina. Dieses Event erhöht currentStamina mit 1 Punkt pro Sekunde. Dabei wird fortlaufend geprüft, ob currentStamina bereits maxStamina erreicht hat. Solange der Maximalwert nicht erreicht ist, wird zusätzlich abgefragt, ob der Spieler aktuell sprintet oder dodged. Nur wenn beide Zustände nicht aktiv sind, wird die Regeneration weitergeführt.
 
+\newpage
 #### Dodge-System
 
 Das Ausweichsystem (Dodge) basiert auf der Unreal-Engine-Funktion Launch Character und ist direkt mit dem Stamina-System verbunden. Pro Dodge werden 20 Stamina von insgesamt 100 verbraucht. Die Boolean-Variable isDodging verhindert eine wiederholte Ausführung in sehr kurzer Zeit und setzt einen Cooldown von einer Sekunde, wodurch während der Dodge-Aktion kein erneuter Dodge möglich ist. Damit ist das Ausweichen ein bewusst eingesetztes Verteidigungswerkzeug und keine dauerhaft verfügbare Bewegungstechnik.
@@ -284,6 +286,7 @@ Der Angriff wird über ein Action Mapping in den Projekteinstellungen ausgelöst
 
 Nach einem zeitlichen Fenster von 1,0 Sekunden wird isAttacking wieder auf false gesetzt. Direkt danach wird der Animation Mode zurückgesetzt, damit die Figur nicht in der Angriffsanimation verbleibt. Die Stamina-Regeneration startet bewusst verzögert und wird erst nach weiteren 1,5 Sekunden wieder freigegeben. Diese Abfolge sorgt dafür, dass das Kampfsystem kontrolliert, fair und technisch stabil bleibt.
 
+\newpage
 #### Hit-Detection (Schlag-Erkennung)
 
 Die Treffererkennung erfolgt über die Funktion Hitdetect. Dafür wird in der Animation ein Knochen ausgewählt, um den während aktiver Angriffsframes eine Hitbox erzeugt wird. Als Beispiel sind Frames zwischen 20 und 35 aktiv. Die Hitbox ist eine unsichtbare Sphere Collision mit einem anpassbaren Standardradius von 20 cm. Da Unreal Engine in Zentimetern rechnet, gilt Radius 1 gleich 1 cm.
