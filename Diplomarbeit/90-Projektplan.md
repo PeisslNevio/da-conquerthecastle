@@ -59,13 +59,13 @@ Hier werden die wichtigsten Termine dokumentiert.
 
 | Termin     | Inhalt                          |
 |-----------:|:--------------------------------|
-| 2025-10-09 | Einreichung DA in Portal                     |
-| 2025-11-12 | Ertse DA Zwischenpräsentation                    |
-| 2026-01-09 | Elek. Erstversion Abgabe an Betreuer        |
-| 2026-02-26 | Zweite DA Zwischenpräsentation      |
-| 2026-03-06 | DA Abgabe       |
-| 2026-04-07 | Biblv. DA Abgabe      |
-| 2026-04-13 | DA Präsentation     | 
+| 2025-10-09 | Einreichung der DA im Portal |
+| 2025-11-12 | Erste DA-Zwischenpräsentation |
+| 2026-01-09 | Elektronische Erstversion an Betreuer |
+| 2026-02-26 | Zweite DA-Zwischenpräsentation |
+| 2026-03-06 | DA-Endabgabe |
+| 2026-04-07 | Bibliotheksversion der DA |
+| 2026-04-13 | DA-Präsentation |
 
 
 
@@ -190,7 +190,7 @@ Hier werden alle Meilensteine noch einmal mit Beschreibung aufgezählt:
 ### 2025-12-30: Erstversion der Diplomarbeit
 
 - Grobversion der schriftlichen DA erstellt  
-- Alle Kapitel strukturiert und mit Platzhaltern für technische Inhalte gefüllt  
+- Alle Kapitel strukturiert und mit ersten technischen Inhalten gefüllt  
 - Dokumententeile pro Teammitglied zusammengeführt  
 
 ### 2026-01-09: Feinschliff & Finale Tests
@@ -265,7 +265,7 @@ Spieler
 Das Spiel wird beendet, es findet kein Übergang in die Spielwelt statt.
 
 
-/newpage
+\newpage
 
 ### Bosskampf starten
 
@@ -297,7 +297,7 @@ Spieler, System
 Der Kampf startet nicht, der Spieler bleibt im Bossraum ohne aktive Gegner.
 
 
-/newpage
+\newpage
 
 ### Gegner angreifen
 
@@ -328,7 +328,7 @@ Spieler, System
 Der Boss erleidet keinen Schaden, der Kampf läuft weiter.
 
 
-/newpage
+\newpage
 
 ### Spieler wird angegriffen
 
@@ -359,7 +359,7 @@ Spieler, System
 Der Spieler erleidet keinen Schaden.
 
 
-/newpage
+\newpage
 
 ### Boss besiegen
 
@@ -390,7 +390,7 @@ Keine.
 Nicht zutreffend.
 
 
-/newpage
+\newpage
 
 ### Spieler verliert den Kampf
 
