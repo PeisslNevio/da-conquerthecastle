@@ -235,7 +235,7 @@ Ein etablierter Erklärungsrahmen für musikalisch ausgelöste Emotionen ist das
 
 Gerade für interaktive Medien ist dieses Modell hilfreich, weil es zeigt, dass Musikemotionen nicht nur über Harmonik entstehen, sondern auch über Konditionierung, Rhythmuskopplung, Erwartungssteuerung und Erinnerungseffekte.
 
-### Interaktive Musik in Videospielen
+### Interaktive Musik in Videospielen {#sec-interaktive-musik}
 Interaktive Musik ist im Gamesound kein statischer Hintergrund, sondern ein steuerbares System. Ihre zentrale Aufgabe besteht darin, das Spielgeschehen emotional zu unterstützen, ohne den Spielfluss zu stören. Im Unterschied zur Filmmusik ist der genaue Zeitpunkt von Szenenwechseln oder Gefahrensituationen im Spiel oft nicht vorhersehbar. Dadurch muss Musik so entworfen werden, dass sie flexibel auf Spielerhandlungen reagieren kann und trotzdem musikalisch zusammenhängend bleibt.
 
 #### Adaptive vs. dynamische Musik
@@ -425,13 +425,19 @@ Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, g
 ##### Produktionsumgebung
 Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände [@collins_game_sound] [@hofmann_szczypula_game_sound_2006].
 
+Ein zentraler praktischer Befund war, dass die Entwicklung passender Spielmusik deutlich mehr Zeit benötigt als zunächst erwartet. Bis musikalische Idee, Stimmung, Dramaturgie und technische Einsetzbarkeit im Spiel zusammenpassen, sind mehrere Iterationen beim Komponieren, Testen und Überarbeiten erforderlich.
+
 ##### Musikalisches Gesamtkonzept
 Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung [@schulz_entwicklung_musik_videospielen_2022] [@collins_game_sound] [@youtube_music_controls_you].
 
 Durch dunkle Klangfarben, spannungsorientierte Verläufe und klar gestufte Intensitäten wird die Wahrnehmung von Gefahr, Unsicherheit und Eskalation gezielt verstärkt. Die detaillierte psychologische Herleitung der einzelnen Stücke wird in einem späteren Arbeitsschritt ergänzt [@youtube_write_music_for_games] [@youtube_music_transcends_game].
 
 ##### Vorgehensweise und Einteilung
-Zu Beginn wurde strukturiert festgelegt, welche Musik- und Soundelemente im Spiel benötigt werden. Daraus ergab sich folgende Einteilung:
+Zu Beginn wurde strukturiert festgelegt, welche Musik- und Soundelemente im Spiel benötigt werden. Die konzeptionelle Orientierung erfolgte dabei über unterschiedliche Referenzquellen: Beiträge und Analysen von Creator:innen auf YouTube, musikalische Eindrücke aus Spotify sowie Vergleichswerte aus anderen Spielen und Filmen. Diese Referenzen dienten nicht als direkte Übernahme, sondern als Grundlage für Stimmung, Klangfarbe und dramaturgische Ausrichtung der eigenen Kompositionen.
+
+Zusätzlich floss das im Theorieteil erarbeitete Wissen gezielt in die praktische Umsetzung ein, insbesondere zu Zustandswechseln, Layering und musikalischer Reaktionslogik (vgl. [Interaktive Musik in Videospielen](#sec-interaktive-musik)).
+
+Daraus ergab sich folgende Einteilung:
 
 - **Titelmusik**
 
@@ -453,6 +459,18 @@ Nach dem dritten Schlag setzt tiefe Percussion ein; anschließend führt ein Cel
 Die Abbildung zeigt das Reaper-Projekt der Übergangsmusik und verdeutlicht den zeitlichen Aufbau vom Glockenmotiv zur Überleitung in die Bossmusik.
 
 - **Bossmusik in mehreren Gefahrenstufen** (abhängig vom Bedrohungsgrad)
+Die Bosskampfmusik wurde als dynamisches Layer-System konzipiert, bei dem sich die musikalische Intensität entsprechend des Kampfverlaufs stufenweise erhöht. **Danger Level 1** bildet dabei die klangliche Grundebene des gesamten Bosskampfs.
+
+Ein rhythmisches Cello-Ostinato fungiert als zentrales Bewegungselement und erzeugt eine kontinuierliche Spannungswirkung. Ergänzt wird dieses durch tiefe Percussion mit langsamem, schwerem Puls, welche den bedrohlichen Charakter der Situation akzentuiert. Im Hintergrund stützen tiefe Streicherflächen die düstere Grundatmosphäre.
+
+Harmonisch bleibt die Gestaltung in **D äolisch** verankert, wodurch eine dunkle und bewusst instabile Klangfarbe erhalten wird. Die erste Gefahrenstufe ist kontrolliert und zurückhaltend angelegt, sodass bei zunehmender Bedrohung weitere Layer ergänzt werden können, ohne einen abrupten musikalischen Bruch zu erzeugen.
+
+Für **Danger Level 2** und **Danger Level 3** wurde im Rahmen der Arbeit ein detailliertes musikalisches Konzept erstellt; eine vollständige klangliche Produktion beider Stufen konnte aus Zeitgründen jedoch nicht mehr abgeschlossen werden. Die technische Zustandslogik für die Aktivierung in Unreal wurde dennoch vorbereitet und in den Blueprint-Ablauf integriert.
+
+**Danger Level 2** erweitert die Grundstruktur von Level 1 um zusätzliche rhythmische und klangliche Ebenen. Das Cello-Ostinato bleibt als zentrales Motiv erhalten, wird jedoch durch aktivere Percussion, zusätzliche Streicherbewegungen und stärker eingesetzte tiefe Brass-Elemente ergänzt. Ziel dieser Stufe ist eine deutlich wahrnehmbare Intensivierung des Kampfgeschehens, ohne die musikalische Kontinuität zu unterbrechen.
+
+**Danger Level 3** ist als maximale Eskalationsstufe konzipiert und für kritische Kampfmomente vorgesehen. In dieser Phase steigt die musikalische Dichte durch weitere orchestrale Layer, markantere Percussion, intensivere Brass-Akzente und einen breiteren Choreinsatz auf ihren Höhepunkt. Das Leitmotiv aus Danger Level 1 bleibt bewusst erhalten, um trotz maximaler Verdichtung ein konsistentes musikalisches Gesamtbild sicherzustellen.
+
 - **Siegemusik**
 - **Niederlagenmusik**
 
@@ -461,9 +479,18 @@ Parallel dazu wurden die benötigten Soundeffekte definiert:
 - **Schwerthit**
 - **Magiebälle des Bosses** beim Abschuss
 
+Die beiden Soundeffekte wurden mit zufallsbasierter Variation umgesetzt, wie es auch in vielen Spielen zur Vermeidung repetitiver Klangwahrnehmung eingesetzt wird (z. B. bei variierenden Treffersounds). Der **Schwerthit** entstand aus einer eigenen Aufnahme eines dumpfen Schlags (Aufprall eines Handys auf eine gedämpfte Oberfläche) und wurde anschließend klanglich nachbearbeitet. Für die **Magiebälle** wurde als Ausgangsmaterial das Sprühgeräusch eines Deodorants verwendet und für den Projektilcharakter entsprechend angepasst.
+
 Diese Struktur half dabei, Musik und Sound nicht isoliert, sondern als zusammenhängendes Feedback-System für den Spielverlauf zu entwickeln.
 
 ##### Exportieren und Einfügen in Unreal
-Nach der Ausarbeitung wurden Musik und Soundeffekte als geeignete Audiodateien exportiert und in Unreal importiert. Für eine saubere Weiterverarbeitung wurde auf konsistente Benennung, eine sinnvolle Dateistruktur und vergleichbare Pegel geachtet.
+Das Exportieren in Reaper war in der praktischen Umsetzung nicht besonders schwierig: Über **Rendern** wurde der jeweilige Titel ausgegeben, mit klarer Benennung und durchgängig im Dateityp **WAV**. Diese einheitliche Exportbasis erleichterte den anschließenden Import in Unreal deutlich.
 
-In Unreal wurden die Dateien anschließend den jeweiligen Spielsituationen zugeordnet (z. B. Titelbereich, Bosszustände, Sieg/Niederlage, Treffer- und Projektilgeräusche). Dadurch ließ sich das zuvor definierte Audio-Konzept direkt in die Spielzustände überführen.
+Auch das Einfügen in Unreal war grundsätzlich unkompliziert. Eine wichtige Erkenntnis war jedoch, dass die Musik nicht nur im Blueprint einer einzelnen Map gesteuert werden sollte, da sie sonst beim Wechsel in die nächste Map abgeschnitten wurde. Die Lösung war eine eigene **Game Instance** für die Musiklogik, ergänzt durch zusätzliche **Blueprint Interfaces**, um Zustände und Trigger sauber zu übergeben.
+
+Die Implementierung von Titelmusik, Übergangsmusik und Bossmusik **Danger Level 1** war vor allem eine Frage des richtigen Timings: Die jeweiligen Methoden mussten zum passenden Zeitpunkt ausgelöst werden. Für **Danger Level 2** und **Danger Level 3** wurde zusätzliche Logik eingebaut:
+
+- **Danger Level 2:** Aktiv, wenn der Boss unter 50 % Leben ist **oder** der Spieler in Schlag- bzw. Schussreichweite ist.
+- **Danger Level 3:** Aktiv, wenn **beide** Bedingungen gleichzeitig erfüllt sind.
+
+Die Sieges- bzw. Niederlagenmusik wird entsprechend beim Tod des Bosses bzw. beim Tod des Spielers abgespielt.
