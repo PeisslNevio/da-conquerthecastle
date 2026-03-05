@@ -1,7 +1,7 @@
 # Teilaufgabe Schüler Schmiedpeter
 \textauthor{Schmiedpeter}
 
-## Blender
+## Blender {#sec32-theorie-blender}
 
 ### Einleitung in Blender
 
@@ -76,7 +76,7 @@ Für den Editmodus:
 - **`Str + T`**: Flächen in Dreiecke konvertieren. Sinnvoll für Export und Rendering.
 
 
-## Erweiterte Funktionen in Blender
+## Erweiterte Funktionen in Blender {#sec32-theorie-erweiterte-blender}
 
 ### Material
 
@@ -110,11 +110,11 @@ Ein typisches Beispiel ist der Cloth-Modifier. Er verhält sich wie ein Stofftuc
 
 
 
-## Animationen
+## Animationen {#sec32-theorie-animationen}
 ### Zweck und Nutzen von Animationen
 Animationen sind notwendig, um statische Modelle in glaubwürdige, lesbare und emotionale Figuren zu verwandeln. In Spielen und Visualisierungen übernehmen sie mehrere Aufgaben: Sie machen Handlungen verständlich (z. B. Gehen, Angreifen), stärken die Identität einer Figur durch charakteristische Bewegungen und unterstützen die Spielmechanik durch klare Rückmeldungen (z. B. Treffer, Ausweichen). Ohne Animationen bleibt ein Modell reiner Blickfang, aber es kann keine Handlung vermitteln und wirkt technisch wie dramaturgisch unvollständig.
 
-### Grundlagen des Rigging mit Armature
+### Grundlagen des Rigging mit Armature {#sec32-theorie-rigging}
 Die Armature ist das Skelett einer Figur. Sie besteht aus Knochen (Bones), die hierarchisch verbunden sind und die spätere Bewegung definieren. Jeder Knochen besitzt einen Kopf und ein Ende; aus der Ausrichtung ergibt sich die lokale Achse, die für Rotationen entscheidend ist. Damit eine Armature sauber funktioniert, müssen Skalen der Meshes angewendet sein und die Bone-Orientierungen konsistent angelegt werden.
 
 **Parent-Knochen (Elternknochen)** bestimmen die Hierarchie. Bewegungen eines Elternknochens wirken auf alle darunterliegenden Kinderknochen. Dadurch lassen sich Ketten wie Wirbelsäule, Arm oder Bein logisch aufbauen. Ein Unterarm ist z. B. Kind des Oberarms, sodass eine Rotation des Oberarms die gesamte Kette mitführt.
@@ -141,7 +141,7 @@ Gerade bei organischen oder flexiblen Objekten ist die Verteilung der Gewichte e
 
 ![Armature im Mesh (On-Figure Ansicht)](img/schmiedpeter/OnFigure.png){width=80%}
 
-### Gewichtung und Bindung des Meshes
+### Gewichtung und Bindung des Meshes {#sec32-theorie-gewichtung}
 Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabei gibt es mehrere Modi, die das Grundgerüst der Gewichtung erzeugen und den Startpunkt für die spätere Feinabstimmung liefern:
 
 **Automatic Weights**: Blender berechnet die Gewichte automatisch anhand der Nähe zu den Knochen. Dieser Modus ist effizient und liefert oft brauchbare Ergebnisse, ist jedoch bei komplexen Formen fehleranfällig. Typische Probleme sind ungewollte Verzerrungen, wenn Knochen zu nah an anderen Bereichen liegen. Deshalb ist eine anschließende manuelle Korrektur in den Weight-Painting-Modi fast immer notwendig. In der Praxis gilt: Automatic Weights sind der Startpunkt, nicht der Abschluss.
@@ -159,7 +159,7 @@ Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und
 
 Wichtige Werkzeuge sind Add (Gewichte erhöhen), Subtract (Gewichte reduzieren), Blur oder Smooth (Übergänge glätten) sowie Normalize/Normalize All (Gewichte pro Vertex ausgleichen). Damit lassen sich harte Kanten vermeiden und Gelenkbereiche wie Ellbogen oder Knie sauber verformen.
 
-### Animation erstellen in Blender
+### Animation erstellen in Blender {#sec32-theorie-animation-erstellen}
 Nach dem Rigging beginnt die eigentliche Animation im **Pose Mode** der Armature. Dabei werden nicht die Mesh-Punkte direkt bewegt, sondern die Knochen. Blender speichert diese Bewegungen als Keyframes und interpoliert die Zwischenbilder automatisch.
 
 Typische Vorgehensweise:
@@ -176,7 +176,7 @@ Bei mehreren Animationen (z. B. Idle, Walk, Attack) sollte jede Bewegung als eig
 
 Für Loops (z. B. Gehen) muss der letzte Frame zur Startpose passen, damit der Übergang ohne sichtbaren Sprung wieder von vorne beginnt.
 
-### Einfügen in Unreal
+### Einfügen in Unreal {#sec32-theorie-einfuegen-unreal}
 Für den Export ist ein konsistentes Rig wichtig: gleiche Ausrichtung, klare Root-Struktur und einheitliche Benennung. In Unreal werden Armature und Animationen als FBX importiert. Entscheidend ist, dass die Animationen im selben Skeleton bleiben, damit sie austauschbar und wiederverwendbar sind. So kann z. B. eine Geh-Animation an mehreren Figuren genutzt werden, solange das Skelett kompatibel bleibt.
 
 Kurzablauf für den Import:
@@ -188,13 +188,13 @@ Kurzablauf für den Import:
 
 Wenn ein Clip nicht korrekt aussieht, liegt es meist an Bone-Namen, Skalierung oder an nicht angewendeten Transformationen in Blender.
 
-## Game Sound
+## Game Sound {#sec32-theorie-gamesound}
 
 Game Sound ist weit mehr als akustische Dekoration. Im Computerspiel übernimmt er eine doppelte Funktion: Einerseits erhöht er die Immersion, indem er die künstliche Spielwelt mit glaubwürdigen Klangräumen füllt, andererseits liefert er dem Spieler unmittelbares Feedback auf Handlungen, Ereignisse und Zustandswechsel. Fehlen Hintergrundgeräusche, wirkt eine Szene schnell künstlich und leer; sind sie stimmig gestaltet, werden sie oft kaum bewusst wahrgenommen, stabilisieren aber das Erleben der Spielwelt nachhaltig.
 
 Im Unterschied zu linearen Medien entsteht Sound im Spielkontext unter interaktiven Bedingungen. Atmo, Musik, Sprache und Geräusche werden nicht in einer fixen Reihenfolge abgespielt, sondern können sich abhängig von Spieleraktionen zeitlich unvorhersehbar überlagern. Genau daraus ergeben sich zentrale gestalterische Herausforderungen: Sprachverständlichkeit muss erhalten bleiben, klangliche Konflikte zwischen Ebenen sollen vermieden werden, und trotzdem muss ein konsistenter Gesamteindruck entstehen. Eine strukturierte Klanghierarchie und ein bewusstes Lautstärke- und Mischungsverhältnis sind daher Grundvoraussetzungen für professionellen Gamesound.
 
-### Musikpsychologische Grundlagen
+### Musikpsychologische Grundlagen {#sec32-theorie-musikpsych}
 #### Wahrnehmung von Tönen
 Die Wahrnehmung von Tönen wird in der musikpsychologischen Lehre von Ernst Kurth als Erleben von „Strebewirkungen“ beschrieben: Töne und Intervalle wirken nicht statisch, sondern erzeugen den Eindruck von gerichteter Bewegung, Spannung und möglicher Auflösung. Die Strebetendenz-Theorie (Willimek) erweitert diesen Ansatz, indem sie diese Wirkung als psychologische Identifikation des Hörers mit Willensregungen deutet. Vereinfacht bedeutet das: Der Hörer erlebt nicht nur eine Klangbewegung, sondern einen inneren Impuls gegen oder für eine Veränderung [@willimek_musik_und_emotionen_2011].
 
@@ -391,7 +391,7 @@ Durch diese Kombination aus automatischer Bereinigung und manueller Korrektur wu
 
 #### Animationen
 ##### Vorgehensweise beim Rigging
-Die Animationen wurden auf Basis des im Theorieteil beschriebenen Rigging-Ansatzes erstellt. Zuerst wurde eine eigene Armature aufgebaut, inklusive Inverse Kinematik (IK) und Offset-Setups, um kontrollierbare Gelenkbewegungen und saubere Hierarchien zu erhalten.
+Die Animationen wurden auf Basis des im Theorieteil beschriebenen Rigging-Ansatzes erstellt (vgl. [Grundlagen des Rigging mit Armature](#sec32-theorie-rigging), [Gewichtung und Bindung des Meshes](#sec32-theorie-gewichtung), [Animation erstellen in Blender](#sec32-theorie-animation-erstellen)). Zuerst wurde eine eigene Armature aufgebaut, inklusive Inverse Kinematik (IK) und Offset-Setups, um kontrollierbare Gelenkbewegungen und saubere Hierarchien zu erhalten.
 
 Anschließend wurden zwei Varianten getestet: die manuell aufgebaute Armature und ein automatisiert erzeugtes Rig. Beide Varianten wurden mit automatischer Gewichtung an den Boss gebunden und praktisch im Animationsprozess verglichen.
 
