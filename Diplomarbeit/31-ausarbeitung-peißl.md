@@ -175,10 +175,10 @@ Der Export wurde mithilfe des Menüpfads `File > Export > FBX (.fbx)` durchgefü
 - **Apply Modifiers**: Aktiviert (um alle Modifier in der Geometrie zu berücksichtigen)
 - **Bake Animation**: Deaktiviert (da das Modell nicht animiert ist)
 
-Nach diesen Schritten erhält man eine `.fbx` File im ausgewählten Pfad.
+Nach diesen Schritten erhält man eine `.fbx`-Datei im ausgewählten Pfad.
 
 
-Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Project-Verzeichnis (`Content/Bossraum/`) kopiert. Unreal Engine erkannte die Datei automatisch und importierte sie. Bei der Bestätigung des Imports wurden folgende Parameter konfiguriert:
+Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Projektverzeichnis (`Content/Bossraum/`) kopiert. Unreal Engine erkannte die Datei automatisch und importierte sie. Bei der Bestätigung des Imports wurden folgende Parameter konfiguriert:
 
 - **Skeletal Mesh**: Deaktiviert (nicht erforderlich für statische Modelle)
 - **Create Physics Asset**: Deaktiviert
@@ -187,9 +187,9 @@ Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Project
 - **Material Import Method**: Create New Materials
 - **Import Textures**: Aktiviert (falls Textur-Dateien vorhanden waren)
 
-Die Kollisionsdaten wurden basierend auf der importierten Geometrie automatisch generiert. Dannach wurde die Collision im Details-Panel auf `Use Complex Collision As Simple` gesetzt.
+Die Kollisionsdaten wurden basierend auf der importierten Geometrie automatisch generiert. Danach wurde die Collision im Details-Panel auf `Use Complex Collision As Simple` gesetzt.
 
-Nach dem Import wurde das Modell im Level platziert und mithilfe verschiedenen Ansichten (Lit, Unlit, Wireframe, Normalansicht) wurde überprüft, ob alles richtig gerendert wird.
+Nach dem Import wurde das Modell im Level platziert und mithilfe verschiedener Ansichten (Lit, Unlit, Wireframe, Normalansicht) überprüft, ob alles richtig gerendert wird.
 
 
 ![Bossraum](img/peissl/praxis/bossroom-ue5.png){width=90%}
@@ -207,7 +207,7 @@ Die Gestaltung dieser Waffen folgt dem mittelalterlichen Gesamtstil des Spiels u
 Bei der Ausarbeitung der Waffen standen drei Ziele im Vordergrund:
 
 1. **Gameplay-Klarheit:** Waffen sollten auf den ersten Blick als kampfrelevante Objekte erkennbar sein.
-2. **Konsistenz:** Form und Texxtur sollten zum Low-Poly-Mittelalterstil des Spiels passen.
+2. **Konsistenz:** Form und Textur sollten zum Low-Poly-Mittelalterstil des Spiels passen.
 3. **Proportionen:** Die Größe der Waffen musste mit der Körpergröße der jeweiligen Figur harmonieren.
 
 
@@ -249,11 +249,11 @@ Die primäre Zielsetzung der GUI besteht darin, dem Spieler ausschließlich esse
 
 #### Rolle der GUI im Spielablauf
 
-Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu Beginn leitet das Hauptmenü den Spieler durch die ersten Schritte und ermöglicht den Einstieg ins Spiel. Sobald der Kampf beginnt, übernimmt das HUD die zentrale Rolle: Es zeigt dem Spieler kontinuierlich seine aktuelle Lebenspunkteanzahl sowie seine verfügbare Ausdauer an. Zusätzlich wird die Lebensleiste des Bosses prominent dargestellt, sodass der Spieler den Kampfverlauf nachvollziehen und seine Strategien dynamisch anpassen kann. Nach einem Spieler-Tod erscheint der Death-Screen, der dem Spieler Optionen zur Fortsetzung bietet. Wenn der Boss besiegt wurde, erscheit der Viktory-Screen. Das Statistikmenü ermöglicht es, wichtige Spielinformationen und die beste Zeit einzusehen.
+Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu Beginn leitet das Hauptmenü den Spieler durch die ersten Schritte und ermöglicht den Einstieg ins Spiel. Sobald der Kampf beginnt, übernimmt das HUD die zentrale Rolle: Es zeigt dem Spieler kontinuierlich seine aktuelle Lebenspunkteanzahl sowie seine verfügbare Ausdauer an. Zusätzlich wird die Lebensleiste des Bosses prominent dargestellt, sodass der Spieler den Kampfverlauf nachvollziehen und seine Strategien dynamisch anpassen kann. Nach einem Spieler-Tod erscheint der Death-Screen, der dem Spieler Optionen zur Fortsetzung bietet. Wenn der Boss besiegt wurde, erscheint der Victory-Screen. Das Statistikmenü ermöglicht es, wichtige Spielinformationen und die beste Zeit einzusehen.
 
 #### Abgrenzung zwischen Spielwelt und Benutzeroberfläche
 
-Die GUI existiert außerhalb der eigentlichen Spielwelt und wird als zweidimensionale Überlagerung im Vordergrund des Bildschirms dargestellt. Diese Trennung zwischen Spielwelt und Benutzeroberfläche wird technisch durch das UMG-Framework realisiert, welches die GUI-Elemente unabhängig von der 3D-Szene rendert. Dadurch bleibt die GUI stets sichtbar und lesbar, unabhängig von Kamerabewegungen oder Spielgeschehen. Diese klare Abgrenzung ermöglicht es dem Spieler, zwischen spielrelevanten Informationen (GUI) und der eigentlichen Spielwelt zu unterscheiden. Die HUD wurde mithilfe von ´pixilart.com´ erstellt. In der folgenden Abbildung sieht man das HUD im Editor.
+Die GUI existiert außerhalb der eigentlichen Spielwelt und wird als zweidimensionale Überlagerung im Vordergrund des Bildschirms dargestellt. Diese Trennung zwischen Spielwelt und Benutzeroberfläche wird technisch durch das UMG-Framework realisiert, welches die GUI-Elemente unabhängig von der 3D-Szene rendert. Dadurch bleibt die GUI stets sichtbar und lesbar, unabhängig von Kamerabewegungen oder Spielgeschehen. Diese klare Abgrenzung ermöglicht es dem Spieler, zwischen spielrelevanten Informationen (GUI) und der eigentlichen Spielwelt zu unterscheiden. Das HUD wurde mithilfe von `pixilart.com` erstellt. In der folgenden Abbildung sieht man das HUD im Editor.
 
 
 ![Spieler-HUD mit Lebenspunkten und Ausdauer](img/peissl/praxis/ui-player.png){width=90%}
@@ -273,12 +273,12 @@ Die einzelnen Widgets bestehen aus verschiedenen Standard-UI-Komponenten:
 
 Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein wiederverwendbares UI-Element, das sowohl visuelle Komponenten als auch zugehörige Logik enthält. Folgende Widgets wurden implementiert:
 
-- **Mainmenu-Widget**: Enthält Buttons für "Play", "Statistics" und "Quit". Das Layout wurde links ausgerichtet und mit konsistenten Abständen zwischen den Buttons versehen, um dem Spieler sicht auf die Burg zu gewähren.
+- **Mainmenu-Widget**: Enthält Buttons für "Play", "Statistics" und "Quit". Das Layout wurde links ausgerichtet und mit konsistenten Abständen zwischen den Buttons versehen, um dem Spieler die Sicht auf die Burg zu erhalten.
 
 ![Hauptmenü](img/peissl/praxis/mainmenu-ui.png){width=90%}
 
 
-- **Statistics-Menu-Widget**: Zeigt Spielstatistiken wie gespielete Spiele, Bestzeit und weitere Errungenschaften an.
+- **Statistics-Menu-Widget**: Zeigt Spielstatistiken wie gespielte Spiele, Bestzeit und weitere Errungenschaften an.
 
 ![Statistikmenü](img/peissl/praxis/statisticsmenu-ui.png){width=90%}
 
@@ -292,9 +292,9 @@ Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein w
 
 ![Death-Screen nach Spieler-Tod](img/peissl/praxis/ui-deathscreen.png){width=90%}
 
-- **Viktory-Screen-Widget**: Wird nach besiegen des Bosses eingeblendet und bietet Optionen zum erneut Spielen oder zur Rückkehr ins Hauptmenü.
+- **Victory-Screen-Widget**: Wird nach dem Besiegen des Bosses eingeblendet und bietet Optionen zum erneuten Spielen oder zur Rückkehr ins Hauptmenü.
 
-![Viktory-Screen nach Boss-Tod](img/peissl/praxis/ui-viktoryscreen.png){width=90%}
+![Victory-Screen nach Boss-Tod](img/peissl/praxis/ui-viktoryscreen.png){width=90%}
 
 
 
@@ -307,7 +307,7 @@ Cutscenes dienen in ConquerTheCastle der Einführung des Spielers in die Spielwe
 
 #### Intro Cutscene
 
-Die Intro-Cutscene führt den Spieler in die Spielwelt ein und zeigt die Umgebung außerhalb des Bossraums, bevor das eigentliche Gameplay beginnt. Sie erzeugt gibt dem Spieler Zeit, sich auf den bevorstehenden Kampf vorzubereiten. Die Sequenz endet mit der Einblendung des Hauptmenüs, das die weitere Spielprogression steuert.
+Die Intro-Cutscene führt den Spieler in die Spielwelt ein und zeigt die Umgebung außerhalb des Bossraums, bevor das eigentliche Gameplay beginnt. Sie gibt dem Spieler Zeit, sich auf den bevorstehenden Kampf vorzubereiten. Die Sequenz endet mit der Einblendung des Hauptmenüs, das die weitere Spielprogression steuert.
 
 
 Der Einsatz von Cutscenes erhöht die narrative Kohärenz und verleiht dem Spiel eine cinematische Qualität. Zugleich verbindet die Intro-Cutscene das Main Menu mit dem Übergang in das eigentliche Spielgeschehen.

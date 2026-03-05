@@ -31,7 +31,7 @@ Die Komplexität der Spielentwicklung kann man  grob in verschiedene Disziplinen
 
 #### Projektnutzen
 
-Dieses Projekt bietet einen klaren fachlichen und pädagogischen Mehrwert. Die Umsetzung eines vollständigen Bosskampfs in der Unreal Engine 5 mit dreidimensionalen Modellen von Blender ermöglicht die verwendung von moderne Technologien, theoretisch so wie praktisch. Dadurch entsteht ein Kompetenzzuwachs in Bereichen wie 3D-Modellierung, Animation, Programmierung, Engine-Workflow und Projektorganisation – alles Fähigkeiten, die in der heutigen IT- und Medienwelt stark nachgefragt sind.
+Dieses Projekt bietet einen klaren fachlichen und pädagogischen Mehrwert. Die Umsetzung eines vollständigen Bosskampfs in der Unreal Engine 5 mit dreidimensionalen Modellen aus Blender ermöglicht die Verwendung moderner Technologien, sowohl theoretisch als auch praktisch. Dadurch entsteht ein Kompetenzzuwachs in Bereichen wie 3D-Modellierung, Animation, Programmierung, Engine-Workflow und Projektorganisation – alles Fähigkeiten, die in der heutigen IT- und Medienwelt stark nachgefragt sind.
 
 Gleichzeitig schafft das Projekt ein sichtbares, funktionierendes Endprodukt, das als Demonstrator für zukünftige Klassen und schulische Präsentationen eingesetzt werden kann. Der Nutzen liegt somit nicht nur beim Projektteam, sondern auch bei der Schule, die ein professionell wirkendes Showcase erhält. Zudem fördert das Projekt die Teamfähigkeit, das technische Problemlösen und das strukturierte Arbeiten über einen längeren Zeitraum hinweg. 
 
@@ -71,7 +71,7 @@ Hier werden die wichtigsten Termine dokumentiert.
 
 #### Projektkosten
 
-Hier ist eine Übersicht, wie viel unsere Diplomarbeit vorraussichtlich kosten wird.
+Hier ist eine Übersicht, wie viel unsere Diplomarbeit voraussichtlich kosten wird.
 
 | Kostenname  | Kostenart | Menge  | Preis   | Gesamtkosten | Deckung durch |
 |:-------------|:---------:|:------:|--------:|-------------:|---------------|
@@ -79,13 +79,13 @@ Hier ist eine Übersicht, wie viel unsere Diplomarbeit vorraussichtlich kosten w
 | 3D Assets | Software  |  1     |  30.93 | 30.93      | Schüler|
 | DA-Schreiben | Druck     |  3     |   26.00 |  78.00      | Schüler       |
 
-__Das Projekt kostet in Summe vorraussichtlich 359,93 Euro__. 
+__Das Projekt kostet in Summe voraussichtlich 359,93 Euro__. 
 
 
 
 #### Projektrisiken
 
-Hier ist unsere einschätzug von den möglichen Risiken sowie deren Wahrscheinlichkeiten.
+Hier ist unsere Einschätzung zu den möglichen Risiken sowie deren Wahrscheinlichkeiten.
 
 | Risiko | EW | Auswirkungen | Maßnahmen |
 |---------------|---:|------------------------|------------------------|
@@ -117,7 +117,7 @@ Hier werden alle Beteiligten an der Diplomarbeit samt Kontaktdaten gelistet.
 
 #### Projektrollen
 
-Hier werden den Kontakten von oben konkrete Rollen zuewiesen.
+Hier werden den Kontakten von oben konkrete Rollen zugewiesen.
 
 | Projektrolle           | Rollenbeschreibung     | Name              |
 |------------------------|------------------------|-------------------|
