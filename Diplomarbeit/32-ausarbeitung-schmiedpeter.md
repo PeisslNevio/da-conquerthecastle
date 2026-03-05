@@ -488,9 +488,13 @@ Das Exportieren in Reaper war in der praktischen Umsetzung nicht besonders schwi
 
 Auch das Einfügen in Unreal war grundsätzlich unkompliziert. Eine wichtige Erkenntnis war jedoch, dass die Musik nicht nur im Blueprint einer einzelnen Map gesteuert werden sollte, da sie sonst beim Wechsel in die nächste Map abgeschnitten wurde. Die Lösung war eine eigene **Game Instance** für die Musiklogik, ergänzt durch zusätzliche **Blueprint Interfaces**, um Zustände und Trigger sauber zu übergeben.
 
+![Sound-Logik in Unreal (Game Instance und Blueprint-Anbindung)](img/schmiedpeter/Sound_Unreal.png){width=80%}
+
 Die Implementierung von Titelmusik, Übergangsmusik und Bossmusik **Danger Level 1** war vor allem eine Frage des richtigen Timings: Die jeweiligen Methoden mussten zum passenden Zeitpunkt ausgelöst werden. Für **Danger Level 2** und **Danger Level 3** wurde zusätzliche Logik eingebaut:
 
 - **Danger Level 2:** Aktiv, wenn der Boss unter 50 % Leben ist **oder** der Spieler in Schlag- bzw. Schussreichweite ist.
 - **Danger Level 3:** Aktiv, wenn **beide** Bedingungen gleichzeitig erfüllt sind.
+
+![Bosskampf-Soundlogik mit Danger-Levels](img/schmiedpeter/Sound_Bosslogik.png){width=80%}
 
 Die Sieges- bzw. Niederlagenmusik wird entsprechend beim Tod des Bosses bzw. beim Tod des Spielers abgespielt.
