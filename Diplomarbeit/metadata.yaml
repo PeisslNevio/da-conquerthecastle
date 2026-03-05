@@ -58,8 +58,12 @@ da-kiquellen:
   pdf-file: gpt-uv-mapping.pdf
 
 - ki: ChatGPT5.2
+  short-prompt: Unreal Theorie
+  pdf-file: unreal-theorie.pdf
+
+- ki: ChatGPT5.2
   short-prompt: Ritterrüstung für Mittelalterboss
-  pdf-file: ritterrüstung-für-mittelalterboss.pdf
+  pdf-file: ruestung-boss.pdf
 
 
 da-appendix:
