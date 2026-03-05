@@ -21,6 +21,7 @@ Unity ist stärker auf Performance, mobile Plattformen und breite Hardware-Unter
 
 Physikalisch basiertes Rendering (PBR) ist in Unreal Engine standardmäßig aktiv. Materialien reagieren dadurch realistisch auf Licht, Rauheit und Metallizität. Dadurch lassen sich glaubwürdige Oberflächen auch ohne tiefgehende Shader-Kenntnisse umsetzen. Bereits mit den Standardwerkzeugen der Engine sind hochwertige Ergebnisse möglich.
 
+\newpage
 ##### Vergleich zu Unity
 
 Unity kann ebenfalls photorealistische Ergebnisse liefern, dies ist jedoch vor allem mit der High Definition Render Pipeline (HDRP) praktikabel. Dafür sind in der Regel ein höherer Konfigurationsaufwand, detaillierte Shader-Anpassungen und zusätzliche manuelle Feinarbeit nötig. Im Vergleich dazu liefert Unreal Engine ähnliche oder bessere Ergebnisse schneller und konsistenter.
@@ -165,6 +166,7 @@ Unreal Engine wird für unterschiedliche Simulationsarten eingesetzt, zum Beispi
 
 Unreal Engine bietet starke Unterstützung für Virtual Reality und Augmented Reality. Die hohe Bildqualität ist wichtig für Immersion und Realismus. Typische Anwendungsbereiche sind Trainingssimulationen, medizinische Anwendungen und Produktpräsentationen. Die hohe grafische Qualität bringt allerdings höhere Hardwareanforderungen mit sich.
 
+\newpage
 #### Automobilindustrie
 
 Unreal Engine wird auch in der Automobilindustrie eingesetzt, etwa für Fahrzeugvisualisierungen, Design-Reviews und virtuelle Showrooms. In der Praxis ermöglicht das schnellere Entwicklungszyklen, bessere Entscheidungsgrundlagen und eine Reduktion physischer Prototypen. Besonders relevant sind dabei realistische Materialdarstellungen wie Lack, Glas und Metall sowie Echtzeit-Anpassungen von Farben, Innenausstattung und Beleuchtung.
@@ -339,7 +341,6 @@ In HitDetectBoss selbst wird analog zur Player-Logik ein Knochen des Boss-Meshes
 
 Ist Can Shoot Projectile dagegen true, stoppt der Boss über den AI Controller zuerst die Bewegung, führt anschließend das Event WhatRangedAttack aus und setzt Can Punch wieder auf true.
 
-\newpage
 #### Fernkampfentscheidung über WhatRangedAttack
 
 Das Event WhatRangedAttack steuert, welche Fernkampfvariante im nächsten Zyklus ausgeführt wird. Zu Beginn wird ein Zufallswert zwischen 0 und 1 erzeugt und in Random Ranged Attack gespeichert. Anschließend entscheidet eine Abfrage mit dem Schwellenwert 0,3 zwischen der Homing-Variante und der normalen Projektilvariante.
