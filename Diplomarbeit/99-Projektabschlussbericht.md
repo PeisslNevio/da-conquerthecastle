@@ -50,10 +50,10 @@ Die Diplomarbeit hat vor allem im Bildungs- und Innovationskontext einen positiv
 Betroffene Sustainable Development Goals (SDGs):
 
 | SDG | Bezug zur Arbeit | Wirkung |
-|:----|:------------------|:--------|
+|:------------|:------------------------------------|:--------|
 | **SDG 4 – Hochwertige Bildung** | Das Projekt dient als praxisnahes Lernbeispiel für Game Development (3D, Programmierung, Projektarbeit). | **Positiv** |
 | **SDG 9 – Industrie, Innovation und Infrastruktur** | Einsatz moderner Entwicklungswerkzeuge und Aufbau technischer Kompetenzen in Zukunftstechnologien. | **Positiv** |
 | **SDG 12 – Nachhaltige/r Konsum und Produktion** | Fokus auf klaren Projektumfang, Wiederverwendung digitaler Assets und Vermeidung unnötiger Nachproduktion. | **Eher positiv** |
-| **SDG 13 – Maßnahmen zum Klimaschutz** | Hoher Rechenaufwand bei Rendering, Testing und Tool-Nutzung verursacht indirekten Energieverbrauch. | **Eher negativ** |
+
 
 Gesamtbewertung: Der direkte gesellschaftliche Beitrag der Arbeit liegt im Bildungsmehrwert und in der Förderung digitaler Zukunftskompetenzen. Ökologische Auswirkungen sind im Vergleich zu materiell intensiven Projekten begrenzt, jedoch nicht vernachlässigbar. Für zukünftige Projekte sind energieeffiziente Entwicklungsprozesse (z. B. optimierte Build-/Testzyklen, bewusste Hardware- und Laufzeitnutzung) sinnvoll, um die Umweltbelastung weiter zu reduzieren.

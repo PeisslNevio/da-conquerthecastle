@@ -311,7 +311,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 * Der Meilenstein „Endabgabe“ wurde vorbereitet und abgeschlossen.
 
 | Dimension      | Status          | Maßnahmen |
-|:---------------|:----------------|:----------|
+|:---------------|:----------------|:-------------------------|
 | Leistungsziele | In Ordnung      | Nur notwendige Restkorrekturen durchführen |
 | Terminziele    | Kritisch        | Abgabepaket frühzeitig finalisieren und prüfen |
 | Kostenziele    | In Ordnung      | Gesamtausgaben im geplanten Rahmen halten |
