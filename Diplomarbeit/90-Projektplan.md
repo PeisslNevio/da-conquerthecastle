@@ -87,8 +87,8 @@ __Das Projekt kostet in Summe vorraussichtlich 359,93 Euro__.
 
 Hier ist unsere einschätzug von den möglichen Risiken sowie deren Wahrscheinlichkeiten.
 
-| Risiko                                   | EW  | Auswirkungen                                                                 | Maßnahmen |
-|:----------------------------------------:|:---:|:-----------------------------------------------------------------------------|:----------|
+| Risiko  | EW  | Auswirkungen | Maßnahmen |
+|:----------------------------------------:|:---:|:-----------------------------------------------------------------------------:|:----------:|
 | Unterschätzung des technischen Aufwands   | 35% | Gameplay, Animationen oder Bosslogik werden später fertig als geplant       | Frühzeitige Prototypen, klare Meilensteine, regelmäßige Reviews |
 | Probleme bei 3D-Modellierung oder Rigging | 25% | Bossmodell kann nicht rechtzeitig animiert oder ins Spiel integriert werden | Vereinfachung des Modells, frühzeitige Tests in UE5, Backup-Modell |
 | Unreal Engine 5 Performance-/Kompatibilitätsprobleme | 20% | Ruckeln, Crashes, hohe Nacharbeit nötig                                      | Optimierung von Anfang an, Low-Poly konsequent einsetzen |
