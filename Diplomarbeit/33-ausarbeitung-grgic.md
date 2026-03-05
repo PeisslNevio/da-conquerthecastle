@@ -185,6 +185,14 @@ In diesem Kapitel wird die praktische Umsetzung in Unreal Engine beschrieben. De
 
 Das Spiel besteht aus mehreren zentralen Komponenten: dem Player-System, der Boss-KI, dem Kampfsystem und verschiedenen Projektilmechaniken. Diese Systeme greifen ineinander, um einen interaktiven und spielerisch fordernden Bosskampf zu ermöglichen.
 
+### Lernquellen, Eigenleistung und Vorgehen
+
+Ein großer Teil der praktischen Arbeitszeit bestand aus dem Durcharbeiten und direkten Mitumsetzen von YouTube-Tutorials zu Animation, Combat, KI, Projektilen, Kamera und allgemeinen Unreal-Workflows. Die Videos wurden nicht nur angesehen, sondern in wesentlichen Teilen aktiv nachgebaut und auf die eigene Projektstruktur übertragen. [@youtube_tnzv7kqpaio] [@youtube_0bo2yoirday] [@youtube_c02yvlqf0gs] [@youtube_jgwini9_xbu] [@youtube_l9qixi858ag] [@youtube_rkhm862pwku] [@youtube_wuxvq6at6pe] [@youtube_1xjglkrb4_m] [@youtube_xm_7m5fw1hu] [@youtube_npnojek7w58] [@youtube_wz11yqdidfa] [@youtube_eh2onheltga] [@youtube_hsbziqfyzw0]
+
+Während der Umsetzung traten viele Fehler auf. Zusätzlich wurde stellenweise experimentell im Stil von Vibe-Coding gearbeitet, um neue Ideen schnell auszuprobieren. Eine zentrale Herausforderung war dabei, neue Funktionen sauber mit bereits bestehenden Systemen zu verbinden, ohne vorhandene Abläufe zu zerstören.
+
+Jede relevante Änderung wurde unmittelbar im Spiel getestet: Der entsprechende Abschnitt wurde gestartet und anschließend geprüft, ob das Verhalten wie erwartet funktioniert. Dieser iterative Testprozess war ein fester Bestandteil der praktischen Entwicklung.
+
 ### Warum Blueprints statt reinem Textcode?
 
 Für die praktische Umsetzung wurde im Gameplay-Bereich bewusst mit Blueprints gearbeitet und nicht ausschließlich mit selbst geschriebenem Textcode (z. B. C++). Der Blueprint-Ansatz ermöglicht eine deutlich schnellere Umsetzung und Iteration bei Gameplay-Features, weil Logik und Datenfluss visuell nachvollziehbar sind und Fehler im Graph oft schnell erkannt werden. Gerade für Prototyping und häufige Änderungen ist dieser Ansatz sehr effizient.
@@ -250,6 +258,20 @@ Normalize normiert einen Vektor auf die Länge 1 und behält dabei nur die Richt
 
 Ein Target Point ist ein berechneter Zielpunkt im Raum, der für präziseres Ausrichten von Projektilen verwendet wird.
 
+Is Valid prüft, ob eine Objekt-Referenz vorhanden und zur Laufzeit noch gültig ist. Damit werden Zugriffe auf ungültige Ziele verhindert.
+
+Apply Damage übergibt einen Schadenswert an ein Zielobjekt. Der Event Instigator bezeichnet den verantwortlichen Controller, Damage Causer das konkrete verursachende Objekt, zum Beispiel ein Projektil.
+
+Die Projectile Movement Component steuert die Flugbewegung eines Projektils. Velocity ist dabei der Geschwindigkeitsvektor, also Richtung und Stärke der Bewegung.
+
+Ein Homing Projectile ist ein Projektil, das sein Ziel während des Fluges aktiv nachverfolgt.
+
+Die Homing Target Component ist die Zielkomponente, auf die ein Homing-Projektil fortlaufend ausgerichtet wird.
+
+Get All Actors of Class liefert alle Instanzen einer bestimmten Klasse in der aktuellen Spielwelt. Über den Indexzugriff kann daraus gezielt eine Instanz weiterverwendet werden.
+
+Boss Payback ist ein projektspezifisches Event im Boss-Blueprint, das als Reaktion auf ein erfolgreich reflektiertes Projektil ausgeführt wird.
+
 Stamina ist die Ausdauer-Ressource für Aktionen wie Dodge oder Angriff.
 
 Ein Cooldown ist eine kurze Sperrzeit nach einer Aktion, damit Eingaben nicht beliebig oft hintereinander ausgeführt werden können.
@@ -261,6 +283,10 @@ Ragdoll Physics bedeutet, dass auf das Skelett-Mesh eines Charakters Physik ange
 ### Architektur des Spiels
 
 Die zentralen Klassen der Spielarchitektur sind BP_FirstPersonCharacter, BP_Boss, BP_Projectile und BP_HomingProjectile. BP_FirstPersonCharacter steuert Bewegung, Kamera, Angriff, Stamina und Parry-Logik. BP_Boss verwaltet Boss-Leben, Angriffsabläufe und das Spawnen von Projektilen. Die Projektil-Blueprints übernehmen Flugverhalten, Kollision und Spezialverhalten wie Homing und Reflexion.
+
+### Gestaltung der Umgebung
+
+Zu Beginn der praktischen Arbeit wurde die Spielumgebung visuell aufgebaut und abgestimmt. Dazu gehörten die grundlegende Lichtstimmung, der Sonnenstand, ein leichter Nebel sowie weitere Atmosphären-Einstellungen, damit die Szene von Anfang an die gewünschte Wirkung erzielt.
 
 \newpage
 ### Player-System
@@ -303,7 +329,7 @@ Durch diese mehrstufige Filterung wird verhindert, dass ein Gegner innerhalb ein
 
 Beim Drücken von InputAction Attack wird zusätzlich ein Parry-Fenster gestartet. Dabei wird parryActive auf true gesetzt und die Collision-Komponente ParryCollider aktiviert. Nach einem Delay von 0,5 Sekunden wird parryActive wieder auf false gesetzt und ParryCollider deaktiviert.
 
-Wenn ParryCollider in diesem Zeitfenster mit einem Homing-Projektil überlappt, wird ein Cast To BP_HomingProjectile ausgeführt. Bei erfolgreichem Cast wird das Event Reflect aufgerufen, wodurch das Projektil zurückgelenkt wird.
+Wenn ParryCollider in diesem Zeitfenster mit einem Homing-Projektil überlappt, wird ein Cast To BP_HomingProjectile ausgeführt. Bei erfolgreichem Cast wird das Event Reflect aufgerufen, wodurch das Projektil auf den Boss zurückgelenkt wird.
 
 \newpage
 #### HitReaction und Todeszustand
@@ -378,3 +404,29 @@ SpawnHoming erzeugt die Homing-Variante. Dafür wird Spawned Homing Projectiles 
 GetPlayerLocation und GetPlayerSprintingLocation berechnen den Zielpunkt für die normale Schussvariante. Beide Events lesen zunächst Position und Geschwindigkeit des Spielers aus und berechnen über Vector Length den aktuellen Speed-Wert. Wenn der Spieler nahezu stillsteht, wird direkt die aktuelle Spielerposition als Zielpunkt verwendet.
 
 Bewegt sich der Spieler, wird aus der Bewegungsrichtung ein Vorhaltepunkt berechnet. Dazu wird der Geschwindigkeitsvektor normalisiert und auf die Spielerposition addiert. In GetPlayerLocation wird mit einem Faktor von 200 gerechnet, in GetPlayerSprintingLocation mit 400. Dadurch wird bei Sprint ein weiter vorausliegender Zielpunkt verwendet, was die Treffergenauigkeit gegen schnelle Bewegung erhöht.
+
+#### Logik des normalen BP_Projectile
+
+Die zentrale Fluglogik startet im Event Fire. Zu Beginn wird geprüft, ob Target Actor gültig ist. Nur wenn diese Referenz vorhanden ist, wird die Zielrichtung berechnet.
+
+Danach entscheidet die Variable Use Target Point über die Art der Richtungsberechnung. Wenn Use Target Point aktiv ist, wird aus Target Point minus aktueller Projektilposition der Richtungsvektor erzeugt. Andernfalls wird die Richtung über Zielposition des Target Actor minus aktueller Projektilposition berechnet.
+
+Der resultierende Richtungsvektor wird normalisiert, mit dem Wert Speed multipliziert und anschließend als Velocity in der Projectile Movement Component gesetzt. Dadurch fliegt das Projektil mit konstanter Geschwindigkeit entlang des berechneten Zielvektors.
+
+Die Trefferverarbeitung erfolgt über On Component Begin Overlap der Kollisionskomponente. Dabei wird geprüft, ob Other Actor dem Player Character entspricht. Nur in diesem Fall wird der Schadenspfad ausgeführt.
+
+Zur Absicherung gegen Mehrfachtreffer verwendet die Logik Do Once. Danach wird Apply Damage mit den Werten Damaged Actor gleich Player Character, Base Damage gleich Damage, Event Instigator über Get Instigator Controller und Damage Causer gleich Self ausgeführt. Unmittelbar nach dem Schaden wird das Projektil über Destroy Actor entfernt.
+
+Zusätzlich enthält die Blueprint-Logik eine zeitgesteuerte Selbstzerstörung nach 10 Sekunden. Dadurch bleiben keine Projektile dauerhaft in der Szene, falls kein Treffer zustande kommt.
+
+#### Logik des BP_HomingProjectile
+
+Die Fire-Funktion des BP_HomingProjectile ist im Kern identisch zur Fire-Funktion des normalen BP_Projectile. Der Unterschied liegt nicht in der Grundberechnung der Flugbewegung, sondern in der Konfiguration der Projectile Movement Component.
+
+Für das Homing-Verhalten wird in den Details der Projectile Movement Component die Einstellung Is Homing Projectile aktiviert. Damit folgt das Projektil nicht nur einer einmal berechneten Startbahn, sondern richtet sich während des Fluges laufend an der gesetzten Homing Target Component aus.
+
+Im Event On Component Begin Overlap wird zunächst geprüft, ob der überlappte Actor den Tag Player besitzt. Danach wird über den Player-Character der aktuelle Parry-Zustand ausgelesen und gemeinsam mit der Variable Reflected ausgewertet.
+
+Aus dieser Prüfung entstehen zwei Pfade. Im normalen Trefferpfad wird Apply Damage auf den Spieler ausgeführt und das Projektil anschließend mit Destroy Actor entfernt. Im Reflektionspfad wird über Do Once eine Mehrfachauslösung verhindert, danach die Boss-Instanz über Get All Actors of Class ermittelt, Boss Payback ausgeführt und das Projektil ebenfalls zerstört.
+
+Zusätzlich enthält BP_HomingProjectile das Custom Event Reflect. Dabei wird Reflected auf true gesetzt und die Homing Target Component auf die Capsule Component des Boss umgestellt. Dadurch wechselt das Ziel nach erfolgreicher Parry-Reaktion vom Spieler auf den Boss.
