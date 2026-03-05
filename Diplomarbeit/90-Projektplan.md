@@ -87,16 +87,16 @@ __Das Projekt kostet in Summe vorraussichtlich 359,93 Euro__.
 
 Hier ist unsere einschätzug von den möglichen Risiken sowie deren Wahrscheinlichkeiten.
 
-| Risiko | EW | Auswirkungen | Maßnahmen |
-|---------------|---:|------------------------|------------------------|
-| Technischer Aufwand unterschätzt | 35% | Gameplay, Animationen oder Bosslogik werden später fertig als geplant. | Frühzeitige Prototypen, klare Meilensteine, regelmäßige Reviews. |
-| Probleme bei 3D-Modellierung oder Rigging | 25% | Bossmodell kann nicht rechtzeitig animiert oder ins Spiel integriert werden. | Modell vereinfachen, frühzeitig in UE5 testen, Backup-Modell vorsehen. |
-| UE5 Performance-/Kompatibilitätsprobleme | 20% | Ruckeln, Crashes, hohe Nacharbeit nötig. | Früh optimieren, Low-Poly konsequent einsetzen. |
-| Zeitmanagement- oder Ressourcenprobleme im Team | 30% | Verzögerungen, ungleich verteilte Aufgaben, Qualität leidet. | Wochenplanung, klare Verantwortlichkeiten, Transparenz im Team. |
-| Fehler in der Game-Logik / KI | 20% | Bosskampf wirkt unfertig oder ist nicht spielbar. | Iterativ testen, Logikmodule isolieren, gezielte Debugging-Sessions. |
-| Verlust von Dateien / Versionskonflikte | 10% | Arbeitsfortschritt geht verloren. | Regelmäßige Backups, GitHub-Nutzung, klare Branch-Struktur. |
-| Ausfall wichtiger Software / Hardware | 10% | Arbeiten stoppen, Deadlines verschieben sich. | Redundante Geräte, Cloud-Speicher, regelmäßige Updates. |
-| Umfang zu groß gewählt | 40% | Features werden nicht fertig, Qualität leidet. | Feature-Cut früh definieren, Fokus auf Kernmechanik. |
+| Risiko | Wahrsch. | Folgen | Maßnahmen |
+|---|---:|---|---|
+| Aufwand unterschätzt | 35% | Gameplay, Animationen oder Bosslogik werden später fertig als geplant. | Frühzeitige Prototypen, klare Meilensteine, regelmäßige Reviews. |
+| 3D-Modellierung/Rigging-Probleme | 25% | Bossmodell kann nicht rechtzeitig animiert oder ins Spiel integriert werden. | Modell vereinfachen, frühzeitig in UE5 testen, Backup-Modell vorsehen. |
+| UE5-Performanceprobleme | 20% | Ruckeln, Crashes, hohe Nacharbeit nötig. | Früh optimieren, Low-Poly konsequent einsetzen. |
+| Zeit-/Ressourcenprobleme im Team | 30% | Verzögerungen, ungleich verteilte Aufgaben, Qualität leidet. | Wochenplanung, klare Verantwortlichkeiten, Transparenz im Team. |
+| Logik-/KI-Fehler | 20% | Bosskampf wirkt unfertig oder ist nicht spielbar. | Iterativ testen, Logikmodule isolieren, gezielte Debugging-Sessions. |
+| Dateiverlust/Versionskonflikte | 10% | Arbeitsfortschritt geht verloren. | Regelmäßige Backups, GitHub-Nutzung, klare Branch-Struktur. |
+| Software-/Hardwareausfall | 10% | Arbeiten stoppen, Deadlines verschieben sich. | Redundante Geräte, Cloud-Speicher, regelmäßige Updates. |
+| Projektumfang zu groß | 40% | Features werden nicht fertig, Qualität leidet. | Feature-Cut früh definieren, Fokus auf Kernmechanik. |
 
 
 ### Projektorganisation
@@ -127,10 +127,6 @@ Hier werden den Kontakten von oben konkrete Rollen zuewiesen.
 | Auftraggeber | Auftraggeber der internen Diplomarbeit | Christina Stroissnigg |
 | Betreuer | Schulischer Betreuer | Uwe Kondert |
 
-
-In dieser Grafik werden die verschienen Rollen und deren Bezihungen dargestellt.
-
-![Projektorganisationsdiagramm](img/projektorganisation.png){width=50%}
 
 
 ### Vorgehen bei Änderungen
@@ -236,11 +232,9 @@ Zur besseren Übersicht werden die wichtigsten Akteure und deren Interaktionen m
 
 Jeder Anwendungsfall wird im selben Muster beschrieben. In den folgenden Absätzen ist zuerst eine allgemeine Beschreibung eines solchen Anwendungsfalls zu finden und dann ein Beispiel dazu.
 
-Damit es übersichtlicher ist gibt es hier noch eine Übersichtsgrafik:
-
-![Übersicht Anwendungsfälle](img/anwendungsfalldiagramm.png){width=60%}
 
 \newpage
+
 ### Spiel starten
 
 **Kurzbeschreibung**  
@@ -272,6 +266,7 @@ Das Spiel wird beendet, es findet kein Übergang in die Spielwelt statt.
 
 
 /newpage
+
 ### Bosskampf starten
 
 **Kurzbeschreibung**  
@@ -303,6 +298,7 @@ Der Kampf startet nicht, der Spieler bleibt im Bossraum ohne aktive Gegner.
 
 
 /newpage
+
 ### Gegner angreifen
 
 **Kurzbeschreibung**  
@@ -333,6 +329,7 @@ Der Boss erleidet keinen Schaden, der Kampf läuft weiter.
 
 
 /newpage
+
 ### Spieler wird angegriffen
 
 **Kurzbeschreibung**  
@@ -363,6 +360,7 @@ Der Spieler erleidet keinen Schaden.
 
 
 /newpage
+
 ### Boss besiegen
 
 **Kurzbeschreibung**  
@@ -393,6 +391,7 @@ Nicht zutreffend.
 
 
 /newpage
+
 ### Spieler verliert den Kampf
 
 **Kurzbeschreibung**  
