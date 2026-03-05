@@ -47,7 +47,7 @@ Die Verifikation wurde über vier komplementäre Testarten durchgeführt:
 #### Verifikationskriterien und Ergebnisse
 
 | Prüfbereich | Prüfmethode | Akzeptanzkriterium | Ergebnis im Endstand |
-|:------------|:------------|:------------|:------------|
+|:-------------------|:-------------------|:-------------------|:------------|
 | Start- und Abschlussfluss | Ablauftests (Intro, Menü, Spielstart, Sieg/Niederlage) | Kein Blocker im Übergang zwischen Zuständen | Erfüllt |
 | Kampfsystem (Nahkampf, Dodge, Parry, Treffer) | Modultests und Wiederholungstests | Mechaniken reagieren reproduzierbar und ohne ungewollte Mehrfachtreffer | Erfüllt |
 | Boss-KI und Fernkampflogik | Integrations- und Verhaltensprüfungen | Boss wechselt nachvollziehbar zwischen Nah- und Fernkampfzuständen | Erfüllt |
