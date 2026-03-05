@@ -9,63 +9,63 @@
 
 ##### Allgemeine Ausrichtung von Unreal Engine
 
-Unreal Engine ist von Grund auf für High-End-Grafik ausgelegt. Der Fokus liegt auf realistischer Lichtberechnung und physikalisch korrekter Darstellung statt auf vereinfachtem Fake Lighting. Die Standard-Workflows orientieren sich stark an professionellen Film-, VFX- und Architektur-Pipelines. Ziel ist eine möglichst hohe visuelle Qualität bei gleichzeitig geringem manuellen Optimierungsaufwand.
+Unreal Engine ist von Grund auf für High-End-Grafik ausgelegt. Der Fokus liegt auf realistischer Lichtberechnung und physikalisch korrekter Darstellung statt auf vereinfachtem Fake Lighting. Die Standard-Workflows orientieren sich stark an professionellen Film-, VFX- und Architektur-Pipelines. Ziel ist eine möglichst hohe visuelle Qualität bei gleichzeitig geringem manuellen Optimierungsaufwand. [@unreal_lighting_environment; @unreal_types_of_lights; @unreal_virtual_shadow_maps]
 
 ##### Gegensatz zu Unity
 
-Unity ist stärker auf Performance, mobile Plattformen und breite Hardware-Unterstützung ausgerichtet. Hochwertige Grafik ist zwar möglich, erfordert jedoch mehr Konfigurationsaufwand, mehr Erfahrung und zusätzliche Arbeitsschritte. Für dieses Projekt mit einer kleinen, überschaubaren Spielwelt ist diese mobile Optimierung nicht entscheidend.
+Unity ist stärker auf Performance, mobile Plattformen und breite Hardware-Unterstützung ausgerichtet. Hochwertige Grafik ist zwar möglich, erfordert jedoch mehr Konfigurationsaufwand, mehr Erfahrung und zusätzliche Arbeitsschritte. Für dieses Projekt mit einer kleinen, überschaubaren Spielwelt ist diese mobile Optimierung nicht entscheidend. [@unity_manual_engine_overview; @unity_render_pipelines]
 
 #### Photorealismus & Realismus
 
 ##### Unreal Engine
 
-Physikalisch basiertes Rendering (PBR) ist in Unreal Engine standardmäßig aktiv. Materialien reagieren dadurch realistisch auf Licht, Rauheit und Metallizität. Dadurch lassen sich glaubwürdige Oberflächen auch ohne tiefgehende Shader-Kenntnisse umsetzen. Bereits mit den Standardwerkzeugen der Engine sind hochwertige Ergebnisse möglich.
+Physikalisch basiertes Rendering (PBR) ist in Unreal Engine standardmäßig aktiv. Materialien reagieren dadurch realistisch auf Licht, Rauheit und Metallizität. Dadurch lassen sich glaubwürdige Oberflächen auch ohne tiefgehende Shader-Kenntnisse umsetzen. Bereits mit den Standardwerkzeugen der Engine sind hochwertige Ergebnisse möglich. [@unreal_physically_based_materials; @unreal_engine_materials_doc; @unreal_material_editor_user_guide]
 
 \newpage
 ##### Vergleich zu Unity
 
-Unity kann ebenfalls photorealistische Ergebnisse liefern, dies ist jedoch vor allem mit der High Definition Render Pipeline (HDRP) praktikabel. Dafür sind in der Regel ein höherer Konfigurationsaufwand, detaillierte Shader-Anpassungen und zusätzliche manuelle Feinarbeit nötig. Im Vergleich dazu liefert Unreal Engine ähnliche oder bessere Ergebnisse schneller und konsistenter.
+Unity kann ebenfalls photorealistische Ergebnisse liefern, dies ist jedoch vor allem mit der High Definition Render Pipeline (HDRP) praktikabel. Dafür sind in der Regel ein höherer Konfigurationsaufwand, detaillierte Shader-Anpassungen und zusätzliche manuelle Feinarbeit nötig. Im Vergleich dazu liefert Unreal Engine ähnliche oder bessere Ergebnisse schneller und konsistenter. [@unity_render_pipelines; @unity_high_definition_render_pipeline; @unity_physically_based_shading_standard_shader; @unity_materials_manual]
 
 #### Nanite - Virtuelle Geometrie
 
 ##### Unreal Engine
 
-Nanite ermöglicht die Verwendung extrem hochauflösender Modelle mit Millionen bis Milliarden Polygonen. Die Engine passt die Detailstufe automatisch an die aktuelle Ansicht an. Eine manuelle Erstellung von LOD-Stufen entfällt. Das reduziert Entwicklungszeit, Fehleranfälligkeit und Asset-Aufwand erheblich, was besonders für kleine Teams ein Vorteil ist. Nanite eignet sich insbesondere für Scan-Daten, Architekturvisualisierungen und detailreiche Spielwelten.
+Nanite ermöglicht die Verwendung extrem hochauflösender Modelle mit Millionen bis Milliarden Polygonen. Die Engine passt die Detailstufe automatisch an die aktuelle Ansicht an. Eine manuelle Erstellung von LOD-Stufen entfällt. Das reduziert Entwicklungszeit, Fehleranfälligkeit und Asset-Aufwand erheblich, was besonders für kleine Teams ein Vorteil ist. Nanite eignet sich insbesondere für Scan-Daten, Architekturvisualisierungen und detailreiche Spielwelten. [@unreal_nanite_virtualized_geometry]
 
 ##### Vergleich zu Unity
 
-Unity verwendet ein klassisches LOD-System, bei dem Detailstufen manuell erstellt werden müssen. Die Performance hängt dadurch stärker von der Asset-Optimierung ab. Ein direkt vergleichbares System wie Nanite ist in Unity nicht in gleicher Form vorhanden.
+Unity verwendet ein klassisches LOD-System, bei dem Detailstufen manuell erstellt werden müssen. Die Performance hängt dadurch stärker von der Asset-Optimierung ab. Ein direkt vergleichbares System wie Nanite ist in Unity nicht in gleicher Form vorhanden. [@unity_render_pipelines; @unity_deferred_rendering_path]
 
 #### Lumen - Dynamische Global Illumination
 
 ##### Unreal Engine
 
-Mit Lumen berechnet Unreal Engine globale Beleuchtung und Reflexionen vollständig in Echtzeit. Das Licht reagiert dynamisch auf bewegte Objekte, Zerstörung und Tageszeitwechsel. Klassisches Light Baking ist nicht zwingend notwendig. Szenen wirken dadurch lebendiger und konsistenter, während der Iterationsaufwand im Leveldesign sinkt.
+Mit Lumen berechnet Unreal Engine globale Beleuchtung und Reflexionen vollständig in Echtzeit. Das Licht reagiert dynamisch auf bewegte Objekte, Zerstörung und Tageszeitwechsel. Klassisches Light Baking ist nicht zwingend notwendig. Szenen wirken dadurch lebendiger und konsistenter, während der Iterationsaufwand im Leveldesign sinkt. [@unreal_lumen_global_illumination_reflections]
 
 ##### Vergleich zu Unity
 
-Unity setzt häufig auf vorab berechnetes Light Baking. Bei Änderungen am Level muss das Licht oft neu berechnet werden. Echtzeit-Global-Illumination ist nur eingeschränkt verfügbar und kann performanceintensiv sein. Lumen reduziert dadurch Zeitaufwand, Speicherbedarf und Iterationsaufwand.
+Unity setzt häufig auf vorab berechnetes Light Baking. Bei Änderungen am Level muss das Licht oft neu berechnet werden. Echtzeit-Global-Illumination ist nur eingeschränkt verfügbar und kann performanceintensiv sein. Lumen reduziert dadurch Zeitaufwand, Speicherbedarf und Iterationsaufwand. [@unity_lighting_overview; @unity_deferred_rendering_path]
 
 \newpage
 #### Post-Processing & Bildqualität
 
 ##### Unreal Engine
 
-Unreal Engine bietet eine integrierte Post-Processing-Pipeline mit Effekten wie Bloom, Motion Blur, Depth of Field und Film Grain. Post-Processing beschreibt die digitale Nachbearbeitung des gerenderten Bildes zur Verbesserung von Atmosphäre und Bildwirkung. Die Effekte sind über Post-Process-Volumes steuerbar und ermöglichen einen konsistenten, filmischen Look.
+Unreal Engine bietet eine integrierte Post-Processing-Pipeline mit Effekten wie Bloom, Motion Blur, Depth of Field und Film Grain. Post-Processing beschreibt die digitale Nachbearbeitung des gerenderten Bildes zur Verbesserung von Atmosphäre und Bildwirkung. Die Effekte sind über Post-Process-Volumes steuerbar und ermöglichen einen konsistenten, filmischen Look. [@unreal_post_process_effects; @unreal_anti_aliasing_upscaling]
 
 ##### Vergleich zu Unity
 
-In Unity werden Post-Processing-Effekte häufig über zusätzliche Pakete integriert. Die Abstimmung ist komplexer und erfordert mehr manuelle Konfiguration. In Unreal Engine lässt sich ein cineastischer Look meist schneller erreichen.
+In Unity werden Post-Processing-Effekte häufig über zusätzliche Pakete integriert. Die Abstimmung ist komplexer und erfordert mehr manuelle Konfiguration. In Unreal Engine lässt sich ein cineastischer Look meist schneller erreichen. [@unity_post_processing_overview; @unity_post_processing_antialiasing]
 
 #### Workflow & Produktivität (grafikbezogen)
 
 ##### Unreal Engine
 
-Unreal Engine bietet eine realitätsnahe Editor-Vorschau. Das sichtbare Ergebnis entspricht in der Regel dem finalen Spielbild (What you see is what you get). Änderungen an Licht, Materialien oder Geometrie sind sofort sichtbar, was iteratives Arbeiten deutlich beschleunigt.
+Unreal Engine bietet eine realitätsnahe Editor-Vorschau. Das sichtbare Ergebnis entspricht in der Regel dem finalen Spielbild (What you see is what you get). Änderungen an Licht, Materialien oder Geometrie sind sofort sichtbar, was iteratives Arbeiten deutlich beschleunigt. Für die Bewertung von Laufzeitverhalten und grafischer Skalierung stehen zusätzlich integrierte Profiling- und Scalability-Werkzeuge zur Verfügung. [@unreal_performance_profiling_configuration; @unreal_scalability_reference]
 
 ##### Vergleich zu Unity
 
-In Unity sind häufiger Test-Builds notwendig. Das Endergebnis hängt stärker von Zielplattform, Render-Pipeline und Build-Einstellungen ab, wodurch der Feedback-Zyklus langsamer sein kann.
+In Unity sind häufiger Test-Builds notwendig. Das Endergebnis hängt stärker von Zielplattform, Render-Pipeline und Build-Einstellungen ab, wodurch der Feedback-Zyklus langsamer sein kann. Für die Analyse stehen der Unity Profiler sowie die Quality Settings zur Verfügung. [@unity_profiler_manual; @unity_quality_settings; @unity_universal_render_pipeline]
 
 \newpage
 
@@ -81,7 +81,7 @@ Blueprints sind ein zentraler Bestandteil der Unreal Engine und nahtlos in alle 
 
 ##### Vergleich zu Unity
 
-Unity verwendet primär C#-Skripte. Visuelles Skripting ist vorhanden, aber weniger tief in die Engine-Workflows integriert.
+Unity verwendet primär C#-Skripte. Visuelles Skripting ist vorhanden, aber weniger tief in die Engine-Workflows integriert. [@unity_manual_engine_overview]
 
 #### Node-System & Logikaufbau
 
@@ -131,21 +131,21 @@ In Unity ist häufiges Stoppen und Neustarten des Play-Modus notwendig, was den 
 
 #### Allgemeine Einordnung
 
-Unreal Engine ist heute nicht nur eine Spiele-Engine, sondern eine umfassende Echtzeit-3D-Plattform. Der Schwerpunkt liegt auf hochwertiger visueller Darstellung, Simulationen und interaktiven Echtzeitsystemen. Unity wird ebenfalls in vielen Bereichen eingesetzt, ist aber stärker im mobilen und leichtgewichtigen Bereich verbreitet. Unreal Engine ist klar auf High-End-Visualisierung und hohe Bildqualität ausgerichtet.
+Unreal Engine ist heute nicht nur eine Spiele-Engine, sondern eine umfassende Echtzeit-3D-Plattform. Der Schwerpunkt liegt auf hochwertiger visueller Darstellung, Simulationen und interaktiven Echtzeitsystemen. Unity wird ebenfalls in vielen Bereichen eingesetzt, ist aber stärker im mobilen und leichtgewichtigen Bereich verbreitet. Unreal Engine ist klar auf High-End-Visualisierung und hohe Bildqualität ausgerichtet. [@unity_manual_engine_overview; @unreal_lighting_environment; @unreal_engine_materials_doc]
 
 #### Game Development
 
 ##### Unreal Engine
 
-Im Game Development liegt der Fokus von Unreal Engine besonders auf High-End-PC- und Konsolenspielen. Das zeigt sich in realistischer Grafik, großen Spielwelten und modernen Technologien. Features wie Nanite, Lumen und Blueprints eignen sich besonders für atmosphärische Spiele und Projekte mit hohem Qualitätsanspruch.
+Im Game Development liegt der Fokus von Unreal Engine besonders auf High-End-PC- und Konsolenspielen. Das zeigt sich in realistischer Grafik, großen Spielwelten und modernen Technologien. Features wie Nanite, Lumen und Blueprints eignen sich besonders für atmosphärische Spiele und Projekte mit hohem Qualitätsanspruch. [@unreal_nanite_virtualized_geometry; @unreal_lumen_global_illumination_reflections]
 
 ##### Vergleich zu Unity
 
-Unity ist im mobilen Bereich stark verbreitet, da geringere Hardwareanforderungen und breite Plattformunterstützung möglich sind. Für grafisch sehr anspruchsvolle Projekte ist jedoch oft zusätzlicher Optimierungsaufwand nötig.
+Unity ist im mobilen Bereich stark verbreitet, da geringere Hardwareanforderungen und breite Plattformunterstützung möglich sind. Für grafisch sehr anspruchsvolle Projekte ist jedoch oft zusätzlicher Optimierungsaufwand nötig. [@unity_manual_engine_overview; @unity_render_pipelines]
 
 #### Architekturvisualisierung
 
-Unreal Engine wird häufig für Echtzeit-Architekturvisualisierungen und interaktive Gebäudebegehungen eingesetzt. Im Vergleich zu statischen Renderbildern bietet Unreal Engine eine deutlich realistischere und interaktive Darstellung. Vorteile sind dabei eine realistische Lichtsimulation, Interaktion statt rein statischer Darstellung, physikalisch korrektes Materialverhalten sowie Echtzeit-Änderungen von Tageszeit, Beleuchtung und Materialien. Genutzt wird Unreal Engine unter anderem von Architekturbüros, Bauunternehmen und Immobilienentwicklern.
+Unreal Engine wird häufig für Echtzeit-Architekturvisualisierungen und interaktive Gebäudebegehungen eingesetzt. Im Vergleich zu statischen Renderbildern bietet Unreal Engine eine deutlich realistischere und interaktive Darstellung. Vorteile sind dabei eine realistische Lichtsimulation, Interaktion statt rein statischer Darstellung, physikalisch korrektes Materialverhalten sowie Echtzeit-Änderungen von Tageszeit, Beleuchtung und Materialien. Genutzt wird Unreal Engine unter anderem von Architekturbüros, Bauunternehmen und Immobilienentwicklern. [@unreal_lighting_environment; @unreal_engine_materials_doc; @unreal_post_process_effects]
 
 \newpage
 #### Film & Animation (Virtual Production)
@@ -169,7 +169,7 @@ Unreal Engine bietet starke Unterstützung für Virtual Reality und Augmented Re
 \newpage
 #### Automobilindustrie
 
-Unreal Engine wird auch in der Automobilindustrie eingesetzt, etwa für Fahrzeugvisualisierungen, Design-Reviews und virtuelle Showrooms. In der Praxis ermöglicht das schnellere Entwicklungszyklen, bessere Entscheidungsgrundlagen und eine Reduktion physischer Prototypen. Besonders relevant sind dabei realistische Materialdarstellungen wie Lack, Glas und Metall sowie Echtzeit-Anpassungen von Farben, Innenausstattung und Beleuchtung.
+Unreal Engine wird auch in der Automobilindustrie eingesetzt, etwa für Fahrzeugvisualisierungen, Design-Reviews und virtuelle Showrooms. In der Praxis ermöglicht das schnellere Entwicklungszyklen, bessere Entscheidungsgrundlagen und eine Reduktion physischer Prototypen. Besonders relevant sind dabei realistische Materialdarstellungen wie Lack, Glas und Metall sowie Echtzeit-Anpassungen von Farben, Innenausstattung und Beleuchtung. [@unreal_engine_materials_doc; @unreal_lighting_environment]
 
 #### Digitale Zwillinge
 
