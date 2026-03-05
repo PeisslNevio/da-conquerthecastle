@@ -108,9 +108,9 @@ In UE wird die Cutscene mithilfe des Level Sequenzers erstellt. Zu diesem Sequen
 
 Aus den oben beschriebenen Grundlagen wurden für *ConquerTheCastle* drei konkrete technische Entscheidungen abgeleitet:
 
-- Der Bossraum wurde als modularer Low-Poly-Raum aufgebaut, weil die in den Abschnitten *Primitive Objekte*, *Mirror*, *Solidify* und *Low-Poly-Modellierung* beschriebenen Verfahren eine schnelle, konsistente und performante Umsetzung erlauben.
-- Die GUI wurde bewusst reduziert und informationszentriert umgesetzt, entsprechend den in *GUI* beschriebenen Prinzipien zu Lesbarkeit, Funktionstrennung und UMG-basierter Implementierung.
-- Die Intro-Sequenz wurde mit dem Level Sequencer umgesetzt, wie in *Cutscenes* beschrieben, um eine kontrollierte, reproduzierbare Übergangslogik zwischen Filmsequenz, Menü und Gameplay zu erhalten.
+- Der Bossraum wurde als modularer Low-Poly-Raum aufgebaut, weil die in den Abschnitten [Primitive Objekte](#theorie-primitive-objekte), [Mirror](#theorie-mirror), [Solidify](#theorie-solidify) und [Low-Poly-Modellierung](#theorie-low-poly-modellierung) beschriebenen Verfahren eine schnelle, konsistente und performante Umsetzung erlauben.
+- Die GUI wurde bewusst reduziert und informationszentriert umgesetzt, entsprechend den in [GUI](#theorie-gui) beschriebenen Prinzipien zu Lesbarkeit, Funktionstrennung und UMG-basierter Implementierung.
+- Die Intro-Sequenz wurde mit dem Level Sequencer umgesetzt, wie in [Cutscenes](#theorie-cutscenes) beschrieben, um eine kontrollierte, reproduzierbare Übergangslogik zwischen Filmsequenz, Menü und Gameplay zu erhalten.
 
 \newpage
 
