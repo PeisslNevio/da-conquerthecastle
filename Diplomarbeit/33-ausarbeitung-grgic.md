@@ -45,6 +45,7 @@ Mit Lumen berechnet Unreal Engine globale Beleuchtung und Reflexionen vollständ
 
 Unity setzt häufig auf vorab berechnetes Light Baking. Bei Änderungen am Level muss das Licht oft neu berechnet werden. Echtzeit-Global-Illumination ist nur eingeschränkt verfügbar und kann performanceintensiv sein. Lumen reduziert dadurch Zeitaufwand, Speicherbedarf und Iterationsaufwand.
 
+\newpage
 #### Post-Processing & Bildqualität
 
 ##### Unreal Engine
@@ -145,6 +146,7 @@ Unity ist im mobilen Bereich stark verbreitet, da geringere Hardwareanforderunge
 
 Unreal Engine wird häufig für Echtzeit-Architekturvisualisierungen und interaktive Gebäudebegehungen eingesetzt. Im Vergleich zu statischen Renderbildern bietet Unreal Engine eine deutlich realistischere und interaktive Darstellung. Vorteile sind dabei eine realistische Lichtsimulation, Interaktion statt rein statischer Darstellung, physikalisch korrektes Materialverhalten sowie Echtzeit-Änderungen von Tageszeit, Beleuchtung und Materialien. Genutzt wird Unreal Engine unter anderem von Architekturbüros, Bauunternehmen und Immobilienentwicklern.
 
+\newpage
 #### Film & Animation (Virtual Production)
 
 ##### Unreal Engine
@@ -301,6 +303,7 @@ Beim Drücken von InputAction Attack wird zusätzlich ein Parry-Fenster gestarte
 
 Wenn ParryCollider in diesem Zeitfenster mit einem Homing-Projektil überlappt, wird ein Cast To BP_HomingProjectile ausgeführt. Bei erfolgreichem Cast wird das Event Reflect aufgerufen, wodurch das Projektil zurückgelenkt wird.
 
+\newpage
 #### HitReaction und Todeszustand
 
 Das Event HitReaction wird im Kampf vom Boss verwendet, wenn der Spieler getroffen wird. Dabei wird der Lebenswert reduziert und anschließend geprüft, ob Leben kleiner oder gleich 0 ist. Ist diese Bedingung erfüllt, werden Ragdoll Physics aktiviert und der Spielercharakter ist tot.
@@ -319,6 +322,7 @@ Im nächsten Schritt wird das Widget über Initialize Boss mit der Boss-Instanz 
 
 Nach dem Erstellen der Bossbar folgt ein weiteres Delay von 5,0 Sekunden. Danach wird ein Timer gestartet, der das Event FollowPlayer periodisch ausführt. Der Timer läuft im Intervall von 0,2 Sekunden und hält damit die Verfolgungslogik des Bosses kontinuierlich aktiv.
 
+\newpage
 #### BossHitReaction
 
 Die BossHitReaction wird vom Player über das Angriffssystem ausgelöst, sobald ein Treffer am Boss registriert wurde. Im Event HitReaction werden dem Boss pro Treffer 10 Lebenspunkte abgezogen. Danach wird E Boss Health Updated erneut aufgerufen, damit die Bossbar den reduzierten Lebenswert unmittelbar anzeigt.
@@ -335,6 +339,7 @@ In HitDetectBoss selbst wird analog zur Player-Logik ein Knochen des Boss-Meshes
 
 Ist Can Shoot Projectile dagegen true, stoppt der Boss über den AI Controller zuerst die Bewegung, führt anschließend das Event WhatRangedAttack aus und setzt Can Punch wieder auf true.
 
+\newpage
 #### Fernkampfentscheidung über WhatRangedAttack
 
 Das Event WhatRangedAttack steuert, welche Fernkampfvariante im nächsten Zyklus ausgeführt wird. Zu Beginn wird ein Zufallswert zwischen 0 und 1 erzeugt und in Random Ranged Attack gespeichert. Anschließend entscheidet eine Abfrage mit dem Schwellenwert 0,3 zwischen der Homing-Variante und der normalen Projektilvariante.
