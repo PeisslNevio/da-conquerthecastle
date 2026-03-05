@@ -87,66 +87,16 @@ __Das Projekt kostet in Summe vorraussichtlich 359,93 Euro__.
 
 Hier ist unsere einschätzug von den möglichen Risiken sowie deren Wahrscheinlichkeiten.
 
-<table>
-  <thead>
-    <tr>
-      <th>Risiko</th>
-      <th>EW</th>
-      <th>Auswirkungen</th>
-      <th>Maßnahmen</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Unterschätzung des technischen Aufwands</td>
-      <td>35%</td>
-      <td>Gameplay, Animationen oder Bosslogik werden später fertig als geplant</td>
-      <td>Frühzeitige Prototypen, klare Meilensteine, regelmäßige Reviews</td>
-    </tr>
-    <tr>
-      <td>Probleme bei 3D-Modellierung oder Rigging</td>
-      <td>25%</td>
-      <td>Bossmodell kann nicht rechtzeitig animiert oder ins Spiel integriert werden</td>
-      <td>Vereinfachung des Modells, frühzeitige Tests in UE5, Backup-Modell</td>
-    </tr>
-    <tr>
-      <td>Unreal Engine 5 Performance-/Kompatibilitätsprobleme</td>
-      <td>20%</td>
-      <td>Ruckeln, Crashes, hohe Nacharbeit nötig</td>
-      <td>Optimierung von Anfang an, Low-Poly konsequent einsetzen</td>
-    </tr>
-    <tr>
-      <td>Zeitmanagement- oder Ressourcenprobleme im Team</td>
-      <td>30%</td>
-      <td>Verzögerungen, ungleich verteilte Aufgaben, Qualität leidet</td>
-      <td>Wochenplanung, klare Verantwortlichkeiten, Transparenz im Team</td>
-    </tr>
-    <tr>
-      <td>Fehler in der Game-Logik / KI</td>
-      <td>20%</td>
-      <td>Bosskampf wirkt unfertig oder ist nicht spielbar</td>
-      <td>Iteratives Testen, isolierte Logikmodule, Debugging-Sessions</td>
-    </tr>
-    <tr>
-      <td>Verlust von Dateien / Versionskonflikte</td>
-      <td>10%</td>
-      <td>Arbeitsfortschritt geht verloren</td>
-      <td>Regelmäßige Backups, Nutzung von GitHub, klare Branch-Struktur</td>
-    </tr>
-    <tr>
-      <td>Ausfall wichtiger Software / Hardware</td>
-      <td>10%</td>
-      <td>Arbeiten stoppen, Deadlines verschieben sich</td>
-      <td>Redundante Geräte, Cloud-Speicher, regelmäßige Updates</td>
-    </tr>
-    <tr>
-      <td>Umfang zu groß gewählt</td>
-      <td>40%</td>
-      <td>Features werden nicht fertig, Qualität leidet</td>
-      <td>Feature-Cut früh definieren, Fokus auf Kernmechanik</td>
-    </tr>
-  </tbody>
-</table>
+| Risiko | EW | Auswirkungen | Maßnahmen |
+|---|---:|---|---|
+| Technischer Aufwand unterschätzt | 35% | Gameplay, Animationen oder Bosslogik werden später fertig als geplant. | Frühzeitige Prototypen, klare Meilensteine, regelmäßige Reviews. |
+| Probleme bei 3D-Modellierung oder Rigging | 25% | Bossmodell kann nicht rechtzeitig animiert oder ins Spiel integriert werden. | Modell vereinfachen, frühzeitig in UE5 testen, Backup-Modell vorsehen. |
+| UE5 Performance-/Kompatibilitätsprobleme | 20% | Ruckeln, Crashes, hohe Nacharbeit nötig. | Früh optimieren, Low-Poly konsequent einsetzen. |
+| Zeitmanagement- oder Ressourcenprobleme im Team | 30% | Verzögerungen, ungleich verteilte Aufgaben, Qualität leidet. | Wochenplanung, klare Verantwortlichkeiten, Transparenz im Team. |
+| Fehler in der Game-Logik / KI | 20% | Bosskampf wirkt unfertig oder ist nicht spielbar. | Iterativ testen, Logikmodule isolieren, gezielte Debugging-Sessions. |
+| Verlust von Dateien / Versionskonflikte | 10% | Arbeitsfortschritt geht verloren. | Regelmäßige Backups, GitHub-Nutzung, klare Branch-Struktur. |
+| Ausfall wichtiger Software / Hardware | 10% | Arbeiten stoppen, Deadlines verschieben sich. | Redundante Geräte, Cloud-Speicher, regelmäßige Updates. |
+| Umfang zu groß gewählt | 40% | Features werden nicht fertig, Qualität leidet. | Feature-Cut früh definieren, Fokus auf Kernmechanik. |
 
 
 ### Projektorganisation
