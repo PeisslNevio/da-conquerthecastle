@@ -7,11 +7,11 @@
 
 #### Möglichkeiten
 
-Blender ist ein Programm mit vielen Einsatzmöglichkeiten. Es eignet sich für die Modellierung, bietet eine Zeichenfunktion sowie einen Python-Editor. Zusätzlich können bestehenden Modellen Animationen hinzugefügt werden. Darüber hinaus lassen sich in Blender auch Videos rendern und schneiden.
+Blender ist ein Programm mit vielfältigen Einsatzmöglichkeiten. Es eignet sich für die Modellierung, bietet eine Zeichenfunktion sowie einen Python-Editor. Zusätzlich können bestehenden Modellen Animationen hinzugefügt werden. Darüber hinaus lassen sich in Blender auch Videos rendern und schneiden.
 
 #### Basics der Modellierung
 
-Blender ist wie folgt aufgebaut: In der Mitte befindet sich das Koordinatensystem, in dem der Großteil der Arbeit stattfindet. Links liegen die wichtigsten Werkzeuge. Rechts befindet sich die Objekthierarchie mit Kamera, Licht und allen Objekten. Im unteren bzw. rechten Modulbereich sind Funktionen wie Modifier, Material und Physik zu finden.
+Blender ist wie folgt aufgebaut: In der Mitte befindet sich das Koordinatensystem, in dem der Großteil der Arbeit stattfindet. Links liegen die wichtigsten Werkzeuge. Rechts befindet sich die Objekthierarchie mit Kamera, Licht und allen Objekten. Im unteren beziehungsweise rechten Modulbereich befinden sich Funktionen wie Modifier, Material und Physik.
 
 ![Koordinatensystem [@blender]](img/schmiedpeter/Defaultscreen-blender.png){width=90%}
 
@@ -19,13 +19,13 @@ In der Modellierungsansicht gibt es drei Modi mit jeweils eigener Funktion:
 
 - **Objektmodus:** Dieser Modus wird hauptsächlich für den Umgang mit mehreren Objekten und zum Einfügen neuer Objekte verwendet. Blender stellt standardmäßig Objekte wie Würfel, Quader, Zylinder oder Kugeln bereit. Diese sind zunächst auf Standardgröße gesetzt und können in Größe sowie Ursprung (`Set Origin`) angepasst werden. Außerdem werden in diesem Modus Funktionen wie Physik oder Modifier genutzt. Wichtige Werkzeuge sind Bewegen, Rotieren und Skalieren.
   
-- **Editmodus:** Dieser Modus dient zur Bearbeitung einzelner Objekte.
+- **Editmodus:** Dieser Modus dient der Bearbeitung einzelner Objekte.
 
-  > Der Modus funktioniert auch mit mehreren Objekten. Das ist jedoch nicht empfohlen, weil dabei leicht ungewollte Fehler entstehen können.
+  > Der Modus funktioniert auch mit mehreren Objekten. Dies ist jedoch nicht empfohlen, weil dabei leicht ungewollte Fehler entstehen können.
 
 
   Die Auswahl funktioniert hier anders als im Objektmodus: Es werden keine ganzen Objekte, sondern Punkte, Kanten oder Flächen ausgewählt. Standardmäßig ist die Punktansicht aktiv. Nach demselben Prinzip funktionieren die Kanten- und Flächenansicht. *Tipp: Mit `Shift` können mehrere Elemente ausgewählt werden.*
-  Wichtige Werkzeuge sind Loop Cuts und das Messer (zum Hinzufügen von Kanten), Bewegen, Einsetzen/Verkleinern von Flächen, Extrahieren sowie Füllen.
+  Wichtige Werkzeuge sind Loop Cuts und das Messer (zum Hinzufügen von Kanten), Bewegen, Einsetzen beziehungsweise Verkleinern von Flächen, Extrahieren sowie Füllen.
 
 - **Skulpturmodus:** Dieser Modus nutzt Werkzeuge, die Polygone auf unterschiedliche Weise verformen. Dabei ist zu beachten, dass die Verformung nicht exakt maßbasiert erfolgt. Zusätzlich sollte das Objekt genügend Polygone besitzen, da das Ergebnis sonst oft nicht den Erwartungen entspricht.
 
@@ -33,7 +33,7 @@ Als Unterstützung in den jeweiligen Modi gibt es das Tool **Anmerkungen**. Dami
   
 ### Konkurrenz
 
-Neben Blender hätten auch andere Modellierungsprogramme verwendet werden können, beispielsweise *Tinkercad, Autodesk Fusion oder OpenSCAD* [@blender_konkurrenz] [@blender_konkurrenz_tinkercad] [@blender_konkurrenz_autodesk] [@blender_konkurrenz_openscad]. 
+Neben Blender hätten auch andere Modellierungsprogramme verwendet werden können, beispielsweise *Tinkercad, Autodesk Fusion oder OpenSCAD* [@blender_konkurrenz] [@blender_konkurrenz_tinkercad] [@blender_konkurrenz_autodesk] [@blender_konkurrenz_openscad].
 
 - **Tinkercad:** Das Programm ist vor allem durch das einfache Entwerfen von Schaltungen bekannt und ähnlich niedrigschwellig ist auch die Modellierung. Es ist leicht verständlich und damit gut für Einsteiger geeignet. Für die Diplomarbeit war es jedoch zu eingeschränkt, da viele Formen nur mit vorgefertigten, kaum veränderbaren Grundobjekten erstellt werden können [@blender_konkurrenz_tinkercad].
 
@@ -61,19 +61,19 @@ Für die folgenden Befehle gilt:
 
 Für den Objektmodus:
 
-- **`Str + J`**: Objekte zusammenführen. Funktioniert mit zwei oder mehr Objekten; dabei bleibt ein aktives Primärobjekt erhalten (z. B. für den Ursprung).
+- **`Strg + J`**: Objekte zusammenführen. Funktioniert mit zwei oder mehr Objekten; dabei bleibt ein aktives Primärobjekt erhalten (z. B. für den Ursprung).
 - **`Rechtsklick` + Ursprung ändern**: Ursprung versetzen (z. B. nach Masse oder Volumen).
 - **`Rechtsklick` + Weich schattieren**: Kanten optisch glätten, ohne Polygone hinzuzufügen.
 
 Für den Editmodus:
 
 - **`M`**: Punkte zusammenfügen. Funktioniert mit zwei oder mehr Punkten (bzw. Kanten/Flächen werden in Punkte umgewandelt); möglich auf erstem/letztem Punkt, in der Mitte oder beim Ursprung.
-- **`Str + R`**: Loop Cuts. Erstellt umlaufende Kanten; die Anzahl der Schnitte kann eingestellt werden.
+- **`Strg + R`**: Loop Cuts. Erstellt umlaufende Kanten; die Anzahl der Schnitte kann eingestellt werden.
 - **`K`**: Messer. Fügt Schnitte in ein Objekt ein.
 - **`E`**: Extrahieren. Erweitert Flächen bzw. Kanten.
 - **`I`**: Einsetzen von Flächen. Erzeugt eine kleinere Fläche in einer größeren.
 - **`F`**: Füllen von Flächen/Kanten. Bei zwei Punkten entsteht eine Kante, sonst eine Fläche; bei sehr vielen Punkten können ungünstige Flächen entstehen.
-- **`Str + T`**: Flächen in Dreiecke konvertieren. Sinnvoll für Export und Rendering.
+- **`Strg + T`**: Flächen in Dreiecke konvertieren. Sinnvoll für Export und Rendering.
 
 
 ## Erweiterte Funktionen in Blender {#sec32-theorie-erweiterte-blender}
@@ -84,7 +84,7 @@ Material beschreibt das Aussehen eines Objekts bzw. einzelner Flächen. Dazu geh
 
 ![Material-Erklärung [@blender]](img/schmiedpeter/Material_blender.png){width=90%}
 
-Objekte lassen sich im Editmodus einfärben. Einzelnen Flächen können Farben zugewiesen werden, indem zuerst die Flächen und danach das gewünschte Material ausgewählt werden. Damit die Farben sichtbar sind, muss das Shading auf Material-Vorschau oder Rendered gestellt werden.
+Objekte lassen sich im Editmodus einfärben. Einzelnen Flächen können Farben zugewiesen werden, indem zuerst die Flächen und danach das gewünschte Material ausgewählt werden. Damit die Farben sichtbar sind, muss das Shading auf Material-Vorschau oder Rendered gesetzt werden.
 
 
 
@@ -115,20 +115,20 @@ Ein typisches Beispiel ist der Cloth-Modifier. Er verhält sich wie ein Stofftuc
 Animationen sind notwendig, um statische Modelle in glaubwürdige, lesbare und emotionale Figuren zu verwandeln. In Spielen und Visualisierungen übernehmen sie mehrere Aufgaben: Sie machen Handlungen verständlich (z. B. Gehen, Angreifen), stärken die Identität einer Figur durch charakteristische Bewegungen und unterstützen die Spielmechanik durch klare Rückmeldungen (z. B. Treffer, Ausweichen). Ohne Animationen bleibt ein Modell reiner Blickfang, aber es kann keine Handlung vermitteln und wirkt technisch wie dramaturgisch unvollständig.
 
 ### Grundlagen des Rigging mit Armature {#sec32-theorie-rigging}
-Die Armature ist das Skelett einer Figur. Sie besteht aus Knochen (Bones), die hierarchisch verbunden sind und die spätere Bewegung definieren. Jeder Knochen besitzt einen Kopf und ein Ende; aus der Ausrichtung ergibt sich die lokale Achse, die für Rotationen entscheidend ist. Damit eine Armature sauber funktioniert, müssen Skalen der Meshes angewendet sein und die Bone-Orientierungen konsistent angelegt werden.
+Die Armature ist das Skelett einer Figur. Sie besteht aus Knochen (Bones), die hierarchisch verbunden sind und die spätere Bewegung definieren. Jeder Knochen besitzt einen Kopf und ein Ende; aus der Ausrichtung ergibt sich die lokale Achse, die für Rotationen entscheidend ist. Damit eine Armature sauber funktioniert, müssen die Skalen der Meshes angewendet sein und die Bone-Orientierungen konsistent angelegt werden.
 
 **Parent-Knochen (Elternknochen)** bestimmen die Hierarchie. Bewegungen eines Elternknochens wirken auf alle darunterliegenden Kinderknochen. Dadurch lassen sich Ketten wie Wirbelsäule, Arm oder Bein logisch aufbauen. Ein Unterarm ist z. B. Kind des Oberarms, sodass eine Rotation des Oberarms die gesamte Kette mitführt.
 
 ![Armature-Struktur einer Figur](img/schmiedpeter/Armature.png){width=80%}
 
-**Keep Offset** entstehen, wenn ein Knochen einem Elternknochen zugewiesen wird, seine aktuelle Position jedoch beibehält. Das bedeutet: Die Hierarchie wirkt, aber der Kindknochen verschiebt sich beim Parenten nicht an den Kopf des Elternknochens. Diese Variante ist sinnvoll, wenn der Abstand zwischen Knochen bewusst erhalten bleiben soll, z. B. bei Zubehör, Sekundärbewegungen oder technischen Rigs. Erstellt wird dies im Pose- oder Edit-Mode durch Auswahl von Kind und Elternknochen und anschließend `Str + P` mit der Option Keep Offset. So bleibt der Abstand erhalten, die Vererbung der Bewegung ist aber aktiv.
+**Keep Offset** entsteht, wenn ein Knochen einem Elternknochen zugewiesen wird, seine aktuelle Position jedoch beibehält. Das bedeutet: Die Hierarchie wirkt, aber der Kindknochen verschiebt sich beim Parenten nicht an den Kopf des Elternknochens. Diese Variante ist sinnvoll, wenn der Abstand zwischen Knochen bewusst erhalten bleiben soll, z. B. bei Zubehör, Sekundärbewegungen oder technischen Rigs. Erstellt wird dies im Pose- oder Edit-Mode durch Auswahl von Kind- und Elternknochen und anschließend `Strg + P` mit der Option Keep Offset. So bleibt der Abstand erhalten, die Vererbung der Bewegung ist jedoch aktiv.
 
 ![Keep Offset im Parenting-Vergleich](img/schmiedpeter/KeepOffset.png){width=80%}
 
 **Inverse Kinematik (IK)** wird eingesetzt, wenn man das Ende einer Knochenkette direkt steuern möchte, z. B. Hände, Füße oder ein Knie beim Aufsetzen auf den Boden. Im Gegensatz zur Vorwärtskinematik (FK), bei der jeder Knochen einzeln rotiert wird, berechnet IK die Winkel der gesamten Kette automatisch, damit das Endglied ein Ziel erreicht. Technisch wird dazu ein Ziel-Objekt (IK-Target) definiert und ein IK-Constraint auf den Endknochen gesetzt; eine Kettenlänge bestimmt, wie viele Knochen beeinflusst werden. So lassen sich stabile Kontaktpunkte erzeugen, etwa wenn eine Hand eine Waffe hält oder ein Fuß sauber am Boden bleibt.
 
 ### Anwendung an Figuren: Vorgehensweise
-Für die Anwendung an einer Figur wird ein Mesh benötigt, eine Armature und eine klare Bindung zwischen beiden. Ziel ist es, dass die Knochenbewegung das Mesh nachvollziehbar verformt, ohne sichtbare Artefakte zu erzeugen. Eine Abbildung kann hier optional den Aufbau von Mesh, Armature und Gewichtung verdeutlichen.
+Für die Anwendung an einer Figur werden ein Mesh, eine Armature und eine klare Bindung zwischen beiden benötigt. Ziel ist es, dass die Knochenbewegung das Mesh nachvollziehbar verformt, ohne sichtbare Artefakte zu erzeugen. Eine Abbildung kann hier optional den Aufbau von Mesh, Armature und Gewichtung verdeutlichen.
 
 
 Benötigte Schritte:
@@ -142,7 +142,7 @@ Gerade bei organischen oder flexiblen Objekten ist die Verteilung der Gewichte e
 ![Armature im Mesh (On-Figure Ansicht)](img/schmiedpeter/OnFigure.png){width=80%}
 
 ### Gewichtung und Bindung des Meshes {#sec32-theorie-gewichtung}
-Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabei gibt es mehrere Modi, die das Grundgerüst der Gewichtung erzeugen und den Startpunkt für die spätere Feinabstimmung liefern:
+Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabei gibt es mehrere Modi, die das Grundgerüst der Gewichtung erzeugen und den Ausgangspunkt für die spätere Feinabstimmung liefern:
 
 **Automatic Weights**: Blender berechnet die Gewichte automatisch anhand der Nähe zu den Knochen. Dieser Modus ist effizient und liefert oft brauchbare Ergebnisse, ist jedoch bei komplexen Formen fehleranfällig. Typische Probleme sind ungewollte Verzerrungen, wenn Knochen zu nah an anderen Bereichen liegen. Deshalb ist eine anschließende manuelle Korrektur in den Weight-Painting-Modi fast immer notwendig. In der Praxis gilt: Automatic Weights sind der Startpunkt, nicht der Abschluss.
 
@@ -154,8 +154,7 @@ Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabe
 
 ![Gewichtungs-Vergleich bei Auswahl der Knochen](img/schmiedpeter/Gewichtungen.png){width=80%}
 
-Nach dem Parenting werden die Gewichte mit den Gewichtungstools (Weight Paint) verfeinert. Sie steuern, wie stark ein Knochen einzelne Punkte des Meshes beeinflusst. Jeder Vertex erhält 
-Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und 1. Ein Wert von 1 bedeutet volle Beeinflussung durch den Knochen, ein Wert von 0 keine. In der Praxis werden die Gewichte über Pinselwerkzeuge gemalt, geglättet oder normalisiert, damit Übergänge weich bleiben und sich die Summe der Einflüsse pro Punkt sinnvoll verteilt. So entstehen organische Deformationen, ohne dass das Mesh unerwünscht einbricht oder sich verzieht.
+Nach dem Parenting werden die Gewichte mit den Gewichtungstools (Weight Paint) verfeinert. Sie steuern, wie stark ein Knochen einzelne Punkte des Meshes beeinflusst. Jeder Vertex erhält Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und 1. Ein Wert von 1 bedeutet volle Beeinflussung durch den Knochen, ein Wert von 0 keine. In der Praxis werden die Gewichte über Pinselwerkzeuge gemalt, geglättet oder normalisiert, damit Übergänge weich bleiben und sich die Summe der Einflüsse pro Punkt sinnvoll verteilt. So entstehen organische Deformationen, ohne dass das Mesh unerwünscht einbricht oder sich verzieht.
 
 Wichtige Werkzeuge sind Add (Gewichte erhöhen), Subtract (Gewichte reduzieren), Blur oder Smooth (Übergänge glätten) sowie Normalize/Normalize All (Gewichte pro Vertex ausgleichen). Damit lassen sich harte Kanten vermeiden und Gelenkbereiche wie Ellbogen oder Knie sauber verformen.
 
@@ -186,11 +185,11 @@ Kurzablauf für den Import:
 4. `Import Animations` aktivieren, damit die Actions als Animation Sequences übernommen werden.
 5. Importierte Clips im Animation Preview testen (Loop, Geschwindigkeit, Root-Bewegung).
 
-Wenn ein Clip nicht korrekt aussieht, liegt es meist an Bone-Namen, Skalierung oder an nicht angewendeten Transformationen in Blender.
+Wenn ein Clip nicht korrekt aussieht, liegt dies meist an Bone-Namen, Skalierung oder nicht angewendeten Transformationen in Blender.
 
 ## Game Sound {#sec32-theorie-gamesound}
 
-Game Sound ist weit mehr als akustische Dekoration. Im Computerspiel übernimmt er eine doppelte Funktion: Einerseits erhöht er die Immersion, indem er die künstliche Spielwelt mit glaubwürdigen Klangräumen füllt, andererseits liefert er dem Spieler unmittelbares Feedback auf Handlungen, Ereignisse und Zustandswechsel. Fehlen Hintergrundgeräusche, wirkt eine Szene schnell künstlich und leer; sind sie stimmig gestaltet, werden sie oft kaum bewusst wahrgenommen, stabilisieren aber das Erleben der Spielwelt nachhaltig.
+Game Sound ist weit mehr als akustische Dekoration. Im Computerspiel übernimmt er eine doppelte Funktion: Einerseits erhöht er die Immersion, indem er die künstliche Spielwelt mit glaubwürdigen Klangräumen füllt, andererseits liefert er dem Spieler unmittelbares Feedback auf Handlungen, Ereignisse und Zustandswechsel. Fehlen Hintergrundgeräusche, wirkt eine Szene schnell künstlich und leer; sind sie stimmig gestaltet, werden sie oft kaum bewusst wahrgenommen, stabilisieren jedoch das Erleben der Spielwelt nachhaltig.
 
 Im Unterschied zu linearen Medien entsteht Sound im Spielkontext unter interaktiven Bedingungen. Atmo, Musik, Sprache und Geräusche werden nicht in einer fixen Reihenfolge abgespielt, sondern können sich abhängig von Spieleraktionen zeitlich unvorhersehbar überlagern. Genau daraus ergeben sich zentrale gestalterische Herausforderungen: Sprachverständlichkeit muss erhalten bleiben, klangliche Konflikte zwischen Ebenen sollen vermieden werden, und trotzdem muss ein konsistenter Gesamteindruck entstehen. Eine strukturierte Klanghierarchie und ein bewusstes Lautstärke- und Mischungsverhältnis sind daher Grundvoraussetzungen für professionellen Gamesound.
 
@@ -233,7 +232,7 @@ Ein etablierter Erklärungsrahmen für musikalisch ausgelöste Emotionen ist das
 - **E – Episodic Memory**: Musik aktiviert autobiografische Erinnerungen und damit verbundene Gefühle.
 - **M – Musical Expectancy**: Erwartungen an den Fortgang der Musik werden erfüllt, verzögert oder verletzt; daraus entstehen Spannung, Überraschung und Auflösung.
 
-Gerade für interaktive Medien ist dieses Modell hilfreich, weil es zeigt, dass Musikemotionen nicht nur über Harmonik entstehen, sondern auch über Konditionierung, Rhythmuskopplung, Erwartungssteuerung und Erinnerungseffekte.
+Gerade für interaktive Medien ist dieses Modell hilfreich, weil es zeigt, dass Musikemotionen nicht nur über Harmonik entstehen, sondern auch über Konditionierung, Rhythmuskopplung, Erwartungssteuerung und Erinnerungseffekte vermittelt werden.
 
 ### Interaktive Musik in Videospielen {#sec-interaktive-musik}
 Interaktive Musik ist im Gamesound kein statischer Hintergrund, sondern ein steuerbares System. Ihre zentrale Aufgabe besteht darin, das Spielgeschehen emotional zu unterstützen, ohne den Spielfluss zu stören. Im Unterschied zur Filmmusik ist der genaue Zeitpunkt von Szenenwechseln oder Gefahrensituationen im Spiel oft nicht vorhersehbar. Dadurch muss Musik so entworfen werden, dass sie flexibel auf Spielerhandlungen reagieren kann und trotzdem musikalisch zusammenhängend bleibt.
@@ -248,7 +247,7 @@ Im praktischen Einsatz lassen sich zwei komplementäre Verfahren unterscheiden, 
 - **Kampf** (hohe Intensität, dichteres Arrangement),
 - **Nach dem Kampf** (Reduktion und Entspannung).
 
-Der Wechsel zwischen diesen States wird durch konkrete Spielparameter ausgelöst – etwa Gegnernähe, Alarmstatus, Lebenspunkte, Ortswechsel oder Missionsfortschritt. Die Musik wechselt einmal, wenn der State eintritt, und bleibt dann in diesem Zustand bestehen, bis sich eine neue Spielbedingung ergibt.
+Der Wechsel zwischen diesen States wird durch konkrete Spielparameter ausgelöst – etwa Gegnernähe, Alarmstatus, Lebenspunkte, Ortswechsel oder Missionsfortschritt. Die Musik wechselt einmal, wenn der State eintritt, und bleibt dann in diesem Zustand, bis sich eine neue Spielbedingung ergibt.
 
 **Dynamische Musik** hingegen arbeitet parametrisch und kontinuierlich. Während ein Musikstück läuft, werden einzelne Parameter in Echtzeit angepasst – nicht der State selbst, sondern die Eigenschaften der bereits spielenden Musik. Typische dynamische Parameter sind:
 - **Lautstärke:** Erhöhung bei Gegnerannaherung, Reduktion bei Sicherheit,
@@ -268,7 +267,7 @@ Für professionelle Übergänge zwischen Zuständen werden laut den beschriebene
 - **Überblendung (Crossfade)** zwischen zwei Musikzuständen.
 - **Takt- oder phasenbezogener Wechsel**, bei dem der Übergang an musikalisch sinnvollen Punkten erfolgt.
 
-In der Praxis ist die Überblendung robuster, weil sie auch bei unvorhersehbaren Spieleraktionen funktioniert. Taktgenaue Wechsel klingen musikalisch sauberer, benötigen aber ein enger abgestimmtes Musiksystem.
+In der Praxis ist die Überblendung robuster, weil sie auch bei unvorhersehbaren Spieleraktionen funktioniert. Taktgenaue Wechsel klingen musikalisch sauberer, benötigen jedoch ein enger abgestimmtes Musiksystem.
 
 #### Layer-Systeme
 Layer-Systeme teilen einen Musikzustand in mehrere Ebenen, die je nach Spielsituation zu- oder abgeschaltet werden. Typische Layer sind z. B. Rhythmus, Harmonie, Flächen oder Percussion-Akzente. Dadurch kann die Musik stufenlos verdichtet werden, ohne dass das Grundthema wechselt.
@@ -304,7 +303,7 @@ Der große Vorteil dieses Stils liegt vor allem in der Performance.
 Grundsätzlich gilt:
 > Je weniger Punkte ein Modell besitzt, desto weniger muss der PC beim Rendern berechnen.
 
-Um zu überprüfen, wie viele Punkte ein Modell besitzt, kann es exportiert und anschließend als **FBX-Datei** betrachtet werden. Unter **3dviewer.net** erhält man dafür eine gute Übersicht.
+Um zu überprüfen, wie viele Punkte ein Modell besitzt, kann es exportiert und anschließend als **FBX-Datei** betrachtet werden. Auf **3dviewer.net** erhält man dafür eine gute Übersicht.
 
 #### Helmgestaltung
 
@@ -313,7 +312,7 @@ Eine weitere unübliche Gestaltung ist der Helm. Untypisch sind dabei vor allem 
 #### Farbwahl
 
 Die Farben wurden bewusst gewählt, da sie eine klare Funktion erfüllen.  
-Sie unterstützen das Aussehen des Bosses als Oberhaupt des Gegners und tragen zusätzlich eine symbolische Bedeutung.
+Sie unterstützen die Darstellung des Bosses als Oberhaupt des Gegners und tragen zusätzlich eine symbolische Bedeutung.
 
 Die Farbe **Lila** wird beispielsweise häufig mit Macht, Reichtum und Autorität assoziiert. Historisch gesehen war Lila zudem eine Farbe, die sehr schwer herzustellen war und daher auch im Mittelalter als Zeichen von Wohlstand galt.
 
@@ -342,7 +341,7 @@ Im Verlauf eines längeren Projekts werden immer wieder neue Funktionen entdeckt
 
 ##### Vorgehensweise
 
-Das Design war bereits grob festgelegt, daher musste eine sinnvolle Umsetzungsstrategie definiert werden. Gestartet wurde beim Kopf, anschließend wurde nach unten weitergearbeitet. Die Gliedmaßen wurden bewusst später ausgearbeitet. Die Reihenfolge war: Helm und Kopf, danach Körper, anschließend Hals als Verbindung und danach Beine und Arme; zum Schluss folgten Füße und Hände.
+Das Design war bereits grob festgelegt, daher musste eine sinnvolle Umsetzungsstrategie definiert werden. Gestartet wurde beim Kopf, anschließend wurde nach unten weitergearbeitet. Die Gliedmaßen wurden bewusst später ausgearbeitet. Die Reihenfolge lautete: Helm und Kopf, danach Körper, anschließend Hals als Verbindung sowie danach Beine und Arme; zum Schluss folgten Füße und Hände.
 
 Die Modellierung des Bosses erfolgte nach dem Prinzip, von oben nach unten zu arbeiten, wobei die Gliedmaßen bewusst erst am Ende ausgearbeitet wurden. Diese Vorgehensweise erleichterte es, zunächst die grundlegenden Proportionen und die visuelle Wirkung der Figur festzulegen, bevor Details ergänzt wurden. Der Fokus lag dabei auf einer klaren Silhouette und einer gut erkennbaren Formensprache, die bereits aus der Distanz die Rolle des Bossgegners vermittelt.
 
@@ -360,13 +359,13 @@ Ein weiteres markantes Merkmal des Helms sind die Hörner. Diese verlaufen mit i
 
 Beim Körper wurde eine spezielle Modellierungstechnik eingesetzt, bei der quer verlaufende Akzente genutzt wurden, um die körperlichen Strukturen gezielt hervorzuheben. Der Fokus lag dabei insbesondere auf der Brust- und Bauchmuskulatur sowie auf den Schultern, da diese Bereiche maßgeblich zur kraftvollen und einschüchternden Wirkung des Bosses beitragen. Zusätzlich wurden auch sekundäre Elemente wie der Gürtel in das Modell integriert, um den Gesamteindruck stimmig abzurunden.
 
-Im nächsten Schritt wurde eine Cloth-Simulation angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen. Nach Abschluss dieses Arbeitsschrittes wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
+Im nächsten Schritt wurde eine Cloth-Simulation angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen. Nach Abschluss dieses Arbeitsschritts wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
 
 ###### Hals
 Der Hals wurde bewusst als verbindendes Element zwischen Helm und Körper modelliert. Ziel war keine stark ausgeprägte Eigenform, sondern ein stabiler Übergang, der die Proportionen zusammenführt und die Silhouette technisch wie optisch schlüssig hält.
 
 ###### Beine
-Die Beine entstanden aus einem längeren Zylinder mit mehreren Vertices, um genügend Geometrie für spätere Verformungen zu haben. Im Kniebereich wurde die Form leicht verjüngt und anschließend im Sculpt-Modus mit zusätzlicher Tiefe und Detail versehen.
+Die Beine entstanden aus einem längeren Zylinder mit mehreren Vertices, um genügend Geometrie für spätere Verformungen zu erhalten. Im Kniebereich wurde die Form leicht verjüngt und anschließend im Sculpt-Modus mit zusätzlicher Tiefe und Detail versehen.
 
 Besonders beachtet wurde, dass das Knie vorne etwas stärker ausgeprägt ist und auf der Rückseite eine kleine Einbuchtung besitzt. Diese Form unterstützt eine glaubwürdigere Beweglichkeit, da die Gelenkzone beim Beugen mehr Platz erhält.
 
@@ -383,7 +382,7 @@ Bereits im Körperbereich zeigten sich Form- und Topologieprobleme. Die Rüstung
 
 Während der praktischen Umsetzung traten mehrere typische Topologieprobleme auf. An einigen Stellen liefen Vertices durch den Körper, was in verschiedenen Ansichtsmodi deutlich sichtbar war. Zusätzlich waren einzelne Körperbereiche fehlerhaft verbunden, sodass unter anderem zwischen Schulter und Rumpf sowie im Handbereich Lücken entstanden.
 
-Diese Übergänge wurden manuell korrigiert: fehlerhafte Vertices wurden gelöscht, neu gesetzt und die betroffenen Bereiche anschließend sauber zusammengeführt. Dadurch konnten offene Kanten und sichtbare Spalte im Mesh weitgehend geschlossen werden.
+Diese Übergänge wurden manuell korrigiert: Fehlerhafte Vertices wurden gelöscht, neu gesetzt und die betroffenen Bereiche anschließend sauber zusammengeführt. Dadurch konnten offene Kanten und sichtbare Spalte im Mesh weitgehend geschlossen werden.
 
 Ein weiteres Problem waren nicht-manifold Geometrien. Darunter versteht man Geometrieelemente, die keine saubere, geschlossene Oberfläche bilden (z. B. lose, doppelte oder topologisch fehlerhafte Kanten und Vertices). Zur Bereinigung wurde zuerst `Mesh > Clean Up > Merge by Distance` verwendet, um überlappende Punkte zu verschmelzen. Danach wurden über `Select > Select All by Trait > Non Manifold` problematische Stellen markiert und anschließend händisch nachbearbeitet.
 
@@ -408,12 +407,12 @@ Die folgende Abbildung zeigt das in Blender erzeugte Rigify-Kontroll-Rig. Sichtb
 
 In der praktischen Arbeit zeigte sich, dass sich das Rigify-Rig für die meisten Bewegungen besser steuern ließ. Gleichzeitig wurden nicht alle automatisch erzeugten Knochen verwendet, insbesondere im Gesichtsbereich. Diese Teile waren für den benötigten Animationsumfang nicht erforderlich und wurden deshalb im Workflow bewusst ausgeklammert.
 
-Zusätzlich ist relevant, dass Rigify standardisierte Grundriggerüste bereitstellt, unter anderem für humanoide Figuren und auch für vierbeinige Tiere. Dadurch eignet sich das Addon gut als Ausgangspunkt für unterschiedliche Charaktertypen.
+Zusätzlich ist relevant, dass Rigify standardisierte Grundriggerüste bereitstellt, unter anderem für humanoide Figuren und für vierbeinige Tiere. Dadurch eignet sich das Addon gut als Ausgangspunkt für unterschiedliche Charaktertypen.
 
 ##### Recherche und Nutzung von Mixamo
 Bei der Recherche zu geeigneten Animationsquellen wurde die Plattform **Mixamo** von Adobe einbezogen. Mixamo bietet vorkonfigurierte Bewegungsabläufe, die direkt auf Charaktere angewendet und anschließend exportiert werden können. Dadurch lassen sich grundlegende Animationen schnell testen und in einen eigenen Workflow integrieren.
 
-Ein Teil der Animationen wurde aus Mixamo übernommen. Mehrere dieser Clips mussten jedoch nachbearbeitet werden, damit Timing, Haltung und Übergänge zur Figur und zum Spielkontext passen. Zusätzlich wurden einzelne Bewegungen vollständig selbst erstellt, da die verfügbaren Vorlagen die gewünschte Wirkung nicht ausreichend abgedeckt haben.
+Ein Teil der Animationen wurde aus Mixamo übernommen. Mehrere dieser Clips mussten jedoch nachbearbeitet werden, damit Timing, Haltung und Übergänge zur Figur und zum Spielkontext passen. Zusätzlich wurden einzelne Bewegungen vollständig selbst erstellt, da die verfügbaren Vorlagen die gewünschte Wirkung nicht ausreichend abdeckten.
 
 ##### Schwierigkeiten und Probleme
 Während der Animationsphase traten vor allem Unterschiede zwischen importierten und eigenen Bewegungsabläufen auf. Die größten Herausforderungen lagen in der konsistenten Übergangsqualität zwischen Clips sowie in der Anpassung einzelner Posen an die Proportionen des Boss-Charakters.
@@ -471,8 +470,19 @@ Für **Danger Level 2** und **Danger Level 3** wurde im Rahmen der Arbeit ein de
 
 **Danger Level 3** ist als maximale Eskalationsstufe konzipiert und für kritische Kampfmomente vorgesehen. In dieser Phase steigt die musikalische Dichte durch weitere orchestrale Layer, markantere Percussion, intensivere Brass-Akzente und einen breiteren Choreinsatz auf ihren Höhepunkt. Das Leitmotiv aus Danger Level 1 bleibt bewusst erhalten, um trotz maximaler Verdichtung ein konsistentes musikalisches Gesamtbild sicherzustellen.
 
-- **Siegemusik**
-- **Niederlagenmusik**
+- **Siegemusik (Victory Theme)**
+Die Siegesmusik ist als kurzer Entspannungsmoment nach der Kampfspannung gedacht. Sie soll **Erleichterung**, **Triumph** und das **Ende der Gefahr** vermitteln.
+
+Harmonisch wechselt sie von D äolisch nach **F-Dur** (relative Dur-Tonart zu D-Moll), wodurch der Eindruck von „Licht nach Dunkelheit“ entsteht. Als einfacher Verlauf wird **F – C – Dm – Bb** verwendet.
+
+Die Instrumentierung bleibt weich und orchestral: **Hörner**, **Streicher**, **Chor**, **Harfe** und optional **Soft Piano**; Percussion entfällt. Die Melodie ist langsam und klar (z. B. **F–A–C–Bb / A–G–F**). Die Länge beträgt nur **wenige Sekunden** und markiert eindeutig den abgeschlossenen Sieg: Der Boss ist besiegt, der Kampf ist vorbei.
+
+- **Niederlagenmusik (Defeat Theme)**
+Die Niederlagenmusik soll **Scheitern**, **Hoffnungslosigkeit** und **Leere** vermitteln. Sie bleibt bewusst reduziert und kalt statt filmisch-dramatisch.
+
+Harmonisch bleibt das Thema in **D-Moll** ohne Auflösung. Verwendet wird **Dm – Bb** oder in der minimalsten Form nur **Dm**.
+
+Die Instrumentierung ist minimal: **Cello**, **tiefe Streicher** und sehr leiser **Chor**, ohne Percussion. Die Melodie bleibt langsam und fragmentarisch (z. B. **D–F–Bb / A**) und endet absichtlich offen. Die Länge beträgt nur **wenige Sekunden**, danach folgt der Game-Over-Screen.
 
 Parallel dazu wurden die benötigten Soundeffekte definiert:
 
@@ -486,7 +496,7 @@ Diese Struktur half dabei, Musik und Sound nicht isoliert, sondern als zusammenh
 ##### Exportieren und Einfügen in Unreal
 Das Exportieren in Reaper war in der praktischen Umsetzung nicht besonders schwierig: Über **Rendern** wurde der jeweilige Titel ausgegeben, mit klarer Benennung und durchgängig im Dateityp **WAV**. Diese einheitliche Exportbasis erleichterte den anschließenden Import in Unreal deutlich.
 
-Auch das Einfügen in Unreal war grundsätzlich unkompliziert. Eine wichtige Erkenntnis war jedoch, dass die Musik nicht nur im Blueprint einer einzelnen Map gesteuert werden sollte, da sie sonst beim Wechsel in die nächste Map abgeschnitten wurde. Die Lösung war eine eigene **Game Instance** für die Musiklogik, ergänzt durch zusätzliche **Blueprint Interfaces**, um Zustände und Trigger sauber zu übergeben.
+Auch das Einfügen in Unreal war grundsätzlich unkompliziert. Eine wichtige Erkenntnis war jedoch, dass die Musik nicht ausschließlich im Blueprint einer einzelnen Map gesteuert werden sollte, da sie sonst beim Wechsel in die nächste Map abgeschnitten wurde. Die Lösung war eine eigene **Game Instance** für die Musiklogik, ergänzt durch zusätzliche **Blueprint Interfaces**, um Zustände und Trigger sauber zu übergeben.
 
 ![Sound-Logik in Unreal (Game Instance und Blueprint-Anbindung)](img/schmiedpeter/Sound_Unreal.png){width=80%}
 
@@ -497,4 +507,4 @@ Die Implementierung von Titelmusik, Übergangsmusik und Bossmusik **Danger Level
 
 ![Bosskampf-Soundlogik mit Danger-Levels](img/schmiedpeter/Sound_Bosslogik.png){width=80%}
 
-Die Sieges- bzw. Niederlagenmusik wird entsprechend beim Tod des Bosses bzw. beim Tod des Spielers abgespielt.
+Die Sieges- beziehungsweise Niederlagenmusik wird beim Tod des Bosses beziehungsweise beim Tod des Spielers abgespielt.
