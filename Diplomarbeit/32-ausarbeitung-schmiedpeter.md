@@ -31,6 +31,8 @@ In der Modellierungsansicht gibt es drei Modi mit jeweils eigener Funktion:
 
 Als Unterstützung in den jeweiligen Modi gibt es das Tool **Anmerkungen**. Damit können in der aktuellen Perspektive Markierungen eingezeichnet werden. Im Edit- und Objektmodus kann zusätzlich das Tool **Messen** verwendet werden. Dieses funktioniert ebenfalls perspektivbezogen und arbeitet wie die Anmerkungen in 2D.
   
+\newpage
+
 ### Konkurrenz
 
 Neben Blender hätten auch andere Modellierungsprogramme verwendet werden können, beispielsweise *Tinkercad, Autodesk Fusion oder OpenSCAD* [@blender_konkurrenz] [@blender_konkurrenz_tinkercad] [@blender_konkurrenz_autodesk] [@blender_konkurrenz_openscad].
@@ -75,6 +77,7 @@ Für den Editmodus:
 - **`F`**: Füllen von Flächen/Kanten. Bei zwei Punkten entsteht eine Kante, sonst eine Fläche; bei sehr vielen Punkten können ungünstige Flächen entstehen.
 - **`Strg + T`**: Flächen in Dreiecke konvertieren. Sinnvoll für Export und Rendering.
 
+\newpage
 
 ## Erweiterte Funktionen in Blender {#sec32-theorie-erweiterte-blender}
 
@@ -108,7 +111,7 @@ Physik ist kein einzelner Modifier, sondern eine eigene Kategorie. Hier reagiere
 
 Ein typisches Beispiel ist der Cloth-Modifier. Er verhält sich wie ein Stofftuch: Startet man die Simulation mit `LEERZEICHEN`, fällt das Objekt nach unten. Befindet sich ein Collision-Objekt im Weg, bleibt der Stoff daran hängen. Da Flächen aus Polygonen bestehen, hängt die Qualität stark von der Geometrie und den Einstellungen (z. B. Gewicht, Steifigkeit) ab. Nach dem Anwenden wird die simulierte Form als fester Zustand übernommen.
 
-
+\newpage
 
 ## Animationen {#sec32-theorie-animationen}
 ### Zweck und Nutzen von Animationen
@@ -159,6 +162,8 @@ Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabe
 Nach dem Parenting werden die Gewichte mit den Gewichtungstools (Weight Paint) verfeinert. Sie steuern, wie stark ein Knochen einzelne Punkte des Meshes beeinflusst. Jeder Vertex erhält Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und 1. Ein Wert von 1 bedeutet volle Beeinflussung durch den Knochen, ein Wert von 0 keine. In der Praxis werden die Gewichte über Pinselwerkzeuge gemalt, geglättet oder normalisiert, damit Übergänge weich bleiben und sich die Summe der Einflüsse pro Punkt sinnvoll verteilt. So entstehen organische Deformationen, ohne dass das Mesh unerwünscht einbricht oder sich verzieht [@blender_weight_paint_editing].
 
 Wichtige Werkzeuge sind Add (Gewichte erhöhen), Subtract (Gewichte reduzieren), Blur oder Smooth (Übergänge glätten) sowie Normalize/Normalize All (Gewichte pro Vertex ausgleichen). Damit lassen sich harte Kanten vermeiden und Gelenkbereiche wie Ellbogen oder Knie sauber verformen.
+
+\newpage
 
 ### Animation erstellen in Blender {#sec32-theorie-animation-erstellen}
 Nach dem Rigging beginnt die eigentliche Animation im **Pose Mode** der Armature. Dabei werden nicht die Mesh-Punkte direkt bewegt, sondern die Knochen. Blender speichert diese Bewegungen als Keyframes und interpoliert die Zwischenbilder automatisch.
@@ -309,7 +314,7 @@ Die Kettenrüstung ist jedoch nicht gut geeignet für den Modellierungsstil **Lo
 
 #### Low-Poly-Stil
 
-Low-Poly ist ein einfach gehaltener Stil mit relativ wenigen Polygonen (Punkten) (vgl. [Low-Poly-Modellierung](#theorie-low-poly-modellierung)).  
+Low-Poly ist ein einfach gehaltener Stil mit relativ wenigen Polygonen (Punkten).  
 Der große Vorteil dieses Stils liegt vor allem in der Performance [@low_poly] [@why_low_poly].
 
 Grundsätzlich gilt:
@@ -349,7 +354,7 @@ Im Verlauf eines längeren Projekts werden immer wieder neue Funktionen entdeckt
 
 ![Objekte auf einer Kugel [@blender]](img/schmiedpeter/kugel_bewegen.png){width=50%}
 
-- **Skizzenbasierter Aufbau:** Formen wurden zunächst mit Anmerkungen vorgezeichnet und danach in der 2D-Ansicht ausgearbeitet. Diese Methode ist einfacher als klassisches UV-Mapping (vgl. [UV-Mapping](#theorie-uv-mapping)).
+- **Skizzenbasierter Aufbau:** Formen wurden zunächst mit Anmerkungen vorgezeichnet und danach in der 2D-Ansicht ausgearbeitet. Diese Methode ist einfacher als klassisches UV-Mapping.
 
 **Vorgehensweise**
 
@@ -435,9 +440,7 @@ Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, g
 ### Musik
 
 #### Produktionsumgebung
-Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände [@collins_game_sound] [@hofmann_szczypula_game_sound_2006].
-
-[@reaper_official] [@splice_official]
+Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände [@collins_game_sound] [@hofmann_szczypula_game_sound_2006],[@reaper_official] [@splice_official].
 
 Für die praktische Musikgestaltung und Musiksteuerung in Unreal wurden ergänzend Tutorials zur dynamischen Musikumschaltung und zur levelübergreifenden Musikwiedergabe verwendet [@youtube_8wbtWj_MQ9w] [@youtube_izH206dOhNQ].
 
