@@ -1,7 +1,5 @@
-# Teilaufgabe Peißl
-\textauthor{Nevio Peißl}
-
-Dieser Teil der Diplomarbeit beschäftigt sich mit der Erstellung des Bossraum-Modells, der Benutzeroberfläche (UI) sowie der Cutscenes. Dabei werden die getroffenen Designentscheidungen sowie deren Umsetzung beschrieben.
+# Teilaufgabe Peißl Nevio
+\textauthor{Peißl}
 
 ## Literaturrecherche
 
@@ -104,20 +102,20 @@ Eine Cutscene, auch genannt Zwischensequenz, ist eine kurze Filmsequenz in einem
 
 In UE wird die Cutscene mithilfe des Level Sequenzers erstellt. Zu diesem Sequenzer wird eine Kamera hinzugefügt und in der Timeline wird mithilfe von Keyframes die Kameraposition zu bestimmten Zeitpunkten angegeben. Mithilfe eines Blueprints wird festgelegt, wann die Cutscene aufgerufen wird.  [@cutscene_tutorial]
 
-#### Projektspezifische Ableitungen
-
-Aus den oben beschriebenen Grundlagen wurden für *ConquerTheCastle* drei konkrete technische Entscheidungen abgeleitet:
-
-- Der Bossraum wurde als modularer Low-Poly-Raum aufgebaut, weil die in den Abschnitten [Primitive Objekte](#theorie-primitive-objekte), [Mirror](#theorie-mirror), [Solidify](#theorie-solidify) und [Low-Poly-Modellierung](#theorie-low-poly-modellierung) beschriebenen Verfahren eine schnelle, konsistente und performante Umsetzung erlauben.
-- Die GUI wurde bewusst reduziert und informationszentriert umgesetzt, entsprechend den in [GUI](#theorie-gui) beschriebenen Prinzipien zu Lesbarkeit, Funktionstrennung und UMG-basierter Implementierung.
-- Die Intro-Sequenz wurde mit dem Level Sequencer umgesetzt, wie in [Cutscenes](#theorie-cutscenes) beschrieben, um eine kontrollierte, reproduzierbare Übergangslogik zwischen Filmsequenz, Menü und Gameplay zu erhalten.
-
 \newpage
 
 
 ## Praktische Arbeit
 
 In diesem Kapitel wird die praktische Umsetzung des Bossraums, der Items, der GUI und der Cutscenes beschrieben.
+
+### Projektspezifische Ableitungen
+
+Die in der Theorie erarbeiteten Grundlagen wurden in der praktischen Umsetzung direkt auf drei Kernbereiche übertragen:
+
+- **Bossraum:** Der Raum wurde als modularer Low-Poly-Raum aufgebaut. Die in [Primitive Objekte](#theorie-primitive-objekte), [Mirror](#theorie-mirror), [Solidify](#theorie-solidify) und [Low-Poly-Modellierung](#theorie-low-poly-modellierung) beschriebenen Verfahren ermöglichten eine schnelle, konsistente und performante Umsetzung.
+- **GUI:** Die Benutzeroberfläche wurde bewusst reduziert und informationszentriert gestaltet, entsprechend den in [GUI](#theorie-gui) beschriebenen Prinzipien zu Lesbarkeit, Funktionstrennung und UMG-basierter Implementierung.
+- **Intro-Sequenz:** Die Sequenz wurde mit dem Level Sequencer umgesetzt, wie in [Cutscenes](#theorie-cutscenes) beschrieben, um eine kontrollierte und reproduzierbare Übergangslogik zwischen Filmsequenz, Menü und Gameplay zu gewährleisten.
 
 ### Bossraum
 
@@ -134,7 +132,7 @@ Nachfolgend ist die Skizze des Bossraums dargestellt. In der Skizze sind die Ein
 
 #### Modellierung
 
-Die Modellierung des Bossraumes wurde vollständig im 3D-Modellierungsprogramm Blender durchgeführt. Das Modellierungsverfahren erfolgte in mehreren iterativen Schritten: Zunächst wurden die Grundstrukturen des Bodens und der Wandflächen grob modelliert, um die räumliche Grundform zu etablieren. Die Wandkonstruktion wurde unter Verwendung des Blender-Add-ons „Wall Builder" erstellt, um eine effiziente und realistische Modellierung zu ermöglichen (vgl. [Primitive Objekte](#theorie-primitive-objekte), [Bearbeitungsmodi](#theorie-bearbeitungsmodi), [Extra Mesh Objects](#theorie-extra-mesh-objects)).
+Die Modellierung des Bossraumes wurde vollständig im 3D-Modellierungsprogramm Blender durchgeführt. Das Modellierungsverfahren erfolgte in mehreren iterativen Schritten: Zunächst wurden die Grundstrukturen des Bodens und der Wandflächen grob modelliert, um die räumliche Grundform zu etablieren. Die Wandkonstruktion wurde unter Verwendung des Blender-Add-ons `Wall Builder` erstellt, um eine effiziente und realistische Modellierung zu ermöglichen (vgl. [Primitive Objekte](#theorie-primitive-objekte), [Bearbeitungsmodi](#theorie-bearbeitungsmodi), [Extra Mesh Objects](#theorie-extra-mesh-objects)).
 
 Anschließend wurden die tragenden Säulen sowie der Thronsessel als zentrale Designelemente integriert. Der Thronsessel wurde bewusst auf einer erhöhten Plattform positioniert, die durch eine Treppe erreichbar ist. Diese Designentscheidung verfolgt das Ziel, der Boss-Figur eine visuelle Hierarchie und eine übergeordnete Positionierung gegenüber dem Spieler zu verleihen. Die Fensterpositionierung wurde strategisch so gewählt, dass stets mindestens eine Säule zwischen benachbarten Fenstern positioniert ist, um Sichtblockaden zu erzeugen.
 
@@ -253,7 +251,7 @@ Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu 
 
 #### Abgrenzung zwischen Spielwelt und Benutzeroberfläche
 
-Die GUI existiert außerhalb der eigentlichen Spielwelt und wird als zweidimensionale Überlagerung im Vordergrund des Bildschirms dargestellt. Diese Trennung zwischen Spielwelt und Benutzeroberfläche wird technisch durch das UMG-Framework realisiert, welches die GUI-Elemente unabhängig von der 3D-Szene rendert. Dadurch bleibt die GUI stets sichtbar und lesbar, unabhängig von Kamerabewegungen oder Spielgeschehen. Diese klare Abgrenzung ermöglicht es dem Spieler, zwischen spielrelevanten Informationen (GUI) und der eigentlichen Spielwelt zu unterscheiden. Das HUD wurde mithilfe von `pixilart.com` erstellt. In der folgenden Abbildung sieht man das HUD im Editor.
+Die GUI existiert außerhalb der eigentlichen Spielwelt und wird als zweidimensionale Überlagerung im Vordergrund des Bildschirms dargestellt. Diese Trennung zwischen Spielwelt und Benutzeroberfläche wird technisch durch das UMG-Framework realisiert, welches die GUI-Elemente unabhängig von der 3D-Szene rendert. Dadurch bleibt die GUI stets sichtbar und lesbar, unabhängig von Kamerabewegungen oder Spielgeschehen. Diese klare Abgrenzung ermöglicht es dem Spieler, zwischen spielrelevanten Informationen (GUI) und der eigentlichen Spielwelt zu unterscheiden. Das `Head-up-Display` (HUD) wurde mithilfe von `pixilart.com` erstellt. In der folgenden Abbildung sieht man das HUD im Editor.
 
 
 ![Spieler-HUD mit Lebenspunkten und Ausdauer](img/peissl/praxis/ui-player.png){width=90%}
@@ -283,16 +281,15 @@ Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein w
 ![Statistikmenü](img/peissl/praxis/statisticsmenu-ui.png){width=90%}
 
 
-- **HUD-Widget**: Beinhaltet Progress-Bars für Spieler-Lebenspunkte (rot) und Ausdauer (hellblau) sowie die Boss-Lebensleiste.
-
+- **HUD-Widget**: Beinhaltet Progress-Bars für Spieler-Lebenspunkte (rot) und Ausdauer (hellblau) sowie die Boss-Lebensleiste. Zusätzlich wurde ein `low-health-indikator` umgesetzt, der bei weniger als 30 % Lebenspunkten als visuelles Warnsignal am Rand des Bildschirms eingeblendet wird.
 ![Spielerperspektive im Bossraum mit aktiver GUI](img/peissl/praxis/bossroom-player-perspective.png){width=90%}
 
 
-- **Death-Screen-Widget**: Wird bei Spieler-Tod eingeblendet und bietet Optionen zum Neustart oder zur Rückkehr ins Hauptmenü.
+- **Death-Screen-Widget**: Wird bei Spieler-Tod eingeblendet und bietet Optionen zum Neustart oder zur Rückkehr ins Hauptmenü. Der eingeblendete `low-health-indikator` macht den zuvor kritischen Gesundheitszustand auch in dieser Phase nachvollziehbar.
 
 ![Death-Screen nach Spieler-Tod](img/peissl/praxis/ui-deathscreen.png){width=90%}
 
-- **Victory-Screen-Widget**: Wird nach dem Besiegen des Bosses eingeblendet und bietet Optionen zum erneuten Spielen oder zur Rückkehr ins Hauptmenü.
+- **Victory-Screen-Widget**: Wird nach dem Besiegen des Bosses eingeblendet und bietet Optionen zum erneuten Spielen oder zur Rückkehr ins Hauptmenü. 
 
 ![Victory-Screen nach Boss-Tod](img/peissl/praxis/ui-viktoryscreen.png){width=90%}
 
@@ -308,9 +305,6 @@ Cutscenes dienen in ConquerTheCastle der Einführung des Spielers in die Spielwe
 #### Intro Cutscene
 
 Die Intro-Cutscene führt den Spieler in die Spielwelt ein und zeigt die Umgebung außerhalb des Bossraums, bevor das eigentliche Gameplay beginnt. Sie gibt dem Spieler Zeit, sich auf den bevorstehenden Kampf vorzubereiten. Die Sequenz endet mit der Einblendung des Hauptmenüs, das die weitere Spielprogression steuert.
-
-
-Der Einsatz von Cutscenes erhöht die narrative Kohärenz und verleiht dem Spiel eine cinematische Qualität. Zugleich verbindet die Intro-Cutscene das Main Menu mit dem Übergang in das eigentliche Spielgeschehen.
 
 
 #### Erstellung mit Level Sequencer

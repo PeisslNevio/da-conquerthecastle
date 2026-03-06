@@ -302,7 +302,7 @@ Der Kampf startet nicht, der Spieler bleibt im Bossraum ohne aktive Gegner.
 ### Gegner angreifen
 
 **Kurzbeschreibung**  
-Der Spieler greift den Boss mit einer Waffe an.
+Der Spieler attackiert den Boss mit den Fäusten.
 
 **Trigger**  
 Der Spieler löst einen Angriff aus.

@@ -9,14 +9,14 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 
 #### Gesamtstatus
 
-* Das Projekt befand sich in der Startphase nicht im Plan.
-* Die initiale Projektvorbereitung wurde zeitlich unterschätzt.
+* Das Projekt befand sich in der Startphase ungefähr im Plan.
+* Die initiale Projektvorbereitung wurde zeitlich etwas unterschätzt.
 * Es gab noch keine kontinuierliche technische Umsetzung.
 
 | Dimension      | Status            | Maßnahmen |
 |:---------------|:----------------|:-------------------------|
-| Leistungsziele | Nicht in Ordnung  | Projektstart neu strukturieren und Mindestziele definieren |
-| Terminziele    | Nicht in Ordnung  | Meilensteine neu priorisieren |
+| Leistungsziele | In Ordnung        | Mindestziele erreicht |
+| Terminziele    | Eingeschränkt     | Meilensteine neu priorisieren |
 | Kostenziele    | In Ordnung        | Keine zusätzlichen Ausgaben vor Freigabe tätigen |
 | Teamarbeit     | Eingeschränkt     | Klare Zuständigkeiten und fixe Abstimmungen einführen |
 
@@ -68,7 +68,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 
 #### Nächste Schritte
 
-* Aufbau eines lauffähigen Prototyps (Controller, Raum-Blockout, Basislogik)
+* Aufbau eines lauffähigen Prototyps (Player-Controller, Bossraum, Basislogik)
 
 : Projektstatus Stand 30. September 2025
 
@@ -85,7 +85,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 | Dimension      | Status            | Maßnahmen |
 |:---------------|:----------------|:-------------------------|
 | Leistungsziele | Teilweise erfüllt | Fokus auf Kernfunktionen statt Detailtiefe |
-| Terminziele    | Nicht in Ordnung  | Zusätzliche Arbeitsblöcke einplanen |
+| Terminziele    | Eingeschränkt     | Zusätzliche Arbeitsblöcke einplanen |
 | Kostenziele    | In Ordnung        | Keine Scope-Erweiterung mit Zusatzkosten |
 | Teamarbeit     | Schwankend        | Engere Synchronisierung zwischen Teilaufgaben |
 
@@ -199,7 +199,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 | Dimension      | Status            | Maßnahmen |
 |:---------------|:----------------|:-------------------------|
 | Leistungsziele | Teilweise erfüllt | Funktionsumfang priorisieren und Detailfeatures verschieben |
-| Terminziele    | Kritisch          | Puffer für Fehlerbehebung und Nacharbeit einplanen |
+| Terminziele    | Eingeschränkt     | Puffer für Fehlerbehebung und Nacharbeit einplanen |
 | Kostenziele    | In Ordnung        | Zusatzkosten vermeiden, vorhandene Tools nutzen |
 | Teamarbeit     | In Ordnung        | Aufgaben je Sprint klar trennen |
 
@@ -232,7 +232,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 
 * Die Erstversion der App wurde fertiggestellt und intern getestet.
 * Der Meilenstein „Erstversion der Diplomarbeit“ (30.12.2025) wurde erreicht.
-* Der Meilenstein „Feinschliff & Finale Tests“ (09.01.2026) wurde mit kritischem Terminpuffer erreicht.
+
 
 | Dimension      | Status             | Maßnahmen |
 |:---------------|:----------------|:-------------------------|
@@ -270,7 +270,7 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 
 * Das Projekt war in diesem Zeitraum im Plan.
 * Systemtests wurden durchgeführt und zentrale Fehler behoben.
-* Der Meilenstein „Spiel abgeschlossen“ wurde erreicht.
+
 
 | Dimension      | Status      | Maßnahmen |
 |:---------------|:----------------|:-------------------------|
@@ -308,6 +308,8 @@ Jeder Abschnitt enthält den Gesamtstatus, die durchgeführten Arbeiten, die Auf
 
 * Das Projekt befand sich in der Finalisierungsphase.
 * Fokus lag auf Abgabevorbereitung, finalen Tests und Dokumentation.
+* Der Meilenstein „Feinschliff & Finale Tests“ wurde mit kritischem Terminpuffer erreicht.
+* Der Meilenstein „Spiel abgeschlossen“ wurde erreicht.
 * Der Meilenstein „Endabgabe“ wurde vorbereitet und abgeschlossen.
 
 | Dimension      | Status          | Maßnahmen |

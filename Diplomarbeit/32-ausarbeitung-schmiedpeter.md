@@ -1,4 +1,4 @@
-# Teilaufgabe Schüler Schmiedpeter
+# Teilaufgabe Schmiedpeter Rhys
 \textauthor{Schmiedpeter}
 
 ## Blender {#sec32-theorie-blender}

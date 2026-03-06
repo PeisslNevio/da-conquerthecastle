@@ -1,4 +1,4 @@
-﻿# Teilaufgabe Schüler Grgic
+﻿# Teilaufgabe Grgic Elias
 \textauthor{Grgic}
 
 ## Theorie
