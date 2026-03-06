@@ -309,7 +309,7 @@ Die Kettenrüstung ist jedoch nicht gut geeignet für den Modellierungsstil **Lo
 
 #### Low-Poly-Stil
 
-Low-Poly ist ein einfach gehaltener Stil mit relativ wenigen Polygonen (Punkten).  
+Low-Poly ist ein einfach gehaltener Stil mit relativ wenigen Polygonen (Punkten) (vgl. [Low-Poly-Modellierung](#theorie-low-poly-modellierung)).  
 Der große Vorteil dieses Stils liegt vor allem in der Performance [@low_poly] [@why_low_poly].
 
 Grundsätzlich gilt:
@@ -349,7 +349,7 @@ Im Verlauf eines längeren Projekts werden immer wieder neue Funktionen entdeckt
 
 ![Objekte auf einer Kugel [@blender]](img/schmiedpeter/kugel_bewegen.png){width=50%}
 
-- **Skizzenbasierter Aufbau:** Formen wurden zunächst mit Anmerkungen vorgezeichnet und danach in der 2D-Ansicht ausgearbeitet. Diese Methode ist einfacher als klassisches UV-Mapping.
+- **Skizzenbasierter Aufbau:** Formen wurden zunächst mit Anmerkungen vorgezeichnet und danach in der 2D-Ansicht ausgearbeitet. Diese Methode ist einfacher als klassisches UV-Mapping (vgl. [UV-Mapping](#theorie-uv-mapping)).
 
 **Vorgehensweise**
 
@@ -371,7 +371,7 @@ Ein weiteres markantes Merkmal des Helms sind die Hörner. Diese verlaufen mit i
 
 Beim Körper wurde eine spezielle Modellierungstechnik eingesetzt, bei der quer verlaufende Akzente genutzt wurden, um die körperlichen Strukturen gezielt hervorzuheben. Der Fokus lag dabei insbesondere auf der Brust- und Bauchmuskulatur sowie auf den Schultern, da diese Bereiche maßgeblich zur kraftvollen und einschüchternden Wirkung des Bosses beitragen. Zusätzlich wurden auch sekundäre Elemente wie der Gürtel in das Modell integriert, um den Gesamteindruck stimmig abzurunden.
 
-Im nächsten Schritt wurde eine Cloth-Simulation angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen. Nach Abschluss dieses Arbeitsschritts wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
+Im nächsten Schritt wurde eine Cloth-Simulation angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen (vgl. [Erweiterte Funktionen in Blender](#sec32-theorie-erweiterte-blender)). Nach Abschluss dieses Arbeitsschritts wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
 
 **Hals**
 Der Hals wurde bewusst als verbindendes Element zwischen Helm und Körper modelliert. Ziel war keine stark ausgeprägte Eigenform, sondern ein stabiler Übergang, der die Proportionen zusammenführt und die Silhouette technisch wie optisch schlüssig hält.
@@ -397,7 +397,7 @@ Diese Übergänge wurden manuell korrigiert: Fehlerhafte Vertices wurden gelösc
 
 Ein weiteres Problem waren nicht-manifold Geometrien. Darunter versteht man Geometrieelemente, die keine saubere, geschlossene Oberfläche bilden (z. B. lose, doppelte oder topologisch fehlerhafte Kanten und Vertices). Zur Bereinigung wurde zuerst `Mesh > Clean Up > Merge by Distance` verwendet, um überlappende Punkte zu verschmelzen. Danach wurden über `Select > Select All by Trait > Non Manifold` problematische Stellen markiert und anschließend händisch nachbearbeitet.
 
-Durch diese Kombination aus automatischer Bereinigung und manueller Korrektur wurde das Mesh deutlich stabiler und besser für weitere Schritte wie Rigging, Animation und Export vorbereitet.
+Durch diese Kombination aus automatischer Bereinigung und manueller Korrektur wurde das Mesh deutlich stabiler und besser für weitere Schritte wie Rigging, Animation und Export vorbereitet (vgl. [Grundlagen des Rigging mit Armature](#sec32-theorie-rigging), [Animation erstellen in Blender](#sec32-theorie-animation-erstellen), [Einfügen in Unreal](#sec32-theorie-einfuegen-unreal)).
 
 ### Animationen
 #### Vorgehensweise beim Rigging
@@ -446,7 +446,7 @@ Ein zentraler praktischer Befund war der hohe Zeitaufwand: Bis Idee, Stimmung, D
 Ein weiterer wichtiger Praxispunkt war die Bearbeitung der MIDI-Velocity: Die Anschlagsstärken wurden bewusst grob variiert, da gleichförmige Velocity-Werte schnell zu einem maschinellen Klang führen. Durch diese Variation wirkt die Musik lebendiger, und die gewünschte emotionale Wirkung kommt deutlich stärker zur Geltung.
 
 #### Musikalisches Gesamtkonzept
-Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung [@schulz_entwicklung_musik_videospielen_2022] [@collins_game_sound] [@youtube_music_controls_you].
+Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung (vgl. [Musikpsychologische Grundlagen](#sec32-theorie-musikpsych)) [@schulz_entwicklung_musik_videospielen_2022] [@collins_game_sound] [@youtube_music_controls_you].
 
 Durch dunkle Klangfarben, spannungsorientierte Verläufe und klar gestufte Intensitäten wird die Wahrnehmung von Gefahr, Unsicherheit und Eskalation gezielt verstärkt. Die detaillierte psychologische Herleitung der einzelnen Stücke wird in einem späteren Arbeitsschritt ergänzt [@youtube_write_music_for_games] [@youtube_music_transcends_game].
 
