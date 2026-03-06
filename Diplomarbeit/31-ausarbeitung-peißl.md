@@ -36,7 +36,7 @@ Wird ein Objekt ausgewählt, ist es orange umrandet. Der Ursprung des Objekts wi
 
 Objekte bestehen aus Vertices, Edges und Faces. Ein Vertex stellt einen einzelnen Punkt dar. Werden zwei Vertices verbunden, entsteht eine Edge. Mehrere verbundene Edges ergeben eine Face. Verbinden sich mehrere Faces, entsteht ein Mesh, welches das eigentliche Objekt darstellt. [@blender_manual]
 
-Diese Objekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objekte können verschoben (`G`), rotiert (`R`) und skaliert (`S`) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (X, Y oder Z) ausgewählt wird, verschiebt sich das Objekt nur auf dieser Achse. Wenn ein Objekt genau einen Meter nach X positiv verschoben werden sollte, lautet der Befehl `G + X + 1`. [@blender_manual]
+Diese Objekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objekte können verschoben (**G**), rotiert (**R**) und skaliert (**S**) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (X, Y oder Z) ausgewählt wird, verschiebt sich das Objekt nur auf dieser Achse. Wenn ein Objekt genau einen Meter nach X positiv verschoben werden sollte, lautet der Befehl **G + X + 1**. [@blender_manual]
 
 #### Bearbeitungsmodi {#theorie-bearbeitungsmodi}
 
@@ -46,7 +46,7 @@ Der Object Mode ist der Standardmodus in Blender. In diesem Modus können Objekt
 
 ##### Edit Mode {#theorie-edit-mode}
 
-Im Edit Mode bearbeitet man die Geometrie einzelner Objekte. Um in den Edit Mode zu kommen muss man das Objekt auswählen und `Tab` drücken. Ein weiteres `Tab` und man gelangt wieder im Object Mode. Wichtige Edit Mode Tools sind Extrude `E`, Insert `I`, Loop Cut `Ctrl + R`, Bevel `B` und Merge Vertices `M`. Mit den Tasten `1`, `2` und `3` kann zwischen der Auswahl von Vertices, Edges und Faces gewechselt werden. [@blender_manual]
+Im Edit Mode bearbeitet man die Geometrie einzelner Objekte. Um in den Edit Mode zu kommen muss man das Objekt auswählen und **Tab** drücken. Ein weiteres **Tab** und man gelangt wieder im Object Mode. Wichtige Edit Mode Tools sind Extrude **E**, Insert **I**, Loop Cut **Ctrl + R**, Bevel **B** und Merge Vertices **M**. Mit den Tasten **1**, **2** und **3** kann zwischen der Auswahl von Vertices, Edges und Faces gewechselt werden. [@blender_manual]
 
 #### Mirror {#theorie-mirror}
 Der Mirror Modifier spiegelt ein Objekt entlang einer oder mehrerer Achsen, wobei die Spiegelung über den Objektursprung erfolgt. Dieser Modifier reduziert den Arbeitsaufwand bei symmetrischen Modellen erheblich und stellt sicher, dass beide Seiten exakt identisch sind. [@blender_manual]
@@ -57,7 +57,7 @@ Der Solidify Modifier verleiht Objekten eine Dicke. Die einfachste Anwendung äh
 
 #### Extra Mesh Objects {#theorie-extra-mesh-objects}
 
-Extra Mesh Objects ist ein Add-on für Blender, das die dynamische Erstellung komplexer Strukturen wie Wände ermöglicht. Um es zu nutzen, muss das Add-on installiert sein. Neue Wall Objekte werden mit `Shift + A` und dem Wall Builder erstellt (siehe Abb. 3). [@blender_extra_mesh_objects]
+Extra Mesh Objects ist ein Add-on für Blender, das die dynamische Erstellung komplexer Strukturen wie Wände ermöglicht. Um es zu nutzen, muss das Add-on installiert sein. Neue Wall Objekte werden mit **Shift + A** und dem Wall Builder erstellt (siehe Abb. 3). [@blender_extra_mesh_objects]
 
 ![Wall Builder [@blender]](img/peissl/theorie/wallbuilder.png){width=90%}
 
@@ -132,7 +132,7 @@ Nachfolgend ist die Skizze des Bossraums dargestellt. In der Skizze sind die Ein
 
 #### Modellierung
 
-Die Modellierung des Bossraumes wurde vollständig im 3D-Modellierungsprogramm Blender durchgeführt. Das Modellierungsverfahren erfolgte in mehreren iterativen Schritten: Zunächst wurden die Grundstrukturen des Bodens und der Wandflächen grob modelliert, um die räumliche Grundform zu etablieren. Die Wandkonstruktion wurde unter Verwendung des Blender-Add-ons `Wall Builder` erstellt, um eine effiziente und realistische Modellierung zu ermöglichen (vgl. [Primitive Objekte](#theorie-primitive-objekte), [Bearbeitungsmodi](#theorie-bearbeitungsmodi), [Extra Mesh Objects](#theorie-extra-mesh-objects)).
+Die Modellierung des Bossraumes wurde vollständig im 3D-Modellierungsprogramm Blender durchgeführt. Das Modellierungsverfahren erfolgte in mehreren iterativen Schritten: Zunächst wurden die Grundstrukturen des Bodens und der Wandflächen grob modelliert, um die räumliche Grundform zu etablieren. Die Wandkonstruktion wurde unter Verwendung des Blender-Add-ons **Wall Builder** erstellt, um eine effiziente und realistische Modellierung zu ermöglichen (vgl. [Primitive Objekte](#theorie-primitive-objekte), [Bearbeitungsmodi](#theorie-bearbeitungsmodi), [Extra Mesh Objects](#theorie-extra-mesh-objects)).
 
 Anschließend wurden die tragenden Säulen sowie der Thronsessel als zentrale Designelemente integriert. Der Thronsessel wurde bewusst auf einer erhöhten Plattform positioniert, die durch eine Treppe erreichbar ist. Diese Designentscheidung verfolgt das Ziel, der Boss-Figur eine visuelle Hierarchie und eine übergeordnete Positionierung gegenüber dem Spieler zu verleihen. Die Fensterpositionierung wurde strategisch so gewählt, dass stets mindestens eine Säule zwischen benachbarten Fenstern positioniert ist, um Sichtblockaden zu erzeugen.
 
@@ -163,7 +163,7 @@ Zunächst wurde sichergestellt, dass alle Komponenten des Bossraums korrekt in B
 
 Vor dem Export wurden alle angewendeten Modifier (insbesondere Mirror und Solidify) "angewendet", um sicherzustellen, dass diese Transformationen in der FBX-Datei persistent gespeichert werden. Dies geschah durch Auswahl des Modifiers und Klick auf "Apply" im Modifier-Panel.
 
-Der Export wurde mithilfe des Menüpfads `File > Export > FBX (.fbx)` durchgeführt. Dabei öffnete sich der Export-Dialog mit einer umfangreichen Liste von Konfigurationsoptionen. Die folgenden Einstellungen wurden konfiguriert:
+Der Export wurde mithilfe des Menüpfads **File > Export > FBX (.fbx)** durchgeführt. Dabei öffnete sich der Export-Dialog mit einer umfangreichen Liste von Konfigurationsoptionen. Die folgenden Einstellungen wurden konfiguriert:
 
 - **Scale**: 1.0 (um die Maßstäbe korrekt zu erhalten)
 - **Forward Axis**: -Y Forward (Standard für Unreal Engine)
@@ -173,10 +173,10 @@ Der Export wurde mithilfe des Menüpfads `File > Export > FBX (.fbx)` durchgefü
 - **Apply Modifiers**: Aktiviert (um alle Modifier in der Geometrie zu berücksichtigen)
 - **Bake Animation**: Deaktiviert (da das Modell nicht animiert ist)
 
-Nach diesen Schritten erhält man eine `.fbx`-Datei im ausgewählten Pfad.
+Nach diesen Schritten erhält man eine **.fbx**-Datei im ausgewählten Pfad.
 
 
-Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Projektverzeichnis (`Content/Bossraum/`) kopiert. Unreal Engine erkannte die Datei automatisch und importierte sie. Bei der Bestätigung des Imports wurden folgende Parameter konfiguriert:
+Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Projektverzeichnis (**Content/Bossraum/**) kopiert. Unreal Engine erkannte die Datei automatisch und importierte sie. Bei der Bestätigung des Imports wurden folgende Parameter konfiguriert:
 
 - **Skeletal Mesh**: Deaktiviert (nicht erforderlich für statische Modelle)
 - **Create Physics Asset**: Deaktiviert
@@ -185,7 +185,7 @@ Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Projekt
 - **Material Import Method**: Create New Materials
 - **Import Textures**: Aktiviert (falls Textur-Dateien vorhanden waren)
 
-Die Kollisionsdaten wurden basierend auf der importierten Geometrie automatisch generiert. Danach wurde die Collision im Details-Panel auf `Use Complex Collision As Simple` gesetzt.
+Die Kollisionsdaten wurden basierend auf der importierten Geometrie automatisch generiert. Danach wurde die Collision im Details-Panel auf **Use Complex Collision As Simple** gesetzt.
 
 Nach dem Import wurde das Modell im Level platziert und mithilfe verschiedener Ansichten (Lit, Unlit, Wireframe, Normalansicht) überprüft, ob alles richtig gerendert wird.
 
@@ -251,10 +251,12 @@ Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu 
 
 #### Abgrenzung zwischen Spielwelt und Benutzeroberfläche
 
-Die GUI existiert außerhalb der eigentlichen Spielwelt und wird als zweidimensionale Überlagerung im Vordergrund des Bildschirms dargestellt. Diese Trennung zwischen Spielwelt und Benutzeroberfläche wird technisch durch das UMG-Framework realisiert, welches die GUI-Elemente unabhängig von der 3D-Szene rendert. Dadurch bleibt die GUI stets sichtbar und lesbar, unabhängig von Kamerabewegungen oder Spielgeschehen. Diese klare Abgrenzung ermöglicht es dem Spieler, zwischen spielrelevanten Informationen (GUI) und der eigentlichen Spielwelt zu unterscheiden. Das `Head-up-Display` (HUD) wurde mithilfe von `pixilart.com` erstellt. In der folgenden Abbildung sieht man das HUD im Editor.
+Die GUI existiert außerhalb der eigentlichen Spielwelt und wird als zweidimensionale Überlagerung im Vordergrund des Bildschirms dargestellt. Diese Trennung zwischen Spielwelt und Benutzeroberfläche wird technisch durch das UMG-Framework realisiert, welches die GUI-Elemente unabhängig von der 3D-Szene rendert. Dadurch bleibt die GUI stets sichtbar und lesbar, unabhängig von Kamerabewegungen oder Spielgeschehen. Diese klare Abgrenzung ermöglicht es dem Spieler, zwischen spielrelevanten Informationen (GUI) und der eigentlichen Spielwelt zu unterscheiden. Das **Head-up-Display** (HUD) wurde mithilfe von **pixilart.com** erstellt. In der folgenden Abbildung sieht man das HUD im Editor.
 
 
 ![Spieler-HUD mit Lebenspunkten und Ausdauer](img/peissl/praxis/ui-player.png){width=90%}
+
+Zur Überprüfung der UI-Balken wurden Debug-Tasten eingebaut, mit denen die Lebenspunkte des Spieler und Bosses gezielt angepasst werden konnten. Dadurch ließ sich zusätzlich die Funktionalität des Victory-Screens und des Death-Screens testen.
 
 
 
@@ -276,16 +278,16 @@ Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein w
 ![Hauptmenü](img/peissl/praxis/mainmenu-ui.png){width=90%}
 
 
-- **Statistics-Menu-Widget**: Zeigt Spielstatistiken wie gespielte Spiele, Bestzeit und weitere Errungenschaften an.
+- **Statistics-Menu-Widget**: Zeigt zentrale Langzeitstatistiken wie die Anzahl gespielter Runden, die Bestzeit und weitere Errungenschaften an. Diese Werte werden in einem **SaveGame**-Objekt persistent gespeichert, nach jedem abgeschlossenen Spiel aktualisiert und beim nächsten Start wieder geladen.
 
 ![Statistikmenü](img/peissl/praxis/statisticsmenu-ui.png){width=90%}
 
 
-- **HUD-Widget**: Beinhaltet Progress-Bars für Spieler-Lebenspunkte (rot) und Ausdauer (hellblau) sowie die Boss-Lebensleiste. Zusätzlich wurde ein `low-health-indikator` umgesetzt, der bei weniger als 30 % Lebenspunkten als visuelles Warnsignal am Rand des Bildschirms eingeblendet wird.
+- **HUD-Widget**: Beinhaltet Progress-Bars für Spieler-Lebenspunkte (rot) und Ausdauer (hellblau) sowie die Boss-Lebensleiste. Zusätzlich wurde ein **low-health-indikator** umgesetzt, der bei weniger als 30 % Lebenspunkten als visuelles Warnsignal am Rand des Bildschirms eingeblendet wird.
 ![Spielerperspektive im Bossraum mit aktiver GUI](img/peissl/praxis/bossroom-player-perspective.png){width=90%}
 
 
-- **Death-Screen-Widget**: Wird bei Spieler-Tod eingeblendet und bietet Optionen zum Neustart oder zur Rückkehr ins Hauptmenü. Der eingeblendete `low-health-indikator` macht den zuvor kritischen Gesundheitszustand auch in dieser Phase nachvollziehbar.
+- **Death-Screen-Widget**: Wird bei Spieler-Tod eingeblendet und bietet Optionen zum Neustart oder zur Rückkehr ins Hauptmenü. Der eingeblendete **low-health-indikator** macht den zuvor kritischen Gesundheitszustand auch in dieser Phase nachvollziehbar.
 
 ![Death-Screen nach Spieler-Tod](img/peissl/praxis/ui-deathscreen.png){width=90%}
 
