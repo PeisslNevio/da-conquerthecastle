@@ -112,7 +112,8 @@ Ein typisches Beispiel ist der Cloth-Modifier. Er verhält sich wie ein Stofftuc
 
 ## Animationen {#sec32-theorie-animationen}
 ### Zweck und Nutzen von Animationen
-Animationen sind notwendig, um statische Modelle in glaubwürdige, lesbare und emotionale Figuren zu verwandeln. In Spielen und Visualisierungen übernehmen sie mehrere Aufgaben: Sie machen Handlungen verständlich (z. B. Gehen, Angreifen), stärken die Identität einer Figur durch charakteristische Bewegungen und unterstützen die Spielmechanik durch klare Rückmeldungen (z. B. Treffer, Ausweichen). Ohne Animationen bleibt ein Modell ein reiner Blickfang, vermittelt jedoch keine Handlung und wirkt technisch wie dramaturgisch unvollständig [@collins_game_sound] [@schulz_entwicklung_musik_videospielen_2022].
+Animationen sind notwendig, um statische Modelle in glaubwürdige, lesbare und emotionale Figuren zu verwandeln. In Spielen und Visualisierungen übernehmen sie mehrere Aufgaben: Sie machen Handlungen verständlich (z. B. Gehen, Angreifen), stärken die Identität einer Figur durch charakteristische Bewegungen und unterstützen die Spielmechanik durch klare Rückmeldungen (z. B. Treffer, Ausweichen). Ohne Animationen bleibt ein Modell ein reiner Blickfang, vermittelt jedoch keine Handlung und wirkt technisch wie dramaturgisch unvollständig.
+[@blender_manual] 
 
 ### Grundlagen des Rigging mit Armature {#sec32-theorie-rigging}
 Die Armature ist das Skelett einer Figur. Sie besteht aus Knochen (Bones), die hierarchisch verbunden sind und die spätere Bewegung definieren. Jeder Knochen besitzt einen Kopf und ein Ende; aus der Ausrichtung ergibt sich die lokale Achse, die für Rotationen entscheidend ist. Damit eine Armature sauber funktioniert, müssen die Skalierungen der Meshes angewendet sein, und die Bone-Orientierungen müssen konsistent angelegt werden.
@@ -125,7 +126,7 @@ Die Armature ist das Skelett einer Figur. Sie besteht aus Knochen (Bones), die h
 
 ![Keep Offset im Parenting-Vergleich](img/schmiedpeter/KeepOffset.png){width=80%}
 
-**Inverse Kinematik (IK)** wird eingesetzt, wenn das Ende einer Knochenkette direkt gesteuert werden soll, z. B. Hände, Füße oder ein Knie beim Aufsetzen auf den Boden. Im Gegensatz zur Vorwärtskinematik (FK), bei der jeder Knochen einzeln rotiert wird, berechnet IK die Winkel der gesamten Kette automatisch, damit das Endglied ein Ziel erreicht. Technisch wird dazu ein Zielobjekt (IK-Target) definiert und ein IK-Constraint auf den Endknochen gesetzt; eine Kettenlänge bestimmt, wie viele Knochen beeinflusst werden. So lassen sich stabile Kontaktpunkte erzeugen, etwa wenn eine Hand eine Waffe hält oder ein Fuß sauber am Boden bleibt.
+**Inverse Kinematik (IK)** wird eingesetzt, wenn das Ende einer Knochenkette direkt gesteuert werden soll, z. B. Hände, Füße oder ein Knie beim Aufsetzen auf den Boden. Im Gegensatz zur Vorwärtskinematik (FK), bei der jeder Knochen einzeln rotiert wird, berechnet IK die Winkel der gesamten Kette automatisch, damit das Endglied ein Ziel erreicht. Technisch wird dazu ein Zielobjekt (IK-Target) definiert und ein IK-Constraint auf den Endknochen gesetzt; eine Kettenlänge bestimmt, wie viele Knochen beeinflusst werden. So lassen sich stabile Kontaktpunkte erzeugen, etwa wenn eine Hand eine Waffe hält oder ein Fuß sauber am Boden bleibt [@youtube_eCtSviaHZ6U].
 
 ### Anwendung an Figuren: Vorgehensweise
 Für die Anwendung an einer Figur werden ein Mesh, eine Armature und eine klare Bindung zwischen beiden benötigt. Ziel ist es, dass die Knochenbewegung das Mesh nachvollziehbar verformt, ohne sichtbare Artefakte zu erzeugen. Eine Abbildung kann hier optional den Aufbau von Mesh, Armature und Gewichtung verdeutlichen.
@@ -155,13 +156,13 @@ Das Verbinden von Mesh und Armature erfolgt in Blender über das Parenting. Dabe
 
 ![Gewichtungs-Vergleich bei Auswahl der Knochen](img/schmiedpeter/Gewichtungen.png){width=80%}
 
-Nach dem Parenting werden die Gewichte mit den Gewichtungstools (Weight Paint) verfeinert. Sie steuern, wie stark ein Knochen einzelne Punkte des Meshes beeinflusst. Jeder Vertex erhält Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und 1. Ein Wert von 1 bedeutet volle Beeinflussung durch den Knochen, ein Wert von 0 keine. In der Praxis werden die Gewichte über Pinselwerkzeuge gemalt, geglättet oder normalisiert, damit Übergänge weich bleiben und sich die Summe der Einflüsse pro Punkt sinnvoll verteilt. So entstehen organische Deformationen, ohne dass das Mesh unerwünscht einbricht oder sich verzieht.
+Nach dem Parenting werden die Gewichte mit den Gewichtungstools (Weight Paint) verfeinert. Sie steuern, wie stark ein Knochen einzelne Punkte des Meshes beeinflusst. Jeder Vertex erhält Gewichte in sogenannten Vertex-Gruppen, typischerweise mit Werten zwischen 0 und 1. Ein Wert von 1 bedeutet volle Beeinflussung durch den Knochen, ein Wert von 0 keine. In der Praxis werden die Gewichte über Pinselwerkzeuge gemalt, geglättet oder normalisiert, damit Übergänge weich bleiben und sich die Summe der Einflüsse pro Punkt sinnvoll verteilt. So entstehen organische Deformationen, ohne dass das Mesh unerwünscht einbricht oder sich verzieht [@blender_weight_paint_editing].
 
 Wichtige Werkzeuge sind Add (Gewichte erhöhen), Subtract (Gewichte reduzieren), Blur oder Smooth (Übergänge glätten) sowie Normalize/Normalize All (Gewichte pro Vertex ausgleichen). Damit lassen sich harte Kanten vermeiden und Gelenkbereiche wie Ellbogen oder Knie sauber verformen.
 
 ### Animation erstellen in Blender {#sec32-theorie-animation-erstellen}
 Nach dem Rigging beginnt die eigentliche Animation im **Pose Mode** der Armature. Dabei werden nicht die Mesh-Punkte direkt bewegt, sondern die Knochen. Blender speichert diese Bewegungen als Keyframes und interpoliert die Zwischenbilder automatisch.
-
+[@youtube_2nlMZx0vp6E] [@youtube_JQT9sT1YuAI] [@youtube_1khSuB6sER0]
 Typische Vorgehensweise:
 
 1. Armature auswählen und in den Pose Mode wechseln.
@@ -171,7 +172,7 @@ Typische Vorgehensweise:
 5. Zur nächsten Zeitposition wechseln (z. B. Frame 12/24), neue Pose erstellen und erneut Keyframes setzen.
 6. Dies für alle wichtigen Posen wiederholen (z. B. Kontaktpose, Passing Pose, Endpose).
 
-Für saubere Ergebnisse werden die Kurven im **Graph Editor** oder die Keyframe-Reihenfolge im **Dope Sheet** nachbearbeitet. So lassen sich Bewegungen weicher, schneller oder härter gestalten.
+Für saubere Ergebnisse werden die Kurven im **Graph Editor** oder die Keyframe-Reihenfolge im **Dope Sheet** nachbearbeitet. So lassen sich Bewegungen weicher, schneller oder härter gestalten [@youtube_08aXoov2qco].
 
 Bei mehreren Animationen (z. B. Idle, Walk, Attack) sollte jede Bewegung als eigene **Action** im Action Editor gespeichert und klar benannt werden. Dadurch bleiben die Clips getrennt und können später in Unreal gezielt importiert werden.
 
@@ -294,7 +295,7 @@ Dieses Verfahren passt besonders gut zu den Anforderungen interaktiver Klanggest
 #### Produktionswerkzeuge im Kontext interaktiver Musik
 Die zuvor beschriebenen Konzepte (States, Layer, Looping, Übergänge) werden in der Praxis meist in einer **Digital Audio Workstation (DAW)** vorbereitet. Eine DAW dient dabei als Produktionsumgebung, in der musikalische Bausteine komponiert, arrangiert, gemischt und für den späteren Einsatz in der Engine exportiert werden.
 
-Eine zentrale Rolle spielt dabei **MIDI**. MIDI enthält keine Audiodaten, sondern Steuerinformationen (z. B. Tonhöhe, Länge, Velocity, Timing). Dadurch können musikalische Ideen schnell variiert, instrumentiert und an unterschiedliche Intensitätsstufen angepasst werden. Gerade für adaptive und dynamische Spielmusik ist diese Flexibilität wichtig, weil Material häufig in mehreren Versionen (z. B. ruhig, mittel, intensiv) benötigt wird [@collins_game_sound].
+Eine zentrale Rolle spielt dabei **MIDI**. MIDI enthält keine Audiodaten, sondern Steuerinformationen (z. B. Tonhöhe, Länge, Velocity, Timing). Dadurch können musikalische Ideen schnell variiert, instrumentiert und an unterschiedliche Intensitätsstufen angepasst werden. Gerade für adaptive und dynamische Spielmusik ist diese Flexibilität wichtig, weil Material häufig in mehreren Versionen (z. B. ruhig, mittel, intensiv) benötigt wird [@collins_game_sound],[@hofmann_szczypula_game_sound_2006].
 
 ----
 
@@ -352,7 +353,7 @@ Im Verlauf eines längeren Projekts werden immer wieder neue Funktionen entdeckt
 
 **Vorgehensweise**
 
-Das Design war bereits grob festgelegt, daher musste eine sinnvolle Umsetzungsstrategie definiert werden. Der Start erfolgte beim Kopf, anschließend wurde nach unten weitergearbeitet. Die Gliedmaßen wurden bewusst später ausgearbeitet. Die Reihenfolge lautete: Helm und Kopf, danach Körper, anschließend Hals als Verbindung sowie danach Beine und Arme; zum Schluss folgten Füße und Hände.
+Das Design war bereits grob festgelegt, daher musste eine sinnvolle Umsetzungsstrategie definiert werden. Der Start erfolgte beim Kopf, anschließend wurde nach unten weitergearbeitet. Die Gliedmaßen wurden bewusst später ausgearbeitet. Die Reihenfolge lautete: Helm und Kopf, danach Körper, anschließend Hals als Verbindung sowie danach Beine und Arme; zum Schluss folgten Füße und Hände. [@mio3_uv_addon] [@edgeflow_addon] [@blender_python_api_247_module]
 
 Die Modellierung des Bosses erfolgte nach dem Prinzip, von oben nach unten zu arbeiten, wobei die Gliedmaßen bewusst erst am Ende ausgearbeitet wurden. Diese Vorgehensweise erleichterte es, zunächst die grundlegenden Proportionen und die visuelle Wirkung der Figur festzulegen, bevor Details ergänzt wurden. Der Fokus lag dabei auf einer klaren Silhouette und einer gut erkennbaren Formensprache, die bereits aus der Distanz die Rolle des Bossgegners vermittelt.
 
@@ -436,6 +437,10 @@ Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, g
 #### Produktionsumgebung
 Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände [@collins_game_sound] [@hofmann_szczypula_game_sound_2006].
 
+[@reaper_official] [@splice_official]
+
+Für die praktische Musikgestaltung und Musiksteuerung in Unreal wurden ergänzend Tutorials zur dynamischen Musikumschaltung und zur levelübergreifenden Musikwiedergabe verwendet [@youtube_8wbtWj_MQ9w] [@youtube_izH206dOhNQ].
+
 Ein zentraler praktischer Befund war der hohe Zeitaufwand: Bis Idee, Stimmung, Dramaturgie und technische Einsetzbarkeit zusammenpassen, sind mehrere Iterationen aus Komponieren, Testen und Überarbeiten nötig.
 
 Ein weiterer wichtiger Praxispunkt war die Bearbeitung der MIDI-Velocity: Die Anschlagsstärken wurden bewusst grob variiert, da gleichförmige Velocity-Werte schnell zu einem maschinellen Klang führen. Durch diese Variation wirkt die Musik lebendiger, und die gewünschte emotionale Wirkung kommt deutlich stärker zur Geltung.
@@ -448,7 +453,7 @@ Durch dunkle Klangfarben, spannungsorientierte Verläufe und klar gestufte Inten
 #### Vorgehensweise und Einteilung
 Zu Beginn wurde strukturiert festgelegt, welche Musik- und Soundelemente im Spiel benötigt werden. Die konzeptionelle Orientierung erfolgte dabei über unterschiedliche Referenzquellen: Beiträge und Analysen von Creator:innen auf YouTube, musikalische Eindrücke aus Spotify sowie Vergleichswerte aus anderen Spielen und Filmen. Diese Referenzen dienten nicht als direkte Übernahme, sondern als Grundlage für Stimmung, Klangfarbe und dramaturgische Ausrichtung der eigenen Kompositionen.
 
-Zusätzlich floss das im Theorieteil erarbeitete Wissen gezielt in die praktische Umsetzung ein, insbesondere zu Zustandswechseln, Layering und musikalischer Reaktionslogik (vgl. [Interaktive Musik in Videospielen](#sec-interaktive-musik)).
+Zusätzlich floss das im Theorieteil erarbeitete Wissen gezielt in die praktische Umsetzung ein, insbesondere zu Zustandswechseln, Layering und musikalischer Reaktionslogik (vgl. [Musikpsychologische Grundlagen](#sec32-theorie-musikpsych) und [Interaktive Musik in Videospielen](#sec-interaktive-musik)).
 
 Daraus ergab sich folgende Einteilung:
 
