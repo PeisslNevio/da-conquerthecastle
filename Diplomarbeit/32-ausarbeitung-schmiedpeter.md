@@ -316,7 +316,7 @@ Grundsätzlich gilt:
 
 Um zu überprüfen, wie viele Punkte ein Modell besitzt, kann es exportiert und anschließend als **FBX-Datei** betrachtet werden. Auf **3dviewer.net** erhält man dazu eine gute Übersicht.
 
-#### Helmgestaltung
+#### Helmgestaltung {#helmgestaltung}
 
 Eine weitere unübliche Gestaltung ist der Helm. Untypisch sind dabei vor allem die Hörner sowie generell die auffällige Farbgestaltung. Hörner an Helmen gab es im Mittelalter nur sehr selten. Wahrscheinlich wurden sie damals kaum verwendet, da sie im Kampf eher hinderlich waren.
 
@@ -360,19 +360,19 @@ Die folgende Abbildung zeigt den fertig modellierten Boss als Ergebnis dieses Ar
 
 ![Fertig modellierter Boss](img/schmiedpeter/Boss_fertig.png){width=70%}
 
-###### Helm
+**Helm**
 
-Die Kopfform des Helms wurde bewusst höher als rund gestaltet und orientiert sich eher an einer quaderartigen Grundform. Dadurch wirkt der Kopf massiver und dominanter, was die bedrohliche Erscheinung des Bosses zusätzlich verstärkt. Die Gesichtsform weist einen klaren, basalen Schnitt auf, der gezielt hervorgehoben wurde. Das Visier wurde leuchtend gestaltet, um einen mysteriösen und leicht übernatürlichen Eindruck zu erzeugen.
+Die praktische Ausarbeitung des Helms baut auf den zuvor beschriebenen Gestaltungsentscheidungen auf (vgl. [Helmgestaltung](#helmgestaltung)). Die Kopfform wurde bewusst höher als rund gestaltet und orientiert sich eher an einer quaderartigen Grundform. Dadurch wirkt der Kopf massiver und dominanter, was die bedrohliche Erscheinung des Bosses zusätzlich verstärkt. Die Gesichtsform weist einen klaren, basalen Schnitt auf, der gezielt hervorgehoben wurde. Das Visier wurde leuchtend gestaltet, um einen mysteriösen und leicht übernatürlichen Eindruck zu erzeugen.
 
 Ein weiteres markantes Merkmal des Helms sind die Hörner. Diese verlaufen mit ihrer Masse nach hinten, wurden jedoch relativ flach gehalten, um die Gesamtform nicht zu überladen. Während der Modellierung zeigte sich, dass die Spitzen der Hörner zunächst an einer falschen Position lagen. Aus diesem Grund wurden sie im weiteren Verlauf neu ausgerichtet, sodass sie sich harmonisch in die Gesamtform des Helms einfügen und die Silhouette nicht negativ beeinflussen.
 
-###### Körper
+**Körper**
 
 Beim Körper wurde eine spezielle Modellierungstechnik eingesetzt, bei der quer verlaufende Akzente genutzt wurden, um die körperlichen Strukturen gezielt hervorzuheben. Der Fokus lag dabei insbesondere auf der Brust- und Bauchmuskulatur sowie auf den Schultern, da diese Bereiche maßgeblich zur kraftvollen und einschüchternden Wirkung des Bosses beitragen. Zusätzlich wurden auch sekundäre Elemente wie der Gürtel in das Modell integriert, um den Gesamteindruck stimmig abzurunden.
 
 Im nächsten Schritt wurde eine Cloth-Simulation angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen. Nach Abschluss dieses Arbeitsschritts wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
 
-###### Hals
+**Hals**
 Der Hals wurde bewusst als verbindendes Element zwischen Helm und Körper modelliert. Ziel war keine stark ausgeprägte Eigenform, sondern ein stabiler Übergang, der die Proportionen zusammenführt und die Silhouette technisch wie optisch schlüssig hält.
 
 **Beine**
@@ -390,9 +390,7 @@ Die Hände wurden separat modelliert, um Form und Topologie präziser steuern zu
 Zusätzlich wurden Proportionen und Übergänge zur Armgeometrie mehrfach nachgearbeitet, damit die Hände sowohl im statischen Modell als auch in Bewegung stimmig wirken.
 
 **Probleme und Lösungen**
-Bereits im Körperbereich zeigten sich Form- und Topologieprobleme. Die Rüstung war an den Seiten zu dünn und am Rücken stellenweise zu flach. Diese Bereiche wurden durch gezielte Skalierung korrigiert und anschließend sauber zusammengeführt. Außerdem waren einzelne Eckpunkte durch überlagernde Flächen nur schwer erreichbar. In diesen Fällen wurden Arbeitsschritte zurückgesetzt und in korrekter Reihenfolge neu aufgebaut.
-
-Während der praktischen Umsetzung traten mehrere typische Topologieprobleme auf. An einigen Stellen liefen Vertices durch den Körper, was in verschiedenen Ansichtsmodi deutlich sichtbar war. Zusätzlich waren einzelne Körperbereiche fehlerhaft verbunden, sodass unter anderem zwischen Schulter und Rumpf sowie im Handbereich Lücken entstanden.
+Im Körperbereich traten Form- und Topologieprobleme auf: Die Rüstung war an den Seiten zu dünn und am Rücken stellenweise zu flach, einzelne Eckpunkte waren durch überlagernde Flächen schwer erreichbar, und an mehreren Stellen liefen Vertices durch den Körper. Zusätzlich waren Übergänge fehlerhaft verbunden, sodass unter anderem zwischen Schulter und Rumpf sowie im Handbereich Lücken entstanden. Diese Bereiche wurden durch gezielte Skalierung korrigiert; bei fehlerhafter Topologie wurden Arbeitsschritte zurückgesetzt und in korrekter Reihenfolge neu aufgebaut.
 
 Diese Übergänge wurden manuell korrigiert: Fehlerhafte Vertices wurden gelöscht, neu gesetzt und die betroffenen Bereiche anschließend sauber zusammengeführt. Dadurch konnten offene Kanten und sichtbare Spalte im Mesh weitgehend geschlossen werden.
 
@@ -439,6 +437,8 @@ Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, g
 Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände [@collins_game_sound] [@hofmann_szczypula_game_sound_2006].
 
 Ein zentraler praktischer Befund war der hohe Zeitaufwand: Bis Idee, Stimmung, Dramaturgie und technische Einsetzbarkeit zusammenpassen, sind mehrere Iterationen aus Komponieren, Testen und Überarbeiten nötig.
+
+Ein weiterer wichtiger Praxispunkt war die Bearbeitung der MIDI-Velocity: Die Anschlagsstärken wurden bewusst grob variiert, da gleichförmige Velocity-Werte schnell zu einem maschinellen Klang führen. Durch diese Variation wirkt die Musik lebendiger, und die gewünschte emotionale Wirkung kommt deutlich stärker zur Geltung.
 
 #### Musikalisches Gesamtkonzept
 Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung [@schulz_entwicklung_musik_videospielen_2022] [@collins_game_sound] [@youtube_music_controls_you].
