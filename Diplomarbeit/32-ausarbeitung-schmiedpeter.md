@@ -132,6 +132,7 @@ Für die Anwendung an einer Figur werden ein Mesh, eine Armature und eine klare 
 
 
 Benötigte Schritte:
+
 1. Mesh vorbereiten (Skalierung anwenden, Ursprung setzen).
 2. Armature platzieren und Knochen entlang der geplanten Bewegung anordnen.
 3. Parenting zwischen Mesh und Armature herstellen.
@@ -162,6 +163,7 @@ Wichtige Werkzeuge sind Add (Gewichte erhöhen), Subtract (Gewichte reduzieren),
 Nach dem Rigging beginnt die eigentliche Animation im **Pose Mode** der Armature. Dabei werden nicht die Mesh-Punkte direkt bewegt, sondern die Knochen. Blender speichert diese Bewegungen als Keyframes und interpoliert die Zwischenbilder automatisch.
 
 Typische Vorgehensweise:
+
 1. Armature auswählen und in den Pose Mode wechseln.
 2. Zeitleiste auf den Startframe setzen (z. B. Frame 1).
 3. Gewünschte Knochen in eine Startpose bringen.
@@ -179,6 +181,7 @@ Für Loops (z. B. Gehen) muss der letzte Frame zur Startpose passen, damit der �
 Für den Export ist ein konsistentes Rig wichtig: gleiche Ausrichtung, klare Root-Struktur und einheitliche Benennung. In Unreal werden Armature und Animationen als FBX importiert. Entscheidend ist, dass die Animationen im selben Skeleton bleiben, damit sie austauschbar und wiederverwendbar sind. So kann z. B. eine Geh-Animation an mehreren Figuren genutzt werden, solange das Skelett kompatibel bleibt.
 
 Kurzablauf für den Import:
+
 1. In Blender als `FBX` exportieren (Mesh + Armature + gewünschte Animationen).
 2. In Unreal im Content Browser `Import` wählen und die FBX-Datei laden.
 3. Beim ersten Import ein neues Skeleton erzeugen, bei weiteren Animationen **dasselbe** Skeleton auswählen.
@@ -246,6 +249,7 @@ Im Unterschied zur Filmmusik ist der genaue Zeitpunkt von Szenenwechseln oder Ge
 Im praktischen Einsatz lassen sich zwei komplementäre Verfahren unterscheiden, die oft kombiniert werden:
 
 **Adaptive Musik** funktioniert zustandsorientiert. Sie wechselt zwischen vordefinierten Musikzuständen (States), die jeweils an eine konkrete Spielsituation gebunden sind. Mit **Musikzuständen** sind klar definierte Spielphasen gemeint, beispielsweise:
+
 - **Erkundung** (ruhig, wenig rhythmische Dichte),
 - **Gefahr im Anmarsch** (wachsender Puls/Spannung),
 - **Kampf** (hohe Intensität, dichteres Arrangement),
@@ -254,6 +258,7 @@ Im praktischen Einsatz lassen sich zwei komplementäre Verfahren unterscheiden, 
 Der Wechsel zwischen diesen States wird durch konkrete Spielparameter ausgelöst – etwa Gegnernähe, Alarmstatus, Lebenspunkte, Ortswechsel oder Missionsfortschritt. Die Musik wechselt, wenn der State eintritt, und bleibt in diesem Zustand, bis sich eine neue Spielbedingung ergibt.
 
 **Dynamische Musik** hingegen arbeitet parametrisch und kontinuierlich. Während ein Musikstück läuft, werden einzelne Parameter in Echtzeit angepasst – nicht der State selbst, sondern die Eigenschaften der bereits laufenden Musik. Typische dynamische Parameter sind:
+
 - **Lautstärke:** Erhöhung bei Gegnerannaherung, Reduktion bei Sicherheit,
 - **Instrumentierung:** Hinzufügen von aggressiveren Instrumenten oder Entfernung von beruhigenden Pads mit wachsender Gefahr,
 - **Rhythmische Dichte:** Das Tempo der Schlagzeug- oder Bassmuster wird schneller/komplexer, je intensiver die Situation wird,
@@ -404,10 +409,12 @@ Die folgende Abbildung zeigt das praktische Rigging-Setup; **gelb steht für die
 
 ![Armature mit IK (Gelb = Inverse Kinematik)](img/schmiedpeter/Armature_mit_IK.png){width=60%}
 
+
+Die folgende Abbildung zeigt das in Blender erzeugte Rigify-Kontroll-Rig. Sichtbar sind die typischen Controller-Formen; die Controls sind überwiegend blau dargestellt, während gelbe Elemente die IK-relevanten Bereiche markieren.
+
 ##### Einsatz von Rigify
 Für den Vergleich wurde das Blender-Addon **Rigify** verwendet. Der Vorteil von Rigify liegt in der schnellen Erstellung eines funktionsfähigen Kontroll-Rigs, das für die Animation meist angenehmer und effizienter zu bedienen ist als ein vollständig manuell aufgebautes Setup.
 
-Die folgende Abbildung zeigt das in Blender erzeugte Rigify-Kontroll-Rig. Sichtbar sind die typischen Controller-Formen; die Controls sind überwiegend blau dargestellt, während gelbe Elemente die IK-relevanten Bereiche markieren.
 
 ![Armature Rigify (Kontroll-Rig)](img/schmiedpeter/Armature_Rigify.png){width=80%}
 
