@@ -50,7 +50,6 @@ Folgend sind die Kontaktdaten der HTL Leoben.
 | **E-Mail**             | office@htl-leoben.at                      |
 | **Ansprechpartner/in** | Christina Stroissnigg                     |
 | **Telefon**            | +43 3842 44 888 0                         |
-| **Typ**                | Fachhochschule                            |
 
 
 #### Projekttermine

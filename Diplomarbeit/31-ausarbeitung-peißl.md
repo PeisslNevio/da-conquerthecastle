@@ -8,7 +8,7 @@ In diesem Kapitel werden die theoretischen Grundlagen für die Erstellung von 3D
 
 ### Blender
 
-Blender ist ein Open-Source-3D-Programm, das von der Blender Foundation entwickelt wird und kostenlos zugänglich ist. Es deckt alle wesentlichen Schritte der 3D-Modellierung ab. Dazu zählen Modeling, Animation, Simulation, Rendering und Export. Dadurch ist es möglich, den gesamten 3D-Workflow innerhalb von Blender durchzuführen, ohne zusätzliche externe Software zu verwenden. [@blender_features]
+Blender ist ein Open-Source-3D-Programm, das von der Blender Foundation entwickelt wird und kostenlos zugänglich ist. Es deckt alle wesentlichen Schritte der 3D-Modellierung ab. Dazu zählen Modellierung, Animation, Simulation, Rendering und Export. Dadurch ist es möglich, den gesamten 3D-Workflow innerhalb von Blender durchzuführen, ohne zusätzliche externe Software zu verwenden. [@blender_features]
 
 Die Mission von Blender ist es, ein leistungsstarkes 3D-Programm für jeden frei zugänglich zu machen. Blender wird von einer großen Community entwickelt, wobei jeder einen Beitrag leisten kann. [@blender_about]
 
@@ -34,9 +34,9 @@ Wird ein Objekt ausgewählt, ist es orange umrandet. Der Ursprung des Objekts wi
 ![Objekte [@blender]](img/peissl/theorie/objekte.png){width=90%}
 
 
-Objekte bestehen aus Vertices, Edges und Faces. Ein Vertex stellt einen einzelnen Punkt dar. Werden zwei Vertices verbunden, entsteht eine Edge. Mehrere verbundene Edges ergeben eine Face. Verbinden sich mehrere Faces, entsteht ein Mesh, welches das eigentliche Objekt darstellt. [@blender_manual]
+Objekte bestehen aus Vertices, Edges und Faces. Ein Vertex stellt einen einzelnen Punkt dar. Werden zwei Vertices verbunden, entsteht eine Edge. Mehrere verbundene Edges ergeben eine Face. Verbinden sich mehrere Faces, entsteht ein Mesh, das das eigentliche Objekt darstellt. [@blender_manual]
 
-Diese Objekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objekte können verschoben (`G`), rotiert (`R`) und skaliert (`S`) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (X, Y oder Z) ausgewählt wird, verschiebt sich das Objekt nur auf dieser Achse. Wenn ein Objekt genau einen Meter nach X positiv verschoben werden sollte, lautet der Befehl `G + X + 1`. [@blender_manual]
+Diese Objekte werden verändert, um das gewünschte Ergebnis zu erzielen. Objekte können verschoben (**G**), rotiert (**R**) und skaliert (**S**) werden. Wenn ein Objekt verschoben wird und dazu eine Achse (X, Y oder Z) ausgewählt wird, verschiebt es sich nur entlang dieser Achse. Wenn ein Objekt genau einen Meter in positive X-Richtung verschoben werden soll, lautet der Befehl **G + X + 1**. [@blender_manual]
 
 #### Bearbeitungsmodi {#theorie-bearbeitungsmodi}
 
@@ -46,7 +46,7 @@ Der Object Mode ist der Standardmodus in Blender. In diesem Modus können Objekt
 
 ##### Edit Mode {#theorie-edit-mode}
 
-Im Edit Mode bearbeitet man die Geometrie einzelner Objekte. Um in den Edit Mode zu kommen muss man das Objekt auswählen und `Tab` drücken. Ein weiteres `Tab` und man gelangt wieder im Object Mode. Wichtige Edit Mode Tools sind Extrude `E`, Insert `I`, Loop Cut `Ctrl + R`, Bevel `B` und Merge Vertices `M`. Mit den Tasten `1`, `2` und `3` kann zwischen der Auswahl von Vertices, Edges und Faces gewechselt werden. [@blender_manual]
+Im Edit Mode bearbeitet man die Geometrie einzelner Objekte. Um in den Edit Mode zu kommen, muss man das Objekt auswählen und **Tab** drücken. Mit einem weiteren **Tab** gelangt man wieder in den Object Mode. Wichtige Werkzeuge im Edit Mode sind Extrude **E**, Insert **I**, Loop Cut **Ctrl + R**, Bevel **B** und Merge Vertices **M**. Mit den Tasten **1**, **2** und **3** kann zwischen der Auswahl von Vertices, Edges und Faces gewechselt werden. [@blender_manual]
 
 #### Mirror {#theorie-mirror}
 Der Mirror Modifier spiegelt ein Objekt entlang einer oder mehrerer Achsen, wobei die Spiegelung über den Objektursprung erfolgt. Dieser Modifier reduziert den Arbeitsaufwand bei symmetrischen Modellen erheblich und stellt sicher, dass beide Seiten exakt identisch sind. [@blender_manual]
@@ -57,25 +57,25 @@ Der Solidify Modifier verleiht Objekten eine Dicke. Die einfachste Anwendung äh
 
 #### Extra Mesh Objects {#theorie-extra-mesh-objects}
 
-Extra Mesh Objects ist ein Add-on für Blender, das die dynamische Erstellung komplexer Strukturen wie Wände ermöglicht. Um es zu nutzen, muss das Add-on installiert sein. Neue Wall Objekte werden mit `Shift + A` und dem Wall Builder erstellt (siehe Abb. 3). [@blender_extra_mesh_objects]
+Extra Mesh Objects ist ein Add-on für Blender, das die dynamische Erstellung komplexer Strukturen wie Wände ermöglicht. Um es zu nutzen, muss das Add-on installiert sein. Neue Wall-Objekte werden mit **Shift + A** und dem Wall Builder erstellt (siehe Abb. 3). [@blender_extra_mesh_objects]
 
 ![Wall Builder [@blender]](img/peissl/theorie/wallbuilder.png){width=90%}
 
-Es können nun die Eigenschaften dieser Wand bearbeitet werden. Darunter zählen Anfang und Ende der Wand, die Höhe und Breite sowie die Größe der einzelnen Ziegelsteine. Es gibt noch weitere Einstellungen für Fenster, Zinnen und Treppen. [@blender_extra_mesh_objects]
+Es können nun die Eigenschaften dieser Wand bearbeitet werden. Dazu zählen Anfang und Ende der Wand, die Höhe und Breite sowie die Größe der einzelnen Ziegelsteine. Es gibt weitere Einstellungen für Fenster, Zinnen und Treppen. [@blender_extra_mesh_objects]
 
 
 
 
 #### UV-Mapping {#theorie-uv-mapping}
 
-UV-Mapping wird zum Texturieren von Objekten benötigt. Es ist der Prozess, bei dem eine 3D-Grafik auf eine 2D-Fläche projiziert wird. Das Objekt wird aufgeschnitten und auf eine 2D Textur gelegt. Jede Fläche (Face) bekommt Koordinaten auf einer 2D-Textur. Wenn diese Textur bearbeitet wird, verändert sich auch das Aussehen des Objektes. Ohne UV-Mapping wären Texturen verzerrt, und Details gehen verloren. [@uv_mapping_guide] [@gpt_uv_mapping]
+UV-Mapping wird zum Texturieren von Objekten benötigt. Es ist der Prozess, bei dem eine 3D-Grafik auf eine 2D-Fläche projiziert wird. Das Objekt wird aufgeschnitten und auf eine 2D-Textur gelegt. Jede Fläche (Face) bekommt Koordinaten auf einer 2D-Textur. Wenn diese Textur bearbeitet wird, verändert sich auch das Aussehen des Objekts. Ohne UV-Mapping wären Texturen verzerrt, und Details gehen verloren. [@uv_mapping_guide] [@gpt_uv_mapping]
 
 ![UV Mapping [@uv_mapping_guide]](img/peissl/theorie/uv-mapping.png){width=90%}
 
 
 #### Low-Poly-Modellierung {#theorie-low-poly-modellierung}
 
-Durch die geringe Anzahl von Polygonen bleibt der Rechenaufwand eher gering und die Framerate ist stabiler. Außerdem verkürzen sich Ladezeiten, besonders auf älteren Geräten. Low-Poly hält den Style einheitlich und reduziert den Modellierungsaufwand drastisch. Ein Low-Poly Spiel setzt nicht auf hochauflösende Grafik oder komplexe Modelle, sondern auf die Einfachheit und Effizienz. [@low_poly] [@why_low_poly]
+Durch die geringe Anzahl von Polygonen bleibt der Rechenaufwand eher gering und die Framerate ist stabiler. Außerdem verkürzen sich Ladezeiten, besonders auf älteren Geräten. Low-Poly hält den Stil einheitlich und reduziert den Modellierungsaufwand drastisch. Ein Low-Poly-Spiel setzt nicht auf hochauflösende Grafik oder komplexe Modelle, sondern auf Einfachheit und Effizienz. [@low_poly] [@why_low_poly]
 
 ![Low-Poly Beispiel [@low_poly_example]](img/peissl/theorie/low-poly-example.png){width=90%}
 
@@ -88,19 +88,19 @@ Blender unterstützt das Exportformat FBX, welches zum Datenaustausch zwischen v
 
 ### Unreal Engine
 
-Die Unreal Engine (im Folgenden UE genannt) ist eine leistungsstarke, kostenlose 3D-Entwicklungssoftware, die vielseitig eingesetzt werden kann. Egal ob Spiele programmieren, Filme produzieren oder animieren. UE verfügt über die gleichen Technologien wie AAA-Gamestudios und ist für jeden nutzbar. Mit Unreal Engine ist (fast) jeder Entwicklungsschritt in einem einheitlichen Ökosystem integriert, was den Entwicklungsprozess deutlich vereinfacht und es ermöglicht, selbst als kleines Entwicklerteam hochwertige Spiele zu entwickeln. [@what_is_unreal_engine] [@unreal_engine_indie]
+Die Unreal Engine (im Folgenden UE genannt) ist eine leistungsstarke, kostenlose 3D-Entwicklungssoftware, die vielseitig eingesetzt werden kann, etwa zum Programmieren von Spielen, Produzieren von Filmen oder Erstellen von Animationen. UE verfügt über die gleichen Technologien wie AAA-Game-Studios und ist für jeden nutzbar. Mit Unreal Engine ist (fast) jeder Entwicklungsschritt in einem einheitlichen Ökosystem integriert, was den Entwicklungsprozess deutlich vereinfacht und es ermöglicht, selbst als kleines Entwicklerteam hochwertige Spiele zu entwickeln. [@what_is_unreal_engine] [@unreal_engine_indie]
 
 #### GUI {#theorie-gui}
 
-Das Graphical User Interface (GUI), auch Benutzeroberfläche genannt, ist eines der wichtigsten Bestandteile eines Spiels. Unter GUI versteht man alles, was vor dem eigentlichen Spiel angezeigt wird. Darunter zählt man alle Menüs sowie Lebens- und andere Statistikanzeigen. Es wird benötigt, um dem User die nötigen Informationen zu geben. Das GUI dient als Schnittstelle zwischen User und Spiel. Eine Benutzeroberfläche soll einfach, effizient und intuitiv sein. Es ist wichtig, dass jedes Element einen Namen hat, der die Funktion des Elementes intuitiv beschreibt. Mithilfe von Farben kann man den Benutzer auf bestimmte Elemente aufmerksam machen und dessen Erfahrung verbessern. Außerdem sollte jede Funktion innerhalb weniger Klicks zu erreichen sein. Funktionen, welche häufiger verwendet werden sollen leicht erreichbar sein. Das GUI muss eine Balance zwischen Funktionen und Design sein. [@ui_guide] [@what_is_a_good_ui]
+Das Graphical User Interface (GUI), auch Benutzeroberfläche genannt, ist einer der wichtigsten Bestandteile eines Spiels. Unter GUI versteht man alles, was vor dem eigentlichen Spiel angezeigt wird. Dazu zählen alle Menüs sowie Lebens- und andere Statistikanzeigen. Es wird benötigt, um dem Spieler die nötigen Informationen zu geben. Das GUI dient als Schnittstelle zwischen Spieler und Spiel. Eine Benutzeroberfläche soll einfach, effizient und intuitiv sein. Es ist wichtig, dass jedes Element einen Namen hat, der seine Funktion intuitiv beschreibt. Mithilfe von Farben kann man den Benutzer auf bestimmte Elemente aufmerksam machen und dessen Erfahrung verbessern. Außerdem sollte jede Funktion innerhalb weniger Klicks erreichbar sein. Funktionen, die häufiger verwendet werden, sollen leicht erreichbar sein. Das GUI muss eine Balance zwischen Funktionalität und Design bieten. [@ui_guide] [@what_is_a_good_ui]
 
 Die GUI wird in Unreal Engine mithilfe von UMG (Unreal Motion Graphics) erstellt. Dazu erstellt man Widgets und bindet diese in das Spiel ein. Diese Widgets werden mit dem HUD (Heads Up Display) angezeigt und der Blueprint im Hintergrund steuert das Verhalten des Widgets. Dazu gibt es einen eigenen UMG-Editor in UE, der alle notwendigen Funktionen an einem Platz bündelt. [@ui_tutorial]
 
 #### Cutscenes {#theorie-cutscenes}
 
-Eine Cutscene, auch genannt Zwischensequenz, ist eine kurze Filmsequenz in einem Videospiel, welche die Geschichte weiter erzählt. Der Spieler kann während dieser Cutscene nicht eingreifen, er ist der Zuschauer. [@cutscene_explanation]
+Eine Cutscene, auch Zwischensequenz genannt, ist eine kurze Filmsequenz in einem Videospiel, die die Geschichte weitererzählt. Der Spieler kann während dieser Cutscene nicht eingreifen, sondern ist Zuschauer. [@cutscene_explanation]
 
-In UE wird die Cutscene mithilfe des Level Sequenzers erstellt. Zu diesem Sequenzer wird eine Kamera hinzugefügt und in der Timeline wird mithilfe von Keyframes die Kameraposition zu bestimmten Zeitpunkten angegeben. Mithilfe eines Blueprints wird festgelegt, wann die Cutscene aufgerufen wird.  [@cutscene_tutorial]
+In UE wird die Cutscene mithilfe des Level Sequencers erstellt. Zu diesem Sequencer wird eine Kamera hinzugefügt, und in der Timeline wird mithilfe von Keyframes die Kameraposition zu bestimmten Zeitpunkten festgelegt. Mithilfe eines Blueprints wird definiert, wann die Cutscene aufgerufen wird. [@cutscene_tutorial]
 
 \newpage
 
@@ -119,7 +119,7 @@ Die in der Theorie erarbeiteten Grundlagen wurden in der praktischen Umsetzung d
 
 ### Bossraum
 
-Der Bossraum ist das Herz des Spiels. Dieser Raum erinnert an einen Thronsaal und bietet ausreichend Platz für den Kampf. Wenn der Spieler den Bossraum betritt, soll er das Gefühl haben, vor einem entscheidenden Kampf zu stehen.
+Der Bossraum ist das Herz des Spiels. Er erinnert an einen Thronsaal und bietet ausreichend Platz für den Kampf. Wenn der Spieler den Bossraum betritt, soll er das Gefühl haben, vor einem entscheidenden Kampf zu stehen.
 
 #### Konzept
 
@@ -132,7 +132,7 @@ Nachfolgend ist die Skizze des Bossraums dargestellt. In der Skizze sind die Ein
 
 #### Modellierung
 
-Die Modellierung des Bossraumes wurde vollständig im 3D-Modellierungsprogramm Blender durchgeführt. Das Modellierungsverfahren erfolgte in mehreren iterativen Schritten: Zunächst wurden die Grundstrukturen des Bodens und der Wandflächen grob modelliert, um die räumliche Grundform zu etablieren. Die Wandkonstruktion wurde unter Verwendung des Blender-Add-ons `Wall Builder` erstellt, um eine effiziente und realistische Modellierung zu ermöglichen (vgl. [Primitive Objekte](#theorie-primitive-objekte), [Bearbeitungsmodi](#theorie-bearbeitungsmodi), [Extra Mesh Objects](#theorie-extra-mesh-objects)).
+Die Modellierung des Bossraums wurde vollständig im 3D-Modellierungsprogramm Blender durchgeführt. Das Modellierungsverfahren erfolgte in mehreren iterativen Schritten: Zunächst wurden die Grundstrukturen des Bodens und der Wandflächen grob modelliert, um die räumliche Grundform zu etablieren. Die Wandkonstruktion wurde unter Verwendung des Blender-Add-ons **Wall Builder** erstellt, um eine effiziente und realistische Modellierung zu ermöglichen (vgl. [Primitive Objekte](#theorie-primitive-objekte), [Bearbeitungsmodi](#theorie-bearbeitungsmodi), [Extra Mesh Objects](#theorie-extra-mesh-objects)).
 
 Anschließend wurden die tragenden Säulen sowie der Thronsessel als zentrale Designelemente integriert. Der Thronsessel wurde bewusst auf einer erhöhten Plattform positioniert, die durch eine Treppe erreichbar ist. Diese Designentscheidung verfolgt das Ziel, der Boss-Figur eine visuelle Hierarchie und eine übergeordnete Positionierung gegenüber dem Spieler zu verleihen. Die Fensterpositionierung wurde strategisch so gewählt, dass stets mindestens eine Säule zwischen benachbarten Fenstern positioniert ist, um Sichtblockaden zu erzeugen.
 
@@ -151,7 +151,7 @@ Der Fußbodenteppich wurde bewusst in intensivem Rot texturiert, da diese Farbwa
 
 #### Optimierung
 
-Um die Polygonenanzahl des Bossraummodelles möglichst gering zu halten, wurden sämtliche Optimierungsstrategien angewendet. Die Grundstrukturen des Raumes (Boden, Wände, Decke) wurden mit minimaler Geometrie konstruiert. Statt komplexer, organischer Formen wurden hauptsächlich einfache geometrische Flächen und Formen verwendet. Dies reduzierte die Verarbeitungslast erheblich, ohne die visuelle Qualität wesentlich zu beeinträchtigen und folgt den Prinzipien der [Low-Poly-Modellierung](#theorie-low-poly-modellierung).
+Um die Polygonanzahl des Bossraummodells möglichst gering zu halten, wurden sämtliche Optimierungsstrategien angewendet. Die Grundstrukturen des Raumes (Boden, Wände, Decke) wurden mit minimaler Geometrie konstruiert. Statt komplexer, organischer Formen wurden hauptsächlich einfache geometrische Flächen und Formen verwendet. Dies reduzierte die Verarbeitungslast erheblich, ohne die visuelle Qualität wesentlich zu beeinträchtigen, und folgte den Prinzipien der [Low-Poly-Modellierung](#theorie-low-poly-modellierung).
 
 Sich wiederholende Elemente wie Säulen und Wandsegmente wurden als wiederverwendbare Modelle erstellt und mehrfach platziert, statt individuelle Geometrie für jedes Element zu modellieren. Dies reduzierte die Modellierungszeit drastisch.
 
@@ -161,9 +161,9 @@ Das resultierende Modell hat etwa 80.000 Polygone, was eine optimale Balance zwi
 
 Zunächst wurde sichergestellt, dass alle Komponenten des Bossraums korrekt in Blender organisiert waren. Das Modell bestand aus mehreren separaten Objekten (Wände, Säulen, Thronsessel, Tür, Treppen, dekorative Elemente), die zunächst alle aus einzelnen Objekten bestanden. Diese verteilte Struktur ermöglichte Flexibilität bei der Modellierung, musste aber für den Export konsolidiert werden (vgl. [Exportformat](#theorie-exportformat)).
 
-Vor dem Export wurden alle angewendeten Modifier (insbesondere Mirror und Solidify) "angewendet", um sicherzustellen, dass diese Transformationen in der FBX-Datei persistent gespeichert werden. Dies geschah durch Auswahl des Modifiers und Klick auf "Apply" im Modifier-Panel.
+Vor dem Export wurden alle verwendeten Modifier (insbesondere Mirror und Solidify) angewendet, um sicherzustellen, dass diese Transformationen in der FBX-Datei dauerhaft gespeichert werden. Dies geschah durch Auswahl des Modifiers und Klick auf "Apply" im Modifier-Panel.
 
-Der Export wurde mithilfe des Menüpfads `File > Export > FBX (.fbx)` durchgeführt. Dabei öffnete sich der Export-Dialog mit einer umfangreichen Liste von Konfigurationsoptionen. Die folgenden Einstellungen wurden konfiguriert:
+Der Export wurde mithilfe des Menüpfads **File > Export > FBX (.fbx)** durchgeführt. Dabei öffnete sich der Export-Dialog mit einer umfangreichen Liste von Konfigurationsoptionen. Die folgenden Einstellungen wurden konfiguriert:
 
 - **Scale**: 1.0 (um die Maßstäbe korrekt zu erhalten)
 - **Forward Axis**: -Y Forward (Standard für Unreal Engine)
@@ -173,10 +173,10 @@ Der Export wurde mithilfe des Menüpfads `File > Export > FBX (.fbx)` durchgefü
 - **Apply Modifiers**: Aktiviert (um alle Modifier in der Geometrie zu berücksichtigen)
 - **Bake Animation**: Deaktiviert (da das Modell nicht animiert ist)
 
-Nach diesen Schritten erhält man eine `.fbx`-Datei im ausgewählten Pfad.
+Nach diesen Schritten erhält man eine **.fbx**-Datei im ausgewählten Pfad.
 
 
-Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Projektverzeichnis (`Content/Bossraum/`) kopiert. Unreal Engine erkannte die Datei automatisch und importierte sie. Bei der Bestätigung des Imports wurden folgende Parameter konfiguriert:
+Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Projektverzeichnis (**Content/Bossraum/**) kopiert. Unreal Engine erkannte die Datei automatisch und importierte sie. Bei der Bestätigung des Imports wurden folgende Parameter konfiguriert:
 
 - **Skeletal Mesh**: Deaktiviert (nicht erforderlich für statische Modelle)
 - **Create Physics Asset**: Deaktiviert
@@ -185,7 +185,7 @@ Nach dem erfolgreichen Export wurde die FBX-Datei in das Unreal Engine 5 Projekt
 - **Material Import Method**: Create New Materials
 - **Import Textures**: Aktiviert (falls Textur-Dateien vorhanden waren)
 
-Die Kollisionsdaten wurden basierend auf der importierten Geometrie automatisch generiert. Danach wurde die Collision im Details-Panel auf `Use Complex Collision As Simple` gesetzt.
+Die Kollisionsdaten wurden basierend auf der importierten Geometrie automatisch generiert. Danach wurde die Collision im Details-Panel auf **Use Complex Collision As Simple** gesetzt.
 
 Nach dem Import wurde das Modell im Level platziert und mithilfe verschiedener Ansichten (Lit, Unlit, Wireframe, Normalansicht) überprüft, ob alles richtig gerendert wird.
 
@@ -214,17 +214,17 @@ Bei der Ausarbeitung der Waffen standen drei Ziele im Vordergrund:
 Die Modellierung erfolgte in Blender auf Basis einfacher Grundkörper (Cube, Plane, Cylinder), die schrittweise in Form gebracht wurden. Dabei wurde auf eine saubere Trennung von Klinge und Griff geachtet, um Materialzuweisungen in Unreal Engine zu vereinfachen. Für symmetrische Bauteile wurde der Mirror-Modifier verwendet, wodurch die Modellierungszeit reduziert und eine exakte Achsensymmetrie sichergestellt wurde (vgl. [Primitive Objekte](#theorie-primitive-objekte), [Edit Mode](#theorie-edit-mode), [Mirror](#theorie-mirror)).
 
 
-#### Player Schwert
+#### Player-Schwert
 
 Das Schwert des Spielers wurde als Einhandschwert mit einer Gesamtlänge von etwa 1,0 m ausgelegt. Diese Dimension orientiert sich an der Körpergröße des Spielercharakters (ca. 1,80 m) und unterstützt ein ausgewogenes Verhältnis zwischen Reichweite, Lesbarkeit und Beweglichkeit.
 
-Die Klinge wurde relativ schlank modelliert, um Schnelligkeit und Präzision zu vermitteln. Für die Klinge wurden helle Metalltöne gewählt, damit ein Kontrast zwischen Klinge und Bossraum entsteht. Der Griff verwendet dunklere, lederartige Farbtöne, um eine klare Materialtrennung herzustellen.
+Die Klinge wurde relativ schlank modelliert, um Schnelligkeit und Präzision zu vermitteln. Für die Klinge wurden helle Metalltöne gewählt, damit ein Kontrast zwischen Klinge und Umgebung entsteht. Der Griff verwendet dunklere, lederartige Farbtöne, um eine klare Materialtrennung herzustellen.
 
 Das Player-Schwert signalisiert einen kontrollierten, direkten Kampfstil. Es wirkt weder überdimensioniert noch ornamental, wodurch der Fokus auf Gameplay und Reaktionsgeschwindigkeit erhalten bleibt.
 
 ![Player-Schwert mit Proportionen](img/peissl/praxis/player-sword.png){width=90%}
 
-#### Boss Schwert
+#### Boss-Schwert
 
 Das Boss-Schwert wurde als großformatige Zweihandwaffe mit einer Länge von etwa 2,0 m umgesetzt. Die Dimension ist auf die Körpergröße des Bosses (ca. 3,20 m inklusive Hörner) abgestimmt und unterstreicht dessen dominante Rolle innerhalb des Kampfes.
 
@@ -243,18 +243,20 @@ Die GUI (Graphical User Interface) bildet die visuelle Schnittstelle zwischen Sp
 
 #### Zielsetzung der Benutzeroberfläche
 
-Die primäre Zielsetzung der GUI besteht darin, dem Spieler ausschließlich essentielle Informationen bereitzustellen, ohne ihn dabei durch visuelle Überfrachtung abzulenken. Jedes UI-Element wurde so gestaltet, dass seine Funktion ohne zusätzliche Erklärung verständlich ist. Dies trägt dazu bei, dass sich der Spieler auf das Kampfgeschehen konzentrieren kann, während ihm gleichzeitig alle notwendigen Informationen zur Verfügung stehen.
+Die primäre Zielsetzung der GUI besteht darin, dem Spieler ausschließlich essenzielle Informationen bereitzustellen, ohne ihn dabei durch visuelle Überfrachtung abzulenken. Jedes UI-Element wurde so gestaltet, dass seine Funktion ohne zusätzliche Erklärung verständlich ist. Dies trägt dazu bei, dass sich der Spieler auf das Kampfgeschehen konzentrieren kann, während ihm gleichzeitig alle notwendigen Informationen zur Verfügung stehen.
 
 #### Rolle der GUI im Spielablauf
 
-Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu Beginn leitet das Hauptmenü den Spieler durch die ersten Schritte und ermöglicht den Einstieg ins Spiel. Sobald der Kampf beginnt, übernimmt das HUD die zentrale Rolle: Es zeigt dem Spieler kontinuierlich seine aktuelle Lebenspunkteanzahl sowie seine verfügbare Ausdauer an. Zusätzlich wird die Lebensleiste des Bosses prominent dargestellt, sodass der Spieler den Kampfverlauf nachvollziehen und seine Strategien dynamisch anpassen kann. Nach einem Spieler-Tod erscheint der Death-Screen, der dem Spieler Optionen zur Fortsetzung bietet. Wenn der Boss besiegt wurde, erscheint der Victory-Screen. Das Statistikmenü ermöglicht es, wichtige Spielinformationen und die beste Zeit einzusehen.
+Die GUI übernimmt verschiedene Funktionen in unterschiedlichen Spielphasen. Zu Beginn leitet das Hauptmenü den Spieler durch die ersten Schritte und ermöglicht den Einstieg ins Spiel. Sobald der Kampf beginnt, übernimmt das HUD die zentrale Rolle: Es zeigt dem Spieler kontinuierlich seine aktuellen Lebenspunkte sowie seine verfügbare Ausdauer an. Zusätzlich wird die Lebensleiste des Bosses prominent dargestellt, sodass der Spieler den Kampfverlauf nachvollziehen und seine Strategien dynamisch anpassen kann. Nach dem Tod des Spielers erscheint der Death-Screen, der dem Spieler Optionen zur Fortsetzung bietet. Wenn der Boss besiegt wurde, erscheint der Victory-Screen. Das Statistikmenü ermöglicht es, wichtige Spielinformationen und die beste Zeit einzusehen.
 
 #### Abgrenzung zwischen Spielwelt und Benutzeroberfläche
 
-Die GUI existiert außerhalb der eigentlichen Spielwelt und wird als zweidimensionale Überlagerung im Vordergrund des Bildschirms dargestellt. Diese Trennung zwischen Spielwelt und Benutzeroberfläche wird technisch durch das UMG-Framework realisiert, welches die GUI-Elemente unabhängig von der 3D-Szene rendert. Dadurch bleibt die GUI stets sichtbar und lesbar, unabhängig von Kamerabewegungen oder Spielgeschehen. Diese klare Abgrenzung ermöglicht es dem Spieler, zwischen spielrelevanten Informationen (GUI) und der eigentlichen Spielwelt zu unterscheiden. Das `Head-up-Display` (HUD) wurde mithilfe von `pixilart.com` erstellt. In der folgenden Abbildung sieht man das HUD im Editor.
+Die GUI existiert außerhalb der eigentlichen Spielwelt und wird als zweidimensionale Überlagerung im Vordergrund des Bildschirms dargestellt. Diese Trennung zwischen Spielwelt und Benutzeroberfläche wird technisch durch das UMG-Framework realisiert, welches die GUI-Elemente unabhängig von der 3D-Szene rendert. Dadurch bleibt die GUI stets sichtbar und lesbar, unabhängig von Kamerabewegungen oder Spielgeschehen. Diese klare Abgrenzung ermöglicht es dem Spieler, zwischen spielrelevanten Informationen (GUI) und der eigentlichen Spielwelt zu unterscheiden. Das **Head-up-Display** (HUD) wurde mithilfe von **pixilart.com** erstellt. In der folgenden Abbildung sieht man das HUD im Editor.
 
 
 ![Spieler-HUD mit Lebenspunkten und Ausdauer](img/peissl/praxis/ui-player.png){width=90%}
+
+Zur Überprüfung der UI-Balken wurden Debug-Tasten eingebaut, mit denen die Lebenspunkte des Spielers und des Bosses gezielt angepasst werden konnten. Dadurch ließ sich zusätzlich die Funktionalität des Victory-Screens und des Death-Screens testen.
 
 
 
@@ -271,27 +273,27 @@ Die einzelnen Widgets bestehen aus verschiedenen Standard-UI-Komponenten:
 
 Für jedes GUI-Element wurde ein separates Widget erstellt. Ein Widget ist ein wiederverwendbares UI-Element, das sowohl visuelle Komponenten als auch zugehörige Logik enthält. Folgende Widgets wurden implementiert:
 
-- **Mainmenu-Widget**: Enthält Buttons für "Play", "Statistics" und "Quit". Das Layout wurde links ausgerichtet und mit konsistenten Abständen zwischen den Buttons versehen, um dem Spieler die Sicht auf die Burg zu erhalten.
+- **Main-Menu-Widget**: Enthält Buttons für "Play", "Statistics" und "Quit". Das Layout wurde links ausgerichtet und mit konsistenten Abständen zwischen den Buttons versehen, um dem Spieler die Sicht auf die Burg zu erhalten.
 
 ![Hauptmenü](img/peissl/praxis/mainmenu-ui.png){width=90%}
 
 
-- **Statistics-Menu-Widget**: Zeigt Spielstatistiken wie gespielte Spiele, Bestzeit und weitere Errungenschaften an.
+- **Statistics-Menu-Widget**: Zeigt zentrale Langzeitstatistiken wie die Anzahl gespielter Runden, die Bestzeit und weitere Errungenschaften an. Diese Werte werden in einem **SaveGame**-Objekt persistent gespeichert, nach jedem abgeschlossenen Spiel aktualisiert und beim nächsten Start wieder geladen.
 
 ![Statistikmenü](img/peissl/praxis/statisticsmenu-ui.png){width=90%}
 
 
-- **HUD-Widget**: Beinhaltet Progress-Bars für Spieler-Lebenspunkte (rot) und Ausdauer (hellblau) sowie die Boss-Lebensleiste. Zusätzlich wurde ein `low-health-indikator` umgesetzt, der bei weniger als 30 % Lebenspunkten als visuelles Warnsignal am Rand des Bildschirms eingeblendet wird.
+- **HUD-Widget**: Beinhaltet Progress-Bars für Spieler-Lebenspunkte (rot) und Ausdauer (hellblau) sowie die Boss-Lebensleiste. Zusätzlich wurde ein **Low-Health-Indikator** umgesetzt, der bei weniger als 30 % Lebenspunkten als visuelles Warnsignal am Rand des Bildschirms eingeblendet wird.
 ![Spielerperspektive im Bossraum mit aktiver GUI](img/peissl/praxis/bossroom-player-perspective.png){width=90%}
 
 
-- **Death-Screen-Widget**: Wird bei Spieler-Tod eingeblendet und bietet Optionen zum Neustart oder zur Rückkehr ins Hauptmenü. Der eingeblendete `low-health-indikator` macht den zuvor kritischen Gesundheitszustand auch in dieser Phase nachvollziehbar.
+- **Death-Screen-Widget**: Wird bei Tod des Spielers eingeblendet und bietet Optionen zum Neustart oder zur Rückkehr ins Hauptmenü. Der eingeblendete **Low-Health-Indikator** macht den zuvor kritischen Gesundheitszustand auch in dieser Phase nachvollziehbar.
 
 ![Death-Screen nach Spieler-Tod](img/peissl/praxis/ui-deathscreen.png){width=90%}
 
 - **Victory-Screen-Widget**: Wird nach dem Besiegen des Bosses eingeblendet und bietet Optionen zum erneuten Spielen oder zur Rückkehr ins Hauptmenü. 
 
-![Victory-Screen nach Boss-Tod](img/peissl/praxis/ui-viktoryscreen.png){width=90%}
+![Victory-Screen nach dem Tod des Bosses](img/peissl/praxis/ui-viktoryscreen.png){width=90%}
 
 
 
@@ -315,7 +317,7 @@ Die Kamerabewegungen wurden durch das Setzen von Keyframes zu bestimmten Zeitpun
 
 ![Intro-Welt](img/peissl/praxis/intro-world.png){width=90%}
 
-Die Intro-Cutscene wurde auf eine Dauer von etwa 15 Sekunden festgelegt, da dieser Zeitraum ausreicht, um die Außenwelt darzustellen. Gezeigt werden die Burg als zentraler Ort des Kampfes sowie die umliegende Stadt.
+Die Intro-Cutscene wurde auf eine Gesamtdauer von etwa 25 Sekunden festgelegt, da dieser Zeitraum ausreicht, um die Außenwelt darzustellen. Gezeigt werden die Burg als zentraler Ort des Kampfes sowie die umliegende Stadt.
 
 #### Spielablauf
 
@@ -323,11 +325,11 @@ Beim Start des Spiels wird zunächst die Intro-Cutscene abgespielt. Der nachfolg
 
 ![Level-Blueprint für Intro-Welt](img/peissl/praxis/code-intro-world.png){width=90%}
 
-Der folgende Blueprint zeigt den Start der Cutscene über den Level Sequencer. Nach etwa 17 Sekunden wird die Sequenz pausiert, um das Main Menu anzuzeigen.
+Der folgende Blueprint zeigt den Start der Cutscene über den Level Sequencer. Nach etwa 17 Sekunden wird die Sequenz pausiert, um das Hauptmenü anzuzeigen.
 
 ![Blueprint-Code zum Start der Cutscene](img/peissl/praxis/code-start-cutscene.png){width=90%}
 
-Nach dem Pausieren wird das Main Menu angezeigt, und die Mauseingabe für den Spieler wird aktiviert.
+Nach dem Pausieren wird das Hauptmenü angezeigt, und die Mauseingabe für den Spieler wird aktiviert.
 
 ![Blueprint-Code zur Erstellung des Hauptmenüs](img/peissl/praxis/code-create-mainmenu.png){width=90%}
 
