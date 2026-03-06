@@ -316,7 +316,7 @@ Grundsätzlich gilt:
 
 Um zu überprüfen, wie viele Punkte ein Modell besitzt, kann es exportiert und anschließend als **FBX-Datei** betrachtet werden. Auf **3dviewer.net** erhält man dazu eine gute Übersicht.
 
-#### Helmgestaltung
+#### Helmgestaltung {#helmgestaltung}
 
 Eine weitere unübliche Gestaltung ist der Helm. Untypisch sind dabei vor allem die Hörner sowie generell die auffällige Farbgestaltung. Hörner an Helmen gab es im Mittelalter nur sehr selten. Wahrscheinlich wurden sie damals kaum verwendet, da sie im Kampf eher hinderlich waren.
 
@@ -339,7 +339,7 @@ Die Rüstung selbst erinnert eher an das **Hoch- bzw. Spätmittelalter** beziehu
 
 ### Umsetzung mit Blender
 #### Modellierung
-##### Entwickelte Techniken
+**Entwickelte Techniken**
 
 Im Verlauf eines längeren Projekts werden immer wieder neue Funktionen entdeckt. Teilweise entstehen dabei auch eigene Arbeitsweisen. In Blender wurden unter anderem die folgenden Techniken genutzt:
 
@@ -350,7 +350,7 @@ Im Verlauf eines längeren Projekts werden immer wieder neue Funktionen entdeckt
 
 - **Skizzenbasierter Aufbau:** Formen wurden zunächst mit Anmerkungen vorgezeichnet und danach in der 2D-Ansicht ausgearbeitet. Diese Methode ist einfacher als klassisches UV-Mapping.
 
-##### Vorgehensweise
+**Vorgehensweise**
 
 Das Design war bereits grob festgelegt, daher musste eine sinnvolle Umsetzungsstrategie definiert werden. Der Start erfolgte beim Kopf, anschließend wurde nach unten weitergearbeitet. Die Gliedmaßen wurden bewusst später ausgearbeitet. Die Reihenfolge lautete: Helm und Kopf, danach Körper, anschließend Hals als Verbindung sowie danach Beine und Arme; zum Schluss folgten Füße und Hände.
 
@@ -360,38 +360,37 @@ Die folgende Abbildung zeigt den fertig modellierten Boss als Ergebnis dieses Ar
 
 ![Fertig modellierter Boss](img/schmiedpeter/Boss_fertig.png){width=70%}
 
-###### Helm
+**Helm**
 
-Die Kopfform des Helms wurde bewusst höher als rund gestaltet und orientiert sich eher an einer quaderartigen Grundform. Dadurch wirkt der Kopf massiver und dominanter, was die bedrohliche Erscheinung des Bosses zusätzlich verstärkt. Die Gesichtsform weist einen klaren, basalen Schnitt auf, der gezielt hervorgehoben wurde. Das Visier wurde leuchtend gestaltet, um einen mysteriösen und leicht übernatürlichen Eindruck zu erzeugen.
+Die praktische Ausarbeitung des Helms baut auf den zuvor beschriebenen Gestaltungsentscheidungen auf (vgl. [Helmgestaltung](#helmgestaltung)). Die Kopfform wurde bewusst höher als rund gestaltet und orientiert sich eher an einer quaderartigen Grundform. Dadurch wirkt der Kopf massiver und dominanter, was die bedrohliche Erscheinung des Bosses zusätzlich verstärkt. Die Gesichtsform weist einen klaren, basalen Schnitt auf, der gezielt hervorgehoben wurde. Das Visier wurde leuchtend gestaltet, um einen mysteriösen und leicht übernatürlichen Eindruck zu erzeugen.
 
 Ein weiteres markantes Merkmal des Helms sind die Hörner. Diese verlaufen mit ihrer Masse nach hinten, wurden jedoch relativ flach gehalten, um die Gesamtform nicht zu überladen. Während der Modellierung zeigte sich, dass die Spitzen der Hörner zunächst an einer falschen Position lagen. Aus diesem Grund wurden sie im weiteren Verlauf neu ausgerichtet, sodass sie sich harmonisch in die Gesamtform des Helms einfügen und die Silhouette nicht negativ beeinflussen.
 
-###### Körper
+**Körper**
 
 Beim Körper wurde eine spezielle Modellierungstechnik eingesetzt, bei der quer verlaufende Akzente genutzt wurden, um die körperlichen Strukturen gezielt hervorzuheben. Der Fokus lag dabei insbesondere auf der Brust- und Bauchmuskulatur sowie auf den Schultern, da diese Bereiche maßgeblich zur kraftvollen und einschüchternden Wirkung des Bosses beitragen. Zusätzlich wurden auch sekundäre Elemente wie der Gürtel in das Modell integriert, um den Gesamteindruck stimmig abzurunden.
 
 Im nächsten Schritt wurde eine Cloth-Simulation angewendet, um der Rüstung ein realistischeres Verhalten zu verleihen. Nach Abschluss dieses Arbeitsschritts wurden nicht mehr benötigte Körperteile unter der Rüstung entfernt. Diese Entscheidung wurde aus Performancegründen getroffen, da verdeckte Geometrie im finalen Spielmodell keinen visuellen Mehrwert bietet, jedoch unnötig Rechenleistung beansprucht.
 
-###### Hals
+**Hals**
 Der Hals wurde bewusst als verbindendes Element zwischen Helm und Körper modelliert. Ziel war keine stark ausgeprägte Eigenform, sondern ein stabiler Übergang, der die Proportionen zusammenführt und die Silhouette technisch wie optisch schlüssig hält.
 
-###### Beine
+**Beine**
 Die Beine entstanden aus einem längeren Zylinder mit mehreren Vertices, um genügend Geometrie für spätere Verformungen zu erhalten. Im Kniebereich wurde die Form leicht verjüngt und anschließend im Sculpt-Modus mit zusätzlicher Tiefe und Detail versehen.
 
 Besonders beachtet wurde, dass das Knie vorne etwas stärker ausgeprägt ist und auf der Rückseite eine kleine Einbuchtung besitzt. Diese Form unterstützt eine glaubwürdigere Beweglichkeit, da die Gelenkzone beim Beugen mehr Platz erhält.
 
-###### Arme
+**Arme**
+
 Die Arme wurden nach demselben Grundprinzip wie die Beine aufgebaut: zunächst ein länglicher Grundkörper mit ausreichender Segmentierung, danach gezielte Formanpassungen für Gelenkbereiche und Volumenverteilung. Dadurch blieb die Modellierung konsistent und ließ sich gut in die Gesamtfigur integrieren.
 
-###### Hände
+**Hände**
 Die Hände wurden separat modelliert, um Form und Topologie präziser steuern zu können. Entscheidend war dabei die Verteilung der Vertices in den Fingergelenken. In diesen Bereichen wurde zusätzliche Geometrie vorgesehen, damit Fingerbewegungen bei späterer Animation sauber deformieren und keine harten Knicke entstehen.
 
 Zusätzlich wurden Proportionen und Übergänge zur Armgeometrie mehrfach nachgearbeitet, damit die Hände sowohl im statischen Modell als auch in Bewegung stimmig wirken.
 
-##### Probleme und Lösungen
-Bereits im Körperbereich zeigten sich Form- und Topologieprobleme. Die Rüstung war an den Seiten zu dünn und am Rücken stellenweise zu flach. Diese Bereiche wurden durch gezielte Skalierung korrigiert und anschließend sauber zusammengeführt. Außerdem waren einzelne Eckpunkte durch überlagernde Flächen nur schwer erreichbar. In diesen Fällen wurden Arbeitsschritte zurückgesetzt und in korrekter Reihenfolge neu aufgebaut.
-
-Während der praktischen Umsetzung traten mehrere typische Topologieprobleme auf. An einigen Stellen liefen Vertices durch den Körper, was in verschiedenen Ansichtsmodi deutlich sichtbar war. Zusätzlich waren einzelne Körperbereiche fehlerhaft verbunden, sodass unter anderem zwischen Schulter und Rumpf sowie im Handbereich Lücken entstanden.
+**Probleme und Lösungen**
+Im Körperbereich traten Form- und Topologieprobleme auf: Die Rüstung war an den Seiten zu dünn und am Rücken stellenweise zu flach, einzelne Eckpunkte waren durch überlagernde Flächen schwer erreichbar, und an mehreren Stellen liefen Vertices durch den Körper. Zusätzlich waren Übergänge fehlerhaft verbunden, sodass unter anderem zwischen Schulter und Rumpf sowie im Handbereich Lücken entstanden. Diese Bereiche wurden durch gezielte Skalierung korrigiert; bei fehlerhafter Topologie wurden Arbeitsschritte zurückgesetzt und in korrekter Reihenfolge neu aufgebaut.
 
 Diese Übergänge wurden manuell korrigiert: Fehlerhafte Vertices wurden gelöscht, neu gesetzt und die betroffenen Bereiche anschließend sauber zusammengeführt. Dadurch konnten offene Kanten und sichtbare Spalte im Mesh weitgehend geschlossen werden.
 
@@ -399,8 +398,8 @@ Ein weiteres Problem waren nicht-manifold Geometrien. Darunter versteht man Geom
 
 Durch diese Kombination aus automatischer Bereinigung und manueller Korrektur wurde das Mesh deutlich stabiler und besser für weitere Schritte wie Rigging, Animation und Export vorbereitet.
 
-#### Animationen
-##### Vorgehensweise beim Rigging
+### Animationen
+#### Vorgehensweise beim Rigging
 Die Animationen wurden auf Basis des im Theorieteil beschriebenen Rigging-Ansatzes erstellt (vgl. [Grundlagen des Rigging mit Armature](#sec32-theorie-rigging), [Gewichtung und Bindung des Meshes](#sec32-theorie-gewichtung), [Animation erstellen in Blender](#sec32-theorie-animation-erstellen)). Zuerst wurde eine eigene Armature aufgebaut, inklusive Inverser Kinematik (IK) und Offset-Setups, um kontrollierbare Gelenkbewegungen und saubere Hierarchien zu erhalten.
 
 Anschließend wurden zwei Varianten getestet: die manuell aufgebaute Armature und ein automatisiert erzeugtes Rig. Beide Varianten wurden mit automatischer Gewichtung an den Boss gebunden und praktisch im Animationsprozess verglichen.
@@ -412,7 +411,7 @@ Die folgende Abbildung zeigt das praktische Rigging-Setup; **gelb steht für die
 
 Die folgende Abbildung zeigt das in Blender erzeugte Rigify-Kontroll-Rig. Sichtbar sind die typischen Controller-Formen; die Controls sind überwiegend blau dargestellt, während gelbe Elemente die IK-relevanten Bereiche markieren.
 
-##### Einsatz von Rigify
+#### Einsatz von Rigify
 Für den Vergleich wurde das Blender-Addon **Rigify** verwendet. Der Vorteil von Rigify liegt in der schnellen Erstellung eines funktionsfähigen Kontroll-Rigs, das für die Animation meist angenehmer und effizienter zu bedienen ist als ein vollständig manuell aufgebautes Setup.
 
 
@@ -422,29 +421,31 @@ In der praktischen Arbeit zeigte sich, dass sich das Rigify-Rig für die meisten
 
 Zusätzlich ist relevant, dass Rigify standardisierte Grundriggerüste bereitstellt, unter anderem für humanoide Figuren und für vierbeinige Tiere. Dadurch eignet sich das Addon gut als Ausgangspunkt für unterschiedliche Charaktertypen.
 
-##### Recherche und Nutzung von Mixamo
+#### Recherche und Nutzung von Mixamo
 Bei der Recherche zu geeigneten Animationsquellen wurde die Plattform **Mixamo** von Adobe einbezogen. Mixamo bietet vorkonfigurierte Bewegungsabläufe, die direkt auf Charaktere angewendet und anschließend exportiert werden können. Dadurch lassen sich grundlegende Animationen schnell testen und in einen eigenen Workflow integrieren.
 
 Ein Teil der Animationen wurde aus Mixamo übernommen. Mehrere dieser Clips mussten jedoch nachbearbeitet werden, damit Timing, Haltung und Übergänge zur Figur und zum Spielkontext passen. Zusätzlich wurden einzelne Bewegungen vollständig selbst erstellt, da die verfügbaren Vorlagen die gewünschte Wirkung nicht ausreichend abdeckten.
 
-##### Schwierigkeiten und Probleme
+#### Schwierigkeiten und Probleme
 Während der Animationsphase traten vor allem Unterschiede zwischen importierten und eigenen Bewegungsabläufen auf. Die größten Herausforderungen lagen in der konsistenten Übergangsqualität zwischen Clips sowie in der Anpassung einzelner Posen an die Proportionen des Boss-Charakters.
 
 Gelöst wurde dies durch schrittweise Korrekturen im Pose- und Graph-Workflow, gezielte Anpassung der Keyframes und eine vereinheitlichte Struktur der verwendeten Animationen. Dadurch konnte ein stimmiger Bewegungsablauf mit wiederverwendbaren Clips aufgebaut werden.
 
-#### Musik
+### Musik
 
-##### Produktionsumgebung
+#### Produktionsumgebung
 Für die Musikproduktion wurde **Reaper** als zentrale DAW (Digital Audio Workstation) eingesetzt. Ergänzend kamen **MIDI-Inhalte aus Splice Instruments** zum Einsatz. Diese Kombination ermöglichte einen schnellen Einstieg in die Komposition, flexible Anpassungen von Arrangement und Dynamik sowie eine effiziente Ausarbeitung mehrerer Musikzustände [@collins_game_sound] [@hofmann_szczypula_game_sound_2006].
 
 Ein zentraler praktischer Befund war der hohe Zeitaufwand: Bis Idee, Stimmung, Dramaturgie und technische Einsetzbarkeit zusammenpassen, sind mehrere Iterationen aus Komponieren, Testen und Überarbeiten nötig.
 
-##### Musikalisches Gesamtkonzept
+Ein weiterer wichtiger Praxispunkt war die Bearbeitung der MIDI-Velocity: Die Anschlagsstärken wurden bewusst grob variiert, da gleichförmige Velocity-Werte schnell zu einem maschinellen Klang führen. Durch diese Variation wirkt die Musik lebendiger, und die gewünschte emotionale Wirkung kommt deutlich stärker zur Geltung.
+
+#### Musikalisches Gesamtkonzept
 Die Musik des Projekts wurde bewusst düster konzipiert, um die bedrohliche Atmosphäre des Bosskampfs zu tragen und emotional zu verdichten. Der Ansatz orientiert sich an den im Theorieteil dargestellten Zusammenhängen zwischen Harmonik, Tempo, Dynamik und emotionaler Wirkung [@schulz_entwicklung_musik_videospielen_2022] [@collins_game_sound] [@youtube_music_controls_you].
 
 Durch dunkle Klangfarben, spannungsorientierte Verläufe und klar gestufte Intensitäten wird die Wahrnehmung von Gefahr, Unsicherheit und Eskalation gezielt verstärkt. Die detaillierte psychologische Herleitung der einzelnen Stücke wird in einem späteren Arbeitsschritt ergänzt [@youtube_write_music_for_games] [@youtube_music_transcends_game].
 
-##### Vorgehensweise und Einteilung
+#### Vorgehensweise und Einteilung
 Zu Beginn wurde strukturiert festgelegt, welche Musik- und Soundelemente im Spiel benötigt werden. Die konzeptionelle Orientierung erfolgte dabei über unterschiedliche Referenzquellen: Beiträge und Analysen von Creator:innen auf YouTube, musikalische Eindrücke aus Spotify sowie Vergleichswerte aus anderen Spielen und Filmen. Diese Referenzen dienten nicht als direkte Übernahme, sondern als Grundlage für Stimmung, Klangfarbe und dramaturgische Ausrichtung der eigenen Kompositionen.
 
 Zusätzlich floss das im Theorieteil erarbeitete Wissen gezielt in die praktische Umsetzung ein, insbesondere zu Zustandswechseln, Layering und musikalischer Reaktionslogik (vgl. [Interaktive Musik in Videospielen](#sec-interaktive-musik)).
@@ -505,7 +506,7 @@ Die beiden Soundeffekte wurden mit zufallsbasierter Variation umgesetzt, wie es 
 
 Diese Struktur half dabei, Musik und Sound nicht isoliert, sondern als zusammenhängendes Feedback-System für den Spielverlauf zu entwickeln.
 
-##### Exportieren und Einfügen in Unreal
+#### Exportieren und Einfügen in Unreal
 Das Exportieren in Reaper war in der praktischen Umsetzung nicht besonders schwierig: Über **Rendern** wurde der jeweilige Titel ausgegeben, mit klarer Benennung und durchgängig im Dateityp **WAV**. Diese einheitliche Exportbasis erleichterte den anschließenden Import in Unreal deutlich.
 
 Auch das Einfügen in Unreal war grundsätzlich unkompliziert. Eine wichtige Erkenntnis war jedoch, dass die Musik nicht ausschließlich im Blueprint einer einzelnen Map gesteuert werden sollte, da sie sonst beim Wechsel in die nächste Map abgeschnitten wurde. Die Lösung war eine eigene **Game Instance** für die Musiklogik, ergänzt durch zusätzliche **Blueprint Interfaces**, um Zustände und Trigger sauber zu übergeben.
