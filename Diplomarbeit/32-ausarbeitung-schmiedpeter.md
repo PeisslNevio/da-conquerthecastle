@@ -302,7 +302,7 @@ Die zuvor beschriebenen Konzepte (States, Layer, Looping, Übergänge) werden in
 
 Eine zentrale Rolle spielt dabei **MIDI**. MIDI enthält keine Audiodaten, sondern Steuerinformationen (z. B. Tonhöhe, Länge, Velocity, Timing). Dadurch können musikalische Ideen schnell variiert, instrumentiert und an unterschiedliche Intensitätsstufen angepasst werden. Gerade für adaptive und dynamische Spielmusik ist diese Flexibilität wichtig, weil Material häufig in mehreren Versionen (z. B. ruhig, mittel, intensiv) benötigt wird [@collins_game_sound],[@hofmann_szczypula_game_sound_2006].
 
-----
+\newpage
 
 ## Praktisch
 
