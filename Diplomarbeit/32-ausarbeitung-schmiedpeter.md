@@ -1,15 +1,18 @@
 # Teilaufgabe Schmiedpeter Rhys
 \textauthor{Schmiedpeter}
 
-## Blender {#sec32-theorie-blender}
 
-### Einleitung in Blender
+## Theorie
 
-#### Möglichkeiten
+### Blender {#sec32-theorie-blender}
+
+#### Einleitung in Blender
+
+##### Möglichkeiten
 
 Blender ist ein Programm mit vielfältigen Einsatzmöglichkeiten. Es eignet sich für die Modellierung, bietet eine Zeichenfunktion sowie einen Python-Editor. Zusätzlich können bestehenden Modellen Animationen hinzugefügt werden. Darüber hinaus lassen sich in Blender auch Videos rendern und schneiden [@blender_features] [@blender_manual].
 
-#### Basics der Modellierung
+##### Basics der Modellierung
 
 Blender ist wie folgt aufgebaut: In der Mitte befindet sich das Koordinatensystem, in dem der Großteil der Arbeit stattfindet. Links liegen die wichtigsten Werkzeuge. Rechts befindet sich die Objekthierarchie mit Kamera, Licht und allen Objekten. Im unteren beziehungsweise rechten Bedienbereich befinden sich Funktionen wie Modifier, Material und Physik.
 
@@ -33,7 +36,7 @@ Als Unterstützung in den jeweiligen Modi gibt es das Tool **Anmerkungen**. Dami
   
 \newpage
 
-### Konkurrenz
+#### Konkurrenz
 
 Neben Blender hätten auch andere Modellierungsprogramme verwendet werden können, beispielsweise *Tinkercad, Autodesk Fusion oder OpenSCAD* [@blender_konkurrenz] [@blender_konkurrenz_tinkercad] [@blender_konkurrenz_autodesk] [@blender_konkurrenz_openscad].
 
@@ -45,7 +48,7 @@ Neben Blender hätten auch andere Modellierungsprogramme verwendet werden könne
 
 
 
-### Nützliche Befehle
+#### Nützliche Befehle
 
 - **`Shift + A`**: Objekt hinzufügen.
 - **`X`**: Löschen (mit Bestätigungsabfrage).
@@ -79,9 +82,9 @@ Für den Editmodus:
 
 \newpage
 
-## Erweiterte Funktionen in Blender {#sec32-theorie-erweiterte-blender}
+### Erweiterte Funktionen in Blender {#sec32-theorie-erweiterte-blender}
 
-### Material
+#### Material
 
 Material beschreibt das Aussehen eines Objekts bzw. einzelner Flächen. Dazu gehören unter anderem Farbe, Metalleffekt, Rauheit und weitere definierbare Eigenschaften. Standardmäßig ist ein Material neutral und hellgrau, damit Effekte und Farben die Modellierung nicht stören [@blender_manual].
 
@@ -91,21 +94,21 @@ Objekte lassen sich im Editmodus einfärben. Einzelnen Flächen können Farben z
 
 
 
-### Modifier
+#### Modifier
 
 Modifier sind Erweiterungen mit eigenen Funktionen. Es gibt viele davon, in einem Projekt wird jedoch meist nur ein Teil tatsächlich genutzt. Manche Modifier erleichtern bestehende Arbeitsschritte, andere bieten zusätzliche Funktionen. Zu finden sind sie rechts unter dem Schraubenschlüssel-Symbol.
 
 Modifier sind in Kategorien gegliedert; besonders relevant sind **Erzeugen** und **Physik**. Wichtig ist, dass Blender zunächst nur eine Vorschau zeigt. Erst nach dem Anwenden wird die Änderung dauerhaft in die Geometrie übernommen. Häufig verwendete Modifier sind Boolean, Mirror und Collision [@blender_manual].
 
-#### Boolean
+##### Boolean
 
 Mit dem Boolean-Modifier kann ein Objekt mit einem zweiten Objekt verrechnet werden. Je nach Modus sind **Schnittmenge, Vereinigung oder Differenz** möglich. Dafür werden ein primäres und ein sekundäres Objekt benötigt.
 
-#### Mirror
+##### Mirror
 
 Der Mirror-Modifier spiegelt ein Objekt entlang der gewählten Achse. Gespiegelt wird nicht um die geometrische Mitte, sondern um den Ursprung des Objekts.
 
-#### Physik
+##### Physik
 
 Physik ist kein einzelner Modifier, sondern eine eigene Kategorie. Hier reagieren Objekte nach physikalischen Regeln der realen Welt. Möglich sind beispielsweise Simulationen mit Flüssigkeiten oder Stoffen. Viele Physik-Modifier benötigen ein zweites Objekt mit dem Modifier **Collision**, damit Kollisionen erkannt werden.
 
@@ -113,12 +116,12 @@ Ein typisches Beispiel ist der Cloth-Modifier. Er verhält sich wie ein Stofftuc
 
 \newpage
 
-## Animationen {#sec32-theorie-animationen}
-### Zweck und Nutzen von Animationen
+### Animationen {#sec32-theorie-animationen}
+#### Zweck und Nutzen von Animationen
 Animationen sind notwendig, um statische Modelle in glaubwürdige, lesbare und emotionale Figuren zu verwandeln. In Spielen und Visualisierungen übernehmen sie mehrere Aufgaben: Sie machen Handlungen verständlich (z. B. Gehen, Angreifen), stärken die Identität einer Figur durch charakteristische Bewegungen und unterstützen die Spielmechanik durch klare Rückmeldungen (z. B. Treffer, Ausweichen). Ohne Animationen bleibt ein Modell ein reiner Blickfang, vermittelt jedoch keine Handlung und wirkt technisch wie dramaturgisch unvollständig.
 [@blender_manual] 
 
-### Grundlagen des Rigging mit Armature {#sec32-theorie-rigging}
+#### Grundlagen des Rigging mit Armature {#sec32-theorie-rigging}
 Die Armature ist das Skelett einer Figur. Sie besteht aus Knochen (Bones), die hierarchisch verbunden sind und die spätere Bewegung definieren. Jeder Knochen besitzt einen Kopf und ein Ende; aus der Ausrichtung ergibt sich die lokale Achse, die für Rotationen entscheidend ist. Damit eine Armature sauber funktioniert, müssen die Skalierungen der Meshes angewendet sein, und die Bone-Orientierungen müssen konsistent angelegt werden.
 
 **Parent-Knochen (Elternknochen)** bestimmen die Hierarchie. Bewegungen eines Elternknochens wirken auf alle darunterliegenden Kinderknochen. Dadurch lassen sich Ketten wie Wirbelsäule, Arm oder Bein logisch aufbauen. Ein Unterarm ist z. B. Kind des Oberarms, sodass eine Rotation des Oberarms die gesamte Kette mitführt.
@@ -131,7 +134,7 @@ Die Armature ist das Skelett einer Figur. Sie besteht aus Knochen (Bones), die h
 
 **Inverse Kinematik (IK)** wird eingesetzt, wenn das Ende einer Knochenkette direkt gesteuert werden soll, z. B. Hände, Füße oder ein Knie beim Aufsetzen auf den Boden. Im Gegensatz zur Vorwärtskinematik (FK), bei der jeder Knochen einzeln rotiert wird, berechnet IK die Winkel der gesamten Kette automatisch, damit das Endglied ein Ziel erreicht. Technisch wird dazu ein Zielobjekt (IK-Target) definiert und ein IK-Constraint auf den Endknochen gesetzt; eine Kettenlänge bestimmt, wie viele Knochen beeinflusst werden. So lassen sich stabile Kontaktpunkte erzeugen, etwa wenn eine Hand eine Waffe hält oder ein Fuß sauber am Boden bleibt [@youtube_eCtSviaHZ6U].
 
-### Anwendung an Figuren: Vorgehensweise
+#### Anwendung an Figuren: Vorgehensweise
 Für die Anwendung an einer Figur werden ein Mesh, eine Armature und eine klare Bindung zwischen beiden benötigt. Ziel ist es, dass die Knochenbewegung das Mesh nachvollziehbar verformt, ohne sichtbare Artefakte zu erzeugen. Eine Abbildung kann hier optional den Aufbau von Mesh, Armature und Gewichtung verdeutlichen.
 
 
@@ -165,7 +168,7 @@ Wichtige Werkzeuge sind Add (Gewichte erhöhen), Subtract (Gewichte reduzieren),
 
 \newpage
 
-### Animation erstellen in Blender {#sec32-theorie-animation-erstellen}
+#### Animation erstellen in Blender {#sec32-theorie-animation-erstellen}
 Nach dem Rigging beginnt die eigentliche Animation im **Pose Mode** der Armature. Dabei werden nicht die Mesh-Punkte direkt bewegt, sondern die Knochen. Blender speichert diese Bewegungen als Keyframes und interpoliert die Zwischenbilder automatisch.
 [@youtube_2nlMZx0vp6E] [@youtube_JQT9sT1YuAI] [@youtube_1khSuB6sER0]
 Typische Vorgehensweise:
@@ -183,7 +186,7 @@ Bei mehreren Animationen (z. B. Idle, Walk, Attack) sollte jede Bewegung als eig
 
 Für Loops (z. B. Gehen) muss der letzte Frame zur Startpose passen, damit der Übergang ohne sichtbaren Sprung wieder von vorne beginnt.
 
-### Einfügen in Unreal {#sec32-theorie-einfuegen-unreal}
+#### Einfügen in Unreal {#sec32-theorie-einfuegen-unreal}
 Für den Export ist ein konsistentes Rig wichtig: gleiche Ausrichtung, klare Root-Struktur und einheitliche Benennung. In Unreal werden Armature und Animationen als FBX importiert. Entscheidend ist, dass die Animationen im selben Skeleton bleiben, damit sie austauschbar und wiederverwendbar sind. So kann z. B. eine Geh-Animation an mehreren Figuren genutzt werden, solange das Skelett kompatibel bleibt.
 
 Kurzablauf für den Import:
@@ -196,14 +199,14 @@ Kurzablauf für den Import:
 
 Wenn ein Clip nicht korrekt aussieht, liegt dies meist an Bone-Namen, Skalierung oder nicht angewendeten Transformationen in Blender.
 
-## Game Sound {#sec32-theorie-gamesound}
+### Game Sound {#sec32-theorie-gamesound}
 
 Game Sound ist weit mehr als akustische Dekoration. Im Computerspiel übernimmt er eine doppelte Funktion: Einerseits erhöht er die Immersion, indem er die künstliche Spielwelt mit glaubwürdigen Klangräumen füllt, andererseits liefert er dem Spieler unmittelbares Feedback auf Handlungen, Ereignisse und Zustandswechsel. Fehlen Hintergrundgeräusche, wirkt eine Szene schnell künstlich und leer; sind sie stimmig gestaltet, werden sie oft kaum bewusst wahrgenommen, stabilisieren jedoch das Erleben der Spielwelt nachhaltig.
 
 Im Unterschied zu linearen Medien entsteht Sound im Spielkontext unter interaktiven Bedingungen. Atmo, Musik, Sprache und Geräusche werden nicht in einer fixen Reihenfolge abgespielt, sondern können sich abhängig von Spieleraktionen zeitlich unvorhersehbar überlagern. Genau daraus ergeben sich zentrale gestalterische Herausforderungen: Sprachverständlichkeit muss erhalten bleiben, klangliche Konflikte zwischen Ebenen sollen vermieden werden, und trotzdem muss ein konsistenter Gesamteindruck entstehen. Eine strukturierte Klanghierarchie und ein bewusstes Lautstärke- und Mischungsverhältnis sind daher Grundvoraussetzungen für professionellen Gamesound.
 
-### Musikpsychologische Grundlagen {#sec32-theorie-musikpsych}
-#### Wahrnehmung von Tönen
+#### Musikpsychologische Grundlagen {#sec32-theorie-musikpsych}
+##### Wahrnehmung von Tönen
 Die Wahrnehmung von Tönen wird in der musikpsychologischen Lehre von Ernst Kurth als Erleben von „Strebewirkungen“ beschrieben: Töne und Intervalle wirken nicht statisch, sondern erzeugen den Eindruck von gerichteter Bewegung, Spannung und möglicher Auflösung. Die Strebetendenz-Theorie (Willimek) erweitert diesen Ansatz, indem sie diese Wirkung als psychologische Identifikation des Hörers mit Willensregungen deutet. Vereinfacht bedeutet das: Der Hörer erlebt nicht nur eine Klangbewegung, sondern einen inneren Impuls gegen oder für eine Veränderung [@willimek_musik_und_emotionen_2011].
 
 > „Wir erleben einen Ton nicht als Frequenz, sondern als undefinierbares Ding, das wir jedoch nicht als sinnvoll in unsere materielle Welt eingegliedert erfahren können.“ (Musik und Emotionen, S. 3)
@@ -212,7 +215,7 @@ Diese Sichtweise verdeutlicht, dass Töne nicht nur als messbare physikalische S
 
 Für Leitton- und Vorhaltswirkungen wird dieses Prinzip konkret über Spannung erklärt. Dissonante Reibungen (z. B. Sekundreibungen im Obertonbereich) werden teilweise unbewusst wahrgenommen und erzeugen ein Spannungsfeld, das eine Auflösung erwartet. Daraus entsteht der typische Eindruck von Erwartung und Zielgerichtetheit in musikalischen Verläufen. Für den Gamesound ist dieser Mechanismus zentral, weil er genutzt werden kann, um Aufmerksamkeit zu lenken, Unsicherheit zu steigern und Auflösungsmomente dramaturgisch wirksam zu gestalten.
 
-#### Basisemotionen
+##### Basisemotionen
 Im Kontext von Musik und Emotionen werden Basisemotionen nicht isoliert betrachtet, sondern als Ergebnis mehrerer Parameter, vor allem Harmonik, Tempo und Lautstärke. In den dargestellten Testansätzen wurden Musikbeispiele bewusst auf wenige Parameter reduziert, um den emotionalen Kern sichtbar zu machen. Dabei zeigt sich: Das Zusammenspiel aus harmonischer Struktur sowie zeitlicher und klanglicher Gestaltung bestimmt maßgeblich die wahrgenommene Emotion.
 
 Eine besondere Rolle spielt das Tempo. Schnellere Verläufe erhöhen typischerweise Aktivierung und werden häufiger mit Erregung, Anspannung oder Durchsetzungskraft verbunden, während langsamere Verläufe eher Ruhe, Trauer oder Gelöstheit stützen. Zusätzlich zeigen physiologische Befunde, dass aktivierende Musik mit erhöhter Herzfrequenz und Muskelspannung korreliert, beruhigende Musik hingegen mit sinkender Herzfrequenz. Damit wird die emotionale Wirkung nicht nur subjektiv beschrieben, sondern auch körperlich nachvollziehbar [@willimek_musik_und_emotionen_2011] [@neurophysiological_emotion_analysis_music_2014].
@@ -230,7 +233,7 @@ Diese Zuordnungen sind für Gamesound praktisch nutzbar, weil sie eine gezielte 
 
 ![Notenabbildung zu Harmoniewirkungen](img/schmiedpeter/Noten_Abb.png){width=70%}
 
-#### Mechanismen der Musikemotion
+##### Mechanismen der Musikemotion
 Ein etablierter Erklärungsrahmen für musikalisch ausgelöste Emotionen ist das BRECVEM-Modell nach Juslin & Västfjäll. Es beschreibt sieben unterschiedliche Auslösemechanismen, die parallel oder kombiniert wirken können [@neurophysiological_emotion_analysis_music_2014]:
 
 - **B – Brain Stem Reflex**: Plötzliche, laute, dissonante oder sehr schnelle Signale lösen unmittelbare Alarm- bzw. Aktivierungsreaktionen aus.
@@ -243,14 +246,14 @@ Ein etablierter Erklärungsrahmen für musikalisch ausgelöste Emotionen ist das
 
 Gerade für interaktive Medien ist dieses Modell hilfreich, weil es zeigt, dass Musikemotionen nicht nur über Harmonik entstehen, sondern auch über Konditionierung, Rhythmuskopplung, Erwartungssteuerung und Erinnerungseffekte vermittelt werden.
 
-### Interaktive Musik in Videospielen {#sec-interaktive-musik}
+#### Interaktive Musik in Videospielen {#sec-interaktive-musik}
 Interaktive Musik ist im Gamesound kein statischer Hintergrund, sondern ein steuerbares System [@collins_game_sound] [@hofmann_szczypula_game_sound_2006].
 
 Ihre zentrale Aufgabe besteht darin, das Spielgeschehen emotional zu unterstützen, ohne den Spielfluss zu stören.
 
 Im Unterschied zur Filmmusik ist der genaue Zeitpunkt von Szenenwechseln oder Gefahrensituationen im Spiel oft nicht vorhersehbar. Deshalb muss Musik flexibel auf Spielerhandlungen reagieren und trotzdem musikalisch zusammenhängend bleiben.
 
-#### Adaptive vs. dynamische Musik
+##### Adaptive vs. dynamische Musik
 
 Im praktischen Einsatz lassen sich zwei komplementäre Verfahren unterscheiden, die oft kombiniert werden:
 
@@ -276,7 +279,7 @@ Ein konkretes Beispiel: Ein Boss-Kampf könnte mit einem Musikstück im "Kampf"-
 
 Beide Ansätze verfolgen dasselbe Ziel: Die Musik soll den aktuellen Spielzustand hörbar machen. Adaptive Musik bietet große emotionale Sprünge (z. B. von Erkundung zu Kampf), während dynamische Musik feinere Abstufungen ermöglicht. Diese Reaktionsfähigkeit ist entscheidend, weil in interaktiven Medien mehrere Soundebenen (Atmosphäre, Geräusche, Sprache, Musik) gleichzeitig aktiv sein können. Musik muss daher nicht nur emotional passen, sondern sich auch in das Gesamtmixing einordnen, damit die Sprachverständlichkeit nicht leidet.
 
-#### Looping-Techniken
+##### Looping-Techniken
 Looping ist eine Grundtechnik interaktiver Musik, da Spielsituationen unterschiedlich lange dauern. Musik wird deshalb meist als nahtloser Kreis aufgebaut, damit keine hörbaren Brüche entstehen, wenn ein Abschnitt länger aktiv bleibt.
 
 Für professionelle Übergänge zwischen Zuständen werden laut den beschriebenen Produktionsansätzen vor allem zwei Verfahren genutzt:
@@ -286,7 +289,7 @@ Für professionelle Übergänge zwischen Zuständen werden laut den beschriebene
 
 In der Praxis ist die Überblendung robuster, weil sie auch bei unvorhersehbaren Spieleraktionen funktioniert. Taktgenaue Wechsel klingen musikalisch sauberer, benötigen jedoch ein enger abgestimmtes Musiksystem [@collins_game_sound].
 
-#### Layer-Systeme
+##### Layer-Systeme
 Layer-Systeme teilen einen Musikzustand in mehrere Ebenen, die je nach Spielsituation zu- oder abgeschaltet werden. Typische Layer sind z. B. Rhythmus, Harmonie, Flächen oder Percussion-Akzente. Dadurch kann die Musik stufenlos verdichtet werden, ohne dass das Grundthema wechselt.
 
 Der Vorteil liegt in der hohen Kontrolle über Intensität und Dramaturgie:
@@ -297,14 +300,14 @@ Der Vorteil liegt in der hohen Kontrolle über Intensität und Dramaturgie:
 
 Dieses Verfahren passt besonders gut zu den Anforderungen interaktiver Klanggestaltung, weil es musikalische Kontinuität mit klarer Spielrückmeldung kombiniert und Überlagerungen mit Sprache und Atmo besser steuerbar macht.
 
-#### Produktionswerkzeuge im Kontext interaktiver Musik
+##### Produktionswerkzeuge im Kontext interaktiver Musik
 Die zuvor beschriebenen Konzepte (States, Layer, Looping, Übergänge) werden in der Praxis meist in einer **Digital Audio Workstation (DAW)** vorbereitet. Eine DAW dient dabei als Produktionsumgebung, in der musikalische Bausteine komponiert, arrangiert, gemischt und für den späteren Einsatz in der Engine exportiert werden.
 
 Eine zentrale Rolle spielt dabei **MIDI**. MIDI enthält keine Audiodaten, sondern Steuerinformationen (z. B. Tonhöhe, Länge, Velocity, Timing). Dadurch können musikalische Ideen schnell variiert, instrumentiert und an unterschiedliche Intensitätsstufen angepasst werden. Gerade für adaptive und dynamische Spielmusik ist diese Flexibilität wichtig, weil Material häufig in mehreren Versionen (z. B. ruhig, mittel, intensiv) benötigt wird [@collins_game_sound],[@hofmann_szczypula_game_sound_2006].
 
 \newpage
 
-## Praktisch
+## Praktische Arbeit
 
 ### Design
 

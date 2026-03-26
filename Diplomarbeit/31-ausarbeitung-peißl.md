@@ -1,7 +1,7 @@
 # Teilaufgabe Peißl Nevio
 \textauthor{Peißl}
 
-## Literaturrecherche
+## Theorie
 
 In diesem Kapitel werden die theoretischen Grundlagen für die Erstellung von 3D-Modellen, Benutzeroberflächen und Cutscenes, die für das Spiel "ConquerTheCastle" benötigt werden, behandelt.
 

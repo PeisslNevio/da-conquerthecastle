@@ -3,7 +3,7 @@
 
 ## Theorie
 
-### Warum Unreal Engine gegenüber anderen Engines im Bereich Grafik & Rendering wählen?
+### Unreal Engine: Grafik & Rendering
 
 #### Allgemein
 
@@ -69,7 +69,7 @@ In Unity sind häufiger Test-Builds notwendig. Das Endergebnis hängt stärker v
 
 \newpage
 
-### Warum Unreal Engine im Bereich Programmierung & Blueprints wählen?
+### Unreal Engine: Programmierung & Blueprints
 
 #### Grundidee der Blueprints
 
@@ -127,7 +127,7 @@ Unity setzt primär auf C# und bietet weniger klare Trennung zwischen Low-Level-
 
 In Unity ist häufiges Stoppen und Neustarten des Play-Modus notwendig, was den Feedback-Zyklus verlangsamt.
 
-### Warum Unreal Engine gegenüber anderen Engines im Bereich Game Development wählen?
+### Unreal Engine: Game Development
 
 #### Allgemeine Einordnung
 
